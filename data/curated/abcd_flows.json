@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "dataset": "abcd",
+    "description_origin": "source_guidelines_derived",
+    "author": "Claude (rephrased from the 'description' and subflow names of abcd/data/guidelines.json)",
+    "created": "2026-11-11",
+    "reviewed": false,
+    "style": "'The customer ...' sentences. Flow level only (10 flows). Subflow-level conditions are not used in v1: scenario subflow labels (96) do not match guideline subflow names (55) and need a manual mapping.",
+    "notes": "Source guideline descriptions: product_defect='refunds and returns'; order_issue='get status of an order or change an order, possibly shipping'; account_access='username, password, and two-factor authentication'; troubleshoot_site='website slow, search not working, credit card, cart not updating'; manage_account='subscription service added or removed, change profile info'; purchase_dispute='bad price, out of stock, promo codes, billing'; shipping_issue='check our update a shipment of an item'; subscription_inquiry='billing and updates of the premium subscription service'; single_item_query='FAQ questions about jeans, boots, shirt or sweater'; storewide_query='FAQ questions about pricing, timing, membership or features'."
+  },
+  "conditions": {
+    "product_defect": {"description": "The customer wants a refund or return, or asks about a refund, because a product has a problem such as a stain or the wrong color or size."},
+    "order_issue": {"description": "The customer wants to check the status of an order or change an order, for example upgrade, downgrade, add to or cancel it."},
+    "account_access": {"description": "The customer cannot access their account, for example a forgotten username or password or a two-factor authentication reset."},
+    "troubleshoot_site": {"description": "The customer has a problem using the website, such as it being slow, search not working, a credit card being rejected or the cart not updating."},
+    "manage_account": {"description": "The customer wants to manage their account, such as checking added or removed services or changing their address, name, phone number or payment method."},
+    "purchase_dispute": {"description": "The customer disputes a purchase, for example a wrong price, an out-of-stock item, an invalid or expired promo code or incorrect billing."},
+    "shipping_issue": {"description": "The customer asks about the shipment of an item, such as its status, changing the shipping, a missing item or the shipping cost."},
+    "subscription_inquiry": {"description": "The customer asks about billing or updates of their premium subscription, such as the status, amount due, due date, paying, extending or disputing a bill."},
+    "single_item_query": {"description": "The customer has a general question about a specific product such as jeans, boots, a shirt or a jacket."},
+    "storewide_query": {"description": "The customer has a general question about the store such as pricing, opening times, membership or policies."}
+  }
+}

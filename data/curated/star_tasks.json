@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "dataset": "star",
+    "description_origin": "llm_draft",
+    "author": "Claude (draft written from tasks/<task>/responses.json wizard replies)",
+    "created": "2026-11-11",
+    "reviewed": false,
+    "style": "'The user ...' sentences. Keys are the task directory names, which equal the 'Task' values of select_task events (the 'task' field inside each task json differs, e.g. restaurant_book vs restaurant_reserve). family = task prefix (= Scenario.Domains value).",
+    "notes": "STAR provides no natural-language task descriptions; these are authored for this project."
+  },
+  "conditions": {
+    "apartment_schedule": {"description": "The user wants to book a viewing appointment for an apartment."},
+    "apartment_search": {"description": "The user wants to search for apartments by criteria such as bedrooms, price or floor."},
+    "bank_balance": {"description": "The user wants to check the balance of their bank account."},
+    "bank_fraud_report": {"description": "The user wants to report fraudulent activity on their bank account."},
+    "doctor_followup": {"description": "The user wants to retrieve the instructions their doctor gave them at an earlier appointment."},
+    "doctor_schedule": {"description": "The user wants to book an appointment with a doctor."},
+    "hotel_book": {"description": "The user wants to reserve a stay at a hotel."},
+    "hotel_search": {"description": "The user wants to search for hotels by name, location, price or rating."},
+    "hotel_service_request": {"description": "The user is staying at a hotel and wants to make a service request for their room."},
+    "meeting_schedule": {"description": "The user wants to schedule a meeting with someone."},
+    "party_plan": {"description": "The user wants to plan and organise a party at a venue."},
+    "party_rsvp": {"description": "The user wants to respond to an invitation to a party and say when they will arrive."},
+    "plane_book": {"description": "The user wants to book a specific flight."},
+    "plane_search": {"description": "The user wants to search for flights between two cities."},
+    "restaurant_book": {"description": "The user wants to reserve a table at a restaurant."},
+    "restaurant_search": {"description": "The user wants to search for restaurants by name, location, food type or rating."},
+    "ride_book": {"description": "The user wants to book a ride from one place to another."},
+    "ride_change": {"description": "The user wants to change an existing ride booking."},
+    "ride_status": {"description": "The user wants to know the status of their ride, such as when the driver will arrive."},
+    "spaceship_access_codes": {"description": "The user wants to obtain or enter an access code on a spaceship."},
+    "spaceship_life_support": {"description": "The user wants help repairing or restoring the life support system of a spaceship."},
+    "trip_directions": {"description": "The user wants step-by-step directions for a trip by car, on foot or by public transit."},
+    "trivia": {"description": "The user wants to play a trivia quiz."},
+    "weather": {"description": "The user wants a weather forecast for a certain day and place."}
+  }
+}
