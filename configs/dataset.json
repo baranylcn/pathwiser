@@ -1,0 +1,70 @@
+{
+  "version": "v1",
+  "seed": 42,
+  "paths": {"raw": "data/raw", "curated": "data/curated", "out": "data/processed"},
+  "context_max_turns": 6,
+  "export": {"csv": true, "candidates_long": true, "sample_per_dataset_split": 150},
+  "candidates": {
+    "size_weights": {"2": 0.10, "3": 0.20, "4": 0.20, "5": 0.15, "6": 0.12, "8": 0.13, "10": 0.10},
+    "negative_strategy_weights": {"family": 0.4, "nearest": 0.4, "random": 0.2},
+    "nearest_window_multiplier": 3
+  },
+  "no_match": {
+    "fraction": 0.2,
+    "kind_weights": {"other_family": 0.7, "sibling_removed": 0.3}
+  },
+  "sgdx": {
+    "train_variant_weights": {"orig": 0.4, "v1": 0.2, "v2": 0.2, "v3": 0.2},
+    "val_variant": "v4",
+    "test_variant": "v5"
+  },
+  "nodes": {
+    "generic": {"name": "routing", "description": "Decide which action the user wants to take next."},
+    "sgd_single_service": {"description": "Decide which operation the user wants to perform with this service. Service: {service_description}"},
+    "static": {
+      "banking77": {"name": "banking_support_routing", "description": "Route the customer's banking support request to the right topic."},
+      "clinc150": {"name": "voice_assistant_routing", "description": "Route the user's request to the right capability of a voice assistant."},
+      "hwu64": {"name": "home_assistant_routing", "description": "Route the user's request to the right function of a home assistant."},
+      "star": {"name": "task_routing", "description": "Decide which task the user wants the assistant to help with next."},
+      "abcd": {"name": "customer_service_routing", "description": "Identify which kind of issue the customer is contacting support about."}
+    }
+  },
+  "datasets": {
+    "sgd": {"enabled": true},
+    "banking77": {
+      "enabled": true,
+      "val_fraction": 0.1,
+      "heldout_families": {"val": ["identity_account"], "test": ["cash_withdrawal_atm", "exchange_currency"]}
+    },
+    "clinc150": {
+      "enabled": true,
+      "heldout_families": {"val": ["credit_cards"], "test": ["travel", "small_talk"]}
+    },
+    "hwu64": {
+      "enabled": true,
+      "split_fractions": {"train": 0.8, "val": 0.1, "test": 0.1},
+      "excluded_labels": ["general_quirky", "general_greet", "music_dislikeness", "audio_volume_other", "cooking_query"],
+      "heldout_families": {"val": ["cooking", "takeaway"], "test": ["transport", "weather"]}
+    },
+    "star": {
+      "enabled": true,
+      "min_message_words": 3,
+      "split_fractions": {"train": 0.8, "val": 0.1, "test": 0.1},
+      "heldout_families": {"val": ["meeting"], "test": ["spaceship"]}
+    },
+    "abcd": {
+      "enabled": true,
+      "min_message_words": 5,
+      "max_customer_turns_scanned": 3,
+      "heldout_families": {"val": ["troubleshoot_site"], "test": ["storewide_query"]}
+    }
+  },
+  "licenses": {
+    "sgd": "CC BY-SA 4.0",
+    "star": "MIT (repository license; verify data terms before redistribution)",
+    "abcd": "MIT (repository license; verify data terms before redistribution)",
+    "banking77": "CC BY 4.0",
+    "clinc150": "CC BY 3.0",
+    "hwu64": "CC BY 4.0"
+  }
+}
