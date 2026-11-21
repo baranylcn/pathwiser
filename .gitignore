@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+
+# Data: third-party raw files and large generated files stay local. Tracked: README, checksums,
+# the authored data/curated/, and the small provenance files of every generated version
+# (manifest, dataset card, stats, validation report). Everything is reproducible from the commands in README.md.
+data/raw/*
+!data/raw/README.md
+!data/raw/SHA256SUMS.txt
+
+data/processed/*/*
+!data/processed/*/manifest.json
+!data/processed/*/DATASET_CARD.md
+!data/processed/*/stats.json
+!data/processed/*/validation_report.json
+
+data/model/*/*
+!data/model/*/manifest.json
+!data/model/*/SCHEMA.md
+
+# Personal scratch space
+scratch/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Development-only baseline runs (--val-limit) and cached embeddings
+reports/**/dev/
+data/cache/
+models/*
+!models/README.md
