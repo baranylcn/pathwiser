@@ -1,0 +1,47 @@
+{
+  "dataset_weights": {
+    "abcd": 1.713579,
+    "banking77": 1.629012,
+    "clinc150": 1.324631,
+    "hwu64": 1.012098,
+    "sgd": 0.653859,
+    "star": 2.334529
+  },
+  "files": {
+    "SCHEMA.md": {
+      "sha256": "4b7a9f711dc1e41d290d66b64e5842449664acd6f3362bb1482f654440f0c2d8"
+    },
+    "test.jsonl": {
+      "rows": 42498,
+      "sha256": "eeb434b789bf0b8d5b8cb1774a27b8664cbf75e668034a727707cc46df6cc713"
+    },
+    "train.jsonl": {
+      "rows": 88790,
+      "sha256": "7b63435290e2d9d57c48e79464db1c48fdcc3449dc51033032c58cf1316cf6e7"
+    },
+    "val.jsonl": {
+      "rows": 24253,
+      "sha256": "da0758fd6499ae3adcf1fe10ad54b0178d10b9df863c48ce0aea1dc7e41d96bf"
+    }
+  },
+  "preprocessing": {
+    "dataset_weight_power": 0.5,
+    "include_node": true,
+    "max_condition_words": 64,
+    "max_context_turns": 6,
+    "max_context_words": 160,
+    "max_k": 10,
+    "max_message_words": 200,
+    "risky_label_weight": 0.5
+  },
+  "source_files_sha256": {
+    "test.jsonl": "2d49e74b6c3f01f9a1b7c155b255a44469d84cc767181125026bb83f84fecd87",
+    "train.jsonl": "6af9358e2ee88e62fb275d71015792b06c2a59b00266f780efe21ab3d7cdc216",
+    "val.jsonl": "d99b99b6f743f10593225f3cfeceb76021c69ff698b7232843400b821a28a771"
+  },
+  "source_version": "v1",
+  "stats": {
+    "context_turns_dropped_examples": 16
+  },
+  "version": "v1-model"
+}
