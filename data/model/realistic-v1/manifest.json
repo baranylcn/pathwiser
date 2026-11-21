@@ -1,0 +1,153 @@
+{
+  "version": "realistic-v1",
+  "purpose": "external stress test; never used for training, tuning or threshold selection",
+  "quality": {
+    "origin": "llm_generated",
+    "generator": "claude-sonnet-5-5",
+    "human_audited": false,
+    "blind_verified": {
+      "status_counts": {
+        "blind_verified": 344
+      },
+      "blind_verified_examples": 344,
+      "all_passes_agree_with_intended": 344,
+      "alt_flagged": 23,
+      "agreement_by_label_type": {
+        "route": "274/274",
+        "no_match": "70/70"
+      },
+      "note": "Blind annotation by independent model passes (pass A: default model, pass B: opus; items shown with anonymous ids, shuffled order, no labels). NOT a human audit. verified_sha = sha256 of message + sorted candidate texts at the time of annotation; an example whose current text hashes differently was changed after verification."
+    },
+    "note": "not 'gold' until audited by a human"
+  },
+  "source_files_sha256": {
+    "scenarios_01.json": "d548c9b1f2ff6ecad9af5f01c2b63580becf81677abaef609d346e3f2453cd93",
+    "scenarios_02.json": "a469b3daf3bbc9fccad81df3f0e9c58031df475ecb933d2ba1c0622f2e67af37",
+    "scenarios_03.json": "16ae5e66a340fe36982bdc58fcbc0f36a0b9e6114d8c9385e7b19864b6ee5e8a",
+    "scenarios_04.json": "819dd645b7cb9dbda9c32fb95af5c606ef5681cb0625160edfaeb9edb928e1c2",
+    "scenarios_05.json": "bd3c1e932e15dc1e5d8b819baec5101b4645262a143cf2c19a763a1905071424",
+    "scenarios_06.json": "85e41a7365d5f4e1c8f4c005c7ac6df8f8d1f3796afc38b44c985a3c833617e6",
+    "blind_verification.json": "4ed99e33288b9270a2524a5412b3ecddb27da3972b5d0ae1d628e1d4e3d006f4"
+  },
+  "n_scenarios": 65,
+  "n_examples": 344,
+  "dropped_examples": [],
+  "label_counts": {
+    "route": 274,
+    "no_match": 70
+  },
+  "nm_kind_counts": {
+    "sibling_removed": 31,
+    "in_domain_uncovered": 23,
+    "oos": 16
+  },
+  "candidate_size_counts": {
+    "2": 10,
+    "3": 33,
+    "4": 46,
+    "5": 109,
+    "6": 97,
+    "7": 23,
+    "8": 13,
+    "9": 6,
+    "10": 7
+  },
+  "context_counts": {
+    "ctx:none": 210,
+    "ctx:first_turn": 68,
+    "ctx:later_turn": 66
+  },
+  "domains": [
+    "automotive",
+    "childcare",
+    "cloud",
+    "consumer_tech",
+    "creative_services",
+    "customer_service",
+    "customer_success",
+    "devops",
+    "education",
+    "events",
+    "facilities",
+    "finance_internal",
+    "finance_services",
+    "fintech",
+    "fitness",
+    "gaming",
+    "government",
+    "healthcare",
+    "home_services",
+    "hr",
+    "insurance",
+    "it_helpdesk",
+    "legal",
+    "library",
+    "local_services",
+    "logistics",
+    "marketing",
+    "marketplace",
+    "media",
+    "nonprofit",
+    "postal",
+    "procurement",
+    "product",
+    "real_estate",
+    "recruiting",
+    "retail",
+    "saas",
+    "sales_ops",
+    "security",
+    "senior_care",
+    "subscriptions",
+    "telecom",
+    "tourism",
+    "utilities",
+    "veterinary",
+    "workplace",
+    "workspace"
+  ],
+  "options": {
+    "preprocessing": {
+      "max_context_turns": 6,
+      "max_context_words": 160,
+      "max_message_words": 200,
+      "max_condition_words": 64,
+      "include_node": true,
+      "dataset_weight_power": 0.5,
+      "risky_label_weight": 0.5,
+      "max_k": 10
+    }
+  },
+  "leakage": {
+    "reference_messages": 130128,
+    "reference_conditions": 720,
+    "exact_messages": [],
+    "exact_conditions": [],
+    "duplicate_messages_within": [],
+    "duplicate_conditions_within": [],
+    "near_messages_flagged": 3,
+    "near_messages": [
+      {
+        "id": "rl_smart_speaker_02",
+        "text": "do I need an umbrella tomorrow",
+        "similarity": 0.873,
+        "reference": "will i need an umbrella tomorrow"
+      },
+      {
+        "id": "rl_order_review_00",
+        "text": "yep go ahead",
+        "similarity": 1.0,
+        "reference": "Yep, go ahead."
+      },
+      {
+        "id": "rl_cancel_confirmation_00",
+        "text": "yes please, do it",
+        "similarity": 1.0,
+        "reference": "Yes, please do it."
+      }
+    ],
+    "near_conditions_flagged": null,
+    "near_conditions": null,
+    "embeddings_checked": false
+  }
+}

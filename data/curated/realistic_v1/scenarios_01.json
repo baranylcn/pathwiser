@@ -1,0 +1,227 @@
+[
+  {
+    "id": "hr_requests", "domain": "hr",
+    "node": {"name": "employee_request_router", "description": "Decide what kind of HR request the employee is making."},
+    "conditions": {
+      "a": "Employee wants to request time off or book vacation days",
+      "b": "Employee asks how many leave days they have left",
+      "c": "Employee is sick and needs to log sick leave",
+      "d": "Employee wants to update their bank account or payroll details",
+      "e": "Employee asks about the company's parental leave policy",
+      "f": "Employee wants to download a payslip or tax document"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "I'd like to take the week of March 10th off, can you set that up?"},
+      {"gold": "b", "ctx": [["a", "Hi, this is the HR assistant. What can I do for you today?"]], "msg": "Before I book flights for the summer, do I even have enough days banked?"},
+      {"gold": "c", "ctx": [["u", "Hey, I won't be at my desk today"], ["a", "Sorry to hear that. Can you tell me what's going on so I can route this correctly?"]], "msg": "Woke up with a fever, doctor says rest till Friday."},
+      {"gold": "f", "ctx": [], "msg": "need my march payslip for a mortgage application"},
+      {"gold": null, "nm": "sibling_removed", "intent": "e", "cands": ["a", "b", "c", "d", "f"], "ctx": [], "msg": "my wife and I are expecting in the fall, what does the company give new dads?"}
+    ]
+  },
+  {
+    "id": "auto_claims", "domain": "insurance",
+    "node": {"name": "claims_router", "description": "Decide which step of the claims process the customer needs."},
+    "conditions": {
+      "a": "Customer wants to file a new claim for a recent accident or damage",
+      "b": "Customer wants to check the status of a claim they already filed",
+      "c": "Customer wants to upload photos or documents for an existing claim",
+      "d": "Customer wants to dispute the amount offered in a claim settlement",
+      "e": "Customer wants to find an approved repair shop near them",
+      "f": "Customer wants to add a driver or vehicle to their policy"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "someone backed into my car in the parking lot an hour ago and drove off"},
+      {"gold": "b", "ctx": [["a", "Welcome to claims support. How can I help?"]], "msg": "its been 2 weeks since I sent everything in and nobody has called me back"},
+      {"gold": "c", "ctx": [["u", "I filed a claim yesterday for a cracked windshield"], ["a", "Thanks, I can see claim 88213 is open. Is there something you'd like to do with it?"]], "msg": "I took pictures of the chip, where do I send them?"},
+      {"gold": "d", "ctx": [], "msg": "they're offering me $900 for a repair that was quoted at $2,400, that's not right"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "I want to cancel my policy at the end of the month."}
+    ]
+  },
+  {
+    "id": "it_triage", "domain": "it_helpdesk",
+    "node": {"name": "it_ticket_triage", "description": "Work out what kind of IT problem the employee is reporting."},
+    "conditions": {
+      "a": "User cannot log in or has forgotten their password",
+      "b": "User needs a new software application installed or licensed",
+      "c": "User reports a hardware problem such as a broken screen, keyboard or battery",
+      "d": "User has no network, wifi or VPN connectivity",
+      "e": "User received a suspicious email or thinks their account was compromised",
+      "f": "User wants to request a new laptop or other equipment"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "got an email from 'payroll' asking me to confirm my password through a link, looks off to me"},
+      {"gold": "d", "ctx": [["a", "IT Support here. What's going on?"]], "msg": "zoom keeps dropping and nothing loads when I'm at home but the office wifi is fine"},
+      {"gold": "a", "ctx": [["u", "my account is acting weird"], ["a", "Can you tell me more? What happens when you try to use it?"]], "msg": "it says my credentials are invalid even though I just changed them this morning"},
+      {"gold": "f", "ctx": [], "msg": "my laptop is 5 years old and I'm starting a data science role next month, who do I ask for a better machine"},
+      {"gold": null, "nm": "sibling_removed", "intent": "c", "cands": ["a", "b", "d", "e", "f"], "ctx": [], "msg": "the screen on my laptop has a big crack across it and flickers"}
+    ]
+  },
+  {
+    "id": "clinic_desk", "domain": "healthcare",
+    "node": {"name": "clinic_front_desk", "description": "Decide what the patient is calling about."},
+    "conditions": {
+      "a": "Patient wants to book a new appointment",
+      "b": "Patient wants to reschedule or move an existing appointment",
+      "c": "Patient wants to cancel an upcoming appointment",
+      "d": "Patient needs a prescription refilled",
+      "e": "Patient asks for lab or test results",
+      "f": "Patient asks about insurance coverage or the cost of a visit"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "something came up at work, can we push my Thursday 3pm to sometime next week?"},
+      {"gold": "d", "ctx": [["a", "Thank you for calling Riverside Family Clinic, how can I help?"]], "msg": "I'm down to my last two blood pressure pills"},
+      {"gold": "c", "ctx": [["u", "hi it's about my appointment on the 14th"], ["a", "Sure, I have you down for 9:30 with Dr. Patel. What would you like to do?"]], "msg": "I won't be needing it anymore, I'm seeing someone else."},
+      {"gold": "e", "ctx": [], "msg": "did the bloodwork from last week come back yet?"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "random question, is it going to rain this weekend?"}
+    ]
+  },
+  {
+    "id": "saas_billing", "domain": "saas",
+    "node": {"name": "billing_support", "description": "Figure out what the customer needs help with regarding their subscription or invoices."},
+    "conditions": {
+      "a": "Customer wants to upgrade or downgrade their plan",
+      "b": "Customer wants to cancel their subscription",
+      "c": "Customer was charged incorrectly or wants a refund",
+      "d": "Customer needs a copy of an invoice or receipt",
+      "e": "Customer wants to update their credit card or payment method",
+      "f": "Customer wants to add or remove seats for team members"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "you guys billed me twice this month, both 49 dollars"},
+      {"gold": "e", "ctx": [["a", "Hi! I'm the billing assistant. What can I do for you?"]], "msg": "my card expires next month and I don't want the service to cut out"},
+      {"gold": "f", "ctx": [["u", "we just hired two designers"], ["a", "Congrats! Is this about their access to the workspace?"]], "msg": "yeah they need logins, we're on the team plan"},
+      {"gold": "d", "ctx": [], "msg": "accounting is asking for the pdf of last quarter's bill"},
+      {"gold": null, "nm": "sibling_removed", "intent": "b", "cands": ["a", "c", "d", "e", "f"], "ctx": [], "msg": "we're moving to a different tool, please shut down our account after this billing cycle"}
+    ]
+  },
+  {
+    "id": "electricity_provider", "domain": "utilities",
+    "node": {"name": "utility_help", "description": "Determine what the customer wants from their electricity provider."},
+    "conditions": {
+      "a": "Customer wants to report a power outage",
+      "b": "Customer wants to start or stop service because they are moving",
+      "c": "Customer wants to pay a bill or set up a payment plan",
+      "d": "Customer disputes a high bill or suspects a meter error",
+      "e": "Customer wants to switch to a different tariff or green energy plan"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "whole street just went dark"},
+      {"gold": "d", "ctx": [["u", "my bill this month is crazy"], ["a", "I'm sorry about that. Can you tell me what you were expecting to pay?"]], "msg": "usually around 80, this one says 310 and we've been on vacation half the month"},
+      {"gold": "b", "ctx": [["a", "Hello, how can I help with your energy account?"]], "msg": "I'm out of my apartment on the 30th and the new tenants take over"},
+      {"gold": "e", "ctx": [], "msg": "is there a cheaper rate if I run the dishwasher and washing machine at night?"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "can you send someone to look at my solar panels, the inverter keeps beeping"}
+    ]
+  },
+  {
+    "id": "registrar_office", "domain": "education",
+    "node": {"name": "registrar_router", "description": "Identify the student's request to the registrar's office."},
+    "conditions": {
+      "a": "Student wants to enroll in or add a course",
+      "b": "Student wants to drop or withdraw from a course",
+      "c": "Student wants an official transcript sent somewhere",
+      "d": "Student wants to change their major or program",
+      "e": "Student asks about tuition deadlines or payment",
+      "f": "Student wants to appeal a grade",
+      "g": "Student wants to apply for graduation"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "my grad school wants official records mailed directly from you"},
+      {"gold": "b", "ctx": [["u", "I'm drowning this semester"], ["a", "I'm sorry to hear that. Is there something specific I can help you with?"]], "msg": "I think I need to get out of organic chem before the deadline"},
+      {"gold": "d", "ctx": [["a", "Registrar's office, how can I assist?"]], "msg": "I started in biology but I'm way more into computer science now"},
+      {"gold": "g", "ctx": [], "msg": "when do I need to submit the paperwork if I want to walk in May?"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "can you recommend a good coffee place near campus"}
+    ]
+  },
+  {
+    "id": "property_management", "domain": "real_estate",
+    "node": {"name": "tenant_requests", "description": "Decide what the tenant needs from property management."},
+    "conditions": {
+      "a": "Tenant reports a maintenance problem in their unit",
+      "b": "Tenant wants to pay rent or asks about rent due dates",
+      "c": "Tenant wants to renew or end their lease",
+      "d": "Tenant reports a noise or neighbour complaint",
+      "e": "Tenant asks about parking or amenity access"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "the kitchen sink has been leaking under the cabinet since last night"},
+      {"gold": "c", "ctx": [["a", "Hi, this is Maple Court property management. What do you need?"]], "msg": "my lease runs out in August and I haven't decided if I'm staying"},
+      {"gold": "d", "ctx": [["u", "I have an issue with the unit above me"], ["a", "Can you tell me more about the issue?"]], "msg": "they stomp around and play music until 2am every night"},
+      {"gold": "b", "ctx": [], "msg": "I'm going to be 5 days late on rent this month, is there a fee?"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "am I allowed to have a cat? I think my lease might say no pets"}
+    ]
+  },
+  {
+    "id": "gym_membership", "domain": "fitness",
+    "node": {"name": "gym_member_services", "description": "Decide what the gym member needs."},
+    "conditions": {
+      "a": "Member wants to freeze or pause their membership",
+      "b": "Member wants to cancel their membership",
+      "c": "Member wants to book a class or personal trainer session",
+      "d": "Member wants to add a guest or family member to the membership",
+      "e": "Member reports a problem with a locker, equipment or facilities",
+      "f": "Member asks about opening hours or holiday schedule"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "I'm having knee surgery in April, can I stop paying for a few months without losing my rate?"},
+      {"gold": "c", "ctx": [["a", "Welcome to IronWorks. How can I help?"]], "msg": "is there a spin class tomorrow morning, I want to grab a bike"},
+      {"gold": "e", "ctx": [], "msg": "the treadmill on the left by the window has been broken for two weeks"},
+      {"gold": "f", "ctx": [], "msg": "are you open on easter sunday?"},
+      {"gold": null, "nm": "sibling_removed", "intent": "d", "cands": ["a", "b", "c", "e", "f"], "ctx": [], "msg": "my wife wants to join too, can she get the same rate as me?"}
+    ]
+  },
+  {
+    "id": "vet_reception", "domain": "veterinary",
+    "node": {"name": "vet_reception", "description": "Decide what the pet owner needs."},
+    "conditions": {
+      "a": "Pet owner wants to book a checkup or vaccination",
+      "b": "Pet owner describes an urgent symptom or emergency",
+      "c": "Pet owner wants to refill their pet's medication",
+      "d": "Pet owner asks about boarding or grooming services",
+      "e": "Pet owner asks about pricing or payment plans"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "my dog just ate a whole bar of dark chocolate, what do I do?!"},
+      {"gold": "a", "ctx": [["a", "Hi, you've reached Paws & Claws. What can I do for you?"]], "msg": "our new kitten is 9 weeks old and we haven't done any shots yet"},
+      {"gold": "c", "ctx": [["u", "Hi it's about Biscuit"], ["a", "Of course. Which pet is Biscuit and what do you need?"]], "msg": "he's the senior lab on the arthritis pills and the bottle is almost empty"},
+      {"gold": "d", "ctx": [], "msg": "we're traveling the first week of July, do you guys take dogs overnight?"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "can you help me fix my wifi, it keeps disconnecting"}
+    ]
+  },
+  {
+    "id": "city_services", "domain": "government",
+    "node": {"name": "city_services_router", "description": "Decide which municipal service the resident is asking about."},
+    "conditions": {
+      "a": "Resident wants to report a pothole, broken streetlight or other public issue",
+      "b": "Resident wants to apply for or renew a parking permit",
+      "c": "Resident wants to schedule a bulk waste or recycling pickup",
+      "d": "Resident wants to pay a parking ticket or municipal fine",
+      "e": "Resident wants to apply for a building or renovation permit",
+      "f": "Resident asks about property tax"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "I've got an old couch and a broken fridge out front, who takes those?"},
+      {"gold": "d", "ctx": [["u", "I got a notice in the mail"], ["a", "I can help with that. What does the notice say?"]], "msg": "it's $65 for parking by a hydrant, I'd rather just pay it than fight it"},
+      {"gold": "e", "ctx": [["a", "City Services virtual assistant. How may I help?"]], "msg": "we're knocking down a wall to open up our kitchen, do we need paperwork?"},
+      {"gold": "a", "ctx": [], "msg": "there's a streetlight on Elm that's been out for a week and it's pitch black"},
+      {"gold": null, "nm": "sibling_removed", "intent": "b", "cands": ["a", "c", "d", "e", "f"], "ctx": [], "msg": "my residential parking sticker expires next month and I want to get a new one"}
+    ]
+  },
+  {
+    "id": "auto_garage", "domain": "automotive",
+    "node": {"name": "garage_booking", "description": "Decide what the customer wants from the garage."},
+    "conditions": {
+      "a": "Customer wants to book a regular service or oil change",
+      "b": "Customer describes a problem with the car and wants it diagnosed",
+      "c": "Customer wants a price quote for a repair",
+      "d": "Customer wants to know if their car is ready for pickup",
+      "e": "Customer wants to book a tire change or wheel alignment"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "winter's coming, can you swap me over to snow tires"},
+      {"gold": "b", "ctx": [["u", "Hi, I have a car question"], ["a", "Sure, go ahead."]], "msg": "there's a weird grinding noise when I brake, started yesterday"},
+      {"gold": "d", "ctx": [], "msg": "just checking if the Civic is finished?"},
+      {"gold": "c", "ctx": [["a", "Northside Auto, how can I help?"]], "msg": "how much would it roughly cost to replace the alternator on a 2015 Corolla"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you guys sell used cars? I'm looking at a Honda around 10k"}
+    ]
+  }
+]

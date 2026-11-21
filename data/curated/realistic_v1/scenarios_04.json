@@ -1,0 +1,223 @@
+[
+  {
+    "id": "smart_home", "domain": "consumer_tech",
+    "node": {"name": "smart_home_support", "description": "Triage the smart home owner's request."},
+    "conditions": {
+      "a": "How do I connect or pair a new device?",
+      "b": "A device is offline or not responding",
+      "c": "I want to create or edit an automation or schedule",
+      "d": "I want to share access with someone in my household",
+      "e": "I need to reset my hub or factory reset a device"
+    },
+    "examples": [
+      {"gold": "d", "ctx": [], "msg": "my sister's staying with us for a month and needs to be able to unlock the front door"},
+      {"gold": "b", "ctx": [], "msg": "the living room lights just stopped listening to the app, everything else works"},
+      {"gold": "a", "ctx": [["a", "Hi! I'm here to help with your Hive Home setup."]], "msg": "just unboxed a smart plug, where do I even start"},
+      {"gold": "c", "ctx": [["u", "I want my house to feel a bit more automatic"], ["a", "Great idea. What would you like to happen?"]], "msg": "turn the porch light on at sunset and off at midnight"},
+      {"gold": null, "nm": "sibling_removed", "intent": "e", "cands": ["a", "b", "c", "d"], "ctx": [], "msg": "I'm selling the hub and need to wipe everything off it first"}
+    ]
+  },
+  {
+    "id": "home_repair_booking", "domain": "home_services",
+    "node": {"name": "home_services_booking", "description": "Decide which home service the customer wants to book."},
+    "conditions": {
+      "a": "Book a plumber",
+      "b": "Book an electrician",
+      "c": "Book an HVAC technician for heating or cooling",
+      "d": "Book a handyman for small repairs",
+      "e": "Get a quote for a larger renovation project",
+      "f": "Cancel or reschedule an existing service visit"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "the toilet keeps running and there's a puddle by the base"},
+      {"gold": "c", "ctx": [], "msg": "ac is blowing warm air and it's 95 outside"},
+      {"gold": "e", "ctx": [["a", "Hi, how can we help with your home?"]], "msg": "we want to redo the entire bathroom, tile and all, what does something like that cost"},
+      {"gold": "f", "ctx": [["u", "I have someone coming tomorrow"], ["a", "I see your visit tomorrow between 9 and 11. What would you like to do?"]], "msg": "something came up, can we do next week instead"},
+      {"gold": "d", "ctx": [], "msg": "need a guy to hang three shelves and fix a squeaky door"},
+      {"gold": null, "nm": "sibling_removed", "intent": "b", "cands": ["a", "c", "d", "e", "f"], "ctx": [], "msg": "half the outlets in my kitchen are dead and the breaker keeps tripping"}
+    ]
+  },
+  {
+    "id": "daycare_desk", "domain": "childcare",
+    "node": {"name": "daycare_front_desk", "description": "Decide what the parent needs from the daycare."},
+    "conditions": {
+      "a": "Parent wants to enroll a child or join the waitlist",
+      "b": "Parent reports that the child will be absent or arriving late",
+      "c": "Parent asks about tuition, fees or billing",
+      "d": "Parent wants to discuss a concern about their child's care or behaviour",
+      "e": "Parent asks about the daily schedule, meals or allergies"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "Mia has a fever so she won't be in today"},
+      {"gold": "e", "ctx": [], "msg": "my son is allergic to peanuts, how do you handle snack time?"},
+      {"gold": "a", "ctx": [["a", "Welcome to Little Acorns! How can I help?"]], "msg": "we're having a baby in June and want a spot for September"},
+      {"gold": "d", "ctx": [["u", "I wanted to talk about Leo"], ["a", "Of course. What's on your mind?"]], "msg": "he came home with a bruise and says another kid pushed him"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you run a summer camp for older kids, like 8 and 10?"}
+    ]
+  },
+  {
+    "id": "senior_residence", "domain": "senior_care",
+    "node": {"name": "residence_inquiry_assistant", "description": "Understand what the visitor or family member of a senior living residence is asking."},
+    "conditions": {
+      "a": "Family member wants to schedule a tour",
+      "b": "Family member asks about monthly cost and what is included",
+      "c": "Family member or resident reports a care concern",
+      "d": "Family member asks about visiting hours and visitor policies"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "my mom is 82 and we'd like to see the place with her before deciding"},
+      {"gold": "d", "ctx": [], "msg": "can I bring my kids to see grandpa on a weekday evening?"},
+      {"gold": "c", "ctx": [["a", "Good afternoon, Sunrise Gardens assistant here."]], "msg": "dad said the night nurse didn't come when he pressed the button for 40 minutes"},
+      {"gold": "b", "ctx": [["u", "we're comparing a few residences"], ["a", "Happy to help. What matters most to you?"]], "msg": "mostly the price, and whether meals and laundry are in it"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "who won the game last night"}
+    ]
+  },
+  {
+    "id": "wedding_planner", "domain": "events",
+    "node": {"name": "wedding_planner_assistant", "description": "Decide what the couple needs help with."},
+    "conditions": {
+      "a": "Couple wants to book a venue visit",
+      "b": "Couple wants help creating a budget",
+      "c": "Couple wants catering options and tastings",
+      "d": "Couple wants to manage the guest list and RSVPs",
+      "e": "Couple needs vendor recommendations such as photographers or florists",
+      "f": "Couple wants to change the wedding date"
+    },
+    "examples": [
+      {"gold": "f", "ctx": [], "msg": "the venue had a flood so we have to move everything to october"},
+      {"gold": "d", "ctx": [], "msg": "forty people haven't replied and the deadline is friday, can you send them a reminder"},
+      {"gold": "c", "ctx": [["a", "Hi lovebirds! How can I help plan your day?"]], "msg": "my fiance is vegan and I'm gluten free, can we try some menus before we pick"},
+      {"gold": "b", "ctx": [["u", "we just got engaged!"], ["a", "Congratulations! Where would you like to start?"]], "msg": "we have about 25k saved and no clue how to split it up"},
+      {"gold": null, "nm": "sibling_removed", "intent": "e", "cands": ["a", "b", "c", "d", "f"], "ctx": [], "msg": "do you know a good photographer who shoots film instead of digital"}
+    ]
+  },
+  {
+    "id": "crypto_exchange", "domain": "fintech",
+    "node": {"name": "exchange_support", "description": "Route the crypto exchange user's request."},
+    "conditions": {
+      "a": "User cannot log in or lost two-factor access",
+      "b": "A deposit has not arrived or is missing",
+      "c": "A withdrawal is pending or delayed",
+      "d": "User wants to complete identity verification (KYC)",
+      "e": "User asks about trading fees or limits",
+      "f": "User wants tax documents for their transactions"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "I sent 0.5 ETH from my wallet two hours ago and it still doesn't show here"},
+      {"gold": "d", "ctx": [], "msg": "it keeps rejecting my passport photo, says blurry"},
+      {"gold": "c", "ctx": [["a", "Support assistant online. How can I help?"]], "msg": "requested a withdrawal yesterday and it's been 'processing' ever since"},
+      {"gold": "f", "ctx": [["u", "tax season again"], ["a", "I can help with that. What do you need?"]], "msg": "a csv of all my trades from last year for my accountant"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "which coin do you think will go up next month"}
+    ]
+  },
+  {
+    "id": "online_courses", "domain": "education",
+    "node": {"name": "learning_platform_support", "description": "Work out what the learner or instructor needs."},
+    "conditions": {
+      "a": "Student wants a refund for a course",
+      "b": "Student cannot access a purchased course or video",
+      "c": "Student asks for a completion certificate",
+      "d": "Student wants help choosing a course or learning path",
+      "e": "Instructor wants to publish or update a course"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "paid yesterday and it just says 'content locked' on every lesson"},
+      {"gold": "d", "ctx": [], "msg": "I know basic python and want to move into data science, what should I take first"},
+      {"gold": "c", "ctx": [["a", "Hi, I'm the Learnly assistant."]], "msg": "finished all modules in the SQL course, where's my certificate"},
+      {"gold": "e", "ctx": [["u", "I teach photography"], ["a", "Cool! How can I help?"]], "msg": "I recorded 12 lessons and want to put them online for sale"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e"], "ctx": [], "msg": "this course wasn't what the description promised, I'd like my money back"}
+    ]
+  },
+  {
+    "id": "mobile_game", "domain": "gaming",
+    "node": {"name": "game_support_router", "description": "Route the player's support message."},
+    "conditions": {
+      "a": "Player lost progress or wants to restore an account",
+      "b": "Player was charged for an in-app purchase they did not receive",
+      "c": "Player reports a cheater or abusive player",
+      "d": "Player reports a bug or crash"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "got a new phone and my level 60 character is gone"},
+      {"gold": "b", "ctx": [], "msg": "took my 9.99 for the gem pack but no gems ever showed up"},
+      {"gold": "d", "ctx": [["a", "Hey adventurer! What's going on?"]], "msg": "the game freezes every time I open the shop screen"},
+      {"gold": "c", "ctx": [["u", "ranked is unplayable"], ["a", "Sorry to hear that. What's happening?"]], "msg": "the top player is clearly using a speed hack, he teleports around the map"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "any chance of a new character class that uses a bow?"}
+    ]
+  },
+  {
+    "id": "streaming_service", "domain": "media",
+    "node": {"name": "streaming_support", "description": "Decide what the streaming subscriber needs."},
+    "conditions": {
+      "a": "Cancel or pause the subscription",
+      "b": "Video buffering or playback problems",
+      "c": "Change the account profile, password or email",
+      "d": "Question about a charge or a price increase",
+      "e": "Request a title or feature to be added",
+      "f": "Parental controls and kids profiles",
+      "g": "Watch on a new device or smart TV"
+    },
+    "examples": [
+      {"gold": "f", "ctx": [], "msg": "my 6 year old keeps finding the scary stuff, how do I stop that"},
+      {"gold": "g", "ctx": [], "msg": "just bought a Samsung TV, how do I get your app on it"},
+      {"gold": "b", "ctx": [["a", "Hi from StreamBox support!"]], "msg": "every show turns into a slideshow after about 10 minutes"},
+      {"gold": "d", "ctx": [["u", "just saw an email from you"], ["a", "I can help. What does it say?"]], "msg": "you're raising the price by 3 bucks a month, why"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f", "g"], "ctx": [], "msg": "I'm away for the whole summer so I don't want to pay until september"}
+    ]
+  },
+  {
+    "id": "news_publisher", "domain": "media",
+    "node": {"name": "publisher_reader_help", "description": "Decide what the reader of the newsletter wants."},
+    "conditions": {
+      "a": "Reader wants to subscribe or manage their paid subscription",
+      "b": "Reader wants to unsubscribe from emails",
+      "c": "Reader wants to submit a letter, tip or pitch to the editors",
+      "d": "Reader wants to report an error in an article",
+      "e": "Business asks about advertising or sponsorship"
+    },
+    "examples": [
+      {"gold": "d", "ctx": [], "msg": "your piece on the new bridge says it opened in 2019 but it was 2021"},
+      {"gold": "b", "ctx": [], "msg": "stop sending me 3 emails a day"},
+      {"gold": "e", "ctx": [["a", "Hello! How can the Daily Ledger help?"]], "msg": "we're a local bakery, what would a week of sponsorship in the newsletter cost"},
+      {"gold": "c", "ctx": [["u", "I live in the neighbourhood you wrote about"], ["a", "Thanks for reading! Anything we can do for you?"]], "msg": "I know something about the zoning story that hasn't been reported"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you also have an audio version of the newsletter?"}
+    ]
+  },
+  {
+    "id": "book_marketplace", "domain": "marketplace",
+    "node": {"name": "marketplace_support", "description": "Route the marketplace user's request."},
+    "conditions": {
+      "a": "Buyer wants to track an order",
+      "b": "Buyer wants to return an item or report it as not as described",
+      "c": "Seller wants to list an item for sale",
+      "d": "Seller wants to receive a payout",
+      "e": "User wants to report a scam or suspicious listing",
+      "f": "User wants to contact another user about an item"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "this guy asked me to pay outside the app by zelle and the listing photos are from the internet"},
+      {"gold": "d", "ctx": [], "msg": "sold three books last week, when do I see the money"},
+      {"gold": "c", "ctx": [["a", "Welcome to PageTurn! How can I help?"]], "msg": "I'm cleaning out my shelves and want to sell about 60 paperbacks, how does it work"},
+      {"gold": "b", "ctx": [["u", "I got my order"], ["a", "Great! How does it look?"]], "msg": "the book is soaked and the cover is peeling, the listing said like new"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f"], "ctx": [], "msg": "where is my package, it was supposed to arrive monday"}
+    ]
+  },
+  {
+    "id": "hoa_assistant", "domain": "real_estate",
+    "node": {"name": "hoa_assistant", "description": "Decide what the resident needs from the homeowners association."},
+    "conditions": {
+      "a": "Resident wants to report a rule violation or neighbour issue",
+      "b": "Resident wants approval for an exterior change such as paint or a fence",
+      "c": "Resident wants to pay or ask about HOA dues",
+      "d": "Resident wants to reserve the clubhouse or pool",
+      "e": "Resident asks for HOA documents such as bylaws or meeting minutes"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "we want to paint the front door dark green, do we need permission"},
+      {"gold": "a", "ctx": [], "msg": "the house next door has had a trailer parked on the street for a month"},
+      {"gold": "d", "ctx": [["a", "Hi neighbor! How can I help?"]], "msg": "my daughter's birthday is on the 12th and I'd love to use the pool area"},
+      {"gold": "e", "ctx": [["u", "I'm thinking of buying in your community"], ["a", "Great! What would you like to know?"]], "msg": "could I see the rules and the last few board meeting notes"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "what's a good recipe for banana bread"}
+    ]
+  }
+]

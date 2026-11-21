@@ -1,0 +1,222 @@
+[
+  {
+    "id": "mobile_carrier", "domain": "telecom",
+    "node": {"name": "mobile_support_router", "description": "Route the subscriber's request to the right support flow."},
+    "conditions": {
+      "a": "Change or upgrade the mobile plan",
+      "b": "Report no signal or poor mobile data speed",
+      "c": "Activate or order a new SIM card or eSIM",
+      "d": "Explain unexpected charges on the monthly bill",
+      "e": "Set up international roaming for a trip",
+      "f": "Transfer the phone number from another carrier"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "heading to Japan next Tuesday for two weeks, will my phone work there without bankrupting me"},
+      {"gold": "b", "ctx": [["a", "Hi, thanks for contacting Orbit Mobile. How can I help?"]], "msg": "everything loads at dial-up speed since yesterday, even on 5G"},
+      {"gold": "c", "ctx": [["u", "I just got a new phone"], ["a", "Nice! Is there something you need for it?"]], "msg": "yes, it only takes the digital one, there's no tray"},
+      {"gold": "d", "ctx": [], "msg": "why is there a $12 charge labeled 'premium sms' on my bill, I never texted anything"},
+      {"gold": null, "nm": "sibling_removed", "intent": "f", "cands": ["a", "b", "c", "d", "e"], "ctx": [], "msg": "I want to bring my old number over from Verizon"}
+    ]
+  },
+  {
+    "id": "public_library", "domain": "library",
+    "node": {"name": "library_assistant", "description": "Understand what the library patron needs."},
+    "conditions": {
+      "a": "Patron wants to renew a borrowed book",
+      "b": "Patron wants to reserve or place a hold on an item that is currently checked out",
+      "c": "Patron asks whether the library owns a particular title",
+      "d": "Patron wants to book a study room or meeting space",
+      "e": "Patron wants to pay an overdue fine or get a fine waived"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "I'm only halfway through the Dune book, can I keep it another couple weeks?"},
+      {"gold": "b", "ctx": [["a", "Welcome to the Eastside Library chat. What can I do for you?"]], "msg": "someone already has the new Tana French and I want to be next in line"},
+      {"gold": "d", "ctx": [["u", "hi"], ["a", "Hello! How can I help?"]], "msg": "we're a group of six and need somewhere quiet to work on a project saturday afternoon"},
+      {"gold": "c", "ctx": [], "msg": "do you carry any books on beekeeping?"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "what's the best way to cook a steak without a grill"}
+    ]
+  },
+  {
+    "id": "careers_portal", "domain": "recruiting",
+    "node": {"name": "careers_portal_assistant", "description": "Identify what the job applicant is asking about."},
+    "conditions": {
+      "a": "Applicant asks about the status of their application",
+      "b": "Applicant wants to withdraw their application",
+      "c": "Applicant wants to reschedule a scheduled interview",
+      "d": "Applicant asks about the salary range or benefits for a role"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "my flight got moved and I can't make the 2pm panel on Wednesday, any chance of another slot?"},
+      {"gold": "a", "ctx": [["a", "Hi, I'm the Brightwave careers assistant."]], "msg": "applied for the data engineer role three weeks ago and haven't heard anything"},
+      {"gold": "b", "ctx": [["u", "quick question about my application"], ["a", "Of course, go ahead."]], "msg": "I accepted another offer so please take me out of the process"},
+      {"gold": "d", "ctx": [], "msg": "do you disclose what the range is for senior product designer? the posting doesn't say"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you sponsor work visas for people outside the country?"}
+    ]
+  },
+  {
+    "id": "tax_prep", "domain": "finance_services",
+    "node": {"name": "tax_prep_intake", "description": "Decide what the client needs from the tax preparation service."},
+    "conditions": {
+      "a": "Client wants to start filing their annual tax return",
+      "b": "Client wants to know the status of a submitted return or refund",
+      "c": "Client needs help with a notice or letter from the tax authority",
+      "d": "Client wants to amend a return that was already filed",
+      "e": "Client wants to upload tax documents such as W-2s or receipts",
+      "f": "Client asks about filing deadlines or extensions",
+      "g": "Client wants to schedule a call with a tax advisor"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "I got this letter from the IRS saying I owe 1,300 and I don't understand why"},
+      {"gold": "d", "ctx": [], "msg": "turns out I forgot to include my freelance income on my 2022 filing, can we fix it"},
+      {"gold": "b", "ctx": [["a", "Hello! You've reached QuickTax support."]], "msg": "it's been 5 weeks since you e-filed and no refund yet"},
+      {"gold": "f", "ctx": [["u", "I'm so behind on all this"], ["a", "No worries, we can help. What's on your mind?"]], "msg": "is there a way to get more time before the end of April"},
+      {"gold": null, "nm": "sibling_removed", "intent": "g", "cands": ["a", "b", "c", "d", "e", "f"], "ctx": [], "msg": "can I book 30 minutes with someone to go over my deductions as a freelancer?"}
+    ]
+  },
+  {
+    "id": "coworking_space", "domain": "workspace",
+    "node": {"name": "coworking_concierge", "description": "Decide what the coworking member needs from the front desk."},
+    "conditions": {
+      "a": "Member wants to book a meeting room",
+      "b": "Member wants a guest pass or to register a visitor",
+      "c": "Member reports a facilities problem such as heating, noise or cleanliness",
+      "d": "Member asks about changing or ending their membership plan",
+      "e": "Member asks about printing, mail or package handling"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "a package from Amazon was supposed to come for me today, did the front desk get it?"},
+      {"gold": "a", "ctx": [], "msg": "need a room for 8 people tomorrow at 10 with a screen"},
+      {"gold": "b", "ctx": [["a", "Hey! Concierge bot here, how can I help?"]], "msg": "my client is coming by at 3 and I need to get her in the door"},
+      {"gold": "c", "ctx": [["u", "hi"], ["a", "Hi! What do you need?"]], "msg": "it's freezing on the third floor and the heater is making a clicking noise"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "is there a quiet room where I can take a nap during lunch?"}
+    ]
+  },
+  {
+    "id": "language_school", "domain": "education",
+    "node": {"name": "school_enquiries", "description": "Work out what the student or prospective student is asking about."},
+    "conditions": {
+      "a": "Prospective student wants to sign up for a language course",
+      "b": "Student wants a refund or credit for a missed class",
+      "c": "Prospective student wants to take a placement test to find their level",
+      "d": "Student asks for a certificate or proof of attendance",
+      "e": "Student wants to switch to a different class time or teacher",
+      "f": "Student asks about group discounts or payment installments"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "I studied Spanish in high school ten years ago, no idea where I'd fit in"},
+      {"gold": "e", "ctx": [], "msg": "the Tuesday evening slot clashes with my new shift, anything on Thursdays?"},
+      {"gold": "d", "ctx": [["a", "Hi, welcome to Lingua Lab!"]], "msg": "my visa office needs a letter showing I've been attending"},
+      {"gold": "f", "ctx": [["u", "my friend and I both want to join the French course"], ["a", "Great! Would you like to enroll both of you?"]], "msg": "maybe, depends if there's a deal for two people"},
+      {"gold": null, "nm": "sibling_removed", "intent": "b", "cands": ["a", "c", "d", "e", "f"], "ctx": [], "msg": "I was sick last week and missed two lessons, can I get my money back for them?"}
+    ]
+  },
+  {
+    "id": "moving_company", "domain": "logistics",
+    "node": {"name": "moving_quote_assistant", "description": "Decide what the customer wants from the moving company."},
+    "conditions": {
+      "a": "Customer wants a price estimate for a move",
+      "b": "Customer wants to book or confirm a moving date",
+      "c": "Customer wants to add packing services or boxes",
+      "d": "Customer wants to report damaged or missing items after a move",
+      "e": "Customer wants to track where their shipment is during a long-distance move"
+    },
+    "examples": [
+      {"gold": "d", "ctx": [], "msg": "the movers chipped the corner of my dining table and one of the lamp boxes never arrived"},
+      {"gold": "a", "ctx": [], "msg": "how much for a 2 bedroom across town, about 20 miles?"},
+      {"gold": "e", "ctx": [], "msg": "our stuff left Chicago Monday and was supposed to reach Denver by now"},
+      {"gold": "c", "ctx": [["a", "MoveEasy here! What can I do for you?"]], "msg": "we hate packing, can your guys wrap the kitchen stuff too?"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "any idea which Denver neighborhoods are good for young families?"}
+    ]
+  },
+  {
+    "id": "charity_donations", "domain": "nonprofit",
+    "node": {"name": "donor_help", "description": "Find out what the donor or supporter wants."},
+    "conditions": {
+      "a": "Donor wants to make a one-time donation",
+      "b": "Donor wants to set up or change a recurring monthly donation",
+      "c": "Donor needs a tax receipt for past donations",
+      "d": "Person wants to volunteer"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "I'd like to give 25 a month instead of the 10 I'm doing now"},
+      {"gold": "c", "ctx": [], "msg": "need something for my accountant showing everything I gave in 2023"},
+      {"gold": "a", "ctx": [["a", "Thank you for supporting Clean Rivers! How can I help?"]], "msg": "I want to chip in 100 bucks after reading about the flood"},
+      {"gold": "d", "ctx": [["u", "I love what you do"], ["a", "Thank you! Is there a way you'd like to get involved?"]], "msg": "I've got weekends free and a pickup truck"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "how much of my donation actually goes to the flood victims versus admin costs?"}
+    ]
+  },
+  {
+    "id": "online_pharmacy", "domain": "healthcare",
+    "node": {"name": "pharmacy_assistant", "description": "Figure out what the pharmacy customer needs."},
+    "conditions": {
+      "a": "Customer wants to refill a prescription",
+      "b": "Customer wants to transfer a prescription from another pharmacy",
+      "c": "Customer asks whether a medication has side effects or interacts with other drugs",
+      "d": "Customer wants to track a prescription delivery",
+      "e": "Customer asks whether a medication is covered by their insurance",
+      "f": "Customer wants to speak with a pharmacist"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "my doctor sends everything to CVS but I'd rather you guys handle it going forward"},
+      {"gold": "c", "ctx": [], "msg": "can I take ibuprofen while I'm on lisinopril?"},
+      {"gold": "d", "ctx": [["a", "Hello, I'm the pharmacy virtual assistant."]], "msg": "my insulin was supposed to be at my door yesterday"},
+      {"gold": "e", "ctx": [["u", "I just got prescribed something new"], ["a", "I can help with that. What's the medication?"]], "msg": "it's called Jardiance, will my plan pay for it or is it going to be crazy expensive"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f"], "ctx": [], "msg": "I'm out of my metformin, can you send another 90 days?"}
+    ]
+  },
+  {
+    "id": "photo_studio", "domain": "creative_services",
+    "node": {"name": "studio_booking_assistant", "description": "Decide what the photography client wants."},
+    "conditions": {
+      "a": "Client wants to book a photo session",
+      "b": "Client wants to know pricing and packages",
+      "c": "Client wants to receive or download their edited photos",
+      "d": "Client wants to reschedule a booked session",
+      "e": "Client asks about print or album orders"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "it's been 3 weeks since our wedding shoot, where are the pictures?"},
+      {"gold": "a", "ctx": [], "msg": "we want newborn photos in about a month, are there openings?"},
+      {"gold": "b", "ctx": [["a", "Hi! Welcome to Lumen Studio."]], "msg": "what do you charge for a family session of 5 people"},
+      {"gold": "e", "ctx": [["u", "we got the gallery link, they're gorgeous"], ["a", "So glad you love them! Anything else I can help with?"]], "msg": "yes, my mom wants a big canvas of the one on the beach"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you also shoot drone footage for real estate listings?"}
+    ]
+  },
+  {
+    "id": "dry_cleaner", "domain": "local_services",
+    "node": {"name": "cleaners_front_desk", "description": "Decide what the customer of the dry cleaner wants."},
+    "conditions": {
+      "a": "Customer wants to schedule a pickup or delivery of garments",
+      "b": "Customer asks about the status or readiness of their order",
+      "c": "Customer reports a damaged or lost garment",
+      "d": "Customer asks about prices or special services such as wedding dress cleaning"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "my wool coat came back with a big stain that wasn't there before and one button is missing"},
+      {"gold": "a", "ctx": [], "msg": "can someone grab my stuff from the front porch tomorrow morning"},
+      {"gold": "b", "ctx": [["a", "Hi from Fresh Press!"]], "msg": "is my suit done? I need it for a funeral on friday"},
+      {"gold": "d", "ctx": [], "msg": "how much to clean a silk wedding dress?"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you know a good tailor for hemming pants?"}
+    ]
+  },
+  {
+    "id": "bike_shop", "domain": "retail",
+    "node": {"name": "bike_shop_assistant", "description": "Decide what the bike shop customer is asking for."},
+    "conditions": {
+      "a": "Customer wants to book a bike repair or tune-up",
+      "b": "Customer asks if a specific bike or part is in stock",
+      "c": "Customer wants to know the status of a bike left for repair",
+      "d": "Customer wants to return or exchange a purchased item",
+      "e": "Customer asks which bike model or size suits them",
+      "f": "Customer asks about group rides or events",
+      "g": "Customer asks about warranty coverage"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "I'm 5ft4 and mostly commute 6 miles, hybrid or gravel?"},
+      {"gold": "g", "ctx": [], "msg": "the carbon fork cracked after 8 months, is that covered?"},
+      {"gold": "b", "ctx": [["a", "Hi, this is Spoke & Wheel."]], "msg": "got any 700x32 tubes on the shelf right now"},
+      {"gold": "f", "ctx": [["u", "I'm new in town"], ["a", "Welcome! What are you looking for?"]], "msg": "hoping to meet people to ride with on weekends"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f", "g"], "ctx": [], "msg": "my chain keeps skipping, can I drop it off thursday?"}
+    ]
+  }
+]

@@ -1,0 +1,234 @@
+[
+  {
+    "id": "sales_crm", "domain": "sales_ops",
+    "node": {"name": "sales_assistant", "description": "Interpret what the sales rep is asking the CRM assistant to do."},
+    "conditions": {
+      "a": "Create a new lead or contact in the CRM",
+      "b": "Update the stage or close date of an existing deal",
+      "c": "Pull a report on pipeline or quota attainment",
+      "d": "Log a call, email or meeting against an account",
+      "e": "Find the owner or the last activity for an account",
+      "f": "Generate a quote or proposal document"
+    },
+    "examples": [
+      {"gold": "d", "ctx": [], "msg": "just got off a call with Acme, they want to see pricing next week, make a note of that"},
+      {"gold": "b", "ctx": [], "msg": "Globex signed verbally, move it to closed won and set the date for the 30th"},
+      {"gold": "c", "ctx": [["a", "Hi Dana, what can I do for you in the CRM?"]], "msg": "how far am I from quota this quarter?"},
+      {"gold": "e", "ctx": [["u", "I'm about to email someone at Initech"], ["a", "Want me to look anything up first?"]], "msg": "who on our side owns that account and when did anyone last talk to them"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f"], "ctx": [], "msg": "add Maria Lopez from Contoso, she's their new CTO, maria@contoso.com"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "what's the weather going to be like in Austin on friday"}
+    ]
+  },
+  {
+    "id": "oncall_triage", "domain": "devops",
+    "node": {"name": "oncall_triage", "description": "Classify the alert or request that arrives in the on-call channel."},
+    "conditions": {
+      "a": "A production service is down or returning errors",
+      "b": "Request to deploy or roll back a release",
+      "c": "Performance degradation such as high latency or CPU",
+      "d": "Request for access, credentials or permissions",
+      "e": "Question about how to configure or use the infrastructure"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "checkout API is throwing 500s for like 30% of requests since 14:10"},
+      {"gold": "c", "ctx": [], "msg": "p95 on search went from 200ms to 2s after lunch, error rate looks fine though"},
+      {"gold": "b", "ctx": [["a", "Oncall bot online. What do you need?"]], "msg": "the 4.2 release is borked, can we go back to 4.1?"},
+      {"gold": "d", "ctx": [["u", "I just joined the payments team"], ["a", "Welcome! Need anything to get started?"]], "msg": "yeah I can't see the prod dashboards or run kubectl"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "we need to budget for next year's cloud spend, who do I talk to"}
+    ]
+  },
+  {
+    "id": "warehouse_ops", "domain": "logistics",
+    "node": {"name": "warehouse_assistant", "description": "Understand what the warehouse operator is asking for."},
+    "conditions": {
+      "a": "Check the stock level of an item or SKU",
+      "b": "Report damaged or defective inventory",
+      "c": "Create or update an outbound shipment",
+      "d": "Record receipt of an inbound delivery",
+      "e": "Request a cycle count or inventory audit",
+      "f": "Report a safety incident or hazard"
+    },
+    "examples": [
+      {"gold": "d", "ctx": [], "msg": "truck 22 just arrived with 14 pallets from the Shenzhen order, doors 3 and 4"},
+      {"gold": "b", "ctx": [], "msg": "found a whole pallet of monitors with crushed corners in aisle 9"},
+      {"gold": "a", "ctx": [["a", "Warehouse assistant here."]], "msg": "how many of SKU 44019 are left on the floor"},
+      {"gold": "f", "ctx": [["u", "heads up"], ["a", "Go ahead, I'm listening."]], "msg": "there's oil all over the floor near dock 2, forklifts are sliding"},
+      {"gold": null, "nm": "sibling_removed", "intent": "c", "cands": ["a", "b", "d", "e", "f"], "ctx": [], "msg": "customer called, they need the 40 units on order 7781 to go out by air today"}
+    ]
+  },
+  {
+    "id": "cloud_support", "domain": "cloud",
+    "node": {"name": "cloud_support_router", "description": "Classify the customer's cloud support request."},
+    "conditions": {
+      "a": "Billing question or unexpected cloud charges",
+      "b": "Request to increase a quota or service limit",
+      "c": "Report an outage or service disruption",
+      "d": "Help configuring networking, VPCs or firewall rules",
+      "e": "Help with identity, roles and access policies",
+      "f": "Request to migrate workloads to the cloud",
+      "g": "Security incident or suspected breach",
+      "h": "Question about data backup and disaster recovery"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "we keep hitting the limit of 20 GPUs in us-east, need that raised for a training run"},
+      {"gold": "e", "ctx": [], "msg": "a contractor should only be able to read from one bucket, how do I lock that down"},
+      {"gold": "g", "ctx": [["a", "Cloud support assistant, how can I help?"]], "msg": "someone spun up 40 instances in a region we never use and I think our keys leaked"},
+      {"gold": "h", "ctx": [["u", "we had a scare last week with a deleted database"], ["a", "I'm sorry to hear that. What would you like to do?"]], "msg": "want to make sure we can restore to any point in the last month"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f", "g", "h"], "ctx": [], "msg": "our bill doubled this month and I don't know why"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "can you recommend a good Kubernetes course for the team"}
+    ]
+  },
+  {
+    "id": "procurement_desk", "domain": "procurement",
+    "node": {"name": "procurement_helper", "description": "Decide what the employee needs from procurement."},
+    "conditions": {
+      "a": "Start a purchase request for goods or services",
+      "b": "Check the approval status of an existing purchase order",
+      "c": "Onboard or look up an approved vendor",
+      "d": "Report a problem with a delivered order or an invoice mismatch",
+      "e": "Ask about the purchasing policy or spending limits"
+    },
+    "examples": [
+      {"gold": "e", "ctx": [], "msg": "can I buy a 3k monitor arm set without director sign off?"},
+      {"gold": "a", "ctx": [], "msg": "need 10 ergonomic chairs for the new office"},
+      {"gold": "b", "ctx": [["a", "Procurement desk. What do you need?"]], "msg": "PO 55120 has been sitting for a week, is someone supposed to approve it"},
+      {"gold": "d", "ctx": [["u", "we got the shipment from Dell yesterday"], ["a", "Great. Is there an issue with it?"]], "msg": "they billed for 30 laptops but only 24 were in the boxes"},
+      {"gold": null, "nm": "sibling_removed", "intent": "c", "cands": ["a", "b", "d", "e"], "ctx": [], "msg": "we want to work with a new catering company, how do we get them approved"}
+    ]
+  },
+  {
+    "id": "legal_intake", "domain": "legal",
+    "node": {"name": "legal_intake_assistant", "description": "Route the internal request to the correct legal team."},
+    "conditions": {
+      "a": "Review or draft a contract or NDA",
+      "b": "Question about trademarks, patents or other intellectual property",
+      "c": "Employment or HR legal matter",
+      "d": "Data privacy or compliance question, for example GDPR",
+      "e": "Respond to a legal notice, subpoena or lawsuit",
+      "f": "Approve a marketing claim or public statement for legal risk"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "a vendor sent over their MSA and wants it signed by Friday"},
+      {"gold": "d", "ctx": [], "msg": "can we store EU customer emails in our US data center?"},
+      {"gold": "e", "ctx": [["a", "Legal intake bot. What's this about?"]], "msg": "a process server just handed me a lawsuit with our company name on it"},
+      {"gold": "f", "ctx": [["u", "marketing wants to run a campaign"], ["a", "Do you need legal's input on it?"]], "msg": "yes, they're saying we're 'the safest option on the market', is that ok to say"},
+      {"gold": "b", "ctx": [], "msg": "can we trademark the product name Lumos or is it already taken"},
+      {"gold": null, "nm": "sibling_removed", "intent": "c", "cands": ["a", "b", "d", "e", "f"], "ctx": [], "msg": "we need to let a contractor go in the middle of a project, what are the rules"}
+    ]
+  },
+  {
+    "id": "security_ops", "domain": "security",
+    "node": {"name": "secops_intake", "description": "Classify the report that came in to the security team."},
+    "conditions": {
+      "a": "Phishing or suspicious email, call or message",
+      "b": "Lost or stolen device",
+      "c": "Request for a security review of a new tool or vendor",
+      "d": "Vulnerability discovered in company software",
+      "e": "Request to reset multi-factor authentication"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "left my work laptop in an uber about an hour ago"},
+      {"gold": "e", "ctx": [], "msg": "got a new phone and now I can't get the authenticator codes"},
+      {"gold": "d", "ctx": [["a", "Security team here, what's up?"]], "msg": "pretty sure the login endpoint on the partner portal lets you enumerate usernames"},
+      {"gold": "c", "ctx": [["u", "design wants to start using a new tool"], ["a", "Which tool is it?"]], "msg": "a plugin that uploads our design files to some third-party AI service, is that ok security-wise?"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e"], "ctx": [], "msg": "this guy keeps calling saying he's from microsoft and wants remote access to my pc"}
+    ]
+  },
+  {
+    "id": "marketing_requests", "domain": "marketing",
+    "node": {"name": "marketing_requests", "description": "Route the request to the right marketing workflow."},
+    "conditions": {
+      "a": "Request a new design asset such as a banner or social graphic",
+      "b": "Request a new email campaign or newsletter",
+      "c": "Ask for performance numbers of a campaign",
+      "d": "Request a change to a landing page or website page"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "how did last week's webinar promo do?"},
+      {"gold": "d", "ctx": [], "msg": "the pricing page still shows the old 29 dollar tier, can someone update it"},
+      {"gold": "a", "ctx": [["a", "Hey! Marketing helper here."]], "msg": "need a LinkedIn banner for the product launch next Thursday"},
+      {"gold": "b", "ctx": [["u", "we're announcing the new feature"], ["a", "Exciting! How are you planning to announce it?"]], "msg": "a blast to everybody on the customer list"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "can you book me a table for 4 at a nice place near the office tonight"}
+    ]
+  },
+  {
+    "id": "customer_success", "domain": "customer_success",
+    "node": {"name": "cs_assistant", "description": "Understand what the customer success manager wants."},
+    "conditions": {
+      "a": "Prepare a renewal summary for an account",
+      "b": "Flag an account as at risk of churning",
+      "c": "Schedule a quarterly business review",
+      "d": "Look up support tickets for an account",
+      "e": "Share product usage metrics for an account",
+      "f": "Request an executive sponsor for an escalation"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "Hooli's champion left and they stopped logging in, I'm worried we lose them"},
+      {"gold": "e", "ctx": [], "msg": "how many weekly active users does Pied Piper have compared with last quarter"},
+      {"gold": "c", "ctx": [["a", "Hi! What can I do for you today?"]], "msg": "let's get 45 minutes on the calendar with Stark Industries in the first week of March to go over results"},
+      {"gold": "a", "ctx": [["u", "Umbrella renews on April 1st"], ["a", "Got it. How can I help with that account?"]], "msg": "I need a one pager for their finance team before the call"},
+      {"gold": null, "nm": "sibling_removed", "intent": "d", "cands": ["a", "b", "c", "e", "f"], "ctx": [], "msg": "show me everything the support team has open for Wayne Enterprises"}
+    ]
+  },
+  {
+    "id": "office_facilities", "domain": "facilities",
+    "node": {"name": "office_facilities", "description": "Work out what the employee needs from the facilities team."},
+    "conditions": {
+      "a": "Book a desk or a parking spot",
+      "b": "Report a broken fixture, light or climate problem",
+      "c": "Request a new badge or building access",
+      "d": "Order catering or event setup",
+      "e": "Request ergonomic equipment or a standing desk"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "I lost my keycard and I'm locked out of the 5th floor"},
+      {"gold": "a", "ctx": [], "msg": "I'm in on thursday, any desks left near the window?"},
+      {"gold": "d", "ctx": [["a", "Facilities assistant. How can I help?"]], "msg": "we're hosting 25 people for a lunch workshop on the 18th"},
+      {"gold": "b", "ctx": [["u", "it's been a long day"], ["a", "Anything I can do to help?"]], "msg": "the lights in meeting room Orca keep flickering and it's giving me a headache"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "can I bring my dog to the office on fridays?"}
+    ]
+  },
+  {
+    "id": "expense_management", "domain": "finance_internal",
+    "node": {"name": "expense_assistant", "description": "Decide what the employee needs regarding expenses and travel."},
+    "conditions": {
+      "a": "Submit a new expense report",
+      "b": "Check the status of a reimbursement",
+      "c": "Ask whether an expense is allowed under company policy",
+      "d": "Request a corporate card or a higher card limit",
+      "e": "Dispute or correct a rejected expense",
+      "f": "Book business travel"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "can I expense a coworking day pass while I'm travelling for the client?"},
+      {"gold": "e", "ctx": [], "msg": "my dinner receipt got rejected because the vat number was missing but I have the invoice now"},
+      {"gold": "b", "ctx": [["a", "Expense assistant ready."]], "msg": "when will the 380 for the conference hit my account?"},
+      {"gold": "d", "ctx": [["u", "I travel a lot for work next quarter"], ["a", "Sounds busy! Anything I can set up for you?"]], "msg": "I'd like to stop paying out of pocket, can I get a company card"},
+      {"gold": "a", "ctx": [], "msg": "just got back from Berlin with a stack of receipts to submit"},
+      {"gold": null, "nm": "sibling_removed", "intent": "f", "cands": ["a", "b", "c", "d", "e"], "ctx": [], "msg": "I need a flight to Berlin on March 3rd, coming back on the 7th"}
+    ]
+  },
+  {
+    "id": "new_hire_onboarding", "domain": "hr",
+    "node": {"name": "new_hire_assistant", "description": "Help new employees with onboarding questions."},
+    "conditions": {
+      "a": "Complete tax and payroll forms",
+      "b": "Get a laptop and accounts set up",
+      "c": "Learn about health insurance and benefits enrollment",
+      "d": "Find out who the manager and team members are",
+      "e": "Sign up for orientation sessions or product training",
+      "f": "Ask about the dress code or office rules",
+      "g": "Request remote work or flexible hours",
+      "h": "Get a parking pass or commuter benefit",
+      "i": "Report a problem or delay with onboarding"
+    },
+    "examples": [
+      {"gold": "h", "ctx": [], "msg": "I'll be driving in from the suburbs, is there somewhere I can leave my car"},
+      {"gold": "c", "ctx": [], "msg": "when do I have to pick a health plan by?"},
+      {"gold": "g", "ctx": [["a", "Welcome aboard! How can I help?"]], "msg": "my kids' school starts at 9, can I come in a bit later a few days a week?"},
+      {"gold": "b", "ctx": [["u", "it's my third day"], ["a", "How is it going so far?"]], "msg": "good but I still can't get into Slack or the repo"},
+      {"gold": "a", "ctx": [], "msg": "HR said I need to fill out a W-4 and direct deposit thing before payday"},
+      {"gold": null, "nm": "sibling_removed", "intent": "e", "cands": ["a", "b", "c", "d", "f", "g", "h", "i"], "ctx": [], "msg": "is there some kind of training on our product that I should sign up for"}
+    ]
+  }
+]

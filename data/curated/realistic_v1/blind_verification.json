@@ -1,0 +1,5853 @@
+{
+ "examples": {
+  "rl_appliance_repair_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Get a repair price estimate"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Get a repair price estimate"
+    }
+   },
+   "verified_sha": "4b3f5afb1904d55f"
+  },
+  "rl_appliance_repair_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule a repair visit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Schedule a repair visit"
+    }
+   },
+   "verified_sha": "a6aa7a0fe0a89cf1"
+  },
+  "rl_appliance_repair_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check warranty status"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Check warranty status"
+    }
+   },
+   "verified_sha": "e8ee60319a18a013"
+  },
+  "rl_appliance_repair_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reschedule or cancel a repair visit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Reschedule or cancel a repair visit"
+    }
+   },
+   "verified_sha": "14e955342b7ec254"
+  },
+  "rl_appliance_repair_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "selling appliances not handled",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "38dec2d1738d3b47"
+  },
+  "rl_auto_claims_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to file a new claim for a recent accident or damage"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to file a new claim for a recent accident or damage"
+    }
+   },
+   "verified_sha": "ff2070a89a0d7952"
+  },
+  "rl_auto_claims_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to check the status of a claim they already filed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to check the status of a claim they already filed"
+    }
+   },
+   "verified_sha": "2c7f7342f83f5d21"
+  },
+  "rl_auto_claims_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to upload photos or documents for an existing claim"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to upload photos or documents for an existing claim"
+    }
+   },
+   "verified_sha": "eaaeff68d62cc360"
+  },
+  "rl_auto_claims_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to dispute the amount offered in a claim settlement"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to dispute the amount offered in a claim settlement"
+    }
+   },
+   "verified_sha": "83077ef1822cbe70"
+  },
+  "rl_auto_claims_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Policy cancellation not a claims step",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "6f96d19415aa44dc"
+  },
+  "rl_auto_garage_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to book a tire change or wheel alignment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to book a tire change or wheel alignment"
+    }
+   },
+   "verified_sha": "3b4cae01f1bc1444"
+  },
+  "rl_auto_garage_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer describes a problem with the car and wants it diagnosed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer describes a problem with the car and wants it diagnosed"
+    }
+   },
+   "verified_sha": "856ab6ded85acbe5"
+  },
+  "rl_auto_garage_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to know if their car is ready for pickup"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to know if their car is ready for pickup"
+    }
+   },
+   "verified_sha": "80b1106dc8aff848"
+  },
+  "rl_auto_garage_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants a price quote for a repair"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants a price quote for a repair"
+    }
+   },
+   "verified_sha": "2dd8b422f176fbf2"
+  },
+  "rl_auto_garage_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "used car sales not handled",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "c2a79dfedfa9d321"
+  },
+  "rl_bike_shop_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks which bike model or size suits them"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks which bike model or size suits them"
+    }
+   },
+   "verified_sha": "b808e09143c6a628"
+  },
+  "rl_bike_shop_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks about warranty coverage"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks about warranty coverage"
+    }
+   },
+   "verified_sha": "3f1aa68a580d2097"
+  },
+  "rl_bike_shop_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks if a specific bike or part is in stock"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks if a specific bike or part is in stock"
+    }
+   },
+   "verified_sha": "567a4c686a28bf53"
+  },
+  "rl_bike_shop_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks about group rides or events"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks about group rides or events"
+    }
+   },
+   "verified_sha": "4769c31eca00e408"
+  },
+  "rl_bike_shop_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "book repair branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "368e1eb7c468d120"
+  },
+  "rl_book_marketplace_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User wants to report a scam or suspicious listing"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "User wants to report a scam or suspicious listing"
+    }
+   },
+   "verified_sha": "bbd863b07b64be3a"
+  },
+  "rl_book_marketplace_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Seller wants to receive a payout"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Seller wants to receive a payout"
+    }
+   },
+   "verified_sha": "a05c624cd4bef0b2"
+  },
+  "rl_book_marketplace_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Seller wants to list an item for sale"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Seller wants to list an item for sale"
+    }
+   },
+   "verified_sha": "a7a20845c1609cda"
+  },
+  "rl_book_marketplace_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Buyer wants to return an item or report it as not as described"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Buyer wants to return an item or report it as not as described"
+    }
+   },
+   "verified_sha": "260202d3d80ee50f"
+  },
+  "rl_book_marketplace_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Order tracking not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "adefeb379ac60fd8"
+  },
+  "rl_cancel_confirmation_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer confirms the cancellation"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer confirms the cancellation"
+    }
+   },
+   "verified_sha": "b58a7aa933954731"
+  },
+  "rl_cancel_confirmation_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer changes their mind and wants to keep the order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer changes their mind and wants to keep the order"
+    }
+   },
+   "verified_sha": "245a496e551001b2"
+  },
+  "rl_cancel_confirmation_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks a question before deciding"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks a question before deciding"
+    }
+   },
+   "verified_sha": "e3e22d58dfa30fdc"
+  },
+  "rl_cancel_confirmation_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks a question before deciding"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks a question before deciding"
+    }
+   },
+   "verified_sha": "9b1d66a4b7b429e2"
+  },
+  "rl_cancel_confirmation_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer confirms the cancellation"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer confirms the cancellation"
+    }
+   },
+   "verified_sha": "78a636236096c847"
+  },
+  "rl_cancel_confirmation_05": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Off-topic remark unrelated to the cancellation confirmation.",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic remark, no answer to the cancellation question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "bb2520776ed576c8"
+  },
+  "rl_car_voice_assistant_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Call or message a contact"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Call or message a contact"
+    }
+   },
+   "verified_sha": "a36dab588502502c"
+  },
+  "rl_car_voice_assistant_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Navigate to a place"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Navigate to a place"
+    }
+   },
+   "verified_sha": "776663f33757b735"
+  },
+  "rl_car_voice_assistant_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Play music or a podcast"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Play music or a podcast"
+    }
+   },
+   "verified_sha": "163042ec0c720b2e"
+  },
+  "rl_car_voice_assistant_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Navigate to a place"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Navigate to a place"
+    }
+   },
+   "verified_sha": "d78f9e01628d2f85"
+  },
+  "rl_car_voice_assistant_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "general knowledge not supported",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e529254e661d4a73"
+  },
+  "rl_car_voice_assistant_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "climate control not supported",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "71894e075de13b65"
+  },
+  "rl_careers_portal_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Applicant wants to reschedule a scheduled interview"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Applicant wants to reschedule a scheduled interview"
+    }
+   },
+   "verified_sha": "be0d48dd8818aaa7"
+  },
+  "rl_careers_portal_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Applicant asks about the status of their application"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Applicant asks about the status of their application"
+    }
+   },
+   "verified_sha": "bb6b4e8179961c5f"
+  },
+  "rl_careers_portal_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Applicant wants to withdraw their application"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Applicant wants to withdraw their application"
+    }
+   },
+   "verified_sha": "dc85dadff8e8b924"
+  },
+  "rl_careers_portal_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Applicant asks about the salary range or benefits for a role"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Applicant asks about the salary range or benefits for a role"
+    }
+   },
+   "verified_sha": "90694209f51d0a49"
+  },
+  "rl_careers_portal_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Applicant asks about the salary range or benefits for a role",
+     "annotator": "claude-opus",
+     "note": "visa sponsorship not listed; benefits loosely related",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a1c58879b21cbfae"
+  },
+  "rl_charity_donations_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Donor wants to set up or change a recurring monthly donation"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Donor wants to set up or change a recurring monthly donation"
+    }
+   },
+   "verified_sha": "b7f8e38a9498f0b4"
+  },
+  "rl_charity_donations_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Donor needs a tax receipt for past donations"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Donor needs a tax receipt for past donations"
+    }
+   },
+   "verified_sha": "6d07a346e6f24559"
+  },
+  "rl_charity_donations_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Donor wants to make a one-time donation"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Donor wants to make a one-time donation"
+    }
+   },
+   "verified_sha": "c28b1fcc5d8d4f77"
+  },
+  "rl_charity_donations_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Person wants to volunteer"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Person wants to volunteer"
+    }
+   },
+   "verified_sha": "bc84f0afecf07404"
+  },
+  "rl_charity_donations_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "donation allocation question not handled",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "c45948fcb582ec99"
+  },
+  "rl_city_museum_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about accessibility or wheelchair access"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about accessibility or wheelchair access"
+    }
+   },
+   "verified_sha": "33bd1bce4cdbc67e"
+  },
+  "rl_city_museum_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a group or school visit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Book a group or school visit"
+    }
+   },
+   "verified_sha": "2372dc9446c7c9e0"
+  },
+  "rl_city_museum_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about opening hours or current exhibitions"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about opening hours or current exhibitions"
+    }
+   },
+   "verified_sha": "44c058d9cd762428"
+  },
+  "rl_city_museum_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Buy tickets or ask about ticket prices"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Buy tickets or ask about ticket prices"
+    }
+   },
+   "verified_sha": "7a8e319f238faad2"
+  },
+  "rl_city_museum_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Cafe/eating question not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "bf0ec2ead1d96c0f"
+  },
+  "rl_city_museum_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "off-topic train schedule",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "15f2dbd8a159cb8e"
+  },
+  "rl_city_services_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to schedule a bulk waste or recycling pickup"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants to schedule a bulk waste or recycling pickup"
+    }
+   },
+   "verified_sha": "e4fe162b615007ce"
+  },
+  "rl_city_services_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to pay a parking ticket or municipal fine"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants to pay a parking ticket or municipal fine"
+    }
+   },
+   "verified_sha": "dea950e4ef5f2b48"
+  },
+  "rl_city_services_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to apply for a building or renovation permit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants to apply for a building or renovation permit"
+    }
+   },
+   "verified_sha": "072ae2c6d5534e9c"
+  },
+  "rl_city_services_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to report a pothole, broken streetlight or other public issue"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants to report a pothole, broken streetlight or other public issue"
+    }
+   },
+   "verified_sha": "de76dd11f4506b51"
+  },
+  "rl_city_services_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Parking permit renewal not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9bebfd964b7b39f8"
+  },
+  "rl_clinic_desk_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patient wants to reschedule or move an existing appointment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patient wants to reschedule or move an existing appointment"
+    }
+   },
+   "verified_sha": "522db97847b15050"
+  },
+  "rl_clinic_desk_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patient needs a prescription refilled"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patient needs a prescription refilled"
+    }
+   },
+   "verified_sha": "e1636e076f368467"
+  },
+  "rl_clinic_desk_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patient wants to cancel an upcoming appointment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patient wants to cancel an upcoming appointment"
+    }
+   },
+   "verified_sha": "49ca30d285a6aa7a"
+  },
+  "rl_clinic_desk_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patient asks for lab or test results"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patient asks for lab or test results"
+    }
+   },
+   "verified_sha": "84c6e2cabdc947eb"
+  },
+  "rl_clinic_desk_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic weather question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "60cab0be053e2852"
+  },
+  "rl_cloud_support_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request to increase a quota or service limit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request to increase a quota or service limit"
+    }
+   },
+   "verified_sha": "b79f3020964cdb18"
+  },
+  "rl_cloud_support_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Help with identity, roles and access policies"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Help with identity, roles and access policies"
+    }
+   },
+   "verified_sha": "67823f91189ff809"
+  },
+  "rl_cloud_support_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Security incident or suspected breach"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Security incident or suspected breach"
+    }
+   },
+   "verified_sha": "f2fe71920eb09792"
+  },
+  "rl_cloud_support_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Question about data backup and disaster recovery"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Question about data backup and disaster recovery"
+    }
+   },
+   "verified_sha": "80968d7f76a5d2ac"
+  },
+  "rl_cloud_support_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "billing option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Billing question not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "d3c7a845168be79c"
+  },
+  "rl_cloud_support_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "training course recommendation not handled",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "0a33c9f785283e41"
+  },
+  "rl_coworking_space_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member asks about printing, mail or package handling"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member asks about printing, mail or package handling"
+    }
+   },
+   "verified_sha": "4c649460ef1d61c7"
+  },
+  "rl_coworking_space_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member wants to book a meeting room"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member wants to book a meeting room"
+    }
+   },
+   "verified_sha": "329d9159405362ff"
+  },
+  "rl_coworking_space_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member wants a guest pass or to register a visitor"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member wants a guest pass or to register a visitor"
+    }
+   },
+   "verified_sha": "2d4dfcd4696d2a10"
+  },
+  "rl_coworking_space_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member reports a facilities problem such as heating, noise or cleanliness"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member reports a facilities problem such as heating, noise or cleanliness"
+    }
+   },
+   "verified_sha": "a531ef6b09e2764e"
+  },
+  "rl_coworking_space_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Member wants to book a meeting room",
+     "annotator": "claude-opus",
+     "note": "Nap room request; not a meeting room booking",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "72dcd9ca408d1bc2"
+  },
+  "rl_crypto_exchange_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A deposit has not arrived or is missing"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "A deposit has not arrived or is missing"
+    }
+   },
+   "verified_sha": "f903a25d08b0d775"
+  },
+  "rl_crypto_exchange_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User wants to complete identity verification (KYC)"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "User wants to complete identity verification (KYC)"
+    }
+   },
+   "verified_sha": "9bcdb9923ce9d002"
+  },
+  "rl_crypto_exchange_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A withdrawal is pending or delayed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "A withdrawal is pending or delayed"
+    }
+   },
+   "verified_sha": "75a763bf8d99297c"
+  },
+  "rl_crypto_exchange_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User wants tax documents for their transactions"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "User wants tax documents for their transactions"
+    }
+   },
+   "verified_sha": "171c408ccf25a874"
+  },
+  "rl_crypto_exchange_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Investment advice not supported",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9a8e3da2987a797c"
+  },
+  "rl_customer_success_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Flag an account as at risk of churning"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Flag an account as at risk of churning"
+    }
+   },
+   "verified_sha": "ee5180d5ee7822bb"
+  },
+  "rl_customer_success_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Share product usage metrics for an account"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Share product usage metrics for an account"
+    }
+   },
+   "verified_sha": "9f83a8785d67576b"
+  },
+  "rl_customer_success_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule a quarterly business review"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Schedule a quarterly business review"
+    }
+   },
+   "verified_sha": "513f5a9bdba549cc"
+  },
+  "rl_customer_success_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Prepare a renewal summary for an account"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Prepare a renewal summary for an account"
+    }
+   },
+   "verified_sha": "903436ddd5e86d63"
+  },
+  "rl_customer_success_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "support tickets option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Support ticket lookup not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e2deda96786d4e14"
+  },
+  "rl_daycare_desk_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parent reports that the child will be absent or arriving late"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Parent reports that the child will be absent or arriving late"
+    }
+   },
+   "verified_sha": "0cb7b7f550a2c372"
+  },
+  "rl_daycare_desk_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parent asks about the daily schedule, meals or allergies"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Parent asks about the daily schedule, meals or allergies"
+    }
+   },
+   "verified_sha": "288eb868538d5cde"
+  },
+  "rl_daycare_desk_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parent wants to enroll a child or join the waitlist"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Parent wants to enroll a child or join the waitlist"
+    }
+   },
+   "verified_sha": "49edbc5115087cac"
+  },
+  "rl_daycare_desk_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parent wants to discuss a concern about their child's care or behaviour"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Parent wants to discuss a concern about their child's care or behaviour"
+    }
+   },
+   "verified_sha": "c647e5e2f2e58d7d"
+  },
+  "rl_daycare_desk_04": {
+   "passes": {
+    "A": {
+     "alt": "Parent wants to enroll a child or join the waitlist",
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks about camp existence",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Parent wants to enroll a child or join the waitlist",
+     "annotator": "claude-opus",
+     "note": "summer camp not listed; enrollment loosely related",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e9dd110fbab10b80"
+  },
+  "rl_dental_office_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report dental pain or an emergency"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report dental pain or an emergency"
+    }
+   },
+   "verified_sha": "c4da5000956c92ff"
+  },
+  "rl_dental_office_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about the cost or insurance coverage of a treatment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about the cost or insurance coverage of a treatment"
+    }
+   },
+   "verified_sha": "221f2adcfc610310"
+  },
+  "rl_dental_office_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about braces or aligners"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about braces or aligners"
+    }
+   },
+   "verified_sha": "59fda38540a49b4e"
+  },
+  "rl_dental_office_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request dental records or x-rays to be sent elsewhere"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request dental records or x-rays to be sent elsewhere"
+    }
+   },
+   "verified_sha": "35884766942dbf76"
+  },
+  "rl_dental_office_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reschedule or cancel an appointment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Reschedule or cancel an appointment"
+    }
+   },
+   "verified_sha": "33a9b7311be51f60"
+  },
+  "rl_dental_office_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "book cleaning branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "fb572d3d76f6da2b"
+  },
+  "rl_dmv_assistant_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Transfer vehicle ownership"
+    },
+    "B": {
+     "alt": "Register a vehicle or renew its registration",
+     "annotator": "claude-opus",
+     "note": "registration also needed after transfer",
+     "pick": "Transfer vehicle ownership"
+    }
+   },
+   "verified_sha": "707c882444839a02"
+  },
+  "rl_dmv_assistant_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Replace a lost or stolen license or registration"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Replace a lost or stolen license or registration"
+    }
+   },
+   "verified_sha": "e441009eb8ccef23"
+  },
+  "rl_dmv_assistant_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a driving test"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Book a driving test"
+    }
+   },
+   "verified_sha": "7cd447ea6c0b0b4c"
+  },
+  "rl_dmv_assistant_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a change of address"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a change of address"
+    }
+   },
+   "verified_sha": "7ad45cf4f2c20386"
+  },
+  "rl_dmv_assistant_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Register a vehicle or renew its registration"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Register a vehicle or renew its registration"
+    }
+   },
+   "verified_sha": "c652c02b4972089a"
+  },
+  "rl_dmv_assistant_05": {
+   "passes": {
+    "A": {
+     "alt": "Register a vehicle or renew its registration",
+     "annotator": "claude-sonnet-5-5",
+     "note": "license renewal not listed; registration renewal nearby",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Driver license renewal not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "ad6d1406ce3ebc47"
+  },
+  "rl_dry_cleaner_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a damaged or lost garment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer reports a damaged or lost garment"
+    }
+   },
+   "verified_sha": "d31789d04ef47a71"
+  },
+  "rl_dry_cleaner_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to schedule a pickup or delivery of garments"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to schedule a pickup or delivery of garments"
+    }
+   },
+   "verified_sha": "64cc1f781898c4cd"
+  },
+  "rl_dry_cleaner_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks about the status or readiness of their order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks about the status or readiness of their order"
+    }
+   },
+   "verified_sha": "264cce4ac85017b0"
+  },
+  "rl_dry_cleaner_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks about prices or special services such as wedding dress cleaning"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks about prices or special services such as wedding dress cleaning"
+    }
+   },
+   "verified_sha": "82bdfd3f339bfc38"
+  },
+  "rl_dry_cleaner_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "tailor referral not offered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "6f4a0a1e1dc574b2"
+  },
+  "rl_electricity_provider_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to report a power outage"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to report a power outage"
+    }
+   },
+   "verified_sha": "8dc6629ed6e4fdac"
+  },
+  "rl_electricity_provider_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer disputes a high bill or suspects a meter error"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer disputes a high bill or suspects a meter error"
+    }
+   },
+   "verified_sha": "733e9fae23670cb8"
+  },
+  "rl_electricity_provider_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to start or stop service because they are moving"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to start or stop service because they are moving"
+    }
+   },
+   "verified_sha": "e67ffb6112b53db6"
+  },
+  "rl_electricity_provider_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to switch to a different tariff or green energy plan"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to switch to a different tariff or green energy plan"
+    }
+   },
+   "verified_sha": "a35bb6665fe667c7"
+  },
+  "rl_electricity_provider_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "solar inverter maintenance; no repair branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "18f2288f73ad5bea"
+  },
+  "rl_expense_management_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask whether an expense is allowed under company policy"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask whether an expense is allowed under company policy"
+    }
+   },
+   "verified_sha": "4397e417ba36acb6"
+  },
+  "rl_expense_management_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Dispute or correct a rejected expense"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Dispute or correct a rejected expense"
+    }
+   },
+   "verified_sha": "2b87e9933b714442"
+  },
+  "rl_expense_management_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check the status of a reimbursement"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Check the status of a reimbursement"
+    }
+   },
+   "verified_sha": "7c382d1c3714e786"
+  },
+  "rl_expense_management_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a corporate card or a higher card limit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request a corporate card or a higher card limit"
+    }
+   },
+   "verified_sha": "e3b50ebf49d1dd8f"
+  },
+  "rl_expense_management_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Submit a new expense report"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Submit a new expense report"
+    }
+   },
+   "verified_sha": "3f3eebe15066d0c8"
+  },
+  "rl_expense_management_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Booking travel not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b018188b8c53946e"
+  },
+  "rl_feedback_triage_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Compliment or positive feedback"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Compliment or positive feedback"
+    }
+   },
+   "verified_sha": "eb713440454a6a90"
+  },
+  "rl_feedback_triage_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Complaint about a product or service"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Complaint about a product or service"
+    }
+   },
+   "verified_sha": "e418d755ea2101b2"
+  },
+  "rl_feedback_triage_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Suggestion for a new feature"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Suggestion for a new feature"
+    }
+   },
+   "verified_sha": "40518d0873d67ab2"
+  },
+  "rl_feedback_triage_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Complaint about a product or service"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Complaint about a product or service"
+    }
+   },
+   "verified_sha": "aedb2a881fe6bb2d"
+  },
+  "rl_feedback_triage_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Directions request, not feedback",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "cf2da9d2bd7aab92"
+  },
+  "rl_gym_membership_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member wants to freeze or pause their membership"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member wants to freeze or pause their membership"
+    }
+   },
+   "verified_sha": "dc750cecae4996c6"
+  },
+  "rl_gym_membership_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member wants to book a class or personal trainer session"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member wants to book a class or personal trainer session"
+    }
+   },
+   "verified_sha": "558247a46ddfe82f"
+  },
+  "rl_gym_membership_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member reports a problem with a locker, equipment or facilities"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member reports a problem with a locker, equipment or facilities"
+    }
+   },
+   "verified_sha": "70235754b98d2e53"
+  },
+  "rl_gym_membership_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member asks about opening hours or holiday schedule"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Member asks about opening hours or holiday schedule"
+    }
+   },
+   "verified_sha": "de9c0af5869d9f98"
+  },
+  "rl_gym_membership_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "add family member option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Adding family member not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "659d92705c7857ca"
+  },
+  "rl_hoa_assistant_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants approval for an exterior change such as paint or a fence"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants approval for an exterior change such as paint or a fence"
+    }
+   },
+   "verified_sha": "632e27b1821b29be"
+  },
+  "rl_hoa_assistant_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to report a rule violation or neighbour issue"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants to report a rule violation or neighbour issue"
+    }
+   },
+   "verified_sha": "785ae5a754c814ee"
+  },
+  "rl_hoa_assistant_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to reserve the clubhouse or pool"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident wants to reserve the clubhouse or pool"
+    }
+   },
+   "verified_sha": "ea96e6bd94a51420"
+  },
+  "rl_hoa_assistant_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident asks for HOA documents such as bylaws or meeting minutes"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Resident asks for HOA documents such as bylaws or meeting minutes"
+    }
+   },
+   "verified_sha": "ef0f1bf04f26205e"
+  },
+  "rl_hoa_assistant_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic recipe request",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "1b7563c75c0f73f5"
+  },
+  "rl_home_repair_booking_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a plumber"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Book a plumber"
+    }
+   },
+   "verified_sha": "72a492253eb2323a"
+  },
+  "rl_home_repair_booking_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book an HVAC technician for heating or cooling"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Book an HVAC technician for heating or cooling"
+    }
+   },
+   "verified_sha": "a56b5f80ebe58b59"
+  },
+  "rl_home_repair_booking_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Get a quote for a larger renovation project"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Get a quote for a larger renovation project"
+    }
+   },
+   "verified_sha": "5cca4e0983940f1c"
+  },
+  "rl_home_repair_booking_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel or reschedule an existing service visit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Cancel or reschedule an existing service visit"
+    }
+   },
+   "verified_sha": "a2f8061962ca96f9"
+  },
+  "rl_home_repair_booking_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a handyman for small repairs"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Book a handyman for small repairs"
+    }
+   },
+   "verified_sha": "1c5a144393651588"
+  },
+  "rl_home_repair_booking_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Book a handyman for small repairs",
+     "annotator": "claude-opus",
+     "note": "Electrician needed but not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "2412242ce99a06a1"
+  },
+  "rl_hr_requests_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Employee wants to request time off or book vacation days"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Employee wants to request time off or book vacation days"
+    }
+   },
+   "verified_sha": "4988963515a53431"
+  },
+  "rl_hr_requests_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Employee asks how many leave days they have left"
+    },
+    "B": {
+     "alt": "Employee wants to request time off or book vacation days",
+     "annotator": "claude-opus",
+     "note": "checking balance before booking vacation",
+     "pick": "Employee asks how many leave days they have left"
+    }
+   },
+   "verified_sha": "5836bc0c5c14d3e5"
+  },
+  "rl_hr_requests_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Employee is sick and needs to log sick leave"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Employee is sick and needs to log sick leave"
+    }
+   },
+   "verified_sha": "122581ebc8d7562c"
+  },
+  "rl_hr_requests_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Employee wants to download a payslip or tax document"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Employee wants to download a payslip or tax document"
+    }
+   },
+   "verified_sha": "28e10465dd20fa3d"
+  },
+  "rl_hr_requests_04": {
+   "passes": {
+    "A": {
+     "alt": "Employee wants to request time off or book vacation days",
+     "annotator": "claude-sonnet-5-5",
+     "note": "parental leave policy not listed",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Employee wants to request time off or book vacation days",
+     "annotator": "claude-opus",
+     "note": "Parental leave policy not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "eb0be53ad165dcff"
+  },
+  "rl_human_handoff_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks a routine question the assistant can answer"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks a routine question the assistant can answer"
+    }
+   },
+   "verified_sha": "c3a7f9a31ffca00c"
+  },
+  "rl_human_handoff_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks for a human agent or is clearly angry or distressed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks for a human agent or is clearly angry or distressed"
+    }
+   },
+   "verified_sha": "3862a62d5f1fe03a"
+  },
+  "rl_human_handoff_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks for a human agent or is clearly angry or distressed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks for a human agent or is clearly angry or distressed"
+    }
+   },
+   "verified_sha": "cbfb1244ceb248c1"
+  },
+  "rl_human_handoff_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks a routine question the assistant can answer"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks a routine question the assistant can answer"
+    }
+   },
+   "verified_sha": "2ec3d210ddded07a"
+  },
+  "rl_human_handoff_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Gibberish input",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b6e3cac4ea3a80c0"
+  },
+  "rl_intranet_assistant_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Get the cafeteria menu"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Get the cafeteria menu"
+    }
+   },
+   "verified_sha": "b8008dabfd1c553c"
+  },
+  "rl_intranet_assistant_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order office supplies"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Order office supplies"
+    }
+   },
+   "verified_sha": "555a9887d7042cce"
+  },
+  "rl_intranet_assistant_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Find a colleague's contact details"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Find a colleague's contact details"
+    }
+   },
+   "verified_sha": "aa6a68542fc83bfb"
+  },
+  "rl_intranet_assistant_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a bug in an internal tool"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a bug in an internal tool"
+    }
+   },
+   "verified_sha": "446ca8f1222edb7e"
+  },
+  "rl_intranet_assistant_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Find a company policy document"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Find a company policy document"
+    }
+   },
+   "verified_sha": "d2077138e2c1e7fd"
+  },
+  "rl_intranet_assistant_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reset a password"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Reset a password"
+    }
+   },
+   "verified_sha": "0f70aec22f4a2f30"
+  },
+  "rl_intranet_assistant_06": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "expense reimbursement option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "expense reimbursement not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "3284756e81de8612"
+  },
+  "rl_intranet_assistant_07": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "off-topic movie question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "2559e3b24b18109f"
+  },
+  "rl_it_triage_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User received a suspicious email or thinks their account was compromised"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "User received a suspicious email or thinks their account was compromised"
+    }
+   },
+   "verified_sha": "b82fc4b0558dd1aa"
+  },
+  "rl_it_triage_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User has no network, wifi or VPN connectivity"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "User has no network, wifi or VPN connectivity"
+    }
+   },
+   "verified_sha": "a73a535f17d083a2"
+  },
+  "rl_it_triage_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User cannot log in or has forgotten their password"
+    },
+    "B": {
+     "alt": "User received a suspicious email or thinks their account was compromised",
+     "annotator": "claude-opus",
+     "note": "invalid credentials could signal compromise",
+     "pick": "User cannot log in or has forgotten their password"
+    }
+   },
+   "verified_sha": "ca80e507c6657e39"
+  },
+  "rl_it_triage_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "User wants to request a new laptop or other equipment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "User wants to request a new laptop or other equipment"
+    }
+   },
+   "verified_sha": "1a165bf12b8793d8"
+  },
+  "rl_it_triage_04": {
+   "passes": {
+    "A": {
+     "alt": "User wants to request a new laptop or other equipment",
+     "annotator": "claude-sonnet-5-5",
+     "note": "hardware fault; new equipment request arguable",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "User wants to request a new laptop or other equipment",
+     "annotator": "claude-opus",
+     "note": "hardware problem branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "d5d804b4a2eb11b8"
+  },
+  "rl_language_school_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Prospective student wants to take a placement test to find their level"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Prospective student wants to take a placement test to find their level"
+    }
+   },
+   "verified_sha": "2a3c917f4aa7ad5d"
+  },
+  "rl_language_school_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student wants to switch to a different class time or teacher"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student wants to switch to a different class time or teacher"
+    }
+   },
+   "verified_sha": "99dde2c2f628cb59"
+  },
+  "rl_language_school_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student asks for a certificate or proof of attendance"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student asks for a certificate or proof of attendance"
+    }
+   },
+   "verified_sha": "11104d84fa294314"
+  },
+  "rl_language_school_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student asks about group discounts or payment installments"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student asks about group discounts or payment installments"
+    }
+   },
+   "verified_sha": "e33b090ec908c835"
+  },
+  "rl_language_school_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Refund for missed class not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9e5f4b1d38d85424"
+  },
+  "rl_legal_intake_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Review or draft a contract or NDA"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Review or draft a contract or NDA"
+    }
+   },
+   "verified_sha": "a4c46e3f62b53592"
+  },
+  "rl_legal_intake_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Data privacy or compliance question, for example GDPR"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Data privacy or compliance question, for example GDPR"
+    }
+   },
+   "verified_sha": "e4ca89a0e8a01f8a"
+  },
+  "rl_legal_intake_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Respond to a legal notice, subpoena or lawsuit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Respond to a legal notice, subpoena or lawsuit"
+    }
+   },
+   "verified_sha": "c695b6dac42d3f3a"
+  },
+  "rl_legal_intake_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Approve a marketing claim or public statement for legal risk"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Approve a marketing claim or public statement for legal risk"
+    }
+   },
+   "verified_sha": "e1e011efba6ae25e"
+  },
+  "rl_legal_intake_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Question about trademarks, patents or other intellectual property"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Question about trademarks, patents or other intellectual property"
+    }
+   },
+   "verified_sha": "e702ffea06e54518"
+  },
+  "rl_legal_intake_05": {
+   "passes": {
+    "A": {
+     "alt": "Review or draft a contract or NDA",
+     "annotator": "claude-sonnet-5-5",
+     "note": "contractor termination, employment option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Review or draft a contract or NDA",
+     "annotator": "claude-opus",
+     "note": "employment matter missing; contractor contract arguable",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "64237be2782e0a37"
+  },
+  "rl_marketing_requests_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask for performance numbers of a campaign"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask for performance numbers of a campaign"
+    }
+   },
+   "verified_sha": "17e2d113416e2ce5"
+  },
+  "rl_marketing_requests_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a change to a landing page or website page"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request a change to a landing page or website page"
+    }
+   },
+   "verified_sha": "3e9d35efa70b4a86"
+  },
+  "rl_marketing_requests_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a new design asset such as a banner or social graphic"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request a new design asset such as a banner or social graphic"
+    }
+   },
+   "verified_sha": "8c49b6d99e9be613"
+  },
+  "rl_marketing_requests_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a new email campaign or newsletter"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request a new email campaign or newsletter"
+    }
+   },
+   "verified_sha": "317e8bf2bec80bb3"
+  },
+  "rl_marketing_requests_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "restaurant booking off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "746e9473de91ba8f"
+  },
+  "rl_mobile_carrier_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Set up international roaming for a trip"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Set up international roaming for a trip"
+    }
+   },
+   "verified_sha": "702e9b07d4841b5d"
+  },
+  "rl_mobile_carrier_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report no signal or poor mobile data speed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report no signal or poor mobile data speed"
+    }
+   },
+   "verified_sha": "71d447a869d13a10"
+  },
+  "rl_mobile_carrier_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Activate or order a new SIM card or eSIM"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Activate or order a new SIM card or eSIM"
+    }
+   },
+   "verified_sha": "1d22885d972fdf2f"
+  },
+  "rl_mobile_carrier_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Explain unexpected charges on the monthly bill"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Explain unexpected charges on the monthly bill"
+    }
+   },
+   "verified_sha": "175b4bbcd6101fb0"
+  },
+  "rl_mobile_carrier_04": {
+   "passes": {
+    "A": {
+     "alt": "Activate or order a new SIM card or eSIM",
+     "annotator": "claude-sonnet-5-5",
+     "note": "number transfer option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Activate or order a new SIM card or eSIM",
+     "annotator": "claude-opus",
+     "note": "Number porting not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e852e2471871397c"
+  },
+  "rl_mobile_game_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Player lost progress or wants to restore an account"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Player lost progress or wants to restore an account"
+    }
+   },
+   "verified_sha": "ba6ae27f2efea36f"
+  },
+  "rl_mobile_game_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Player was charged for an in-app purchase they did not receive"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Player was charged for an in-app purchase they did not receive"
+    }
+   },
+   "verified_sha": "10a7aac9c9b23e83"
+  },
+  "rl_mobile_game_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Player reports a bug or crash"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Player reports a bug or crash"
+    }
+   },
+   "verified_sha": "30a11255d0b9ffcb"
+  },
+  "rl_mobile_game_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Player reports a cheater or abusive player"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Player reports a cheater or abusive player"
+    }
+   },
+   "verified_sha": "bb96b80c83a03df8"
+  },
+  "rl_mobile_game_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "feature suggestion not handled",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "38b6842c1d8ab72e"
+  },
+  "rl_moving_company_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to report damaged or missing items after a move"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to report damaged or missing items after a move"
+    }
+   },
+   "verified_sha": "8ffa02fc4e8c7e04"
+  },
+  "rl_moving_company_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants a price estimate for a move"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants a price estimate for a move"
+    }
+   },
+   "verified_sha": "e6bd426c8180b240"
+  },
+  "rl_moving_company_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to track where their shipment is during a long-distance move"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to track where their shipment is during a long-distance move"
+    }
+   },
+   "verified_sha": "79353056b48d08cd"
+  },
+  "rl_moving_company_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to add packing services or boxes"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to add packing services or boxes"
+    }
+   },
+   "verified_sha": "9a1032424e49842c"
+  },
+  "rl_moving_company_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "off-topic neighborhood advice",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "80b2b2e3c8fbcd39"
+  },
+  "rl_new_hire_onboarding_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Get a parking pass or commuter benefit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Get a parking pass or commuter benefit"
+    }
+   },
+   "verified_sha": "86e8fb87738a5041"
+  },
+  "rl_new_hire_onboarding_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Learn about health insurance and benefits enrollment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Learn about health insurance and benefits enrollment"
+    }
+   },
+   "verified_sha": "b895e47c2c6bd85f"
+  },
+  "rl_new_hire_onboarding_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request remote work or flexible hours"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request remote work or flexible hours"
+    }
+   },
+   "verified_sha": "4d9fd4a813754f6a"
+  },
+  "rl_new_hire_onboarding_03": {
+   "passes": {
+    "A": {
+     "alt": "Report a problem or delay with onboarding",
+     "annotator": "claude-sonnet-5-5",
+     "note": "accounts setup vs onboarding problem",
+     "pick": "Get a laptop and accounts set up"
+    },
+    "B": {
+     "alt": "Report a problem or delay with onboarding",
+     "annotator": "claude-opus",
+     "note": "Account access missing; could be onboarding problem",
+     "pick": "Get a laptop and accounts set up"
+    }
+   },
+   "verified_sha": "7503184105f7fc51"
+  },
+  "rl_new_hire_onboarding_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Complete tax and payroll forms"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Complete tax and payroll forms"
+    }
+   },
+   "verified_sha": "d4979f5c87ae283a"
+  },
+  "rl_new_hire_onboarding_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "training option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "training sign-up branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "1d50e288783c25a6"
+  },
+  "rl_news_publisher_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reader wants to report an error in an article"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Reader wants to report an error in an article"
+    }
+   },
+   "verified_sha": "d741b8a1c1bca705"
+  },
+  "rl_news_publisher_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reader wants to unsubscribe from emails"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Reader wants to unsubscribe from emails"
+    }
+   },
+   "verified_sha": "23e901b238833c0d"
+  },
+  "rl_news_publisher_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Business asks about advertising or sponsorship"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Business asks about advertising or sponsorship"
+    }
+   },
+   "verified_sha": "fa3acea80ca40288"
+  },
+  "rl_news_publisher_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reader wants to submit a letter, tip or pitch to the editors"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Reader wants to submit a letter, tip or pitch to the editors"
+    }
+   },
+   "verified_sha": "370850e1616ce280"
+  },
+  "rl_news_publisher_04": {
+   "passes": {
+    "C": {
+     "alt": "Reader wants to subscribe or manage their paid subscription",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Product question about audio edition; D only loosely related.",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "Reader wants to subscribe or manage their paid subscription",
+     "annotator": "claude-opus",
+     "note": "Product format question; subscription branch only loosely related",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "63d511fee9b49fa3"
+  },
+  "rl_office_facilities_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a new badge or building access"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request a new badge or building access"
+    }
+   },
+   "verified_sha": "02bcd24e07103a3d"
+  },
+  "rl_office_facilities_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a desk or a parking spot"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Book a desk or a parking spot"
+    }
+   },
+   "verified_sha": "ec6a3f3dbb5e1150"
+  },
+  "rl_office_facilities_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order catering or event setup"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Order catering or event setup"
+    }
+   },
+   "verified_sha": "fda03e7a1221bd14"
+  },
+  "rl_office_facilities_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a broken fixture, light or climate problem"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a broken fixture, light or climate problem"
+    }
+   },
+   "verified_sha": "dfd0f3168e5c2410"
+  },
+  "rl_office_facilities_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Pet policy not a facilities branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9379f3ebd8bc22f3"
+  },
+  "rl_oncall_triage_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A production service is down or returning errors"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "A production service is down or returning errors"
+    }
+   },
+   "verified_sha": "32e4eca827e2f20d"
+  },
+  "rl_oncall_triage_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Performance degradation such as high latency or CPU"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Performance degradation such as high latency or CPU"
+    }
+   },
+   "verified_sha": "4ff8b847ea534e64"
+  },
+  "rl_oncall_triage_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request to deploy or roll back a release"
+    },
+    "B": {
+     "alt": "A production service is down or returning errors",
+     "annotator": "claude-opus",
+     "note": "release broken, could be outage",
+     "pick": "Request to deploy or roll back a release"
+    }
+   },
+   "verified_sha": "b39292d73488e608"
+  },
+  "rl_oncall_triage_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request for access, credentials or permissions"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request for access, credentials or permissions"
+    }
+   },
+   "verified_sha": "334dd2f958e4c7c4"
+  },
+  "rl_oncall_triage_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Budget planning, not on-call issue",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "c5ef939fb0d6b524"
+  },
+  "rl_online_courses_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student cannot access a purchased course or video"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student cannot access a purchased course or video"
+    }
+   },
+   "verified_sha": "56f16a543ad537ff"
+  },
+  "rl_online_courses_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student wants help choosing a course or learning path"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student wants help choosing a course or learning path"
+    }
+   },
+   "verified_sha": "a57df39a2ca717a2"
+  },
+  "rl_online_courses_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student asks for a completion certificate"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student asks for a completion certificate"
+    }
+   },
+   "verified_sha": "69e95d6384870a7d"
+  },
+  "rl_online_courses_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Instructor wants to publish or update a course"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Instructor wants to publish or update a course"
+    }
+   },
+   "verified_sha": "6fa2e0eb057759ab"
+  },
+  "rl_online_courses_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "refund branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "8ea33d0f371095d9"
+  },
+  "rl_online_pharmacy_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to transfer a prescription from another pharmacy"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to transfer a prescription from another pharmacy"
+    }
+   },
+   "verified_sha": "f6c1bcf79bc4d8c6"
+  },
+  "rl_online_pharmacy_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks whether a medication has side effects or interacts with other drugs"
+    },
+    "B": {
+     "alt": "Customer wants to speak with a pharmacist",
+     "annotator": "claude-opus",
+     "note": "could also go to pharmacist",
+     "pick": "Customer asks whether a medication has side effects or interacts with other drugs"
+    }
+   },
+   "verified_sha": "49c9975fcc982601"
+  },
+  "rl_online_pharmacy_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to track a prescription delivery"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to track a prescription delivery"
+    }
+   },
+   "verified_sha": "ecdb21a8e3526513"
+  },
+  "rl_online_pharmacy_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer asks whether a medication is covered by their insurance"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer asks whether a medication is covered by their insurance"
+    }
+   },
+   "verified_sha": "1c69f54ce3a4b744"
+  },
+  "rl_online_pharmacy_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "refill branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "f30509ff32ea38aa"
+  },
+  "rl_order_review_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer confirms and wants to place the order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer confirms and wants to place the order"
+    }
+   },
+   "verified_sha": "daf20202dc4c283a"
+  },
+  "rl_order_review_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to change something in the order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to change something in the order"
+    }
+   },
+   "verified_sha": "24280154d6791426"
+  },
+  "rl_order_review_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer confirms and wants to place the order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer confirms and wants to place the order"
+    }
+   },
+   "verified_sha": "ce7e1a5ccee24240"
+  },
+  "rl_order_review_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to change something in the order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to change something in the order"
+    }
+   },
+   "verified_sha": "29bbc47fa4e2d4a7"
+  },
+  "rl_order_review_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Question about return policy; no question branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "ed9291b553471161"
+  },
+  "rl_photo_studio_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants to receive or download their edited photos"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client wants to receive or download their edited photos"
+    }
+   },
+   "verified_sha": "507e7dc1fb22d624"
+  },
+  "rl_photo_studio_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants to book a photo session"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client wants to book a photo session"
+    }
+   },
+   "verified_sha": "304debc8053e539f"
+  },
+  "rl_photo_studio_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants to know pricing and packages"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client wants to know pricing and packages"
+    }
+   },
+   "verified_sha": "be69faa14b530ed1"
+  },
+  "rl_photo_studio_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client asks about print or album orders"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client asks about print or album orders"
+    }
+   },
+   "verified_sha": "6cdc32ba2951c10a"
+  },
+  "rl_photo_studio_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Client wants to know pricing and packages",
+     "annotator": "claude-opus",
+     "note": "Asks about drone service offered; not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "fb61219cf2124f91"
+  },
+  "rl_plan_manager_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pause the subscription"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pause the subscription"
+    }
+   },
+   "verified_sha": "612e623e07dd56ae"
+  },
+  "rl_plan_manager_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Switch to a cheaper plan"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Switch to a cheaper plan"
+    }
+   },
+   "verified_sha": "459712ab5b753ee9"
+  },
+  "rl_plan_manager_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Keep the subscription but change the billing date"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Keep the subscription but change the billing date"
+    }
+   },
+   "verified_sha": "f5ecbdb84c881006"
+  },
+  "rl_plan_manager_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel the subscription permanently"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Cancel the subscription permanently"
+    }
+   },
+   "verified_sha": "c8c02b3b46a2f397"
+  },
+  "rl_plan_manager_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic trivia question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "dc6b74130adf283b"
+  },
+  "rl_post_office_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hold mail or redirect it to a new address"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Hold mail or redirect it to a new address"
+    }
+   },
+   "verified_sha": "54d8521075215cc2"
+  },
+  "rl_post_office_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a lost or damaged parcel"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a lost or damaged parcel"
+    }
+   },
+   "verified_sha": "e6a0fcb3c591713e"
+  },
+  "rl_post_office_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule a redelivery or a pickup"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Schedule a redelivery or a pickup"
+    }
+   },
+   "verified_sha": "d8eae8f32acd4267"
+  },
+  "rl_post_office_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Track a parcel or letter"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Track a parcel or letter"
+    }
+   },
+   "verified_sha": "49944b88e59191ca"
+  },
+  "rl_post_office_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about postage rates or shipping options"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about postage rates or shipping options"
+    }
+   },
+   "verified_sha": "2fd119c80f0f89fc"
+  },
+  "rl_post_office_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "tracking option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Tracking option not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "18b23aa2db742530"
+  },
+  "rl_procurement_desk_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about the purchasing policy or spending limits"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about the purchasing policy or spending limits"
+    }
+   },
+   "verified_sha": "7d2a9e62a80a954e"
+  },
+  "rl_procurement_desk_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Start a purchase request for goods or services"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Start a purchase request for goods or services"
+    }
+   },
+   "verified_sha": "6b72e57ac86b20a7"
+  },
+  "rl_procurement_desk_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check the approval status of an existing purchase order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Check the approval status of an existing purchase order"
+    }
+   },
+   "verified_sha": "6b91a6c381d34c29"
+  },
+  "rl_procurement_desk_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a problem with a delivered order or an invoice mismatch"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a problem with a delivered order or an invoice mismatch"
+    }
+   },
+   "verified_sha": "7646679efcf1dab6"
+  },
+  "rl_procurement_desk_04": {
+   "passes": {
+    "A": {
+     "alt": "Ask about the purchasing policy or spending limits",
+     "annotator": "claude-sonnet-5-5",
+     "note": "vendor approval not listed",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Start a purchase request for goods or services",
+     "annotator": "claude-opus",
+     "note": "vendor onboarding branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b578e48ed9a0c49c"
+  },
+  "rl_property_management_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Tenant reports a maintenance problem in their unit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Tenant reports a maintenance problem in their unit"
+    }
+   },
+   "verified_sha": "987f5194b63e7e34"
+  },
+  "rl_property_management_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Tenant wants to renew or end their lease"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Tenant wants to renew or end their lease"
+    }
+   },
+   "verified_sha": "dbc9287320bfa08c"
+  },
+  "rl_property_management_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Tenant reports a noise or neighbour complaint"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Tenant reports a noise or neighbour complaint"
+    }
+   },
+   "verified_sha": "18e21d4479ce929a"
+  },
+  "rl_property_management_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Tenant wants to pay rent or asks about rent due dates"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Tenant wants to pay rent or asks about rent due dates"
+    }
+   },
+   "verified_sha": "66d968a2472f919f"
+  },
+  "rl_property_management_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "lease pet policy not listed",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Pet policy question not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "2b38d42c3a5f7e42"
+  },
+  "rl_public_library_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patron wants to renew a borrowed book"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patron wants to renew a borrowed book"
+    }
+   },
+   "verified_sha": "95c876539f9540a9"
+  },
+  "rl_public_library_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patron wants to reserve or place a hold on an item that is currently checked out"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patron wants to reserve or place a hold on an item that is currently checked out"
+    }
+   },
+   "verified_sha": "f7c9cfb093bc0b42"
+  },
+  "rl_public_library_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patron wants to book a study room or meeting space"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patron wants to book a study room or meeting space"
+    }
+   },
+   "verified_sha": "ad6e9e338bbd2fd0"
+  },
+  "rl_public_library_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Patron asks whether the library owns a particular title"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Patron asks whether the library owns a particular title"
+    }
+   },
+   "verified_sha": "31492bd7471d6f59"
+  },
+  "rl_public_library_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic cooking question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b944249e2e6227ba"
+  },
+  "rl_registrar_office_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student wants an official transcript sent somewhere"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student wants an official transcript sent somewhere"
+    }
+   },
+   "verified_sha": "a113737b650c9980"
+  },
+  "rl_registrar_office_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student wants to drop or withdraw from a course"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student wants to drop or withdraw from a course"
+    }
+   },
+   "verified_sha": "b565fa5a4f6e367d"
+  },
+  "rl_registrar_office_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student wants to change their major or program"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student wants to change their major or program"
+    }
+   },
+   "verified_sha": "c50c4504d299a0ca"
+  },
+  "rl_registrar_office_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Student wants to apply for graduation"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Student wants to apply for graduation"
+    }
+   },
+   "verified_sha": "888060e64929a130"
+  },
+  "rl_registrar_office_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "off-topic coffee recommendation",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "52c3f75973421eca"
+  },
+  "rl_saas_billing_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer was charged incorrectly or wants a refund"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer was charged incorrectly or wants a refund"
+    }
+   },
+   "verified_sha": "b503a39e3b3291a2"
+  },
+  "rl_saas_billing_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to update their credit card or payment method"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to update their credit card or payment method"
+    }
+   },
+   "verified_sha": "4295d7dbb40afc75"
+  },
+  "rl_saas_billing_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to add or remove seats for team members"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer wants to add or remove seats for team members"
+    }
+   },
+   "verified_sha": "910489d3766b3a5c"
+  },
+  "rl_saas_billing_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer needs a copy of an invoice or receipt"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Customer needs a copy of an invoice or receipt"
+    }
+   },
+   "verified_sha": "26c93f1f8229b39b"
+  },
+  "rl_saas_billing_04": {
+   "passes": {
+    "A": {
+     "alt": "Customer wants to add or remove seats for team members",
+     "annotator": "claude-sonnet-5-5",
+     "note": "cancel account option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Cancellation not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a558816af63537ee"
+  },
+  "rl_sales_crm_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Log a call, email or meeting against an account"
+    },
+    "B": {
+     "alt": "Update the stage or close date of an existing deal",
+     "annotator": "claude-opus",
+     "note": "Logging call; deal stage update also arguable",
+     "pick": "Log a call, email or meeting against an account"
+    }
+   },
+   "verified_sha": "5b0b4d642894b694"
+  },
+  "rl_sales_crm_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Update the stage or close date of an existing deal"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Update the stage or close date of an existing deal"
+    }
+   },
+   "verified_sha": "88f3edcb5212bc5e"
+  },
+  "rl_sales_crm_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pull a report on pipeline or quota attainment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pull a report on pipeline or quota attainment"
+    }
+   },
+   "verified_sha": "42642a02425fccc1"
+  },
+  "rl_sales_crm_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Find the owner or the last activity for an account"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Find the owner or the last activity for an account"
+    }
+   },
+   "verified_sha": "e92c36137274ad72"
+  },
+  "rl_sales_crm_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "create lead option missing",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Creating new contact not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "bbc8940f57b6bed5"
+  },
+  "rl_sales_crm_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic weather question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "3d97ee7c02912405"
+  },
+  "rl_school_office_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a child's absence"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a child's absence"
+    }
+   },
+   "verified_sha": "e94e317dd6c94dfe"
+  },
+  "rl_school_office_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about the bus route or pickup arrangements"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about the bus route or pickup arrangements"
+    }
+   },
+   "verified_sha": "875dbaa179817f49"
+  },
+  "rl_school_office_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule a meeting with a teacher or counselor"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Schedule a meeting with a teacher or counselor"
+    }
+   },
+   "verified_sha": "642af1593e51797a"
+  },
+  "rl_school_office_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about the lunch program or free meals"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about the lunch program or free meals"
+    }
+   },
+   "verified_sha": "75d58fd9fa449022"
+  },
+  "rl_school_office_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about enrollment or transferring schools"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Ask about enrollment or transferring schools"
+    }
+   },
+   "verified_sha": "0786c2b4e9e9523b"
+  },
+  "rl_school_office_05": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Records request; no condition covers transcripts or report cards.",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "Ask about enrollment or transferring schools",
+     "annotator": "claude-opus",
+     "note": "Records/transcript request not covered; enrollment branch only loosely related",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "8eadbcf6a0119edb"
+  },
+  "rl_security_ops_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lost or stolen device"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Lost or stolen device"
+    }
+   },
+   "verified_sha": "26f00eb6943cc095"
+  },
+  "rl_security_ops_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request to reset multi-factor authentication"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request to reset multi-factor authentication"
+    }
+   },
+   "verified_sha": "ee3eaeb0f0af7c30"
+  },
+  "rl_security_ops_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Vulnerability discovered in company software"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Vulnerability discovered in company software"
+    }
+   },
+   "verified_sha": "b83ca2c8ac3d07f7"
+  },
+  "rl_security_ops_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request for a security review of a new tool or vendor"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Request for a security review of a new tool or vendor"
+    }
+   },
+   "verified_sha": "927e5b1ae78bf34a"
+  },
+  "rl_security_ops_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Phishing/social engineering call not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "6717784a2bdb8995"
+  },
+  "rl_senior_residence_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Family member wants to schedule a tour"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Family member wants to schedule a tour"
+    }
+   },
+   "verified_sha": "2f3f3006927bb150"
+  },
+  "rl_senior_residence_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Family member asks about visiting hours and visitor policies"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Family member asks about visiting hours and visitor policies"
+    }
+   },
+   "verified_sha": "c6570da4cc0c06dc"
+  },
+  "rl_senior_residence_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Family member or resident reports a care concern"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Family member or resident reports a care concern"
+    }
+   },
+   "verified_sha": "96dec118ff7c56dd"
+  },
+  "rl_senior_residence_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Family member asks about monthly cost and what is included"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Family member asks about monthly cost and what is included"
+    }
+   },
+   "verified_sha": "cd7e839a5887c435"
+  },
+  "rl_senior_residence_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "off-topic sports question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "54405765cfcaca54"
+  },
+  "rl_shipping_choice_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Express shipping, 1 to 2 days"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Express shipping, 1 to 2 days"
+    }
+   },
+   "verified_sha": "c091748b748ab7a7"
+  },
+  "rl_shipping_choice_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pick up in the store"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pick up in the store"
+    }
+   },
+   "verified_sha": "0440dbf830309e89"
+  },
+  "rl_shipping_choice_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Standard shipping, 5 to 7 days"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Standard shipping, 5 to 7 days"
+    }
+   },
+   "verified_sha": "466d9947664345ec"
+  },
+  "rl_shipping_choice_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Express shipping, 1 to 2 days"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Express shipping, 1 to 2 days"
+    }
+   },
+   "verified_sha": "39f45ded8971d9b1"
+  },
+  "rl_shipping_choice_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "gift wrap/destination, no shipping speed",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "gift wrap and address, no shipping speed chosen",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "c56d784161784c98"
+  },
+  "rl_smart_home_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "I want to share access with someone in my household"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "I want to share access with someone in my household"
+    }
+   },
+   "verified_sha": "d35f8fb74b8d025e"
+  },
+  "rl_smart_home_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A device is offline or not responding"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "A device is offline or not responding"
+    }
+   },
+   "verified_sha": "1e9c447d5d0fae3d"
+  },
+  "rl_smart_home_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "How do I connect or pair a new device?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "How do I connect or pair a new device?"
+    }
+   },
+   "verified_sha": "2a95eaf5fe7b656a"
+  },
+  "rl_smart_home_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "I want to create or edit an automation or schedule"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "I want to create or edit an automation or schedule"
+    }
+   },
+   "verified_sha": "c80dbd22517b5540"
+  },
+  "rl_smart_home_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "factory reset branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a7a4e635624592fb"
+  },
+  "rl_smart_speaker_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Set a timer or alarm"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Set a timer or alarm"
+    }
+   },
+   "verified_sha": "725b359a42cc82f3"
+  },
+  "rl_smart_speaker_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Add an item to the shopping list"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Add an item to the shopping list"
+    }
+   },
+   "verified_sha": "3f4bb38b9d3301ed"
+  },
+  "rl_smart_speaker_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Get the weather forecast"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Get the weather forecast"
+    }
+   },
+   "verified_sha": "637d71a0072102a3"
+  },
+  "rl_smart_speaker_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Control smart home devices"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Control smart home devices"
+    }
+   },
+   "verified_sha": "fcaee0d704d9b728"
+  },
+  "rl_smart_speaker_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Answer a general knowledge question"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Answer a general knowledge question"
+    }
+   },
+   "verified_sha": "20e03b464a26b9d1"
+  },
+  "rl_smart_speaker_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Play music"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Play music"
+    }
+   },
+   "verified_sha": "6276308bd61f8e90"
+  },
+  "rl_smart_speaker_06": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Ordering food not supported",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "49c333d8e66a5d0c"
+  },
+  "rl_streaming_service_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parental controls and kids profiles"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Parental controls and kids profiles"
+    }
+   },
+   "verified_sha": "55f8880335fc7409"
+  },
+  "rl_streaming_service_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Watch on a new device or smart TV"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Watch on a new device or smart TV"
+    }
+   },
+   "verified_sha": "9255093b88dc1e5a"
+  },
+  "rl_streaming_service_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Video buffering or playback problems"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Video buffering or playback problems"
+    }
+   },
+   "verified_sha": "c5149b37d69b5f62"
+  },
+  "rl_streaming_service_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Question about a charge or a price increase"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Question about a charge or a price increase"
+    }
+   },
+   "verified_sha": "705ca49eb938c0e6"
+  },
+  "rl_streaming_service_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Pausing subscription not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "25d3f7d64c623ee2"
+  },
+  "rl_tailor_shop_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Repair a zipper, seam or tear"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Repair a zipper, seam or tear"
+    }
+   },
+   "verified_sha": "92538451fe84e75a"
+  },
+  "rl_tailor_shop_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hem or alter an existing garment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Hem or alter an existing garment"
+    }
+   },
+   "verified_sha": "aea13f581a83c9fd"
+  },
+  "rl_tailor_shop_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Make a custom suit or dress"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Make a custom suit or dress"
+    }
+   },
+   "verified_sha": "2f8c01f5bb4375dd"
+  },
+  "rl_tailor_shop_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hem or alter an existing garment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Hem or alter an existing garment"
+    }
+   },
+   "verified_sha": "5ee060902605758c"
+  },
+  "rl_tailor_shop_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "fabric sales not offered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "57596e38406d3a0d"
+  },
+  "rl_tax_prep_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client needs help with a notice or letter from the tax authority"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client needs help with a notice or letter from the tax authority"
+    }
+   },
+   "verified_sha": "ab3bc66a62b642ee"
+  },
+  "rl_tax_prep_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants to amend a return that was already filed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client wants to amend a return that was already filed"
+    }
+   },
+   "verified_sha": "46dcf9db67a95724"
+  },
+  "rl_tax_prep_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants to know the status of a submitted return or refund"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client wants to know the status of a submitted return or refund"
+    }
+   },
+   "verified_sha": "b3b458d8e22a14cd"
+  },
+  "rl_tax_prep_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client asks about filing deadlines or extensions"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Client asks about filing deadlines or extensions"
+    }
+   },
+   "verified_sha": "036665f7809101ee"
+  },
+  "rl_tax_prep_04": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Wants a consultation appointment; no such condition offered.",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "Client wants to start filing their annual tax return",
+     "annotator": "claude-opus",
+     "note": "Consultation booking not listed; could precede filing a return",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "c2c91dfc58a07c0e"
+  },
+  "rl_ticket_priority_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Critical: service unusable for many users or data loss"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Critical: service unusable for many users or data loss"
+    }
+   },
+   "verified_sha": "1eacd3aa30cc2327"
+  },
+  "rl_ticket_priority_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Normal: a problem affecting one user, with a workaround"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Normal: a problem affecting one user, with a workaround"
+    }
+   },
+   "verified_sha": "5f2bc38ec342cefb"
+  },
+  "rl_ticket_priority_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Low: a question or a cosmetic issue"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Low: a question or a cosmetic issue"
+    }
+   },
+   "verified_sha": "debf6f86fe8e7c79"
+  },
+  "rl_ticket_priority_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Critical: service unusable for many users or data loss"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Critical: service unusable for many users or data loss"
+    }
+   },
+   "verified_sha": "a0d724fa4b760c60"
+  },
+  "rl_ticket_priority_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Low: a question or a cosmetic issue"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Low: a question or a cosmetic issue"
+    }
+   },
+   "verified_sha": "31f62b610b9bcb05"
+  },
+  "rl_ticket_priority_05": {
+   "passes": {
+    "A": {
+     "alt": "Low: a question or a cosmetic issue",
+     "annotator": "claude-sonnet-5-5",
+     "note": "podcast request not a ticket; maybe low",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Off-topic, not a support ticket",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "6703666bba28e4c7"
+  },
+  "rl_vet_reception_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pet owner describes an urgent symptom or emergency"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pet owner describes an urgent symptom or emergency"
+    }
+   },
+   "verified_sha": "e5109ba63e715e4e"
+  },
+  "rl_vet_reception_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pet owner wants to book a checkup or vaccination"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pet owner wants to book a checkup or vaccination"
+    }
+   },
+   "verified_sha": "7433bd67d0d84721"
+  },
+  "rl_vet_reception_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pet owner wants to refill their pet's medication"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pet owner wants to refill their pet's medication"
+    }
+   },
+   "verified_sha": "9eb941196e9be849"
+  },
+  "rl_vet_reception_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pet owner asks about boarding or grooming services"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Pet owner asks about boarding or grooming services"
+    }
+   },
+   "verified_sha": "a2f4b570b9a215f6"
+  },
+  "rl_vet_reception_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "wifi help, off-topic for vet",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "77b0f22ce47b2b43"
+  },
+  "rl_warehouse_ops_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Record receipt of an inbound delivery"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Record receipt of an inbound delivery"
+    }
+   },
+   "verified_sha": "217d53afc39a8a90"
+  },
+  "rl_warehouse_ops_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report damaged or defective inventory"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report damaged or defective inventory"
+    }
+   },
+   "verified_sha": "f84d3671ef7181e0"
+  },
+  "rl_warehouse_ops_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check the stock level of an item or SKU"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Check the stock level of an item or SKU"
+    }
+   },
+   "verified_sha": "ec88234f8ce54077"
+  },
+  "rl_warehouse_ops_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a safety incident or hazard"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Report a safety incident or hazard"
+    }
+   },
+   "verified_sha": "4570e35ad0b74584"
+  },
+  "rl_warehouse_ops_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "Outbound shipment option not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "4ce80f63d888b344"
+  },
+  "rl_wedding_planner_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Couple wants to change the wedding date"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Couple wants to change the wedding date"
+    }
+   },
+   "verified_sha": "63ec9231e772e4a3"
+  },
+  "rl_wedding_planner_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Couple wants to manage the guest list and RSVPs"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Couple wants to manage the guest list and RSVPs"
+    }
+   },
+   "verified_sha": "ee6653d967130847"
+  },
+  "rl_wedding_planner_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Couple wants catering options and tastings"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Couple wants catering options and tastings"
+    }
+   },
+   "verified_sha": "47aaa09e23f723aa"
+  },
+  "rl_wedding_planner_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Couple wants help creating a budget"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "",
+     "pick": "Couple wants help creating a budget"
+    }
+   },
+   "verified_sha": "0d4c9618c45f85a5"
+  },
+  "rl_wedding_planner_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-opus",
+     "note": "vendor recommendation branch absent",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "d0080985ab7e5c82"
+  }
+ },
+ "note": "Blind annotation by independent model passes (pass A: default model, pass B: opus; items shown with anonymous ids, shuffled order, no labels). NOT a human audit. verified_sha = sha256 of message + sorted candidate texts at the time of annotation; an example whose current text hashes differently was changed after verification."
+}

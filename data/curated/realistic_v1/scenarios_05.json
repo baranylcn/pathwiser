@@ -1,0 +1,201 @@
+[
+  {
+    "id": "car_voice_assistant", "domain": "automotive",
+    "node": {"name": "car_assistant", "description": "Decide what the driver wants the in-car voice assistant to do."},
+    "conditions": {
+      "a": "Navigate to a place",
+      "b": "Play music or a podcast",
+      "c": "Call or message a contact"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "tell Sarah I'm running ten minutes late"},
+      {"gold": "a", "ctx": [], "msg": "where's the closest gas station that's open right now"},
+      {"gold": "b", "ctx": [], "msg": "put on something upbeat for the drive"},
+      {"gold": "a", "ctx": [["u", "I'm heading to my parents'"], ["a", "Which address should I use?"]], "msg": "the one in Brookfield, 14 Oak Lane"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "what's the capital of Australia"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "turn the air conditioning down two degrees"}
+    ]
+  },
+  {
+    "id": "post_office", "domain": "postal",
+    "node": {"name": "post_office_assistant", "description": "Work out what the customer wants from the postal service."},
+    "conditions": {
+      "a": "Track a parcel or letter",
+      "b": "Hold mail or redirect it to a new address",
+      "c": "Ask about postage rates or shipping options",
+      "d": "Report a lost or damaged parcel",
+      "e": "Schedule a redelivery or a pickup"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "we're moving out on the 3rd, will my mail follow me?"},
+      {"gold": "d", "ctx": [], "msg": "the box arrived crushed and the laptop inside is cracked"},
+      {"gold": "e", "ctx": [["a", "Hello, how can I help?"]], "msg": "I missed the courier today, can they come back tomorrow"},
+      {"gold": "a", "ctx": [["u", "my parcel number is RX7G42"], ["a", "Thanks. What would you like to know about it?"]], "msg": "just where it is right now"},
+      {"gold": "c", "ctx": [], "msg": "what's the cheapest way to send a 3kg box to Ireland"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e"], "ctx": [], "msg": "can you tell me where parcel RX448 is?"}
+    ]
+  },
+  {
+    "id": "plan_manager", "domain": "subscriptions",
+    "node": {"name": "plan_manager", "description": "Decide what the subscriber wants to do with their plan."},
+    "conditions": {
+      "a": "Pause the subscription",
+      "b": "Cancel the subscription permanently",
+      "c": "Switch to a cheaper plan",
+      "d": "Keep the subscription but change the billing date"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "I don't want to cancel, I just need a break till january"},
+      {"gold": "c", "ctx": [], "msg": "it's too expensive but I still want to keep using it, anything smaller?"},
+      {"gold": "d", "ctx": [["a", "Hi! What would you like to do with your plan?"]], "msg": "my paycheck comes on the 5th, could the charge be after that instead of the 1st"},
+      {"gold": "b", "ctx": [["u", "I've been thinking about this for a while"], ["a", "Take your time. What have you decided?"]], "msg": "I'm done with it, please delete everything and don't charge me again"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "how many moons does jupiter have"}
+    ]
+  },
+  {
+    "id": "dental_office", "domain": "healthcare",
+    "node": {"name": "dental_front_desk", "description": "Decide what the patient needs from the dental office."},
+    "conditions": {
+      "a": "Book a cleaning or checkup",
+      "b": "Report dental pain or an emergency",
+      "c": "Ask about braces or aligners",
+      "d": "Ask about the cost or insurance coverage of a treatment",
+      "e": "Reschedule or cancel an appointment",
+      "f": "Request dental records or x-rays to be sent elsewhere"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [["u", "hi"], ["a", "Hello, Bright Smile Dental, how can I help?"], ["u", "I'm kind of in a lot of pain"], ["a", "I'm sorry to hear that. Can you tell me more?"]], "msg": "my molar cracked this morning and it throbs, can someone see me today"},
+      {"gold": "d", "ctx": [["u", "my dentist said I need a crown"], ["a", "I see. Would you like to know something about it?"]], "msg": "do you take Delta and what would I be paying"},
+      {"gold": "c", "ctx": [], "msg": "I'm 34, is it too late for clear aligners?"},
+      {"gold": "f", "ctx": [["a", "Bright Smile Dental, how can I help?"]], "msg": "I'm moving to Oregon and my new dentist asked for my xrays"},
+      {"gold": "e", "ctx": [], "msg": "need to move tuesday's cleaning"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f"], "ctx": [], "msg": "it's been two years since my teeth were cleaned, can I come in sometime next month"}
+    ]
+  },
+  {
+    "id": "appliance_repair", "domain": "home_services",
+    "node": {"name": "appliance_repair_assistant", "description": "Decide what the customer wants regarding an appliance repair."},
+    "conditions": {
+      "a": "Schedule a repair visit",
+      "b": "Get a repair price estimate",
+      "c": "Check warranty status",
+      "d": "Reschedule or cancel a repair visit"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [["u", "my dishwasher stopped draining"], ["a", "I can help. Would you like to book a technician or hear the price first?"]], "msg": "price first please"},
+      {"gold": "a", "ctx": [["u", "my fridge is leaking"], ["a", "Sorry about that. I can estimate the cost or book a technician. Which would you like?"]], "msg": "just send someone as soon as possible"},
+      {"gold": "c", "ctx": [["u", "my washer died after 14 months"], ["a", "That's frustrating. Do you want me to look at coverage or schedule a technician?"]], "msg": "coverage, I think it should still be under something"},
+      {"gold": "d", "ctx": [["u", "I have a technician coming Friday"], ["a", "Yes, I see the appointment Friday at 10. What can I do?"]], "msg": "I'll be out of town, can we do the following week?"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you sell refurbished dishwashers?"}
+    ]
+  },
+  {
+    "id": "intranet_assistant", "domain": "workplace",
+    "node": {"name": "intranet_assistant", "description": "Understand what the employee is asking the company assistant."},
+    "conditions": {
+      "a": "Request time off",
+      "b": "Reset a password",
+      "c": "Book a meeting room",
+      "d": "Find a colleague's contact details",
+      "e": "Submit an expense",
+      "f": "Report a bug in an internal tool",
+      "g": "Find a company policy document",
+      "h": "Order office supplies",
+      "i": "Get the cafeteria menu",
+      "j": "Check or download a payslip"
+    },
+    "examples": [
+      {"gold": "i", "ctx": [], "msg": "what's for lunch in the canteen today"},
+      {"gold": "h", "ctx": [], "msg": "we're out of whiteboard markers on 4"},
+      {"gold": "d", "ctx": [], "msg": "who's in charge of vendor payments in Berlin and how do I reach them"},
+      {"gold": "f", "ctx": [["a", "Hi! Ask me anything about work."]], "msg": "the timesheet app crashes when I choose a project from the dropdown"},
+      {"gold": "g", "ctx": [["u", "I'm planning a conference trip"], ["a", "Sounds good, what can I do?"]], "msg": "where's the doc that says how much hotel I'm allowed"},
+      {"gold": "b", "ctx": [], "msg": "locked out again, wrong password three times"},
+      {"gold": null, "nm": "sibling_removed", "intent": "e", "cands": ["a", "b", "c", "d", "f", "g", "h", "i", "j"], "ctx": [], "msg": "I paid for a client dinner out of my pocket and want my money back"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "what's the best movie of 2023"}
+    ]
+  },
+  {
+    "id": "smart_speaker", "domain": "consumer_tech",
+    "node": {"name": "smart_speaker", "description": "Decide what the user wants the smart speaker to do."},
+    "conditions": {
+      "a": "Set a timer or alarm",
+      "b": "Play music",
+      "c": "Control smart home devices",
+      "d": "Answer a general knowledge question",
+      "e": "Add an item to the shopping list",
+      "f": "Get the weather forecast",
+      "g": "Make a phone call",
+      "h": "Read the news"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "get me up at 6:30 tomorrow morning"},
+      {"gold": "e", "ctx": [], "msg": "we're out of oat milk"},
+      {"gold": "f", "ctx": [], "msg": "do I need an umbrella tomorrow"},
+      {"gold": "c", "ctx": [["a", "Hi, how can I help?"]], "msg": "it's too bright in here"},
+      {"gold": "d", "ctx": [], "msg": "how far is the moon"},
+      {"gold": "b", "ctx": [["u", "I just got home"], ["a", "Welcome back! Want me to do something?"]], "msg": "something chill, no lyrics"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "order me a large pepperoni pizza"}
+    ]
+  },
+  {
+    "id": "school_office", "domain": "education",
+    "node": {"name": "school_office_assistant", "description": "Decide what the parent or guardian needs from the school office."},
+    "conditions": {
+      "a": "Report a child's absence",
+      "b": "Request a transcript or school records",
+      "c": "Ask about the lunch program or free meals",
+      "d": "Ask about the bus route or pickup arrangements",
+      "e": "Schedule a meeting with a teacher or counselor",
+      "f": "Ask about enrollment or transferring schools"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "Noah has the flu and will be out through Wednesday"},
+      {"gold": "d", "ctx": [], "msg": "the bus didn't come this morning and it's the third time this month, who do I talk to"},
+      {"gold": "e", "ctx": [["a", "Hello, Lincoln Elementary office."]], "msg": "I'd like to talk with her teacher about her reading"},
+      {"gold": "c", "ctx": [["u", "money's been tight lately"], ["a", "I'm sorry to hear that. Is there something I can help with?"]], "msg": "do you have anything to help with lunches, we can't afford the full price"},
+      {"gold": "f", "ctx": [], "msg": "we're moving into the district in August, how do I enroll my twins"},
+      {"gold": null, "nm": "sibling_removed", "intent": "b", "cands": ["a", "c", "d", "e", "f"], "ctx": [], "msg": "I need an official copy of last year's report card for his scholarship application"}
+    ]
+  },
+  {
+    "id": "city_museum", "domain": "tourism",
+    "node": {"name": "museum_visitor_assistant", "description": "Decide what the museum visitor is asking about."},
+    "conditions": {
+      "a": "Buy tickets or ask about ticket prices",
+      "b": "Ask about opening hours or current exhibitions",
+      "c": "Ask about accessibility or wheelchair access",
+      "d": "Book a group or school visit",
+      "e": "Ask about the gift shop or cafe"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "my dad uses a walker, are there elevators and places to sit?"},
+      {"gold": "d", "ctx": [], "msg": "I teach 4th grade and want to bring 28 kids in May"},
+      {"gold": "b", "ctx": [["a", "Welcome to the City Museum! How can I help?"]], "msg": "is the dinosaur thing still on or did it close"},
+      {"gold": "a", "ctx": [["u", "we're coming on saturday"], ["a", "Lovely! How can I help you plan?"]], "msg": "do kids get in free?"},
+      {"gold": null, "nm": "sibling_removed", "intent": "e", "cands": ["a", "b", "c", "d"], "ctx": [], "msg": "can I eat lunch somewhere inside or do we have to leave and come back"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "what time does the train to Boston leave"}
+    ]
+  },
+  {
+    "id": "dmv_assistant", "domain": "government",
+    "node": {"name": "dmv_assistant", "description": "Work out what the person needs from the motor vehicle office."},
+    "conditions": {
+      "a": "Renew a driver's license",
+      "b": "Register a vehicle or renew its registration",
+      "c": "Book a driving test",
+      "d": "Report a change of address",
+      "e": "Replace a lost or stolen license or registration",
+      "f": "Pay a traffic fine or reinstate a suspended license",
+      "g": "Transfer vehicle ownership"
+    },
+    "examples": [
+      {"gold": "g", "ctx": [], "msg": "I bought my neighbor's old pickup, how do I get it in my name"},
+      {"gold": "e", "ctx": [], "msg": "my wallet got stolen with my license in it"},
+      {"gold": "c", "ctx": [["a", "DMV virtual assistant. How may I help?"]], "msg": "I've had my learner's permit for 6 months and I'm ready to take the road test"},
+      {"gold": "d", "ctx": [["u", "I just moved to a new apartment"], ["a", "Congratulations! What do you need to do?"]], "msg": "make sure my license has the right address"},
+      {"gold": "b", "ctx": [], "msg": "tags expire at the end of this month"},
+      {"gold": null, "nm": "sibling_removed", "intent": "a", "cands": ["b", "c", "d", "e", "f", "g"], "ctx": [], "msg": "my license expires in june and I'd like to renew it online"}
+    ]
+  }
+]

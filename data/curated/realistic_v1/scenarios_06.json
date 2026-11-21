@@ -1,0 +1,114 @@
+[
+  {
+    "id": "order_review", "domain": "retail",
+    "node": {"name": "order_review_step", "description": "The assistant has just summarised the order and asked the customer to confirm it."},
+    "conditions": {
+      "a": "Customer confirms and wants to place the order",
+      "b": "Customer wants to change something in the order"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [["a", "So that's two large pizzas and a garlic bread for $31. Shall I place it?"]], "msg": "yep go ahead"},
+      {"gold": "b", "ctx": [["u", "two large pizzas and a garlic bread"], ["a", "So that's two large pizzas and a garlic bread for $31. Shall I place it?"]], "msg": "can you make one of the pizzas a medium instead"},
+      {"gold": "a", "ctx": [["a", "Your total is $54.20 for 3 items. Ready to check out?"]], "msg": "perfect, thanks"},
+      {"gold": "b", "ctx": [["a", "That's one pair of size 9 running shoes in blue for $89. Place the order?"]], "msg": "hold on, do they come in a 10?"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [["a", "Your total is $54.20 for 3 items. Ready to check out?"]], "msg": "what's your return policy by the way?"}
+    ]
+  },
+  {
+    "id": "human_handoff", "domain": "customer_service",
+    "node": {"name": "handoff_decision", "description": "Decide whether the customer needs a human agent or can keep talking to the assistant."},
+    "conditions": {
+      "a": "Customer asks for a human agent or is clearly angry or distressed",
+      "b": "Customer asks a routine question the assistant can answer"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "what are your opening hours on sunday?"},
+      {"gold": "a", "ctx": [], "msg": "I want to speak to a manager right now"},
+      {"gold": "a", "ctx": [["u", "my package never came"], ["a", "Sorry about that, let me check."], ["u", "you already said that twice and nothing happened"], ["a", "I understand your frustration. Let me look again."]], "msg": "this is useless, put me through to someone who can actually help"},
+      {"gold": "b", "ctx": [], "msg": "do you ship to Canada?"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "asdf jkl; qwerty"}
+    ]
+  },
+  {
+    "id": "tailor_shop", "domain": "local_services",
+    "node": {"name": "tailor_request_router", "description": "Decide what the customer wants from the tailor."},
+    "conditions": {
+      "a": "Hem or alter an existing garment",
+      "b": "Make a custom suit or dress",
+      "c": "Repair a zipper, seam or tear"
+    },
+    "examples": [
+      {"gold": "c", "ctx": [], "msg": "my jacket zipper split right at the bottom"},
+      {"gold": "a", "ctx": [], "msg": "need these pants shortened about two inches"},
+      {"gold": "b", "ctx": [["a", "Hi from Stitch & Co!"]], "msg": "I want a suit made for my brother's wedding in September"},
+      {"gold": "a", "ctx": [["u", "I bought a dress online"], ["a", "What would you like us to do?"]], "msg": "it's too long, it drags on the floor"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "do you sell fabric by the metre?"}
+    ]
+  },
+  {
+    "id": "feedback_triage", "domain": "product",
+    "node": {"name": "feedback_triage", "description": "Classify the message the user sent to the feedback bot."},
+    "conditions": {
+      "a": "Compliment or positive feedback",
+      "b": "Complaint about a product or service",
+      "c": "Suggestion for a new feature"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "just wanted to say the new update is great, so much faster"},
+      {"gold": "b", "ctx": [], "msg": "the checkout button does nothing on my phone and it's been like this for days"},
+      {"gold": "c", "ctx": [["a", "Thanks for taking the time to share your thoughts!"]], "msg": "it would be awesome if I could export my lists to pdf"},
+      {"gold": "b", "ctx": [["u", "I need to tell you something"], ["a", "We're listening."]], "msg": "support took 9 days to answer a simple question, unacceptable"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "do you know how to get to the airport from here"}
+    ]
+  },
+  {
+    "id": "cancel_confirmation", "domain": "retail",
+    "node": {"name": "cancellation_flow", "description": "The assistant asked the customer whether to go ahead with cancelling their order."},
+    "conditions": {
+      "a": "Customer confirms the cancellation",
+      "b": "Customer changes their mind and wants to keep the order",
+      "c": "Customer asks a question before deciding"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [["a", "Just to confirm, you'd like to cancel order #4417 for the blue jacket?"]], "msg": "yes please, do it"},
+      {"gold": "b", "ctx": [["a", "Just to confirm, you'd like to cancel order #4417 for the blue jacket?"]], "msg": "actually never mind, it's fine, leave it"},
+      {"gold": "c", "ctx": [["a", "Just to confirm, you'd like to cancel order #4417 for the blue jacket?"]], "msg": "will I get the full amount back or is there a fee?"},
+      {"gold": "c", "ctx": [["u", "I want to cancel my order"], ["a", "Just to confirm, you'd like to cancel order #4417?"]], "msg": "wait, has it shipped already?"},
+      {"gold": "a", "ctx": [["a", "Just to confirm, you'd like to cancel order #4417 for the blue jacket?"]], "msg": "yeah, I ordered the wrong size anyway"},
+      {"gold": null, "nm": "oos", "ctx": [["a", "Just to confirm, you'd like to cancel order #4417 for the blue jacket?"]], "msg": "my cat just knocked a glass off the table, ugh"}
+    ]
+  },
+  {
+    "id": "ticket_priority", "domain": "it_helpdesk",
+    "node": {"name": "ticket_priority", "description": "Assign a priority to the incoming support ticket."},
+    "conditions": {
+      "a": "Critical: service unusable for many users or data loss",
+      "b": "Normal: a problem affecting one user, with a workaround",
+      "c": "Low: a question or a cosmetic issue"
+    },
+    "examples": [
+      {"gold": "a", "ctx": [], "msg": "none of our 200 agents can open the dashboard since 9am"},
+      {"gold": "b", "ctx": [], "msg": "export to csv fails for me but pdf works fine"},
+      {"gold": "c", "ctx": [], "msg": "typo in the footer, it says 'privicy'"},
+      {"gold": "a", "ctx": [["u", "reporting an issue with payroll"], ["a", "Can you tell me what's happening?"]], "msg": "the run didn't execute and 1,200 people won't get paid tomorrow"},
+      {"gold": "c", "ctx": [["a", "Ticket bot: describe your issue."]], "msg": "where can I find the api docs"},
+      {"gold": null, "nm": "oos", "ctx": [], "msg": "got any good podcast recommendations for a long drive"}
+    ]
+  },
+  {
+    "id": "shipping_choice", "domain": "retail",
+    "node": {"name": "checkout_shipping", "description": "Pick the shipping option the customer is choosing."},
+    "conditions": {
+      "a": "Standard shipping, 5 to 7 days",
+      "b": "Express shipping, 1 to 2 days",
+      "c": "Pick up in the store"
+    },
+    "examples": [
+      {"gold": "b", "ctx": [], "msg": "I need it by friday, whatever it takes"},
+      {"gold": "c", "ctx": [], "msg": "I'm near your downtown shop anyway, I'll grab it there"},
+      {"gold": "a", "ctx": [], "msg": "no rush at all, the cheapest one is fine"},
+      {"gold": "b", "ctx": [["u", "it's a birthday gift"], ["a", "How would you like it delivered?"]], "msg": "the party is the day after tomorrow so as fast as possible"},
+      {"gold": null, "nm": "in_domain_uncovered", "ctx": [], "msg": "can you gift wrap it and send it straight to my sister's address?"}
+    ]
+  }
+]
