@@ -40,10 +40,9 @@ CI runs the same three commands. A pull request needs all of them green.
 
 ## Commits
 
-Conventional Commits, subject line only: `type(scope): summary`, lowercase, imperative, no trailing period, about 72 characters.
-Types: `feat`, `fix`, `perf`, `refactor`, `docs`, `test`, `build`, `ci`, `style`, `chore`. Scopes follow the package layout
-(`benchmark`, `storage`, `scorers`, `decision`, `evaluation`, `reports`, `synth`, `cli`, `data`, `docs`).
-One concern per commit.
+Conventional Commits, subject line only, without a scope: `type: summary`, lowercase, imperative, no trailing period,
+about 72 characters (for example `feat: export model-ready listwise records`).
+Types: `feat`, `fix`, `perf`, `refactor`, `docs`, `test`, `build`, `ci`, `style`, `chore`. One concern per commit.
 
 ## Adding a scorer
 
