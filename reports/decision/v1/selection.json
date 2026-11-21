@@ -1,0 +1,30 @@
+{
+  "chosen": "st_lgbm+st_lgbm__bge_small|fused|tau",
+  "best": "st_lgbm+st_lgbm__bge_small|fused|full",
+  "within_one_se": [
+    "st_lgbm__bge_small|full",
+    "st_lgbm+st_lgbm__bge_small|fused|tau",
+    "st_lgbm+st_lgbm__bge_small|fused|full"
+  ],
+  "excluded_by_guard": [
+    "st_lgbm__bge_small|full"
+  ],
+  "choice_without_guard": "st_lgbm__bge_small|full",
+  "guard": {
+    "slice": "svc:unseen",
+    "tolerance": 0.02,
+    "best_value": 0.9033
+  },
+  "rule": "highest macro decision accuracy under leave-one-dataset-out; among systems within one standard error of the best, drop those whose out-of-fold Top-1 on svc:unseen is more than 0.02 below the best candidate's; of the rest, the least complex",
+  "models_with_validation_scores": [
+    "lexical",
+    "tfidf",
+    "st_message",
+    "tfidf_lr",
+    "st_lr",
+    "st_lgbm",
+    "st_lgbm__bge_small"
+  ],
+  "n_candidates": 21,
+  "caveat": "the maximum over many candidates is optimistic; the selection itself is computed from validation only, but the generalisation guard and the candidate list were chosen after the external set had been looked at (docs/decision-layer.md); the test split was not used"
+}

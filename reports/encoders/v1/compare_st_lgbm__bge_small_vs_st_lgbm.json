@@ -1,0 +1,151 @@
+{
+  "candidate": "st_lgbm__bge_small",
+  "reference": "st_lgbm",
+  "rule": {
+    "statement": "A candidate (same model family, different frozen encoder) replaces the reference only if it does not lose on the benchmark validation split and gains on the external set. Fixed before the candidate was trained or scored.",
+    "validation_not_worse": "leave-one-dataset-out macro decision accuracy >= reference - 1 standard error of the reference, AND validation Top-1 >= reference - 0.005",
+    "external_gain": "paired external-set difference to the reference: Top-1 > 0 AND decision accuracy >= 0 (point estimates)",
+    "confirmed_if": "the 95% scenario-bootstrap interval of the Top-1 difference excludes 0; otherwise the adoption is only tentative",
+    "flag": "unseen-service validation Top-1 more than 0.02 below the reference is reported as a warning",
+    "test": "not read for this comparison; read once, for the adopted model only"
+  },
+  "validation": {
+    "st_lgbm__bge_small": {
+      "top1": 0.8924,
+      "mrr": 0.9419,
+      "lodo_macro": 0.8034,
+      "lodo_se": 0.01849,
+      "lodo_per_dataset": {
+        "abcd": 0.7641,
+        "banking77": 0.8358,
+        "clinc150": 0.877,
+        "hwu64": 0.7603,
+        "sgd": 0.7843,
+        "star": 0.7989
+      },
+      "svc_unseen_top1": 0.8554,
+      "tau_val": -0.54588
+    },
+    "st_lgbm": {
+      "top1": 0.8928,
+      "mrr": 0.9418,
+      "lodo_macro": 0.79963,
+      "lodo_se": 0.01693,
+      "lodo_per_dataset": {
+        "abcd": 0.7813,
+        "banking77": 0.8007,
+        "clinc150": 0.8665,
+        "hwu64": 0.7433,
+        "sgd": 0.7857,
+        "star": 0.8203
+      },
+      "svc_unseen_top1": 0.902,
+      "tau_val": -0.589
+    }
+  },
+  "realistic": {
+    "st_lgbm__bge_small": {
+      "top1": {
+        "value": 0.792,
+        "lo": 0.7464,
+        "hi": 0.8339
+      },
+      "decision_accuracy": {
+        "value": 0.6395,
+        "lo": 0.5948,
+        "hi": 0.6861
+      },
+      "false_routing_rate": {
+        "value": 0.1337,
+        "lo": 0.0997,
+        "hi": 0.1705
+      },
+      "abstain_rate": {
+        "value": 0.3605,
+        "lo": 0.3052,
+        "hi": 0.4135
+      },
+      "no_match_recall": {
+        "value": 0.6571,
+        "lo": 0.5373,
+        "hi": 0.7647
+      },
+      "no_match_precision": {
+        "value": 0.371,
+        "lo": 0.3136,
+        "hi": 0.4311
+      }
+    },
+    "st_lgbm": {
+      "top1": {
+        "value": 0.7591,
+        "lo": 0.704,
+        "hi": 0.8159
+      },
+      "decision_accuracy": {
+        "value": 0.6047,
+        "lo": 0.5478,
+        "hi": 0.6589
+      },
+      "false_routing_rate": {
+        "value": 0.1919,
+        "lo": 0.1556,
+        "hi": 0.2274
+      },
+      "abstain_rate": {
+        "value": 0.314,
+        "lo": 0.2676,
+        "hi": 0.3586
+      },
+      "no_match_recall": {
+        "value": 0.5429,
+        "lo": 0.4264,
+        "hi": 0.6533
+      },
+      "no_match_precision": {
+        "value": 0.3519,
+        "lo": 0.2778,
+        "hi": 0.433
+      }
+    }
+  },
+  "realistic_difference_to_reference": {
+    "top1": {
+      "diff": 0.0328,
+      "lo": -0.0254,
+      "hi": 0.0867
+    },
+    "decision_accuracy": {
+      "diff": 0.0349,
+      "lo": -0.0203,
+      "hi": 0.0893
+    },
+    "false_routing_rate": {
+      "diff": -0.0581,
+      "lo": -0.0971,
+      "hi": -0.0174
+    },
+    "abstain_rate": {
+      "diff": 0.0465,
+      "lo": 0.0,
+      "hi": 0.0938
+    },
+    "no_match_recall": {
+      "diff": 0.1143,
+      "lo": 0.0,
+      "hi": 0.2362
+    },
+    "no_match_precision": {
+      "diff": 0.0191,
+      "lo": -0.0516,
+      "hi": 0.0917
+    }
+  },
+  "verdict": {
+    "validation_not_worse": true,
+    "external_gain": true,
+    "adopt": true,
+    "confidence": "tentative",
+    "unseen_service_warning": true
+  }
+}

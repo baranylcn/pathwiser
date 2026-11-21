@@ -1,0 +1,73 @@
+{
+  "model": "st_message__bge_small",
+  "set": "realistic",
+  "validation_tau": {
+    "tau": 0.5886,
+    "n": 344,
+    "n_route": 274,
+    "n_no_match": 70,
+    "top1": 0.792,
+    "top3": 0.9562,
+    "mrr": 0.876,
+    "top1_chance": 0.2055,
+    "decision_accuracy": 0.5378,
+    "route_accuracy": 0.5219,
+    "wrong_route_rate": 0.0839,
+    "false_abstain_rate": 0.3942,
+    "no_match_precision": 0.28,
+    "no_match_recall": 0.6,
+    "no_match_f1": 0.3818,
+    "false_routing_rate": 0.1483,
+    "abstain_rate": 0.436
+  },
+  "oracle_tau_on_external_set": {
+    "tau": 0.45124,
+    "n": 344,
+    "n_route": 274,
+    "n_no_match": 70,
+    "top1": 0.792,
+    "top3": 0.9562,
+    "mrr": 0.876,
+    "top1_chance": 0.2055,
+    "decision_accuracy": 0.6657,
+    "route_accuracy": 0.792,
+    "wrong_route_rate": 0.2044,
+    "false_abstain_rate": 0.0036,
+    "no_match_precision": 0.9231,
+    "no_match_recall": 0.1714,
+    "no_match_f1": 0.2892,
+    "false_routing_rate": 0.3314,
+    "abstain_rate": 0.0378
+  },
+  "never_abstain": {
+    "n": 344,
+    "n_route": 274,
+    "n_no_match": 70,
+    "top1": 0.792,
+    "top3": 0.9562,
+    "mrr": 0.876,
+    "top1_chance": 0.2055,
+    "decision_accuracy": 0.6308,
+    "route_accuracy": 0.792,
+    "wrong_route_rate": 0.208,
+    "false_abstain_rate": 0.0,
+    "no_match_precision": null,
+    "no_match_recall": 0.0,
+    "no_match_f1": null,
+    "false_routing_rate": 0.3692,
+    "abstain_rate": 0.0
+  },
+  "median_best_score_by_outcome": {
+    "validation": {
+      "correct_route": 0.69686,
+      "wrong_route": 0.63059,
+      "no_match": 0.56842
+    },
+    "realistic": {
+      "correct_route": 0.62846,
+      "wrong_route": 0.57409,
+      "no_match": 0.57048
+    }
+  },
+  "note": "oracle tau is tuned on the external set: an upper bound for threshold policies, never a result"
+}
