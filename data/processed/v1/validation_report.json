@@ -1,0 +1,209 @@
+{
+  "checks": {
+    "candidate_condition_exists": {
+      "violations": 0,
+      "samples": []
+    },
+    "candidate_count_in_range": {
+      "violations": 0,
+      "samples": []
+    },
+    "candidate_partition_allowed_in_split": {
+      "violations": 0,
+      "samples": []
+    },
+    "cids_are_c0_to_ck": {
+      "violations": 0,
+      "samples": []
+    },
+    "context_roles_and_content": {
+      "violations": 0,
+      "samples": []
+    },
+    "context_within_limit": {
+      "violations": 0,
+      "samples": []
+    },
+    "descriptions_non_empty": {
+      "violations": 0,
+      "samples": []
+    },
+    "descriptions_unique_in_example": {
+      "violations": 0,
+      "samples": []
+    },
+    "equivalence_groups_unique_in_example": {
+      "violations": 0,
+      "samples": []
+    },
+    "gold_cid_consistent": {
+      "violations": 0,
+      "samples": []
+    },
+    "gold_partition_allowed_in_split": {
+      "violations": 0,
+      "samples": []
+    },
+    "gold_position_consistent": {
+      "violations": 0,
+      "samples": []
+    },
+    "message_non_empty": {
+      "violations": 0,
+      "samples": []
+    },
+    "meta_parallel_to_candidates": {
+      "violations": 0,
+      "samples": []
+    },
+    "no_match_gold_position_null": {
+      "violations": 0,
+      "samples": []
+    },
+    "no_match_has_no_gold": {
+      "violations": 0,
+      "samples": []
+    },
+    "node_non_empty": {
+      "violations": 0,
+      "samples": []
+    },
+    "oos_has_no_removed_gold": {
+      "violations": 0,
+      "samples": []
+    },
+    "other_family_has_no_gold_family": {
+      "violations": 0,
+      "samples": []
+    },
+    "paired_main_exists": {
+      "violations": 0,
+      "samples": []
+    },
+    "paired_mirrors_main": {
+      "violations": 0,
+      "samples": []
+    },
+    "paired_uses_held_out_variant": {
+      "violations": 0,
+      "samples": []
+    },
+    "removed_gold_group_absent": {
+      "violations": 0,
+      "samples": []
+    },
+    "removed_gold_known": {
+      "violations": 0,
+      "samples": []
+    },
+    "route_has_exactly_one_gold": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_service_node_matches_candidates": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_has_empty_context": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_banking77_train_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_banking77_train_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_banking77_val_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_clinc150_train_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_clinc150_train_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_clinc150_val_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_hwu64_train_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_hwu64_train_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_disjoint_hwu64_val_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_not_in_any_train_banking77_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_not_in_any_train_banking77_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_not_in_any_train_clinc150_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_not_in_any_train_clinc150_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_not_in_any_train_hwu64_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_not_in_any_train_hwu64_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "single_turn_text_unique_within_dataset_split": {
+      "violations": 0,
+      "samples": []
+    },
+    "split_field_matches_file": {
+      "violations": 0,
+      "samples": []
+    },
+    "split_groups_disjoint_train_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "split_groups_disjoint_train_val": {
+      "violations": 0,
+      "samples": []
+    },
+    "split_groups_disjoint_val_test": {
+      "violations": 0,
+      "samples": []
+    },
+    "train_gold_is_train_partition": {
+      "violations": 0,
+      "samples": []
+    },
+    "train_never_uses_held_out_variant": {
+      "violations": 0,
+      "samples": []
+    },
+    "unique_example_id": {
+      "violations": 0,
+      "samples": []
+    }
+  },
+  "n_checks": 50,
+  "n_failed": 0,
+  "warnings": [
+    "324 condition descriptions are unreviewed LLM drafts (see data/curated/*)"
+  ]
+}

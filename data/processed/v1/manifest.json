@@ -1,0 +1,69 @@
+{
+  "version": "v1",
+  "seed": 42,
+  "config_hash": "161a8482e40a883f11ff7526d8554ba136e154e3248d860778ba6dc64be59471",
+  "datasets": [
+    "abcd",
+    "banking77",
+    "clinc150",
+    "hwu64",
+    "sgd",
+    "star"
+  ],
+  "smoke_build_limit": null,
+  "raw_sha256sums_hash": "6297c4398484d5c187ff344ff47a270d9a668f50deeb841a320d27c79fad8c45",
+  "curated_files_sha256": {
+    "abcd_flows.json": "2aca983ade98bde4b48a8a01e857e05231ad12411ae1f719cb570f905ab4e361",
+    "banking77_conditions.json": "27cb3f0555529c3e4080547d81a278fa35909c650efd8e6f28748e9556e518ac",
+    "clinc150_conditions.json": "6655994d42196b2d043eaf6e747df7491b9e81f29fe5f9a59ad7720d279cbfe8",
+    "hwu64_conditions.json": "ac208df9b64842cbb4927bfc3d4bf9645228e9136832794df1790c2b89f79047",
+    "star_tasks.json": "570bdddf6b3452bba74b1ae4ff5247b9535e86ce2a46cb76a85d8d99a76ab0e9"
+  },
+  "files": {
+    "train.jsonl": {
+      "rows": 88790,
+      "sha256": "6af9358e2ee88e62fb275d71015792b06c2a59b00266f780efe21ab3d7cdc216"
+    },
+    "val.jsonl": {
+      "rows": 24253,
+      "sha256": "d99b99b6f743f10593225f3cfeceb76021c69ff698b7232843400b821a28a771"
+    },
+    "test.jsonl": {
+      "rows": 42498,
+      "sha256": "2d49e74b6c3f01f9a1b7c155b255a44469d84cc767181125026bb83f84fecd87"
+    },
+    "conditions.jsonl": {
+      "rows": 412,
+      "sha256": "00c6533405c2947b204dfe0d713afdc45fd413876334116f33bc1393cf1fdfab"
+    },
+    "moments.jsonl": {
+      "rows": 137167,
+      "sha256": "9f35451fc56a3923c5af6095611fcb571432d281c8c0aeb2cddad59ea1044a3e"
+    },
+    "examples_flat.csv": {
+      "rows": 155541,
+      "sha256": "d5cee33424065cc66b482ba4b05d6de2f6abc82393191fb98a0d968978de9934"
+    },
+    "examples_sample.csv": {
+      "rows": 2700,
+      "sha256": "45890a322830dad67b612190fd1b0c670227da17e689072930ff43f62d0031c5"
+    },
+    "candidates_long.csv": {
+      "rows": 789323,
+      "sha256": "ec9d73e4953ca8a09a414e23bc5fa8bcf7970f24237979ba8bcc6d7b918fdc3d"
+    },
+    "conditions.csv": {
+      "rows": 412,
+      "sha256": "8b57afedde1f826d371cdf7e6fddbc7a10939fcddd347f05aba5a3b8eb06ffc0"
+    },
+    "stats.json": {
+      "sha256": "4c1708787c93d16103ea683bb13bb3743db840c83a1d174cf2c116984d893732"
+    },
+    "validation_report.json": {
+      "sha256": "25b5e76996f25dca024a4c7bcfad4075f9b15571940afc2745a7a7679aa43ff9"
+    },
+    "DATASET_CARD.md": {
+      "sha256": "0afc5845f4bf52193de1ba1bbb12772eafb61d15377331c76abbc42225734204"
+    }
+  }
+}

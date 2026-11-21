@@ -1,0 +1,470 @@
+{
+  "stats": {
+    "examples_per_split": {
+      "train": 88790,
+      "val": 24253,
+      "test": 42498
+    },
+    "examples_by_split_dataset": {
+      "train": {
+        "abcd": 6318,
+        "banking77": 6991,
+        "clinc150": 10573,
+        "hwu64": 18111,
+        "sgd": 43393,
+        "star": 3404
+      },
+      "val": {
+        "abcd": 1806,
+        "banking77": 1681,
+        "clinc150": 4413,
+        "hwu64": 2232,
+        "sgd": 13186,
+        "star": 935
+      },
+      "test": {
+        "abcd": 1879,
+        "banking77": 4380,
+        "clinc150": 8508,
+        "hwu64": 3695,
+        "sgd": 23562,
+        "star": 474
+      }
+    },
+    "examples_by_split_dataset_label": {
+      "train": {
+        "abcd/no_match": 1288,
+        "abcd/route": 5030,
+        "banking77/no_match": 1422,
+        "banking77/route": 5569,
+        "clinc150/no_match": 2258,
+        "clinc150/route": 8315,
+        "hwu64/no_match": 3656,
+        "hwu64/route": 14455,
+        "sgd/no_match": 8669,
+        "sgd/route": 34724,
+        "star/no_match": 713,
+        "star/route": 2691
+      },
+      "val": {
+        "abcd/no_match": 364,
+        "abcd/route": 1442,
+        "banking77/no_match": 324,
+        "banking77/route": 1357,
+        "clinc150/no_match": 964,
+        "clinc150/route": 3449,
+        "hwu64/no_match": 427,
+        "hwu64/route": 1805,
+        "sgd/no_match": 2666,
+        "sgd/route": 10520,
+        "star/no_match": 181,
+        "star/route": 754
+      },
+      "test": {
+        "abcd/no_match": 387,
+        "abcd/route": 1492,
+        "banking77/no_match": 860,
+        "banking77/route": 3520,
+        "clinc150/no_match": 2490,
+        "clinc150/route": 6018,
+        "hwu64/no_match": 765,
+        "hwu64/route": 2930,
+        "sgd/no_match": 4742,
+        "sgd/route": 18820,
+        "star/no_match": 99,
+        "star/route": 375
+      }
+    },
+    "slices": {
+      "train": {
+        "cond:none": 18006,
+        "cond:seen": 70784,
+        "ctx:first_turn": 4996,
+        "ctx:later_turn": 31413,
+        "ctx:none": 52381,
+        "dataset:abcd": 6318,
+        "dataset:banking77": 6991,
+        "dataset:clinc150": 10573,
+        "dataset:hwu64": 18111,
+        "dataset:sgd": 43393,
+        "dataset:star": 3404,
+        "desc:orig": 62742,
+        "desc:train_variant": 26048,
+        "k:2-3": 26748,
+        "k:4-6": 42355,
+        "k:7+": 19687,
+        "label:no_match": 18006,
+        "label:route": 70784,
+        "msg:short": 7845,
+        "nm_kind:oos": 100,
+        "nm_kind:other_family": 12554,
+        "nm_kind:sibling_removed": 5352,
+        "risk:sibling_partial_validity": 4256,
+        "svc:seen": 34724,
+        "tier:T1": 43393,
+        "tier:T2": 35675,
+        "tier:T3": 9722
+      },
+      "val": {
+        "cond:none": 4926,
+        "cond:seen": 14873,
+        "cond:unseen": 4454,
+        "ctx:first_turn": 1423,
+        "ctx:later_turn": 9373,
+        "ctx:none": 13457,
+        "dataset:abcd": 1806,
+        "dataset:banking77": 1681,
+        "dataset:clinc150": 4413,
+        "dataset:hwu64": 2232,
+        "dataset:sgd": 13186,
+        "dataset:star": 935,
+        "desc:heldout_paraphrase": 6593,
+        "desc:orig": 17660,
+        "k:2-3": 7308,
+        "k:4-6": 11500,
+        "k:7+": 5445,
+        "label:no_match": 4926,
+        "label:route": 19327,
+        "msg:short": 1868,
+        "nm_kind:oos": 100,
+        "nm_kind:other_family": 3421,
+        "nm_kind:sibling_removed": 1405,
+        "risk:sibling_partial_validity": 1064,
+        "svc:seen": 5886,
+        "svc:unseen": 4634,
+        "tier:T1": 13186,
+        "tier:T2": 8326,
+        "tier:T3": 2741
+      },
+      "test": {
+        "cond:none": 9343,
+        "cond:seen": 22920,
+        "cond:unseen": 10235,
+        "ctx:first_turn": 1429,
+        "ctx:later_turn": 15920,
+        "ctx:none": 25149,
+        "dataset:abcd": 1879,
+        "dataset:banking77": 4380,
+        "dataset:clinc150": 8508,
+        "dataset:hwu64": 3695,
+        "dataset:sgd": 23562,
+        "dataset:star": 474,
+        "desc:heldout_paraphrase": 11781,
+        "desc:orig": 30717,
+        "k:2-3": 12776,
+        "k:4-6": 20039,
+        "k:7+": 9683,
+        "label:no_match": 9343,
+        "label:route": 33155,
+        "msg:short": 2280,
+        "nm_kind:oos": 996,
+        "nm_kind:other_family": 5913,
+        "nm_kind:sibling_removed": 2434,
+        "risk:sibling_partial_validity": 1866,
+        "svc:seen": 5052,
+        "svc:unseen": 13768,
+        "tier:T1": 23562,
+        "tier:T2": 16583,
+        "tier:T3": 2353
+      }
+    },
+    "n_candidates_distribution": {
+      "train": {
+        "2": 8875,
+        "3": 17873,
+        "4": 18106,
+        "5": 13471,
+        "6": 10778,
+        "8": 11493,
+        "10": 8194
+      },
+      "val": {
+        "2": 2440,
+        "3": 4868,
+        "4": 4983,
+        "5": 3606,
+        "6": 2911,
+        "8": 3159,
+        "10": 2286
+      },
+      "test": {
+        "2": 4278,
+        "3": 8498,
+        "4": 8589,
+        "5": 6439,
+        "6": 5011,
+        "8": 5459,
+        "10": 4224
+      }
+    },
+    "construction_kinds": {
+      "train": {
+        "oos": 100,
+        "other_family": 12554,
+        "route": 70784,
+        "sibling_removed": 5352
+      },
+      "val": {
+        "oos": 100,
+        "other_family": 3421,
+        "route": 19327,
+        "sibling_removed": 1405
+      },
+      "test": {
+        "oos": 996,
+        "other_family": 5913,
+        "route": 33155,
+        "sibling_removed": 2434
+      }
+    },
+    "description_variants": {
+      "test/orig": 30717,
+      "test/v5": 11781,
+      "train/orig": 62742,
+      "train/v1": 8630,
+      "train/v2": 8642,
+      "train/v3": 8776,
+      "val/orig": 17660,
+      "val/v4": 6593
+    },
+    "conditions": {
+      "abcd": {
+        "total": 10,
+        "train": 8,
+        "val": 1,
+        "test": 1,
+        "families": 10,
+        "equivalence_groups": 10
+      },
+      "banking77": {
+        "total": 77,
+        "train": 60,
+        "val": 6,
+        "test": 11,
+        "families": 9,
+        "equivalence_groups": 77
+      },
+      "clinc150": {
+        "total": 150,
+        "train": 105,
+        "val": 15,
+        "test": 30,
+        "families": 10,
+        "equivalence_groups": 150
+      },
+      "hwu64": {
+        "total": 63,
+        "train": 55,
+        "val": 3,
+        "test": 5,
+        "families": 18,
+        "equivalence_groups": 63
+      },
+      "sgd": {
+        "total": 88,
+        "train": 53,
+        "val": 15,
+        "test": 20,
+        "families": 20,
+        "equivalence_groups": 46
+      },
+      "star": {
+        "total": 24,
+        "train": 21,
+        "val": 1,
+        "test": 2,
+        "families": 13,
+        "equivalence_groups": 24
+      }
+    },
+    "moments_kept": {
+      "abcd": {
+        "test": 1879,
+        "train": 6318,
+        "val": 1806
+      },
+      "banking77": {
+        "test": 4380,
+        "train": 6991,
+        "val": 1681
+      },
+      "clinc150": {
+        "test": 8508,
+        "train": 10573,
+        "val": 4413
+      },
+      "hwu64": {
+        "test": 3695,
+        "train": 18111,
+        "val": 2232
+      },
+      "sgd": {
+        "test": 11781,
+        "train": 43393,
+        "val": 6593
+      },
+      "star": {
+        "test": 474,
+        "train": 3404,
+        "val": 935
+      }
+    },
+    "dropped": {
+      "abcd": {
+        "no_substantive_customer_turn_early": 39
+      },
+      "banking77": {
+        "duplicate_of_earlier_split": 11,
+        "duplicate_of_other_dataset_earlier_split": 7,
+        "duplicate_within_split": 13
+      },
+      "clinc150": {
+        "duplicate_of_earlier_split": 21,
+        "duplicate_of_other_dataset_earlier_split": 103,
+        "duplicate_within_split": 74,
+        "label_conflict": 8
+      },
+      "hwu64": {
+        "duplicate_of_earlier_split": 18,
+        "duplicate_of_other_dataset_earlier_split": 54,
+        "duplicate_within_split": 62,
+        "excluded_label": 1168,
+        "irrelevant_status": 264,
+        "label_conflict": 36,
+        "no_text": 76
+      },
+      "star": {
+        "incomplete_dialogue": 832,
+        "low_information_message": 299,
+        "multi_gold_turn": 1162
+      }
+    }
+  },
+  "probes": {
+    "lexical_overlap_top1": {
+      "abcd/test": {
+        "accuracy": 0.5362,
+        "chance": 0.2415,
+        "n": 1492
+      },
+      "abcd/val": {
+        "accuracy": 0.7774,
+        "chance": 0.2577,
+        "n": 1442
+      },
+      "banking77/test": {
+        "accuracy": 0.6761,
+        "chance": 0.2461,
+        "n": 3520
+      },
+      "banking77/val": {
+        "accuracy": 0.6633,
+        "chance": 0.2474,
+        "n": 1357
+      },
+      "clinc150/test": {
+        "accuracy": 0.6454,
+        "chance": 0.2418,
+        "n": 6018
+      },
+      "clinc150/val": {
+        "accuracy": 0.7467,
+        "chance": 0.2446,
+        "n": 3449
+      },
+      "hwu64/test": {
+        "accuracy": 0.578,
+        "chance": 0.2439,
+        "n": 2930
+      },
+      "hwu64/val": {
+        "accuracy": 0.5408,
+        "chance": 0.2399,
+        "n": 1805
+      },
+      "sgd/test": {
+        "accuracy": 0.527,
+        "chance": 0.2427,
+        "n": 9410
+      },
+      "sgd/val": {
+        "accuracy": 0.5844,
+        "chance": 0.2431,
+        "n": 5260
+      },
+      "star/test": {
+        "accuracy": 0.6952,
+        "chance": 0.2481,
+        "n": 375
+      },
+      "star/val": {
+        "accuracy": 0.692,
+        "chance": 0.2449,
+        "n": 754
+      }
+    },
+    "gold_is_longest_description": {
+      "abcd/test": {
+        "rate": 0.0962,
+        "chance": 0.2415,
+        "n": 1492
+      },
+      "abcd/val": {
+        "rate": 0.3818,
+        "chance": 0.2577,
+        "n": 1442
+      },
+      "banking77/test": {
+        "rate": 0.2548,
+        "chance": 0.2461,
+        "n": 3520
+      },
+      "banking77/val": {
+        "rate": 0.1857,
+        "chance": 0.2474,
+        "n": 1357
+      },
+      "clinc150/test": {
+        "rate": 0.2458,
+        "chance": 0.2418,
+        "n": 6018
+      },
+      "clinc150/val": {
+        "rate": 0.2272,
+        "chance": 0.2446,
+        "n": 3449
+      },
+      "hwu64/test": {
+        "rate": 0.2031,
+        "chance": 0.2439,
+        "n": 2930
+      },
+      "hwu64/val": {
+        "rate": 0.3258,
+        "chance": 0.2399,
+        "n": 1805
+      },
+      "sgd/test": {
+        "rate": 0.1891,
+        "chance": 0.2427,
+        "n": 9410
+      },
+      "sgd/val": {
+        "rate": 0.1587,
+        "chance": 0.2431,
+        "n": 5260
+      },
+      "star/test": {
+        "rate": 0.1671,
+        "chance": 0.2481,
+        "n": 375
+      },
+      "star/val": {
+        "rate": 0.256,
+        "chance": 0.2449,
+        "n": 754
+      }
+    },
+    "style_artifacts": []
+  }
+}
