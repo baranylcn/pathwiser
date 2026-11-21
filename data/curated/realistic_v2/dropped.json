@@ -1,0 +1,24 @@
+[
+ {
+  "scenario": "v2_056",
+  "i": 5,
+  "message": "Oh dear, I've just realised the time and I must collect my son from football. Before I go, could you tell me whether your shop is open on Sunday afternoons, as I might pop in with the artwork on a memory stick instead? I'd be ever so grateful, it's been one of those days.",
+  "conditions": {
+   "a": "Bot OK: cust proceeds w/ current order/quote steps",
+   "b": "Esc to CSR: cust asks for a live staff member"
+  },
+  "reason": "contested after two annotation rounds and one rewrite: the node is a binary 'live staff or continue with the bot' choice, and annotators treat every non-escalation as 'continue with the bot', so a clean in-domain-uncovered example does not exist for it"
+ },
+ {
+  "scenario": "v2_022",
+  "i": 4,
+  "message": "honestly cant tell, id have to ask my aunt, she had it before me",
+  "conditions": {
+   "a": "The owner gives a date or time window for collecting or bringing in the item.",
+   "b": "The owner says they do not know the answer, for example the item's age or origin.",
+   "c": "The owner chooses one of the treatment options the restorer has just offered.",
+   "d": "The owner declines to share the information the restorer has asked for."
+  },
+  "reason": "contested in three annotation rounds with three different rewrites: with the options 'give a date', 'choose an offered option' and 'decline to share the information', annotators consistently read any answer that supplies no information (including 'I don't know') as the decline option, so the intended 'does not know' reading cannot be expressed cleanly for this node"
+ }
+]

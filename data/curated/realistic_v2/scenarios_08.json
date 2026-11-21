@@ -1,0 +1,512 @@
+[
+ {
+  "id": "v2_074",
+  "node": {
+   "name": "translation_answer_followup",
+   "description": "Classify how the client reacts to the answer the agency assistant just gave about their translation job."
+  },
+  "conditions": {
+   "a": "Ans disputed - client says quote/TAT/word count is wrong",
+   "b": "Ans needs elaboration - client wants breakdown/explanation of same point",
+   "c": "Ans accepted - client satisfied, close thread",
+   "d": "Follow-up Q on same job, diff topic (other LP, file, deliverable)"
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Your certified translation of the birth certificate will be ready on Thursday, and the total is 85 euros."
+     ]
+    ],
+    "msg": "Fine. Took three emails to get a straight answer, but that's what I needed. We're done here.",
+    "why": "accepts answer, ends conversation"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "yo how'd you guys land on 640 bucks for my contract translation"
+     ],
+     [
+      "a",
+      "The quote is based on 3,200 source words at our legal rate, plus a certification fee."
+     ]
+    ],
+    "msg": "lol you lost me there bro, spell it out piece by piece for me",
+    "why": "wants the quote explanation broken down"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Your user manual has 4,800 words, so the quote comes to 1,152 euros."
+     ]
+    ],
+    "msg": "Seriously? I counted it myself and the thing barely has two thousand words. Did anyone even open the file?",
+    "why": "implies word count in answer is wrong"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "When will the French version of our brochure be done?"
+     ],
+     [
+      "a",
+      "The French brochure is scheduled for delivery on the 14th."
+     ]
+    ],
+    "msg": "Thanks. Separate question about the same order: can you also send the Italian brochure as an editable layout file?",
+    "why": "new question on another deliverable of same job"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "d",
+    "cands": [
+     "a",
+     "b",
+     "c"
+    ],
+    "ctx": [
+     [
+      "a",
+      "The Japanese subtitles for your training video will be delivered on Monday."
+     ]
+    ],
+    "msg": "Good to know. Our Seoul office watches those same training videos, and right now they only get the English audio.",
+    "why": "hints at new Korean language pair, not elaboration"
+   }
+  ]
+ },
+ {
+  "id": "v2_075",
+  "node": {
+   "name": "pass_office_router",
+   "description": "Decide which pass office service the caller needs."
+  },
+  "conditions": {
+   "a": "Request a visitor pass",
+   "b": "Request a contractor pass",
+   "c": "Report a lost or stolen pass",
+   "d": "Check application status"
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Good morning, I do hope I am writing to the right place."
+     ],
+     [
+      "a",
+      "Yes, this is the pass office. What can I do for you?"
+     ]
+    ],
+    "msg": "Thank you so much. I will be driving up from the coast with my elderly father this Saturday, it is a long trip and he tires easily, so I would simply like to know whether your counter is open at weekends and until what time. I would hate to arrive to a locked door!",
+    "why": "asks office opening hours; no option covers it"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "My aunt is coming to see me on base next weekend, how do I get her in?",
+    "why": "personal guest needs visitor access"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "I am lose my badge for the base yesterday somewhere in the parking, what I must do now?",
+    "why": "lost pass"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "I need to get someone access to the base starting Monday."
+     ],
+     [
+      "a",
+      "Sure. Is this person a personal guest, or a worker employed by a company doing a job on base?"
+     ]
+    ],
+    "msg": "The second option, for about three weeks.",
+    "why": "chooses company worker, i.e. contractor pass"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "sent pass form 2 weeks back. nothing since",
+    "why": "implies wanting status of submitted application"
+   }
+  ]
+ },
+ {
+  "id": "v2_076",
+  "node": {
+   "name": "licensing_support_triage",
+   "description": "Categorise an incoming customer support request for the stock image library."
+  },
+  "conditions": {
+   "a": "Billing - dup charge / refund / inv. error",
+   "b": "Lic scope query - is use covered by current std/ext licence",
+   "c": "Lic upgrade - cust needs to buy std->ext or more seats"
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "c",
+    "cands": [
+     "a",
+     "b"
+    ],
+    "ctx": [
+     [
+      "u",
+      "yo got a question about that mountain shot I bought"
+     ],
+     [
+      "a",
+      "Sure, what's going on with the image?"
+     ]
+    ],
+    "msg": "ok so turns out we're slapping it on like 50k t-shirts, the basic license ain't gonna cut it, hook me up with the bigger one, how much?",
+    "why": "knows it's not covered, wants to buy upgrade"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "need that skyline pic on a billboard, does my standard license work for that?"
+     ],
+     [
+      "a",
+      "Billboards fall outside the standard licence; you would need the extended licence for that use."
+     ]
+    ],
+    "msg": "aight bet, sign me up for that then",
+    "why": "agrees to buy extended licence"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "hi, I'm not sure who to ask about this"
+     ],
+     [
+      "a",
+      "No problem, tell me what you need and I'll point you the right way."
+     ]
+    ],
+    "msg": "I take a lot of pictures of birds and some people say they're good. Can I put them on your site and get paid when someone uses them? Not sure what that's called, is that even possible?",
+    "why": "wants to become a contributor; not billing or licensing"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "We bought the standard licence for the harbour photo, but now it's going into a TV ad, so we'd like to move up to the extended one.",
+    "why": "explicit upgrade purchase"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "We have buy the forest picture with standard licence. Our magazine print 80 000 copies and also put it on website. I am not sure this is okay.",
+    "why": "unsure if current licence covers usage"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "hey quick one"
+     ],
+     [
+      "a",
+      "Sure, go ahead."
+     ]
+    ],
+    "msg": "charged twice for beach pack this morning. also nice new search filter btw",
+    "why": "double charge; search remark is distractor"
+   }
+  ]
+ },
+ {
+  "id": "v2_077",
+  "node": {
+   "name": "drone_registry_triage",
+   "description": "Classify an incoming request to the drone registry by the type of case to open."
+  },
+  "conditions": {
+   "a": "The pilot wants to register a brand-new drone they have just bought themselves.",
+   "b": "The pilot wants to renew an existing remote pilot licence that is about to expire.",
+   "c": "The pilot reports a drone incident, crash or near-miss that needs investigation.",
+   "d": "The applicant wants to apply for their first remote pilot licence.",
+   "e": "The owner wants to transfer a registered drone to the person they sold it to."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c",
+     "d",
+     "e"
+    ],
+    "ctx": [
+     [
+      "a",
+      "Welcome to the drone registry. How can we help you today?"
+     ]
+    ],
+    "msg": "Good afternoon, and thank you for having this chat service, my eyes are not what they used to be for the paper forms. I have held my pilot licence for nearly five years now, mostly for filming my daughter's horse shows, and I noticed it runs out at the end of next month. I would very much like to keep it valid without a gap.",
+    "why": "existing licence expiring, wants renewal"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "need help"
+     ],
+     [
+      "a",
+      "Of course. What happened?"
+     ]
+    ],
+    "msg": "drone went down over farm road. hit parked van. nobody hurt",
+    "why": "describes a crash"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "so I'm totally new to this, never had any pilot paperwork at all, and I just passed the theory exam last week",
+    "why": "newcomer after exam implies first licence"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "u",
+      "Hello, I have question about my drone registration."
+     ],
+     [
+      "a",
+      "Sure. Do you want to register a new drone, or move an existing registration to someone you sold the drone to?"
+     ]
+    ],
+    "msg": "The second thing, yes. Is for my neighbour now.",
+    "why": "picks moving registration to buyer"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "hey, my pilot license runs out in three weeks, can I get it extended?",
+    "why": "extend expiring licence"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "e",
+    "cands": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ],
+    "ctx": [],
+    "msg": "I sold my old drone to a friend and he wants it under his name now. Do I re-register it for him or something? Is that even possible?",
+    "why": "sold drone, ownership transfer; not new purchase registration"
+   }
+  ]
+ },
+ {
+  "id": "v2_078",
+  "node": {
+   "name": "architect_answer_followup",
+   "description": "Decide how the enquirer responds to the answer the practice just gave."
+  },
+  "conditions": {
+   "a": "Confirm answer resolved query",
+   "b": "Request further written detail",
+   "c": "Challenge answer as incorrect",
+   "d": "Request call to discuss answer",
+   "e": "Raise a different question"
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Do we need planning permission for the rear extension?"
+     ],
+     [
+      "a",
+      "No. At 3 metres deep it falls under permitted development, so no application is needed."
+     ]
+    ],
+    "msg": "Ok, so no need for other explanation, for me this is clear now. Thank you.",
+    "why": "no more detail needed, query resolved"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "d",
+    "cands": [
+     "a",
+     "b",
+     "c",
+     "e"
+    ],
+    "ctx": [
+     [
+      "u",
+      "Could you tell me why the planning officer rejected the loft dormer?"
+     ],
+     [
+      "a",
+      "The officer considered the dormer too large relative to the roof slope and out of character with the street."
+     ]
+    ],
+    "msg": "Thank you ever so much for that. I must confess I have been reading emails about this dormer for weeks and my husband says I talk of nothing else. Rather than another long written note, could we perhaps set up a short telephone conversation so I can talk it through with someone properly?",
+    "why": "wants phone call, explicitly not written detail"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "a",
+      "The survey is booked for Tuesday at 9. You mentioned you had a separate question about the garden studio, still want to go over that?"
+     ]
+    ],
+    "msg": "Oh right, yeah, let's do that one now.",
+    "why": "moves on to the other topic"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "The council's deadline for objections to your neighbour's application is the 30th of June."
+     ]
+    ],
+    "msg": "nah that's dead wrong mate, the letter I got says the 12th, crap. anyway loving the sketches you sent btw",
+    "why": "says date is wrong; sketches remark is distractor"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "How much will the full design service cost for my house?"
+     ],
+     [
+      "a",
+      "Our full service fee is about 9% of the construction cost."
+     ]
+    ],
+    "msg": "Can you write me more detail what is include in this 9 percent? Which stages, drawings and so on.",
+    "why": "wants written breakdown of the fee"
+   }
+  ]
+ },
+ {
+  "id": "v2_079",
+  "node": {
+   "name": "maintenance_shop_router",
+   "description": "Determine what the aircraft owner wants from the maintenance shop."
+  },
+  "conditions": {
+   "a": "Is the owner asking to book a new scheduled inspection such as an annual or 100-hour?",
+   "b": "Is the owner asking about the progress of an inspection already underway?",
+   "c": "Is the owner requesting copies of logbook entries or maintenance records?",
+   "d": "Is the owner reporting a defect or problem found on the aircraft?",
+   "e": "Is the owner asking for a price quote on parts or labour?",
+   "f": "Is the owner asking whether an airworthiness directive applies to their aircraft?"
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [
+     [
+      "u",
+      "hi"
+     ],
+     [
+      "a",
+      "Hi, this is the maintenance shop. What can we do for you?"
+     ]
+    ],
+    "msg": "any good taco spot around here",
+    "why": "food recommendation, unrelated"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "hey, my plane's been in with you for its annual since Monday, how's it coming along?",
+    "why": "progress of ongoing inspection"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "Picked the plane up yesterday and the damn left brake is dragging again. Fourth time this year.",
+    "why": "reports brake problem"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "a",
+    "cands": [
+     "b",
+     "c",
+     "d",
+     "e",
+     "f"
+    ],
+    "ctx": [
+     [
+      "a",
+      "Thanks for contacting the maintenance shop. How can we help?"
+     ]
+    ],
+    "msg": "My annual is due at the end of next month. Can I get on your schedule for it?",
+    "why": "wants to book a future inspection, not progress"
+   },
+   {
+    "gold": "f",
+    "ctx": [],
+    "msg": "I have read that a new directive was issued concerning exhaust risers on certain engine models, and my aircraft is fitted with one of those engines.",
+    "why": "implies asking if the directive affects their aircraft"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Hello there, I hope your week is going well."
+     ],
+     [
+      "a",
+      "It is, thank you! What can we do for you today?"
+     ]
+    ],
+    "msg": "Oh wonderful. Well, I fly a little four-seater mostly for weekend trips to see my grandchildren, and I have been keeping a close eye on the hours. It is coming up on its 100-hour check soon, so I was hoping to find a slot with you sometime in the next few weeks, whatever suits your shop.",
+    "why": "wants to book upcoming 100-hour inspection"
+   }
+  ]
+ }
+]

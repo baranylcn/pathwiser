@@ -1,0 +1,762 @@
+[
+ {
+  "id": "v2_064",
+  "node": {
+   "name": "class_booking_info_reply",
+   "description": "Classify what kind of information the customer's reply supplies after the studio assistant asked for a detail."
+  },
+  "conditions": {
+   "a": "The customer gives a preferred date or session time for the class.",
+   "b": "The customer provides their booking reference or membership number as requested.",
+   "c": "The customer says they do not know or cannot find the requested information.",
+   "d": "The customer declines to share the requested information and refuses to answer."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "I want to move my weaving class to a different week."
+     ],
+     [
+      "a",
+      "Sure, could you give me the booking reference from your confirmation email?"
+     ]
+    ],
+    "msg": "Oh, I don't remember getting an email with any number in it. My daughter did the booking for me on her phone.",
+    "why": "cannot find the reference number"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Welcome to the studio! Before we continue, may I have your home address for our mailing list?"
+     ]
+    ],
+    "msg": "I prefer not giving my address, is not necessary for me to receive the letters from you.",
+    "why": "refuses to give address"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "hey, can I check what time my woodworking class starts?"
+     ],
+     [
+      "a",
+      "Of course. What's your booking reference?"
+     ]
+    ],
+    "msg": "Sure, it's WK-48213.",
+    "why": "supplies booking reference"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "I want to sign up for the woodworking course."
+     ],
+     [
+      "a",
+      "Great! Which start date would you like, 5 May or 19 May?"
+     ]
+    ],
+    "msg": "Seriously, nobody on your site can tell me if tools are included or if I have to buy my own? That's what I actually need to know.",
+    "why": "asks about included tools; no answer type fits"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Hi! Which date would you like for the beginner pottery class: 3 March or 10 March?"
+     ]
+    ],
+    "msg": "The second one, please.",
+    "why": "picks 10 March from offered dates"
+   }
+  ]
+ },
+ {
+  "id": "v2_065",
+  "node": {
+   "name": "costume_issue_triage",
+   "description": "Categorise a problem reported by a theatre or school renting costumes."
+  },
+  "conditions": {
+   "a": "The renter reports that a costume arrived torn, stained or otherwise damaged.",
+   "b": "The renter reports that ordered costumes have not been delivered on time.",
+   "c": "The renter reports that a costume does not fit the performer it was meant for."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "problem with the order"
+     ],
+     [
+      "a",
+      "Sorry to hear that. What's going on with the costumes?"
+     ]
+    ],
+    "msg": "pirate coat. lead actor swimming in it. sleeves past fingertips",
+    "why": "coat far too big for actor"
+   },
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [],
+    "msg": "Good afternoon, I do hope you are well. I've been rehearsing lines with my nephew all week and we got into a little debate, so I wondered whether you might know roughly how long the drive is from the coast up to the mountains? We're planning a trip afterwards. Many thanks!",
+    "why": "asks about driving time, unrelated"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "I would like to know whether you offer discounted rates for school productions that rent more than twenty costumes.",
+    "why": "pricing question, not a reported problem"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Hi, this is the costume house support line. What's happened?"
+     ]
+    ],
+    "msg": "Yo, the witch dress showed up with a freaking huge rip down the back and some nasty stain on the hem, what the hell.",
+    "why": "rip and stain on dress"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "You mentioned the Victorian gown. When you unpacked it, were there any marks or tears on the fabric?"
+     ]
+    ],
+    "msg": "Yes, a few, unfortunately.",
+    "why": "confirms marks and tears on gown"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Costume house, how may we help?"
+     ]
+    ],
+    "msg": "Our dress rehearsal is tomorrow evening and the twelve soldier uniforms we ordered for last Monday have still not reached us.",
+    "why": "uniforms overdue"
+   }
+  ]
+ },
+ {
+  "id": "v2_066",
+  "node": {
+   "name": "parts_order_confirmation",
+   "description": "Decide how the buyer responds to the summarised parts order the assistant asked them to confirm."
+  },
+  "conditions": {
+   "a": "The buyer wants to change quantities or part numbers in the summarised order.",
+   "b": "The buyer wants to change the delivery address or date of the order.",
+   "c": "The buyer confirms the summarised order as presented and wants it placed.",
+   "d": "The buyer wants to cancel the order and not proceed with the purchase."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c",
+     "d"
+    ],
+    "ctx": [
+     [
+      "u",
+      "I'd like to order the valve assemblies we got quoted last week."
+     ],
+     [
+      "a",
+      "Here's your order: 40 x VA-220 valve assemblies, delivered to Dock 3 at the Harlow site on 14 June. Shall I place it?"
+     ]
+    ],
+    "msg": "Almost right, but the delivery site is wrong: please ship them to our Brunswick facility instead of Harlow. The quantities and part numbers are all fine as they are.",
+    "why": "changes delivery site only; quantities and parts unchanged"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "To confirm: 12 heat shield tiles, part HT-09, delivered on 2 May to your workshop. Is that correct?"
+     ]
+    ],
+    "msg": "Actually we need twenty of those tiles, not twelve, the project got bigger.",
+    "why": "changes quantity"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "order for the fuel line couplings"
+     ],
+     [
+      "a",
+      "Summary: 200 x FC-15 couplings, lead time 30 days, total 18,400. Confirm?"
+     ]
+    ],
+    "msg": "no. scrap it. project dead",
+    "why": "drops the order entirely"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "need those igniter kits we talked about"
+     ],
+     [
+      "a",
+      "Got it: 6 IG-4 igniter kits with material certificates, delivered to Bay 7 on 9 August. Shall I go ahead?"
+     ]
+    ],
+    "msg": "Hell yeah, that's spot on, send it through.",
+    "why": "approves order as is"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Your order: 8 x TP-31 turbopump seals, delivered on 12 October to the Kestrel test site. Please confirm."
+     ]
+    ],
+    "msg": "Can we make it the 20th instead?",
+    "why": "moves delivery date"
+   }
+  ]
+ },
+ {
+  "id": "v2_067",
+  "node": {
+   "name": "driver_support_handoff",
+   "description": "Decide whether the driver should be passed to a human agent or keep troubleshooting with the bot."
+  },
+  "conditions": {
+   "a": "Escalate to a live agent",
+   "b": "Continue charger troubleshooting with bot"
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "charger at the mall lot won't start"
+     ],
+     [
+      "a",
+      "Let's try a reset. Please unplug, wait 30 seconds and tap your card again."
+     ]
+    ],
+    "msg": "Did that like five freaking times already. I'm stuck here at 4 percent and this script ain't cutting it, man.",
+    "why": "bot steps failed, needs a person"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Hi, I'm the charging assistant. I can help you here, or connect you to a person. What would you like?"
+     ]
+    ],
+    "msg": "bot fine. connector stuck in car after session tho",
+    "why": "accepts bot, gives charger problem"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Hey, so I've been through this chat thing twice already and it just keeps sending me the same help article about double charges.",
+    "why": "automated flow looping, wants human"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Hello! Want me to help you troubleshoot, or would you prefer to wait for an agent? Current wait is about 25 minutes."
+     ]
+    ],
+    "msg": "Nah, I'll stick with you, no way I'm waiting that long. Cool that you added the site by the train station, by the way. So why does the screen say cable locked?",
+    "why": "chooses bot, describes charger error"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "Site host here, need the Q3 utilization report with kWh dispensed per EVSE for host ID H-2207, for our lease review.",
+    "why": "host reporting request, not handoff or troubleshooting"
+   }
+  ]
+ },
+ {
+  "id": "v2_068",
+  "node": {
+   "name": "battery_ticket_severity",
+   "description": "Assign a severity level to a support request from a battery system owner."
+  },
+  "conditions": {
+   "a": "Safety emergency: the battery shows smoke, fire, swelling, hissing, a burning or chemical smell or unusual heat; the owner needs immediate safety instructions.",
+   "b": "Urgent fault without danger: the system has stopped supplying power, the inverter is offline or shows an error code, but there is no smoke, heat or smell.",
+   "c": "Routine request: questions about gradually reduced capacity, app or display oddities, or booking a regular maintenance check while the system still works normally."
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "There's a burning plastic smell coming from the battery cabinet in the garage and it feels hot to the touch. Also, my last invoice has the wrong address on it.",
+    "why": "burning smell and heat; invoice secondary"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "a",
+    "cands": [
+     "b",
+     "c"
+    ],
+    "ctx": [
+     [
+      "u",
+      "hey, got a question about my home battery"
+     ],
+     [
+      "a",
+      "Sure, what's going on with it?"
+     ]
+    ],
+    "msg": "So the side of the battery pack is kind of bulging out now and there's a faint hissing noise coming from it.",
+    "why": "swelling and hissing is a safety emergency"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "Since this morning the big battery box on my wall isn't giving the house any power at all, and the little screen shows a red code E-41.",
+    "why": "no power, error code, no danger"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "When we installed it two years ago it ran the house through the whole evening, now it's empty by about 8 pm.",
+    "why": "gradual capacity loss"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Battery support desk. What can we help with today?"
+     ]
+    ],
+    "msg": "It's been almost three years since anyone looked at the unit, and the warranty booklet says something about yearly checks.",
+    "why": "implies scheduling routine maintenance"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Hello there, so sorry to bother you on a Sunday. My husband and I had our grid battery put in last spring and we've been ever so pleased with it, but just now I noticed a thin wisp of smoke from the vent at the side and a sharp chemical smell in the utility room. What should we do? Thank you kindly.",
+    "why": "smoke and chemical smell"
+   }
+  ]
+ },
+ {
+  "id": "v2_069",
+  "node": {
+   "name": "production_office_router",
+   "description": "Decide what the crew member needs from the production office."
+  },
+  "conditions": {
+   "a": "The crew member wants to reserve camera, lighting or grip equipment for a shoot.",
+   "b": "The crew member wants to extend the rental period of equipment already checked out.",
+   "c": "The crew member asks about a filming permit for a shooting location."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "Sorry if this is a silly question, but we're shooting on Harbour Street next Thursday and I just realised nobody has asked the council about it. Will we get in trouble?",
+    "why": "worried about location permission"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "a",
+      "Production office here. What do you need?"
+     ]
+    ],
+    "msg": "I need to submit my timesheet for last week's night shoots and check my overtime pay.",
+    "why": "payroll request, no candidate"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c"
+    ],
+    "ctx": [
+     [
+      "a",
+      "Hey, production office. How can I help?"
+     ]
+    ],
+    "msg": "Hey, the shoot's running two extra days, can we hang on to the dolly and the light kit till Sunday?",
+    "why": "keeps current gear longer, extension"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Good morning, I am the gaffer on the Wren Hill shoot."
+     ],
+     [
+      "a",
+      "Good morning. What can the production office do for you?"
+     ]
+    ],
+    "msg": "We will require four additional LED panels and a generator for the exterior scenes on the 14th. Could those be reserved for us?",
+    "why": "reserving new lighting gear"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "need jib arm we have 3 more days past friday. also parking at base camp a mess",
+    "why": "keep jib longer; parking secondary"
+   }
+  ]
+ },
+ {
+  "id": "v2_070",
+  "node": {
+   "name": "studio_booking_confirmation",
+   "description": "Decide how the client responds to the summarised studio booking."
+  },
+  "conditions": {
+   "a": "The client confirms the summarised studio booking and wants it finalised.",
+   "b": "The client wants to change booking details such as time, room or equipment."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "a",
+      "Here is your booking: Studio A, Tuesday 15:00 to 17:00, two microphones. Shall I confirm it?"
+     ]
+    ],
+    "msg": "Before I reply, could you tell me whether the building has step-free access for a wheelchair user?",
+    "why": "accessibility question, neither confirms nor changes"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Booking summary: Studio B, Friday 10:00 to 13:00, two mics, editing package. Shall I lock this in?"
+     ]
+    ],
+    "msg": "looks good. see you fri",
+    "why": "accepts summary"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "I'd like a session for my interview show next week."
+     ],
+     [
+      "a",
+      "Here's what I have: Studio A, Wednesday 14:00 to 16:00, three guest mics, no editing. Does that all look right?"
+     ]
+    ],
+    "msg": "I already told my guests Wednesday at two, so they'll be glad to hear it.",
+    "why": "implies the summary is right"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Quick recap: Studio C, Saturday 9 am, four hours, with the mixing add-on. Good to go?"
+     ]
+    ],
+    "msg": "Nah man, way too damn early for us, make it after lunch.",
+    "why": "wants later time"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Summary: Studio A, Monday 18:00 to 20:00, with the video recording add-on. Want me to confirm it?"
+     ]
+    ],
+    "msg": "Sweet, that's freaking perfect, the crew's already hyped for Monday night.",
+    "why": "happy with booking as is"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "To confirm: Studio B on Thursday from 11:00 to 12:00 with one microphone. Shall I finalise this?"
+     ]
+    ],
+    "msg": "We shall actually be two speakers, so one microphone will not suffice.",
+    "why": "needs extra microphone"
+   }
+  ]
+ },
+ {
+  "id": "v2_071",
+  "node": {
+   "name": "practice_enquiry_router",
+   "description": "Decide what the person contacting the architecture practice wants."
+  },
+  "conditions": {
+   "a": "A prospective client wants the firm to design a new building project.",
+   "b": "A client asks for a progress update on their ongoing design project.",
+   "c": "A client wants to book or reschedule a meeting with their architect.",
+   "d": "A client wants to change the brief or layout of their ongoing project.",
+   "e": "The planning authority requests documents or information about a submitted application."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "Is Mira Okafor in the office this week? I need to sit down with her."
+     ],
+     [
+      "a",
+      "Mira is available Tuesday at 10:00 or Thursday at 15:00. Would either suit you?"
+     ]
+    ],
+    "msg": "Thursday. Finally. I've been chasing this for two weeks.",
+    "why": "picks meeting slot"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Hey, we just bought a plot out by the river and want to build a family house there, could you guys design it?",
+    "why": "new house design"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "u",
+      "I'm calling from the borough council planning department."
+     ],
+     [
+      "a",
+      "Thank you. What do you need regarding the application?"
+     ]
+    ],
+    "msg": "Just the revised drainage plans and the heritage statement for reference 24/0871.",
+    "why": "council requests application documents"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "It's been six weeks since you showed us the first sketches for our extension and we haven't heard a thing since.",
+    "why": "wants to know progress"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "d",
+    "cands": [
+     "a",
+     "b",
+     "c",
+     "e"
+    ],
+    "ctx": [
+     [
+      "u",
+      "hi, it's about the loft conversion on Penrose Road"
+     ],
+     [
+      "a",
+      "Hi! What would you like to know or do about it?"
+     ]
+    ],
+    "msg": "So we've decided we want a bigger dormer window and to drop the en-suite, can that go into the plans?",
+    "why": "changing design of ongoing project"
+   }
+  ]
+ },
+ {
+  "id": "v2_072",
+  "node": {
+   "name": "food_bank_router",
+   "description": "Decide what the person contacting the food bank wants to do."
+  },
+  "conditions": {
+   "a": "A recipient wants to book a new food parcel collection slot at a distribution site, for example choosing a day and time to pick up.",
+   "b": "Someone wants to donate food or household goods, including asking which items are accepted and where or when to drop them off.",
+   "c": "Someone wants to sign up for or swap a volunteer shift, such as sorting in the warehouse or helping at a distribution day.",
+   "d": "Someone asks whether they are eligible for support and which documents or referrals are needed to register as a recipient.",
+   "e": "A recipient wants to cancel or move a food parcel collection slot they have already booked, not book a new one.",
+   "f": "Someone needs food urgently today, for example has nothing to eat tonight, and asks for emergency same-day help outside normal bookings."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "a",
+    "cands": [
+     "b",
+     "c",
+     "d",
+     "e",
+     "f"
+    ],
+    "ctx": [],
+    "msg": "hey, I'm already registered but haven't booked anything this month yet, can I get a slot to pick up a parcel Thursday?",
+    "why": "new booking, only change/cancel offered"
+   },
+   {
+    "gold": "f",
+    "ctx": [],
+    "msg": "So the fridge is literally empty, payday's not till next week and the kids need dinner tonight.",
+    "why": "no food tonight, urgent"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "hi, could I grab a pickup time for a parcel at the church hall site, sometime Saturday morning?",
+    "why": "booking a new collection time"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "I've cleared out my cupboards and have a box of tins and pasta, where can I bring it?",
+    "why": "giving away food"
+   },
+   {
+    "gold": "e",
+    "ctx": [],
+    "msg": "I think I have a, what do you call it, appointment? for collecting food on Tuesday, but I can't make it then, can it be another day? Also is the hall the one next to the school?",
+    "why": "move existing collection; location question secondary"
+   }
+  ]
+ },
+ {
+  "id": "v2_073",
+  "node": {
+   "name": "print_order_detail_reply",
+   "description": "Classify what kind of information the customer's reply supplies after the print shop assistant asked for an order detail."
+  },
+  "conditions": {
+   "a": "The customer supplies a quantity: a number of copies or units to print, for example 500 flyers or a couple of hundred posters.",
+   "b": "The customer supplies a paper size or format, such as A4, A3, poster size, or picks one of the formats offered in the question.",
+   "c": "The customer supplies a deadline or collection date, for instance by Friday or next Monday morning, including requested delivery dates.",
+   "d": "The customer says they do not know or have not decided yet, and asks for advice or a recommendation before answering.",
+   "e": "The customer refuses or declines to give the requested information, for example does not want to share contact details or a budget."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [
+     [
+      "u",
+      "Hello, I'd like some posters for our choir concert."
+     ],
+     [
+      "a",
+      "Lovely! How many posters would you like?"
+     ]
+    ],
+    "msg": "Oh, before that, do forgive me, my granddaughter asked me this morning and I simply couldn't answer: do you happen to know why the sky turns orange at sunset? It's been bothering me all day, silly as it sounds.",
+    "why": "sunset question, unrelated to printing"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "I need flyers for a bake sale."
+     ],
+     [
+      "a",
+      "Sure. Would you like them in A5 or A6?"
+     ]
+    ],
+    "msg": "The bigger one, please.",
+    "why": "chooses A5 format"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "flyers for the street party"
+     ],
+     [
+      "a",
+      "Great. How many copies do you need?"
+     ]
+    ],
+    "msg": "one per house. street has about 240",
+    "why": "implies about 240 copies"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "I want to print my thesis with hard cover."
+     ],
+     [
+      "a",
+      "Of course. When do you need the bound copies ready?"
+     ]
+    ],
+    "msg": "I must give it to university in next Wednesday, so before this day please.",
+    "why": "deadline before Wednesday"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Thanks for your order of business cards. Which paper weight would you prefer: 300gsm or 400gsm?"
+     ]
+    ],
+    "msg": "Oh goodness, I've run my little bakery for years and never once had cards made, so those numbers mean nothing to me. Which would feel sturdier in the hand and not bend in a wallet? I'd love your thoughts.",
+    "why": "undecided, asks for recommendation"
+   }
+  ]
+ }
+]

@@ -1,0 +1,5476 @@
+[
+ {
+  "id": "v2_000",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "music_school_enrolment",
+  "domain_description": "Music school enrolling students and arranging teachers and lessons",
+  "archetype": "post_answer_followup",
+  "k": 3,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "hinting",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "c",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_001",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "elevator_maintenance_company",
+  "domain_description": "Firm maintaining lifts for building managers, with breakdown call-outs",
+  "archetype": "post_answer_followup",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "lay",
+    "noise": "no_punct_lower",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_002",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "print_shop_orders",
+  "domain_description": "Print shop taking orders for flyers, posters and bound documents",
+  "archetype": "intent_router",
+  "k": 8,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "h",
+    "i": 2,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 3,
+    "context": "none",
+    "persona": "lay",
+    "noise": "autocorrect",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 5,
+    "context": "none",
+    "persona": "lay",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_003",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "food_bank_distribution",
+  "domain_description": "Food bank managing pickups, donations and volunteer shifts",
+  "archetype": "intent_router",
+  "k": 8,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "h",
+    "sibling": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_004",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "gas_pipeline_inspection",
+  "domain_description": "Inspection teams logging pipeline findings and requesting permits",
+  "archetype": "confirmation",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_005",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "ev_charging_network",
+  "domain_description": "Operator of public charging stations supporting drivers and site hosts",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_006",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "satellite_ground_station",
+  "domain_description": "Ground station operators scheduling passes and reporting link issues",
+  "archetype": "post_answer_followup",
+  "k": 3,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_007",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "translation_agency",
+  "domain_description": "Agency receiving documents for translation and managing translators",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_008",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "space_agency_outreach",
+  "domain_description": "Outreach team answering schools and the public about missions and visits",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "c",
+    "i": 4,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_009",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "scout_troop_admin",
+  "domain_description": "Scout troop leaders handling camps, badges and parent forms",
+  "archetype": "intent_router",
+  "k": 6,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 1,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "autocorrect",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_010",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "military_base_pass_office",
+  "domain_description": "Base office issuing visitor and contractor passes",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 2,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "lay",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 5,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_011",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "podcast_studio_booking",
+  "domain_description": "Recording studio booking sessions and editing services for podcasters",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 3,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "jargon",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_012",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "sound_studio_sessions",
+  "domain_description": "Music studio handling session bookings, mixing and mastering requests",
+  "archetype": "confirmation",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "multi_topic",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "c",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_013",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "architecture_firm_intake",
+  "domain_description": "Architecture practice receiving enquiries from clients and planning authorities",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 0,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "e",
+    "sibling": "b",
+    "i": 2,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_014",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "wind_farm_operations",
+  "domain_description": "Control room staff and technicians reporting turbine faults and maintenance",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 1,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 4,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "autocorrect",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_015",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "heating_oil_delivery",
+  "domain_description": "Fuel distributor scheduling heating oil deliveries and tank checks",
+  "archetype": "slot_answer_type",
+  "k": 6,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "e",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_016",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "roofing_contractor",
+  "domain_description": "Roofing company handling quotes, repairs and warranty claims",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "b",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "lay",
+    "noise": "autocorrect",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 5,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "keyboard_typos",
+    "tags": [
+     "negation"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_017",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "art_gallery_sales",
+  "domain_description": "Gallery answering collectors about works, prices and viewings",
+  "archetype": "intent_router",
+  "k": 3,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 3,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_018",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "auction_house_consignment",
+  "domain_description": "Auction house valuing and accepting consignments from sellers",
+  "archetype": "confirmation",
+  "k": 4,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_019",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "film_set_logistics",
+  "domain_description": "Production office handling crew, permits and equipment for film shoots",
+  "archetype": "intent_router",
+  "k": 6,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "lay",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 1,
+    "context": "none",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 3,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_020",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "parish_office",
+  "domain_description": "Parish office handling baptisms, hall hire and pastoral requests",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_021",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "theater_costume_rental",
+  "domain_description": "Costume house renting outfits to theatres and schools",
+  "archetype": "intent_router",
+  "k": 3,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 0,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "text_speak",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_022",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "antique_restoration",
+  "domain_description": "Workshop restoring furniture and paintings for owners and museums",
+  "archetype": "slot_answer_type",
+  "k": 4,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "d",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_023",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "funeral_home_arrangements",
+  "domain_description": "Funeral home guiding families through arrangements and paperwork",
+  "archetype": "triage",
+  "k": 3,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_024",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "community_center_bookings",
+  "domain_description": "Community centre renting rooms and running local programmes",
+  "archetype": "handoff",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 1,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_025",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "aviation_maintenance_logbook",
+  "domain_description": "Maintenance shop recording inspections and parts for aircraft owners",
+  "archetype": "triage",
+  "k": 4,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 5,
+    "context": "none",
+    "persona": "hinting",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_026",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "neighborhood_watch",
+  "domain_description": "Local watch group receiving incident reports and meeting notices",
+  "archetype": "slot_answer_type",
+  "k": 4,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "b",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "lay",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_027",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "rocket_parts_supplier",
+  "domain_description": "Aerospace parts supplier handling quotes, certificates and lead times",
+  "archetype": "confirmation",
+  "k": 3,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_028",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "building_materials_yard",
+  "domain_description": "Builders' merchant selling bricks, timber and concrete with delivery",
+  "archetype": "intent_router",
+  "k": 10,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 1,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "h",
+    "i": 2,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 3,
+    "context": "none",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "none",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_029",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "land_surveying_company",
+  "domain_description": "Surveyors booking boundary, topographic and construction-stakeout jobs",
+  "archetype": "slot_answer_type",
+  "k": 4,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_030",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "solar_installer_projects",
+  "domain_description": "Installer managing customers' rooftop solar projects from survey to grid connection",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "none",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_031",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "scaffolding_hire",
+  "domain_description": "Company renting and erecting scaffolding for building sites",
+  "archetype": "intent_router",
+  "k": 10,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "h",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 3,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_032",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "craft_workshop_classes",
+  "domain_description": "Studio running pottery, weaving and woodworking classes",
+  "archetype": "intent_router",
+  "k": 6,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "f",
+    "i": 0,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_033",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "stock_photo_licensing",
+  "domain_description": "Stock image library selling licences to designers and publishers",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_034",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "battery_storage_support",
+  "domain_description": "Support desk for owners of home and grid battery systems",
+  "archetype": "intent_router",
+  "k": 6,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "a",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 4,
+    "context": "none",
+    "persona": "lay",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_035",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "drone_regulation_registry",
+  "domain_description": "Aviation authority registering drones and handling pilot licences",
+  "archetype": "intent_router",
+  "k": 8,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "e",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "h",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": [
+     "negation"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_036",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "space_agency_outreach",
+  "domain_description": "Outreach team answering schools and the public about missions and visits",
+  "archetype": "intent_router",
+  "k": 7,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 0,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 4,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_037",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "scaffolding_hire",
+  "domain_description": "Company renting and erecting scaffolding for building sites",
+  "archetype": "intent_router",
+  "k": 10,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "h",
+    "sibling": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "j",
+    "i": 2,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 3,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_038",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "elevator_maintenance_company",
+  "domain_description": "Firm maintaining lifts for building managers, with breakdown call-outs",
+  "archetype": "slot_answer_type",
+  "k": 6,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_039",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "land_surveying_company",
+  "domain_description": "Surveyors booking boundary, topographic and construction-stakeout jobs",
+  "archetype": "intent_router",
+  "k": 8,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "h",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "h",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 4,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_040",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "solar_installer_projects",
+  "domain_description": "Installer managing customers' rooftop solar projects from survey to grid connection",
+  "archetype": "slot_answer_type",
+  "k": 4,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_041",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "stock_photo_licensing",
+  "domain_description": "Stock image library selling licences to designers and publishers",
+  "archetype": "post_answer_followup",
+  "k": 3,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "hinting",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_042",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "antique_restoration",
+  "domain_description": "Workshop restoring furniture and paintings for owners and museums",
+  "archetype": "handoff",
+  "k": 2,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "none",
+    "persona": "hinting",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_043",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "auction_house_consignment",
+  "domain_description": "Auction house valuing and accepting consignments from sellers",
+  "archetype": "intent_router",
+  "k": 7,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 2,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 4,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_044",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "wind_farm_operations",
+  "domain_description": "Control room staff and technicians reporting turbine faults and maintenance",
+  "archetype": "intent_router",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_045",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "neighborhood_watch",
+  "domain_description": "Local watch group receiving incident reports and meeting notices",
+  "archetype": "intent_router",
+  "k": 10,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "j",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "h",
+    "i": 3,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_046",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "music_school_enrolment",
+  "domain_description": "Music school enrolling students and arranging teachers and lessons",
+  "archetype": "post_answer_followup",
+  "k": 5,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "text_speak",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_047",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "sound_studio_sessions",
+  "domain_description": "Music studio handling session bookings, mixing and mastering requests",
+  "archetype": "intent_router",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_048",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "roofing_contractor",
+  "domain_description": "Roofing company handling quotes, repairs and warranty claims",
+  "archetype": "intent_router",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "none",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "b",
+    "i": 5,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_049",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "parish_office",
+  "domain_description": "Parish office handling baptisms, hall hire and pastoral requests",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 5,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_050",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "gas_pipeline_inspection",
+  "domain_description": "Inspection teams logging pipeline findings and requesting permits",
+  "archetype": "intent_router",
+  "k": 7,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "g",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_051",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "heating_oil_delivery",
+  "domain_description": "Fuel distributor scheduling heating oil deliveries and tank checks",
+  "archetype": "handoff",
+  "k": 3,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "c",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_052",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "building_materials_yard",
+  "domain_description": "Builders' merchant selling bricks, timber and concrete with delivery",
+  "archetype": "triage",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "multi_topic",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 5,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_053",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "translation_agency",
+  "domain_description": "Agency receiving documents for translation and managing translators",
+  "archetype": "triage",
+  "k": 4,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 4,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_054",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "satellite_ground_station",
+  "domain_description": "Ground station operators scheduling passes and reporting link issues",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 0,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "d",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "lay",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_055",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "food_bank_distribution",
+  "domain_description": "Food bank managing pickups, donations and volunteer shifts",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "anxious",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "d",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_056",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "print_shop_orders",
+  "domain_description": "Print shop taking orders for flyers, posters and bound documents",
+  "archetype": "handoff",
+  "k": 2,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_057",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "art_gallery_sales",
+  "domain_description": "Gallery answering collectors about works, prices and viewings",
+  "archetype": "post_answer_followup",
+  "k": 4,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "b",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_058",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "aviation_maintenance_logbook",
+  "domain_description": "Maintenance shop recording inspections and parts for aircraft owners",
+  "archetype": "confirmation",
+  "k": 2,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "jargon",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "multi_topic",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_059",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "drone_regulation_registry",
+  "domain_description": "Aviation authority registering drones and handling pilot licences",
+  "archetype": "handoff",
+  "k": 2,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "anxious",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_060",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "community_center_bookings",
+  "domain_description": "Community centre renting rooms and running local programmes",
+  "archetype": "slot_answer_type",
+  "k": 5,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "anxious",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "autocorrect",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_061",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "military_base_pass_office",
+  "domain_description": "Base office issuing visitor and contractor passes",
+  "archetype": "slot_answer_type",
+  "k": 5,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "autocorrect",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_062",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "scout_troop_admin",
+  "domain_description": "Scout troop leaders handling camps, badges and parent forms",
+  "archetype": "confirmation",
+  "k": 2,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "text_speak",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_063",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "funeral_home_arrangements",
+  "domain_description": "Funeral home guiding families through arrangements and paperwork",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_064",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "craft_workshop_classes",
+  "domain_description": "Studio running pottery, weaving and woodworking classes",
+  "archetype": "slot_answer_type",
+  "k": 4,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "lay",
+    "noise": "autocorrect",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_065",
+  "split": "eval_v2",
+  "group": "arts_culture",
+  "domain": "theater_costume_rental",
+  "domain_description": "Costume house renting outfits to theatres and schools",
+  "archetype": "triage",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 1,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 2,
+    "context": "none",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_066",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "rocket_parts_supplier",
+  "domain_description": "Aerospace parts supplier handling quotes, certificates and lead times",
+  "archetype": "confirmation",
+  "k": 4,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "lay",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_067",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "ev_charging_network",
+  "domain_description": "Operator of public charging stations supporting drivers and site hosts",
+  "archetype": "handoff",
+  "k": 2,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "autocorrect",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 4,
+    "context": "none",
+    "persona": "jargon",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_068",
+  "split": "eval_v2",
+  "group": "energy_industry",
+  "domain": "battery_storage_support",
+  "domain_description": "Support desk for owners of home and grid battery systems",
+  "archetype": "triage",
+  "k": 3,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 2,
+    "context": "none",
+    "persona": "lay",
+    "noise": "autocorrect",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 5,
+    "context": "none",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_069",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "film_set_logistics",
+  "domain_description": "Production office handling crew, permits and equipment for film shoots",
+  "archetype": "intent_router",
+  "k": 3,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "none",
+    "persona": "anxious",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "formal",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_070",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "podcast_studio_booking",
+  "domain_description": "Recording studio booking sessions and editing services for podcasters",
+  "archetype": "confirmation",
+  "k": 2,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "first_turn",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "hinting",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "text_speak",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 5,
+    "context": "first_turn",
+    "persona": "formal",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_071",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "architecture_firm_intake",
+  "domain_description": "Architecture practice receiving enquiries from clients and planning authorities",
+  "archetype": "intent_router",
+  "k": 5,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_072",
+  "split": "eval_v2",
+  "group": "community_religion",
+  "domain": "food_bank_distribution",
+  "domain_description": "Food bank managing pickups, donations and volunteer shifts",
+  "archetype": "intent_router",
+  "k": 6,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "e",
+    "i": 0,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "none",
+    "persona": "lay",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 4,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_073",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "print_shop_orders",
+  "domain_description": "Print shop taking orders for flyers, posters and bound documents",
+  "archetype": "slot_answer_type",
+  "k": 5,
+  "condition_style": "detailed",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_074",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "translation_agency",
+  "domain_description": "Agency receiving documents for translation and managing translators",
+  "archetype": "post_answer_followup",
+  "k": 4,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "b",
+    "i": 4,
+    "context": "first_turn",
+    "persona": "hinting",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_075",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "military_base_pass_office",
+  "domain_description": "Base office issuing visitor and contractor passes",
+  "archetype": "intent_router",
+  "k": 4,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 1,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 2,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 4,
+    "context": "none",
+    "persona": "fragment_texter",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_076",
+  "split": "eval_v2",
+  "group": "media_production",
+  "domain": "stock_photo_licensing",
+  "domain_description": "Stock image library selling licences to designers and publishers",
+  "archetype": "triage",
+  "k": 3,
+  "condition_style": "internal_jargon",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "c",
+    "sibling": "b",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "slang_heavy",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "in_domain_uncovered",
+    "i": 2,
+    "context": "later_turn",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "none",
+    "persona": "neutral",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "text_speak",
+    "tags": [
+     "distractor"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2_077",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "drone_regulation_registry",
+  "domain_description": "Aviation authority registering drones and handling pilot licences",
+  "archetype": "triage",
+  "k": 5,
+  "condition_style": "user_wants",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "b",
+    "sibling": "d",
+    "i": 0,
+    "context": "first_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 3,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "none",
+    "persona": "casual",
+    "noise": "no_punct_lower",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "e",
+    "sibling": "a",
+    "i": 5,
+    "context": "none",
+    "persona": "confused",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_078",
+  "split": "eval_v2",
+  "group": "construction_trades",
+  "domain": "architecture_firm_intake",
+  "domain_description": "Architecture practice receiving enquiries from clients and planning authorities",
+  "archetype": "post_answer_followup",
+  "k": 5,
+  "condition_style": "imperative_terse",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": [
+     "negation"
+    ]
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "d",
+    "sibling": "b",
+    "i": 1,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "e",
+    "i": 2,
+    "context": "first_turn",
+    "persona": "casual",
+    "noise": "none",
+    "tags": [
+     "context_dependent"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "c",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "slang_heavy",
+    "noise": "no_punct_lower",
+    "tags": [
+     "distractor"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 4,
+    "context": "later_turn",
+    "persona": "non_native",
+    "noise": "none",
+    "tags": []
+   }
+  ]
+ },
+ {
+  "id": "v2_079",
+  "split": "eval_v2",
+  "group": "space_defense",
+  "domain": "aviation_maintenance_logbook",
+  "domain_description": "Maintenance shop recording inspections and parts for aircraft owners",
+  "archetype": "intent_router",
+  "k": 6,
+  "condition_style": "question",
+  "language": "en",
+  "examples": [
+   {
+    "kind": "no_match",
+    "nm": "oos",
+    "i": 0,
+    "context": "later_turn",
+    "persona": "fragment_texter",
+    "noise": "keyboard_typos",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "b",
+    "i": 1,
+    "context": "none",
+    "persona": "casual",
+    "noise": "text_speak",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "d",
+    "i": 2,
+    "context": "none",
+    "persona": "frustrated",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "no_match",
+    "nm": "sibling_removed",
+    "intent": "a",
+    "sibling": "b",
+    "i": 3,
+    "context": "first_turn",
+    "persona": "neutral",
+    "noise": "none",
+    "tags": []
+   },
+   {
+    "kind": "route",
+    "target": "f",
+    "i": 4,
+    "context": "none",
+    "persona": "formal",
+    "noise": "keyboard_typos",
+    "tags": [
+     "indirect"
+    ]
+   },
+   {
+    "kind": "route",
+    "target": "a",
+    "i": 5,
+    "context": "later_turn",
+    "persona": "rambling_polite",
+    "noise": "keyboard_typos",
+    "tags": []
+   }
+  ]
+ }
+]

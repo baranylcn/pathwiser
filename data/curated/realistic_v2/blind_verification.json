@@ -1,0 +1,7431 @@
+{
+ "examples": {
+  "r2_v2_000_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Say the answer is wrong"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Say the answer is wrong"
+    }
+   },
+   "verified_sha": "980e3a43f42cc387"
+  },
+  "r2_v2_000_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Say the answer is wrong"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Say the answer is wrong"
+    }
+   },
+   "verified_sha": "7ec4c89f4c5bee00"
+  },
+  "r2_v2_000_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants detail; branches are wrong or accept",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "8344d7b8a9ab6dd4"
+  },
+  "r2_v2_000_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Accept answer and proceed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Accept answer and proceed"
+    }
+   },
+   "verified_sha": "179836643f20a096"
+  },
+  "r2_v2_000_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Say the answer is wrong"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Say the answer is wrong"
+    }
+   },
+   "verified_sha": "1a35640c6760eaff"
+  },
+  "r2_v2_000_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask for more detail"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask for more detail"
+    }
+   },
+   "verified_sha": "9a826969072d3f86"
+  },
+  "r2_v2_001_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "raises different question; absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks quote for new lift, off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "fc1f069b38be8308"
+  },
+  "r2_v2_001_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager wants a fuller explanation or more detail about the answer given."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager wants a fuller explanation or more detail about the answer given."
+    }
+   },
+   "verified_sha": "70e7da41aeab470f"
+  },
+  "r2_v2_001_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager is satisfied with the answer and needs nothing more on it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager is satisfied with the answer and needs nothing more on it."
+    }
+   },
+   "verified_sha": "8b665a39817b18ff"
+  },
+  "r2_v2_001_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager says the answer does not match what is actually happening on site."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager says the answer does not match what is actually happening on site."
+    }
+   },
+   "verified_sha": "795e786a79fdee63"
+  },
+  "r2_v2_001_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager says the answer does not match what is actually happening on site."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager says the answer does not match what is actually happening on site."
+    }
+   },
+   "verified_sha": "fad8b70d11152560"
+  },
+  "r2_v2_001_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager wants a fuller explanation or more detail about the answer given."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The building manager wants a fuller explanation or more detail about the answer given."
+    }
+   },
+   "verified_sha": "fd14506bc658c3a3"
+  },
+  "r2_v2_002_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check an order's status"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check an order's status"
+    }
+   },
+   "verified_sha": "7af59c84ddf36035"
+  },
+  "r2_v2_002_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order flyers"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order flyers"
+    }
+   },
+   "verified_sha": "6621a9a08a358dce"
+  },
+  "r2_v2_002_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order bound documents"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order bound documents"
+    }
+   },
+   "verified_sha": "ac9e1c10eceadada"
+  },
+  "r2_v2_002_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reprint a faulty order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reprint a faulty order"
+    }
+   },
+   "verified_sha": "6441257168998687"
+  },
+  "r2_v2_002_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel an order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel an order"
+    }
+   },
+   "verified_sha": "d2e6342ceb1b1d74"
+  },
+  "r2_v2_002_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "scanning photos; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "photo scanning service not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "914da59a9bf2d5d3"
+  },
+  "r2_v2_003_00": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to sign up for a volunteer shift at the food bank."
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to sign up for a volunteer shift at the food bank."
+    }
+   },
+   "verified_sha": "a05331885b609ea5"
+  },
+  "r2_v2_003_01": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to register as a new client of the food bank."
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to register as a new client of the food bank."
+    }
+   },
+   "verified_sha": "ad6dce463c71302e"
+  },
+  "r2_v2_003_02": {
+   "passes": {
+    "C": {
+     "alt": "The client wants to book a new time slot to collect a food parcel (no booking exists yet).",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Wants to move existing booking; reschedule option absent",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "The client wants to book a new time slot to collect a food parcel (no booking exists yet).",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Move booked pickup; no reschedule branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "3db2284dc22717a1"
+  },
+  "r2_v2_003_03": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The donor wants to arrange dropping off donated food items."
+    },
+    "D": {
+     "alt": "The person asks about the food bank's opening hours or location.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Drop-off donation; also asks where",
+     "pick": "The donor wants to arrange dropping off donated food items."
+    }
+   },
+   "verified_sha": "a8a303dc0bbec963"
+  },
+  "r2_v2_003_04": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks about the food bank's opening hours or location."
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks about the food bank's opening hours or location."
+    }
+   },
+   "verified_sha": "ff52f8303967c558"
+  },
+  "r2_v2_004_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The inspector confirms the summarised finding is correct and wants it submitted as shown."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The inspector confirms the summarised finding is correct and wants it submitted as shown."
+    }
+   },
+   "verified_sha": "1da54ea863d8de17"
+  },
+  "r2_v2_004_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The inspector wants to discard the drafted finding entirely so nothing gets submitted."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The inspector wants to discard the drafted finding entirely so nothing gets submitted."
+    }
+   },
+   "verified_sha": "4a310ec894ee25d3"
+  },
+  "r2_v2_004_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "separate permit question, not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "12e8a6a1ae1b0503"
+  },
+  "r2_v2_004_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "confirms; neither discard nor correct fits",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "33a04f97325af556"
+  },
+  "r2_v2_004_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The inspector wants to correct a detail in the summarised finding before it is submitted."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The inspector wants to correct a detail in the summarised finding before it is submitted."
+    }
+   },
+   "verified_sha": "7b34bfe497c21ef2"
+  },
+  "r2_v2_005_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Driver asks how pricing works in general, for example per-kWh rates, idle fees or membership discounts, without contesting any specific past charge."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Driver asks how pricing works in general, for example per-kWh rates, idle fees or membership discounts, without contesting any specific past charge."
+    }
+   },
+   "verified_sha": "39e04941d0522e0f"
+  },
+  "r2_v2_005_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "duplicate charge refund not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "567e8c3d82f6fef3"
+  },
+  "r2_v2_005_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Driver wants to cancel or pause their charging membership plan, including stopping the automatic monthly renewal; not about one-off session payments."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Driver wants to cancel or pause their charging membership plan, including stopping the automatic monthly renewal; not about one-off session payments."
+    }
+   },
+   "verified_sha": "8f62127b6a9958f6"
+  },
+  "r2_v2_005_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Site host business asks about its revenue share payouts, host dashboard reports, or adding more chargers at the property it hosts."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Site host business asks about its revenue share payouts, host dashboard reports, or adding more chargers at the property it hosts."
+    }
+   },
+   "verified_sha": "4957daee8fa25f23"
+  },
+  "r2_v2_005_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Driver disputes a specific charge on their bill or receipt, such as being billed for energy not received or a duplicated session fee."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Driver disputes a specific charge on their bill or receipt, such as being billed for energy not received or a duplicated session fee."
+    }
+   },
+   "verified_sha": "f2dc0872789ed4aa"
+  },
+  "r2_v2_006_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator accepts the answer and is satisfied, for example thanks the assistant or says the pass information resolves the question, with no further request."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator accepts the answer and is satisfied, for example thanks the assistant or says the pass information resolves the question, with no further request."
+    }
+   },
+   "verified_sha": "2cd6b725e1107c38"
+  },
+  "r2_v2_006_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator wants more detail on the same answer, such as exact acquisition and loss of signal times, elevation profile or antenna setup for that pass."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator wants more detail on the same answer, such as exact acquisition and loss of signal times, elevation profile or antenna setup for that pass."
+    }
+   },
+   "verified_sha": "3fe5bb4e1d3178d4"
+  },
+  "r2_v2_006_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator says the given answer is wrong or does not match their own data, for example a different pass time, wrong satellite or mismatched frequency."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator says the given answer is wrong or does not match their own data, for example a different pass time, wrong satellite or mismatched frequency."
+    }
+   },
+   "verified_sha": "653a81727076725f"
+  },
+  "r2_v2_006_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator says the given answer is wrong or does not match their own data, for example a different pass time, wrong satellite or mismatched frequency."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Operator says the given answer is wrong or does not match their own data, for example a different pass time, wrong satellite or mismatched frequency."
+    }
+   },
+   "verified_sha": "5ab37d1e1e4f4179"
+  },
+  "r2_v2_006_04": {
+   "passes": {
+    "A": {
+     "alt": "Operator says the given answer is wrong or does not match their own data, for example a different pass time, wrong satellite or mismatched frequency.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants precise data; neither accept nor wrong",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants more precise detail, neither option",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b3164146bab764fc"
+  },
+  "r2_v2_007_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "invoice copy request; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "invoice copy request not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "667896e32579743d"
+  },
+  "r2_v2_007_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Freelance linguist onboarding: translator applying to join vendor pool"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Freelance linguist onboarding: translator applying to join vendor pool"
+    }
+   },
+   "verified_sha": "33024c4b2a25b4a1"
+  },
+  "r2_v2_007_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Status chk on in-progress TR job by job ref / delivery ETA"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Status chk on in-progress TR job by job ref / delivery ETA"
+    }
+   },
+   "verified_sha": "a7b4c90070a2721a"
+  },
+  "r2_v2_007_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "QA complaint re delivered TR: mistranslation, terminology errors, rework req"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "QA complaint re delivered TR: mistranslation, terminology errors, rework req"
+    }
+   },
+   "verified_sha": "acc6d7ba9327e70b"
+  },
+  "r2_v2_007_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "New TR job intake: client sends docs for quote/translation (src+tgt lang, deadline)"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "New TR job intake: client sends docs for quote/translation (src+tgt lang, deadline)"
+    }
+   },
+   "verified_sha": "74696d09600d9e59"
+  },
+  "r2_v2_008_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user requesting an astronaut or scientist speaker to come to their school or event?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user requesting an astronaut or scientist speaker to come to their school or event?"
+    }
+   },
+   "verified_sha": "518ef8ebd9337dc9"
+  },
+  "r2_v2_008_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to book a school or group visit to the visitor centre?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to book a school or group visit to the visitor centre?"
+    }
+   },
+   "verified_sha": "7e85086efc62d01a"
+  },
+  "r2_v2_008_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user requesting an astronaut or scientist speaker to come to their school or event?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user requesting an astronaut or scientist speaker to come to their school or event?"
+    }
+   },
+   "verified_sha": "aa2045a2bdc3e52f"
+  },
+  "r2_v2_008_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about visitor centre opening hours or tickets for an individual or family visit?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about visitor centre opening hours or tickets for an individual or family visit?"
+    }
+   },
+   "verified_sha": "fd06d33ac9dc872a"
+  },
+  "r2_v2_008_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "group visit booking option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Is the user asking about visitor centre opening hours or tickets for an individual or family visit?",
+     "annotator": "claude-sonnet-5-5",
+     "note": "class trip, not individual or family visit",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "f4b749fb762696c2"
+  },
+  "r2_v2_008_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about a current or upcoming mission, such as launch dates or objectives?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about a current or upcoming mission, such as launch dates or objectives?"
+    }
+   },
+   "verified_sha": "5643320c822ae221"
+  },
+  "r2_v2_009_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic pizza question",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "pizza question, off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "3f82e1c0266cc991"
+  },
+  "r2_v2_009_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader reports a safety incident or injury that happened during a troop activity and needs to file a report."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader reports a safety incident or injury that happened during a troop activity and needs to file a report."
+    }
+   },
+   "verified_sha": "7e20b8942cfb67be"
+  },
+  "r2_v2_009_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader asks about badge requirements or wants to record that a scout completed a badge, such as first aid or knot tying."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader asks about badge requirements or wants to record that a scout completed a badge, such as first aid or knot tying."
+    }
+   },
+   "verified_sha": "dad0545be7138c17"
+  },
+  "r2_v2_009_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader asks about borrowing troop equipment such as tents, stoves or canoes for a meeting or outing."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader asks about borrowing troop equipment such as tents, stoves or canoes for a meeting or outing."
+    }
+   },
+   "verified_sha": "deee7ec0418dd316"
+  },
+  "r2_v2_009_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader wants to register scouts for an upcoming camp or trip, including adding names, paying the camp fee, or asking whether places remain."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Leader wants to register scouts for an upcoming camp or trip, including adding names, paying the camp fee, or asking whether places remain."
+    }
+   },
+   "verified_sha": "d635df29d204bfe8"
+  },
+  "r2_v2_010_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "App status chk: follow-up on already submitted visitor/contractor pass app"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "App status chk: follow-up on already submitted visitor/contractor pass app"
+    }
+   },
+   "verified_sha": "d77c419f6089be1a"
+  },
+  "r2_v2_010_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "App status chk: follow-up on already submitted visitor/contractor pass app"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "App status chk: follow-up on already submitted visitor/contractor pass app"
+    }
+   },
+   "verified_sha": "fdaceede565e0a3e"
+  },
+  "r2_v2_010_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "vehicle registration; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "vehicle registration not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "8409ae5daf263dc0"
+  },
+  "r2_v2_010_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Visitor pass req: sponsor requests 1-day/short-term pass for guest w/o base ID"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Visitor pass req: sponsor requests 1-day/short-term pass for guest w/o base ID"
+    }
+   },
+   "verified_sha": "dd862fbe736b41ff"
+  },
+  "r2_v2_010_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lost/stolen badge rpt + replacement issue"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lost/stolen badge rpt + replacement issue"
+    }
+   },
+   "verified_sha": "9fe41dce596bd358"
+  },
+  "r2_v2_010_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Contractor badge renewal: extend expiring long-term contractor pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Contractor badge renewal: extend expiring long-term contractor pass"
+    }
+   },
+   "verified_sha": "3b7fa97dec5b0595"
+  },
+  "r2_v2_011_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to reschedule an existing session booking to another time?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to reschedule an existing session booking to another time?"
+    }
+   },
+   "verified_sha": "4e0f1a7292af3d60"
+  },
+  "r2_v2_011_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking for editing or post-production work on recorded episodes?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking for editing or post-production work on recorded episodes?"
+    }
+   },
+   "verified_sha": "2f4071bc0a875440"
+  },
+  "r2_v2_011_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about prices or packages for studio time or editing?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about prices or packages for studio time or editing?"
+    }
+   },
+   "verified_sha": "78bd06723840867a"
+  },
+  "r2_v2_011_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "lost property query; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "lost property not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "4b7d206d10861e9a"
+  },
+  "r2_v2_011_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to book a new recording session in one of the studios?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to book a new recording session in one of the studios?"
+    }
+   },
+   "verified_sha": "a57341cb3a48e868"
+  },
+  "r2_v2_011_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about prices or packages for studio time or editing?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about prices or packages for studio time or editing?"
+    }
+   },
+   "verified_sha": "5d4d38f50e3d745a"
+  },
+  "r2_v2_012_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised session booking and wants it finalised as shown."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised session booking and wants it finalised as shown."
+    }
+   },
+   "verified_sha": "5780f90773f41a1c"
+  },
+  "r2_v2_012_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to cancel the booking request entirely instead of confirming it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to cancel the booking request entirely instead of confirming it."
+    }
+   },
+   "verified_sha": "dcfa881d553c7680"
+  },
+  "r2_v2_012_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change a detail of the booking, such as day, hours or engineer."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change a detail of the booking, such as day, hours or engineer."
+    }
+   },
+   "verified_sha": "40ea2dbc5b90ea32"
+  },
+  "r2_v2_012_03": {
+   "passes": {
+    "A": {
+     "alt": "The client wants to change a detail of the booking, such as day, hours or engineer.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "cancel booking option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "The client wants to change a detail of the booking, such as day, hours or engineer.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "cancellation not offered; only change or confirm",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "465a6b2a9da32fda"
+  },
+  "r2_v2_012_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change a detail of the booking, such as day, hours or engineer."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change a detail of the booking, such as day, hours or engineer."
+    }
+   },
+   "verified_sha": "a351b22931d4c848"
+  },
+  "r2_v2_012_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants to change time, not cancel/confirm",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e47958fe23f7669d"
+  },
+  "r2_v2_013_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change the design or scope of their ongoing project."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change the design or scope of their ongoing project."
+    }
+   },
+   "verified_sha": "0114aaadaeb8df1e"
+  },
+  "r2_v2_013_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The visitor asks about job openings or internships at the architecture practice."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The visitor asks about job openings or internships at the architecture practice."
+    }
+   },
+   "verified_sha": "fcc4ee11acdbc18d"
+  },
+  "r2_v2_013_02": {
+   "passes": {
+    "A": {
+     "alt": "The client asks about progress or schedule of the design work on their ongoing project.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "no clean fit; closest alt",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "design change not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "2c21143559e9e956"
+  },
+  "r2_v2_013_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A planning authority officer requests documents or clarification on a submitted planning application."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A planning authority officer requests documents or clarification on a submitted planning application."
+    }
+   },
+   "verified_sha": "605e0183cad084a7"
+  },
+  "r2_v2_013_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client asks about progress or schedule of the design work on their ongoing project."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client asks about progress or schedule of the design work on their ongoing project."
+    }
+   },
+   "verified_sha": "5faf437b500fb29b"
+  },
+  "r2_v2_014_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user reporting a fault, trip or alarm on a specific turbine?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user reporting a fault, trip or alarm on a specific turbine?"
+    }
+   },
+   "verified_sha": "957b3809a32d8ed0"
+  },
+  "r2_v2_014_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic dog question",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "dog grapes off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "49da27a5975d3b8a"
+  },
+  "r2_v2_014_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to schedule planned maintenance or an inspection for turbines?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to schedule planned maintenance or an inspection for turbines?"
+    }
+   },
+   "verified_sha": "a851027db7b2829f"
+  },
+  "r2_v2_014_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about the status or progress of an existing work order?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about the status or progress of an existing work order?"
+    }
+   },
+   "verified_sha": "fdcddb91a1b652be"
+  },
+  "r2_v2_014_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic football question",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "sports chat off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "194275c443d8835c"
+  },
+  "r2_v2_015_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer refuses to give the information the agent has asked for."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer refuses to give the information the agent has asked for."
+    }
+   },
+   "verified_sha": "0201e4f65e26ede4"
+  },
+  "r2_v2_015_01": {
+   "passes": {
+    "A": {
+     "alt": "The customer refuses to give the information the agent has asked for.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "says no idea; no don't-know option",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "does not know; no such branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9ffb390cc14c3a47"
+  },
+  "r2_v2_015_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer picks one of the delivery slots the agent has just offered."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer picks one of the delivery slots the agent has just offered."
+    }
+   },
+   "verified_sha": "d5cd6f04c322d879"
+  },
+  "r2_v2_015_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer provides their customer account number or invoice reference."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer provides their customer account number or invoice reference."
+    }
+   },
+   "verified_sha": "fa599fc049001ffc"
+  },
+  "r2_v2_015_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer states a specific delivery date or day of their own choosing."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer states a specific delivery date or day of their own choosing."
+    }
+   },
+   "verified_sha": "5094dc21491203a3"
+  },
+  "r2_v2_016_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a quote or estimate for a new roof or full replacement, including pricing questions or a site visit to measure up."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a quote or estimate for a new roof or full replacement, including pricing questions or a site visit to measure up."
+    }
+   },
+   "verified_sha": "7b87418fb8246543"
+  },
+  "r2_v2_016_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "repair of other firm's roof absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "repair of storm damage; no repair branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "8b0a77743bca6c92"
+  },
+  "r2_v2_016_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a repair booked for active damage on a roof we did not install, such as a leak, missing tiles or storm damage."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a repair booked for active damage on a roof we did not install, such as a leak, missing tiles or storm damage."
+    }
+   },
+   "verified_sha": "c58a13bf9ef898b3"
+  },
+  "r2_v2_016_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to move an existing appointment or job to a different date or time, keeping the job itself in place."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to move an existing appointment or job to a different date or time, keeping the job itself in place."
+    }
+   },
+   "verified_sha": "51f3ee49ae6e3be2"
+  },
+  "r2_v2_016_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to claim under our warranty because work we previously installed has failed or shows a defect, like leaking flashing or lifting shingles."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to claim under our warranty because work we previously installed has failed or shows a defect, like leaking flashing or lifting shingles."
+    }
+   },
+   "verified_sha": "8b03742d86973080"
+  },
+  "r2_v2_016_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to cancel a scheduled appointment or job entirely, calling it off rather than moving it to another date."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to cancel a scheduled appointment or job entirely, calling it off rather than moving it to another date."
+    }
+   },
+   "verified_sha": "cce1a7cbefd470fb"
+  },
+  "r2_v2_017_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "selling own painting not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b348bfd52371ccc1"
+  },
+  "r2_v2_017_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector wants to arrange a private viewing or visit to see works in person, including choosing a date or time to come to the gallery."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector wants to arrange a private viewing or visit to see works in person, including choosing a date or time to come to the gallery."
+    }
+   },
+   "verified_sha": "e1a0e7faeb8bbcd6"
+  },
+  "r2_v2_017_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector asks about the price, availability or purchase terms of a specific artwork, for example whether a piece is still for sale or can be reserved."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector asks about the price, availability or purchase terms of a specific artwork, for example whether a piece is still for sale or can be reserved."
+    }
+   },
+   "verified_sha": "e33b3e782050f5cc"
+  },
+  "r2_v2_017_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic weather question",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "weather question, off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b85b1f5f13249e6b"
+  },
+  "r2_v2_017_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector wants to arrange a private viewing or visit to see works in person, including choosing a date or time to come to the gallery."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector wants to arrange a private viewing or visit to see works in person, including choosing a date or time to come to the gallery."
+    }
+   },
+   "verified_sha": "c01e1383f0672115"
+  },
+  "r2_v2_017_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector asks for background on an artist or a work, such as provenance, technique, exhibition history or the artist's biography."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The collector asks for background on an artist or a work, such as provenance, technique, exhibition history or the artist's biography."
+    }
+   },
+   "verified_sha": "46640357b58e87ef"
+  },
+  "r2_v2_018_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask a question first"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask a question first"
+    }
+   },
+   "verified_sha": "13a659393acf4e0e"
+  },
+  "r2_v2_018_01": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Asking to wait a moment; no decision yet",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Stepping away, no decision yet",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "1cbd06bad4ef425f"
+  },
+  "r2_v2_018_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Withdraw the item"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Withdraw the item"
+    }
+   },
+   "verified_sha": "33828daf94091fae"
+  },
+  "r2_v2_018_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm the consignment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm the consignment"
+    }
+   },
+   "verified_sha": "5ab07c7f524b3e53"
+  },
+  "r2_v2_018_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Withdraw the item"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Withdraw the item"
+    }
+   },
+   "verified_sha": "5e1873e7030c4774"
+  },
+  "r2_v2_018_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Change consignment terms"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Change consignment terms"
+    }
+   },
+   "verified_sha": "9d77dff350a6e5c2"
+  },
+  "r2_v2_019_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Arrange crew vehicle parking"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Arrange crew vehicle parking"
+    }
+   },
+   "verified_sha": "b7f7c4ff2d2f2efd"
+  },
+  "r2_v2_019_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report damaged equipment"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report damaged equipment"
+    }
+   },
+   "verified_sha": "9802e339c665167d"
+  },
+  "r2_v2_019_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a location filming permit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a location filming permit"
+    }
+   },
+   "verified_sha": "68b7c2debd6c48c7"
+  },
+  "r2_v2_019_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "hot dog trivia, off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "569156e104c780db"
+  },
+  "r2_v2_019_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book camera or lighting gear"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book camera or lighting gear"
+    }
+   },
+   "verified_sha": "5a5b1dd962b00bed"
+  },
+  "r2_v2_020_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to arrange a baptism or christening?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to arrange a baptism or christening?"
+    }
+   },
+   "verified_sha": "bfee11c999b08f04"
+  },
+  "r2_v2_020_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user requesting a pastoral visit or a conversation with a priest about a personal matter?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user requesting a pastoral visit or a conversation with a priest about a personal matter?"
+    }
+   },
+   "verified_sha": "3c5cd94c83540936"
+  },
+  "r2_v2_020_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to hire the parish hall for an event?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to hire the parish hall for an event?"
+    }
+   },
+   "verified_sha": "b123043fc313c05f"
+  },
+  "r2_v2_020_03": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Idle chat about retirement and choir; no request",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Reminiscing; no request covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "eb2793f62d55865c"
+  },
+  "r2_v2_020_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about the times of services or Mass?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking about the times of services or Mass?"
+    }
+   },
+   "verified_sha": "770b777a18c9a3ee"
+  },
+  "r2_v2_021_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic bread question",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "baking question off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "af5952b0b9e09486"
+  },
+  "r2_v2_021_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hire ext - extend return date on live order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hire ext - extend return date on live order"
+    }
+   },
+   "verified_sha": "5483a52274b265ff"
+  },
+  "r2_v2_021_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hire ext - extend return date on live order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hire ext - extend return date on live order"
+    }
+   },
+   "verified_sha": "1e5bde1b503a36f3"
+  },
+  "r2_v2_021_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Returns - book collection/drop-off of hired stock"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Returns - book collection/drop-off of hired stock"
+    }
+   },
+   "verified_sha": "a51a6c097eb8d85b"
+  },
+  "r2_v2_021_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "New hire enq - avail + quote for a production"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "New hire enq - avail + quote for a production"
+    }
+   },
+   "verified_sha": "41d1f56410563cd1"
+  },
+  "r2_v2_022_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner chooses one of the treatment options the restorer has just offered."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner chooses one of the treatment options the restorer has just offered."
+    }
+   },
+   "verified_sha": "f8d11bdbb292d7f1"
+  },
+  "r2_v2_022_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner says they do not know the answer, for example the item's age or origin."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner says they do not know the answer, for example the item's age or origin."
+    }
+   },
+   "verified_sha": "2099f1b5594efbd8"
+  },
+  "r2_v2_022_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner declines to share the information the restorer has asked for."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner declines to share the information the restorer has asked for."
+    }
+   },
+   "verified_sha": "388d6bd32c0430df"
+  },
+  "r2_v2_022_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner declines to share the information the restorer has asked for."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner declines to share the information the restorer has asked for."
+    }
+   },
+   "verified_sha": "26294e89576a1c3c"
+  },
+  "r2_v2_022_04": {
+   "passes": {
+    "E": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner declines to share the information the restorer has asked for."
+    },
+    "F": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner declines to share the information the restorer has asked for."
+    }
+   },
+   "verified_sha": "e8456189f63b406e"
+  },
+  "r2_v2_022_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner gives a date or time window for collecting or bringing in the item."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner gives a date or time window for collecting or bringing in the item."
+    }
+   },
+   "verified_sha": "e154d634593dcb4c"
+  },
+  "r2_v2_023_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Urgent: a death has just occurred and the family needs immediate collection or transfer of the deceased, for example a death at home or in a care home today."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Urgent: a death has just occurred and the family needs immediate collection or transfer of the deceased, for example a death at home or in a care home today."
+    }
+   },
+   "verified_sha": "d30cd925b45eb116"
+  },
+  "r2_v2_023_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Routine: paperwork or administrative questions with no deadline pressure, such as extra death certificate copies, invoices or pre-planning documents."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Routine: paperwork or administrative questions with no deadline pressure, such as extra death certificate copies, invoices or pre-planning documents."
+    }
+   },
+   "verified_sha": "540233b753431a83"
+  },
+  "r2_v2_023_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Time-sensitive: changes or details for an upcoming funeral in the next few days, such as readings, music, flowers, the order of service or notices."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Time-sensitive: changes or details for an upcoming funeral in the next few days, such as readings, music, flowers, the order of service or notices."
+    }
+   },
+   "verified_sha": "1a42362307d4236f"
+  },
+  "r2_v2_023_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Time-sensitive: changes or details for an upcoming funeral in the next few days, such as readings, music, flowers, the order of service or notices."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Time-sensitive: changes or details for an upcoming funeral in the next few days, such as readings, music, flowers, the order of service or notices."
+    }
+   },
+   "verified_sha": "72af3085ba333fb0"
+  },
+  "r2_v2_023_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "routine paperwork option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "routine paperwork branch missing",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "7cf95b3acefbc70a"
+  },
+  "r2_v2_024_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller is happy to keep going with the automated assistant on their booking."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller is happy to keep going with the automated assistant on their booking."
+    }
+   },
+   "verified_sha": "1356cbf59e3c3cbd"
+  },
+  "r2_v2_024_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "data deletion request; no matching condition",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "data deletion request not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "7ff6a08ad66df217"
+  },
+  "r2_v2_024_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller wants to be put through to a live staff member right now."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller wants to be put through to a live staff member right now."
+    }
+   },
+   "verified_sha": "66ebf470b0ce7036"
+  },
+  "r2_v2_024_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller is happy to keep going with the automated assistant on their booking."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller is happy to keep going with the automated assistant on their booking."
+    }
+   },
+   "verified_sha": "18ebf8675f3a7df1"
+  },
+  "r2_v2_024_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller reports an injury, accident or safety concern that staff must handle."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller reports an injury, accident or safety concern that staff must handle."
+    }
+   },
+   "verified_sha": "7c32da2cff5d9fd4"
+  },
+  "r2_v2_025_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ground aircraft for urgent defect"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ground aircraft for urgent defect"
+    }
+   },
+   "verified_sha": "9cb0b90cdc607e72"
+  },
+  "r2_v2_025_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule upcoming due inspection"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule upcoming due inspection"
+    }
+   },
+   "verified_sha": "4bca1920ccdb05a5"
+  },
+  "r2_v2_025_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Log cosmetic or cabin wear"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Log cosmetic or cabin wear"
+    }
+   },
+   "verified_sha": "200450a0cb3ec559"
+  },
+  "r2_v2_025_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ground aircraft for urgent defect"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ground aircraft for urgent defect"
+    }
+   },
+   "verified_sha": "5e5b254d72ccabac"
+  },
+  "r2_v2_025_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "non-urgent defect deferral absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "non-urgent defect branch missing",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "ef11cd72549c86f1"
+  },
+  "r2_v2_025_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Defer non-urgent technical defect"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Defer non-urgent technical defect"
+    }
+   },
+   "verified_sha": "471fa35c3a8d4207"
+  },
+  "r2_v2_026_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "refuses name/phone; no refuse option",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "09aeb6b03bfdefef"
+  },
+  "r2_v2_026_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident supplies a location, street or address connected to the incident."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident supplies a location, street or address connected to the incident."
+    }
+   },
+   "verified_sha": "b303098065c4920c"
+  },
+  "r2_v2_026_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident says they do not know or cannot remember the requested detail."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident says they do not know or cannot remember the requested detail."
+    }
+   },
+   "verified_sha": "2ae7078ffade39fd"
+  },
+  "r2_v2_026_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident gives the date or time when the incident took place."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident gives the date or time when the incident took place."
+    }
+   },
+   "verified_sha": "cb2362947b6a339b"
+  },
+  "r2_v2_026_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident refuses or declines to share the requested information with the group."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The resident refuses or declines to share the requested information with the group."
+    }
+   },
+   "verified_sha": "e995f54581064596"
+  },
+  "r2_v2_027_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks about certs, neither confirm nor change",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a6e8d13665009948"
+  },
+  "r2_v2_027_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Amend order details"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Amend order details"
+    }
+   },
+   "verified_sha": "00a09afb696a2420"
+  },
+  "r2_v2_027_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel the pending order"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel the pending order"
+    }
+   },
+   "verified_sha": "5b542730d6b99d36"
+  },
+  "r2_v2_027_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm the order as summarised"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm the order as summarised"
+    }
+   },
+   "verified_sha": "32214a540a0ea44e"
+  },
+  "r2_v2_027_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm the order as summarised"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm the order as summarised"
+    }
+   },
+   "verified_sha": "eb7379f39601d85d"
+  },
+  "r2_v2_028_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Track an existing delivery"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Track an existing delivery"
+    }
+   },
+   "verified_sha": "fc83e088d82b72b4"
+  },
+  "r2_v2_028_01": {
+   "passes": {
+    "A": {
+     "alt": "Book a delivery",
+     "annotator": "claude-sonnet-5-5",
+     "note": "another condition arguable",
+     "pick": "Order ready-mix concrete"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Order ready-mix concrete"
+    }
+   },
+   "verified_sha": "c725a583d21589ce"
+  },
+  "r2_v2_028_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Calculate material quantities"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Calculate material quantities"
+    }
+   },
+   "verified_sha": "7c5dac042712c4ac"
+  },
+  "r2_v2_028_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "puppy remark off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a8a8ec71d5ba3e11"
+  },
+  "r2_v2_028_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Return unused materials"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Return unused materials"
+    }
+   },
+   "verified_sha": "5ac7e202349f79c6"
+  },
+  "r2_v2_028_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a delivery"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a delivery"
+    }
+   },
+   "verified_sha": "c9628e5a6412bed7"
+  },
+  "r2_v2_029_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client supplies an existing job reference or quote number for their booking."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client supplies an existing job reference or quote number for their booking."
+    }
+   },
+   "verified_sha": "8d37fdf8da0275d6"
+  },
+  "r2_v2_029_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client indicates which kind of survey they need, such as boundary or topographic."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client indicates which kind of survey they need, such as boundary or topographic."
+    }
+   },
+   "verified_sha": "9799a8a58cdbaac2"
+  },
+  "r2_v2_029_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client states a preferred date or time window for the site visit."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client states a preferred date or time window for the site visit."
+    }
+   },
+   "verified_sha": "91fd27206dc1cb7d"
+  },
+  "r2_v2_029_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client gives the address or parcel number of the land to be surveyed."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client gives the address or parcel number of the land to be surveyed."
+    }
+   },
+   "verified_sha": "c35fa214c05f2f6a"
+  },
+  "r2_v2_029_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "sports chat, no info supplied",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "998fd012982811b8"
+  },
+  "r2_v2_030_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer reporting that their installed panels or inverter are not producing power?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer reporting that their installed panels or inverter are not producing power?"
+    }
+   },
+   "verified_sha": "3348abcaeb25db1a"
+  },
+  "r2_v2_030_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer asking about the grid connection or export meter application?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer asking about the grid connection or export meter application?"
+    }
+   },
+   "verified_sha": "3ae372d7539289e6"
+  },
+  "r2_v2_030_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer asking about the current stage or progress of their installation project?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer asking about the current stage or progress of their installation project?"
+    }
+   },
+   "verified_sha": "f06de63bd197ad4d"
+  },
+  "r2_v2_030_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer querying an invoice or a payment they have made?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the customer querying an invoice or a payment they have made?"
+    }
+   },
+   "verified_sha": "cfcaaa3b7524b4b1"
+  },
+  "r2_v2_030_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "battery quote request; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "battery add-on offer not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "99809bee49eac012"
+  },
+  "r2_v2_030_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the customer want to reschedule the site survey or installation appointment?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the customer want to reschedule the site survey or installation appointment?"
+    }
+   },
+   "verified_sha": "6298244e67280d53"
+  },
+  "r2_v2_031_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer reports scaffolding that looks damaged, unsafe or has been tampered with."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer reports scaffolding that looks damaged, unsafe or has been tampered with."
+    }
+   },
+   "verified_sha": "962ef5143440efff"
+  },
+  "r2_v2_031_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer has a question or dispute about an invoice they received."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer has a question or dispute about an invoice they received."
+    }
+   },
+   "verified_sha": "dac04757968f6b7a"
+  },
+  "r2_v2_031_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a quote for hiring scaffolding on a new job."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a quote for hiring scaffolding on a new job."
+    }
+   },
+   "verified_sha": "aed69d94497a09e6"
+  },
+  "r2_v2_031_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "lawn moss off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "ab94b977458613c3"
+  },
+  "r2_v2_031_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to change the date the crew comes to erect scaffolding."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to change the date the crew comes to erect scaffolding."
+    }
+   },
+   "verified_sha": "0dc3dea710c4cf63"
+  },
+  "r2_v2_032_00": {
+   "passes": {
+    "A": {
+     "alt": "Cancel a class booking",
+     "annotator": "claude-sonnet-5-5",
+     "note": "move class date; no transfer option",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Cancel a class booking",
+     "annotator": "claude-sonnet-5-5",
+     "note": "move class date not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "0329a5dad57ae2ca"
+  },
+  "r2_v2_032_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a class place"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a class place"
+    }
+   },
+   "verified_sha": "ce5283b19cd2424e"
+  },
+  "r2_v2_032_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Transfer to another class date"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Transfer to another class date"
+    }
+   },
+   "verified_sha": "3ff3cd315c84eb0b"
+  },
+  "r2_v2_032_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about materials needed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ask about materials needed"
+    }
+   },
+   "verified_sha": "1ea3686675e2b420"
+  },
+  "r2_v2_032_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Rent studio time"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Rent studio time"
+    }
+   },
+   "verified_sha": "f7f7a4349b3d0fa7"
+  },
+  "r2_v2_032_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Buy a gift voucher"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Buy a gift voucher"
+    }
+   },
+   "verified_sha": "3b7c7af7334eeb44"
+  },
+  "r2_v2_033_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants to sell own photos; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "selling own photos not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "1b799d32195ae500"
+  },
+  "r2_v2_033_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer asks which licence type fits a planned use before buying, for example web banners, book covers or social media posts."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer asks which licence type fits a planned use before buying, for example web banners, book covers or social media posts."
+    }
+   },
+   "verified_sha": "7c9b9f4c446a78ca"
+  },
+  "r2_v2_033_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a refund or cancellation of an image or subscription purchase, for example a duplicate charge or an accidental plan renewal."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a refund or cancellation of an image or subscription purchase, for example a duplicate charge or an accidental plan renewal."
+    }
+   },
+   "verified_sha": "bf085648d3ebecdd"
+  },
+  "r2_v2_033_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to upgrade a licence they already hold to cover wider use, such as more printed copies, merchandise or a bigger advertising campaign."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to upgrade a licence they already hold to cover wider use, such as more printed copies, merchandise or a bigger advertising campaign."
+    }
+   },
+   "verified_sha": "c1d18a3c7f4bc170"
+  },
+  "r2_v2_033_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer cannot download or access an image they already paid for, for example broken download links, expired sessions or files missing from their account."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer cannot download or access an image they already paid for, for example broken download links, expired sessions or files missing from their account."
+    }
+   },
+   "verified_sha": "df6f7b8c6aeb9d7e"
+  },
+  "r2_v2_034_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner reports a fault, error code or abnormal behaviour of the battery system."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner reports a fault, error code or abnormal behaviour of the battery system."
+    }
+   },
+   "verified_sha": "d3f9553eb4db4c5a"
+  },
+  "r2_v2_034_01": {
+   "passes": {
+    "C": {
+     "alt": "The owner reports a fault, error code or abnormal behaviour of the battery system.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Warranty swap claim for known dead module; not a new fault report",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "The owner reports a fault, error code or abnormal behaviour of the battery system.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Warranty swap claim, not a new fault report",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b210b00be9a154a8"
+  },
+  "r2_v2_034_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer asks about credits or payments for energy exported to the grid."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer asks about credits or payments for energy exported to the grid."
+    }
+   },
+   "verified_sha": "f428a0d337ea7279"
+  },
+  "r2_v2_034_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner asks how to change the battery's charging schedule or operating mode."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner asks how to change the battery's charging schedule or operating mode."
+    }
+   },
+   "verified_sha": "652ee934a0bd9724"
+  },
+  "r2_v2_034_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner wants to add another battery module to increase storage capacity."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner wants to add another battery module to increase storage capacity."
+    }
+   },
+   "verified_sha": "2044d0996a8a60e6"
+  },
+  "r2_v2_035_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "ownership transfer option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Deregister a drone",
+     "annotator": "claude-sonnet-5-5",
+     "note": "ownership transfer not listed; deregister only arguable",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "0bca4f23092772a5"
+  },
+  "r2_v2_035_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Replace a lost licence card"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Replace a lost licence card"
+    }
+   },
+   "verified_sha": "9cb84835de99d9df"
+  },
+  "r2_v2_035_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a drone incident"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a drone incident"
+    }
+   },
+   "verified_sha": "5a241f65bfd75962"
+  },
+  "r2_v2_035_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Deregister a drone"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Deregister a drone"
+    }
+   },
+   "verified_sha": "ae694be902562266"
+  },
+  "r2_v2_035_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a flight zone permit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a flight zone permit"
+    }
+   },
+   "verified_sha": "ce125ac6b45310df"
+  },
+  "r2_v2_036_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to use agency images or video footage in a publication, film or product and asks about permission, licensing or credit lines."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to use agency images or video footage in a publication, film or product and asks about permission, licensing or credit lines."
+    }
+   },
+   "verified_sha": "613bdb615301f96a"
+  },
+  "r2_v2_036_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to change or cancel a visit booking they have already made, for example moving it to a new date or reducing the number of visitors."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person wants to change or cancel a visit booking they have already made, for example moving it to a new date or reducing the number of visitors."
+    }
+   },
+   "verified_sha": "60bb2f6e06882598"
+  },
+  "r2_v2_036_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks about the current status or schedule of a specific mission, for example a launch date, a delay or a landing time."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks about the current status or schedule of a specific mission, for example a launch date, a delay or a landing time."
+    }
+   },
+   "verified_sha": "3970b2a55bc7f88d"
+  },
+  "r2_v2_036_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks for a scientist or astronaut to give a talk at their school or event, either in person or by video call."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks for a scientist or astronaut to give a talk at their school or event, either in person or by video call."
+    }
+   },
+   "verified_sha": "68b60c0ee1c2f427"
+  },
+  "r2_v2_036_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks how to apply for internships, student programmes or jobs at the agency, including eligibility and application deadlines."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The person asks how to apply for internships, student programmes or jobs at the agency, including eligibility and application deadlines."
+    }
+   },
+   "verified_sha": "53b23663831e9a60"
+  },
+  "r2_v2_036_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "car trouble off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "d7118673f203fef7"
+  },
+  "r2_v2_037_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Full strike - job done, dismantle + collect all kit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Full strike - job done, dismantle + collect all kit"
+    }
+   },
+   "verified_sha": "6826e08aad1f1181"
+  },
+  "r2_v2_037_01": {
+   "passes": {
+    "A": {
+     "alt": "Full strike - job done, dismantle + collect all kit",
+     "annotator": "claude-sonnet-5-5",
+     "note": "part strike option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Full strike - job done, dismantle + collect all kit",
+     "annotator": "claude-sonnet-5-5",
+     "note": "partial strike not offered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "d650a918cff7de5f"
+  },
+  "r2_v2_037_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pavement licence - council permit for scaff on public footway"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pavement licence - council permit for scaff on public footway"
+    }
+   },
+   "verified_sha": "599e5a923dfe42c4"
+  },
+  "r2_v2_037_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Defect report - damaged or unsafe scaff on site"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Defect report - damaged or unsafe scaff on site"
+    }
+   },
+   "verified_sha": "9d27774d85f092d1"
+  },
+  "r2_v2_037_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Erect delay - crew/delivery not turned up, chase ETA"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Erect delay - crew/delivery not turned up, chase ETA"
+    }
+   },
+   "verified_sha": "73697511cfcfd029"
+  },
+  "r2_v2_037_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hire ext - keep scaff up past off-hire date"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hire ext - keep scaff up past off-hire date"
+    }
+   },
+   "verified_sha": "40db98e0585df04a"
+  },
+  "r2_v2_038_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a date or time"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a date or time"
+    }
+   },
+   "verified_sha": "3d73a1b64394e4c1"
+  },
+  "r2_v2_038_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a lift ID number"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a lift ID number"
+    }
+   },
+   "verified_sha": "94273abe55c5079e"
+  },
+  "r2_v2_038_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic question; no fitting condition",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic chemist question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "63cb9517b2a2bd0c"
+  },
+  "r2_v2_038_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a site address"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a site address"
+    }
+   },
+   "verified_sha": "4bd29c411a750835"
+  },
+  "r2_v2_038_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Describes the lift fault"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Describes the lift fault"
+    }
+   },
+   "verified_sha": "7ea4934e41e2f203"
+  },
+  "r2_v2_039_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to book a boundary survey to establish property lines."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to book a boundary survey to establish property lines."
+    }
+   },
+   "verified_sha": "4415b0f93af6e6c2"
+  },
+  "r2_v2_039_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants construction stakeout marking building positions on site."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants construction stakeout marking building positions on site."
+    }
+   },
+   "verified_sha": "cc492ae6c6d3fc4c"
+  },
+  "r2_v2_039_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "dispute boundary survey absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "dispute boundary result not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "10c8e0c12b52c3cd"
+  },
+  "r2_v2_039_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client asks about the status or delivery date of their survey report."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client asks about the status or delivery date of their survey report."
+    }
+   },
+   "verified_sha": "87f7446aa4f6395b"
+  },
+  "r2_v2_039_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to reschedule a booked field visit to another date."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to reschedule a booked field visit to another date."
+    }
+   },
+   "verified_sha": "fccb0087e05f6840"
+  },
+  "r2_v2_040_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a date"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Gives a date"
+    }
+   },
+   "verified_sha": "41233a645b9d1ce3"
+  },
+  "r2_v2_040_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks warranty length, not a meter number",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "83909839d9ecf937"
+  },
+  "r2_v2_040_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks for contract by email first",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "00faed7940566323"
+  },
+  "r2_v2_040_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Picks an offered option"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Picks an offered option"
+    }
+   },
+   "verified_sha": "1cb6bf64c8cf4b62"
+  },
+  "r2_v2_040_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Says they are unsure"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Says they are unsure"
+    }
+   },
+   "verified_sha": "add1b326e86b8d95"
+  },
+  "r2_v2_041_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks about invoice, unrelated to answer",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "030f0e4dd043b0b8"
+  },
+  "r2_v2_041_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user say the answer is wrong or does not match what they see?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user say the answer is wrong or does not match what they see?"
+    }
+   },
+   "verified_sha": "4b539584299ce653"
+  },
+  "r2_v2_041_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user indicate the answer resolved their question?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user indicate the answer resolved their question?"
+    }
+   },
+   "verified_sha": "a36b3fe601fd6f41"
+  },
+  "r2_v2_041_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user indicate the answer resolved their question?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user indicate the answer resolved their question?"
+    }
+   },
+   "verified_sha": "9b12bbabbdbe84f9"
+  },
+  "r2_v2_041_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want more detail about the same answer?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want more detail about the same answer?"
+    }
+   },
+   "verified_sha": "5fc34a7eb55b1f3f"
+  },
+  "r2_v2_041_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user say the answer is wrong or does not match what they see?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user say the answer is wrong or does not match what they see?"
+    }
+   },
+   "verified_sha": "5b347d3563ab3db8"
+  },
+  "r2_v2_042_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue self-service drop-off booking"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue self-service drop-off booking"
+    }
+   },
+   "verified_sha": "631e6e22dd1af06c"
+  },
+  "r2_v2_042_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue self-service drop-off booking"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue self-service drop-off booking"
+    }
+   },
+   "verified_sha": "3952ef0c64d57b7e"
+  },
+  "r2_v2_042_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hand off to conservator for condition advice"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Hand off to conservator for condition advice"
+    }
+   },
+   "verified_sha": "d656ae742c5732c8"
+  },
+  "r2_v2_042_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "invoice copy request; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "invoice copy request not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e368b64032063ba5"
+  },
+  "r2_v2_042_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "selling furniture not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "06c01d80286a1c5f"
+  },
+  "r2_v2_043_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Change a lot's reserve"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Change a lot's reserve"
+    }
+   },
+   "verified_sha": "7aa3c7cbfe108eaf"
+  },
+  "r2_v2_043_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Consign an item for sale"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Consign an item for sale"
+    }
+   },
+   "verified_sha": "62b17ccca248817e"
+  },
+  "r2_v2_043_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "bidder registration; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "bidder registration not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "564cb6ce798c7602"
+  },
+  "r2_v2_043_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Chase seller payout"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Chase seller payout"
+    }
+   },
+   "verified_sha": "782cbe80aae041fe"
+  },
+  "r2_v2_043_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check sale results"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check sale results"
+    }
+   },
+   "verified_sha": "40ba595438099e6f"
+  },
+  "r2_v2_044_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Control room wants to schedule planned maintenance or a service visit for a turbine."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Control room wants to schedule planned maintenance or a service visit for a turbine."
+    }
+   },
+   "verified_sha": "b7060b43e47265d9"
+  },
+  "r2_v2_044_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Technician wants to update or close a fault ticket that was already reported."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Technician wants to update or close a fault ticket that was already reported."
+    }
+   },
+   "verified_sha": "9224b8044bce6c14"
+  },
+  "r2_v2_044_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "closing ticket not covered by branches",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9d3c49d5cf3ff565"
+  },
+  "r2_v2_044_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Technician wants to report a new fault or alarm on a specific turbine."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Technician wants to report a new fault or alarm on a specific turbine."
+    }
+   },
+   "verified_sha": "39f32800e29aa5d1"
+  },
+  "r2_v2_044_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Technician wants to update or close a fault ticket that was already reported."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Technician wants to update or close a fault ticket that was already reported."
+    }
+   },
+   "verified_sha": "1a83bc145e9cb1e6"
+  },
+  "r2_v2_045_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member wants to report a suspicious person or vehicle currently in the area."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Member wants to report a suspicious person or vehicle currently in the area."
+    }
+   },
+   "verified_sha": "4c61d958224c0e8e"
+  },
+  "r2_v2_045_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to join the watch group or sign up as a volunteer patroller."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to join the watch group or sign up as a volunteer patroller."
+    }
+   },
+   "verified_sha": "a5b0a9c537e4c153"
+  },
+  "r2_v2_045_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "theft report not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "4f0012413bbec13f"
+  },
+  "r2_v2_045_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to report a lost or found pet in the neighborhood."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to report a lost or found pet in the neighborhood."
+    }
+   },
+   "verified_sha": "465a8023049bea02"
+  },
+  "r2_v2_045_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to report a theft or burglary that has already happened."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Resident wants to report a theft or burglary that has already happened."
+    }
+   },
+   "verified_sha": "af03fe5c04aa55be"
+  },
+  "r2_v2_046_00": {
+   "passes": {
+    "A": {
+     "alt": "The parent or student is satisfied with the answer and needs nothing more.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "no clean fit; closest alt",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "new question about violin rental",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "1212897770ca9b6e"
+  },
+  "r2_v2_046_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent or student is satisfied with the answer and needs nothing more."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent or student is satisfied with the answer and needs nothing more."
+    }
+   },
+   "verified_sha": "1d02fd231bfd38e4"
+  },
+  "r2_v2_046_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to go ahead and enrol or book based on that answer."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to go ahead and enrol or book based on that answer."
+    }
+   },
+   "verified_sha": "99e13a4be81d04ef"
+  },
+  "r2_v2_046_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The student wants more detail or a clearer explanation of the answer given."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The student wants more detail or a clearer explanation of the answer given."
+    }
+   },
+   "verified_sha": "1b79196737e585aa"
+  },
+  "r2_v2_046_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a copy of the answer sent to them by email or text."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants a copy of the answer sent to them by email or text."
+    }
+   },
+   "verified_sha": "805c59fbc5cf50bf"
+  },
+  "r2_v2_047_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Artist wants to book a new recording session in one of the studio rooms."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Artist wants to book a new recording session in one of the studio rooms."
+    }
+   },
+   "verified_sha": "bf2d11d3dfca0c20"
+  },
+  "r2_v2_047_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants mixing or mastering done on tracks they already recorded."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants mixing or mastering done on tracks they already recorded."
+    }
+   },
+   "verified_sha": "55e498d0a56e6ea4"
+  },
+  "r2_v2_047_02": {
+   "passes": {
+    "A": {
+     "alt": "Artist wants to book a new recording session in one of the studio rooms.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "reschedule session; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "rescheduling booked session not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e98f12d3972a1729"
+  },
+  "r2_v2_047_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Artist wants to reschedule or cancel a session that is already booked."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Artist wants to reschedule or cancel a session that is already booked."
+    }
+   },
+   "verified_sha": "9ba34c84c4939ea6"
+  },
+  "r2_v2_047_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants mixing or mastering done on tracks they already recorded."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Client wants mixing or mastering done on tracks they already recorded."
+    }
+   },
+   "verified_sha": "4d76798565418aea"
+  },
+  "r2_v2_047_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Artist wants to reschedule or cancel a session that is already booked."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Artist wants to reschedule or cancel a session that is already booked."
+    }
+   },
+   "verified_sha": "b2a3d8733bfe82c3"
+  },
+  "r2_v2_048_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants to claim under warranty for roofing work the company already did."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants to claim under warranty for roofing work the company already did."
+    }
+   },
+   "verified_sha": "40ece4fd0db40cb6"
+  },
+  "r2_v2_048_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants a quote for a new roof or a full roof replacement."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants a quote for a new roof or a full roof replacement."
+    }
+   },
+   "verified_sha": "15989ff9f98839b5"
+  },
+  "r2_v2_048_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants to claim under warranty for roofing work the company already did."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants to claim under warranty for roofing work the company already did."
+    }
+   },
+   "verified_sha": "14dff9a131853116"
+  },
+  "r2_v2_048_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants a repair for a leak or damage on their roof."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants a repair for a leak or damage on their roof."
+    }
+   },
+   "verified_sha": "a2de8a072af75130"
+  },
+  "r2_v2_048_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants a repair for a leak or damage on their roof."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Homeowner wants a repair for a leak or damage on their roof."
+    }
+   },
+   "verified_sha": "413ac4c8388c1f44"
+  },
+  "r2_v2_048_05": {
+   "passes": {
+    "E": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Wants emailed warranty copy; neither repair nor new-roof quote.",
+     "pick": "NONE"
+    },
+    "F": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Asks for emailed warranty copy; not a quote or repair.",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "4b202e73790e0309"
+  },
+  "r2_v2_049_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parent wants to arrange a baptism for their child at the church."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parent wants to arrange a baptism for their child at the church."
+    }
+   },
+   "verified_sha": "6cb34fb595d0663c"
+  },
+  "r2_v2_049_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "marriage record copy; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "marriage record copy not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "0571b321ef0e870d"
+  },
+  "r2_v2_049_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parishioner asks for a pastoral visit to a sick or housebound person."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parishioner asks for a pastoral visit to a sick or housebound person."
+    }
+   },
+   "verified_sha": "43e52ab0a441e90d"
+  },
+  "r2_v2_049_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parishioner asks for a pastoral visit to a sick or housebound person."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Parishioner asks for a pastoral visit to a sick or housebound person."
+    }
+   },
+   "verified_sha": "f463fb12e2acf3b0"
+  },
+  "r2_v2_049_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to make a new booking of the parish hall for an event."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to make a new booking of the parish hall for an event."
+    }
+   },
+   "verified_sha": "2a08da5f2d0319ba"
+  },
+  "r2_v2_049_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to cancel or change an existing parish hall booking."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to cancel or change an existing parish hall booking."
+    }
+   },
+   "verified_sha": "b51bc9af1de34028"
+  },
+  "r2_v2_050_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request an excavation permit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request an excavation permit"
+    }
+   },
+   "verified_sha": "b5f7dfde99a0a532"
+  },
+  "r2_v2_050_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule a reinspection"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Schedule a reinspection"
+    }
+   },
+   "verified_sha": "e458c0d80808ceb3"
+  },
+  "r2_v2_050_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "football score, off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "111195c90e0e4f53"
+  },
+  "r2_v2_050_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a hot work permit"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a hot work permit"
+    }
+   },
+   "verified_sha": "2b434b555977fc05"
+  },
+  "r2_v2_050_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "ordering new device not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "9024c6a9dd2acb7c"
+  },
+  "r2_v2_050_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Upload inspection photos"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Upload inspection photos"
+    }
+   },
+   "verified_sha": "fb1f0421a38abeb5"
+  },
+  "r2_v2_051_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Connect the customer to a human immediately because of an urgent safety or no-heat situation, for example an oil smell, a leaking tank, or an empty tank in freezing weather."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Connect the customer to a human immediately because of an urgent safety or no-heat situation, for example an oil smell, a leaking tank, or an empty tank in freezing weather."
+    }
+   },
+   "verified_sha": "f6466b60ea6f8a62"
+  },
+  "r2_v2_051_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants human, non-urgent; no matching condition",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "non-urgent human request branch missing",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b1a51bc8ca4d1aba"
+  },
+  "r2_v2_051_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "The customer wants to talk to a person about a non-urgent matter, such as a billing dispute or a complaint, and can wait for a callback during office hours.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "urgent no-heat case needs human; branch missing",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "fb16abffde044480"
+  },
+  "r2_v2_051_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Connect the customer to a human immediately because of an urgent safety or no-heat situation, for example an oil smell, a leaking tank, or an empty tank in freezing weather."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Connect the customer to a human immediately because of an urgent safety or no-heat situation, for example an oil smell, a leaking tank, or an empty tank in freezing weather."
+    }
+   },
+   "verified_sha": "e085d137d6c52c21"
+  },
+  "r2_v2_051_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer can stay with the automated assistant because the request is routine, such as ordering a delivery, checking a delivery date or asking about current prices."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer can stay with the automated assistant because the request is routine, such as ordering a delivery, checking a delivery date or asking about current prices."
+    }
+   },
+   "verified_sha": "da1479184f3372cb"
+  },
+  "r2_v2_051_05": {
+   "passes": {
+    "A": {
+     "alt": "The customer can stay with the automated assistant because the request is routine, such as ordering a delivery, checking a delivery date or asking about current prices.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "prefers callback but could be assistant",
+     "pick": "The customer wants to talk to a person about a non-urgent matter, such as a billing dispute or a complaint, and can wait for a callback during office hours."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer wants to talk to a person about a non-urgent matter, such as a billing dispute or a complaint, and can wait for a callback during office hours."
+    }
+   },
+   "verified_sha": "fa77cc3fcda1e393"
+  },
+  "r2_v2_052_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports an urgent problem that is stopping work on site right now."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports an urgent problem that is stopping work on site right now."
+    }
+   },
+   "verified_sha": "fea1a6eb5fd6518e"
+  },
+  "r2_v2_052_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to give feedback or a compliment about staff, service or products."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer wants to give feedback or a compliment about staff, service or products."
+    }
+   },
+   "verified_sha": "c6cd88f371606bd8"
+  },
+  "r2_v2_052_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a problem with an order that needs fixing but is not urgent."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a problem with an order that needs fixing but is not urgent."
+    }
+   },
+   "verified_sha": "13768bdd8ad3283b"
+  },
+  "r2_v2_052_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a problem with an order that needs fixing but is not urgent."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a problem with an order that needs fixing but is not urgent."
+    }
+   },
+   "verified_sha": "e7c992b2696ff88b"
+  },
+  "r2_v2_052_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a problem with an order that needs fixing but is not urgent."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Customer reports a problem with an order that needs fixing but is not urgent."
+    }
+   },
+   "verified_sha": "605404100019cd92"
+  },
+  "r2_v2_052_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "trade account request not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a21b03f68c978760"
+  },
+  "r2_v2_053_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Standard job: a new translation request with a normal turnaround of several days, for example a contract, manual or website text, with no deadline pressure."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Standard job: a new translation request with a normal turnaround of several days, for example a contract, manual or website text, with no deadline pressure."
+    }
+   },
+   "verified_sha": "23cf150f085c04ad"
+  },
+  "r2_v2_053_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Certified job: the document needs a certified or sworn translation for official use, such as birth certificates, diplomas or immigration papers, whatever the deadline."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Certified job: the document needs a certified or sworn translation for official use, such as birth certificates, diplomas or immigration papers, whatever the deadline."
+    }
+   },
+   "verified_sha": "1828e9afd529752e"
+  },
+  "r2_v2_053_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Rush job: the client needs the translation within about 24 hours or by a fixed near deadline, such as a filing due tomorrow, including requests to speed up a job."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Rush job: the client needs the translation within about 24 hours or by a fixed near deadline, such as a filing due tomorrow, including requests to speed up a job."
+    }
+   },
+   "verified_sha": "54d9f0ead482c4aa"
+  },
+  "r2_v2_053_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Quality complaint: the client reports errors, omissions or poor quality in a translation already delivered and wants it reviewed or corrected."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Quality complaint: the client reports errors, omissions or poor quality in a translation already delivered and wants it reviewed or corrected."
+    }
+   },
+   "verified_sha": "476bfdbb5033663b"
+  },
+  "r2_v2_053_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "egg question, off-topic",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "dbc8af11d81e8d6b"
+  },
+  "r2_v2_053_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Rush job: the client needs the translation within about 24 hours or by a fixed near deadline, such as a filing due tomorrow, including requests to speed up a job."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Rush job: the client needs the translation within about 24 hours or by a fixed near deadline, such as a filing due tomorrow, including requests to speed up a job."
+    }
+   },
+   "verified_sha": "de01721e0c3d8013"
+  },
+  "r2_v2_054_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reschedule a booked pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Reschedule a booked pass"
+    }
+   },
+   "verified_sha": "be24c25b5097344c"
+  },
+  "r2_v2_054_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a link outage"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a link outage"
+    }
+   },
+   "verified_sha": "dba5c7e226f52b92"
+  },
+  "r2_v2_054_02": {
+   "passes": {
+    "C": {
+     "alt": "Reschedule a booked pass",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Wants cancellation, not rescheduling or booking",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "Reschedule a booked pass",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Cancel pass outright; no cancel branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "5a10d5fb9934d004"
+  },
+  "r2_v2_054_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request antenna maintenance"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request antenna maintenance"
+    }
+   },
+   "verified_sha": "15f47f7f832c8e97"
+  },
+  "r2_v2_054_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a new satellite pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Book a new satellite pass"
+    }
+   },
+   "verified_sha": "5167a095bac0165a"
+  },
+  "r2_v2_054_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel a scheduled pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Cancel a scheduled pass"
+    }
+   },
+   "verified_sha": "a603fbd3ca86fb0d"
+  },
+  "r2_v2_055_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to arrange collecting a food parcel for themselves?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the user asking to arrange collecting a food parcel for themselves?"
+    }
+   },
+   "verified_sha": "6f1f16d5258c21be"
+  },
+  "r2_v2_055_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want to donate food or supplies to the food bank?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want to donate food or supplies to the food bank?"
+    }
+   },
+   "verified_sha": "5a7bfe46784fe149"
+  },
+  "r2_v2_055_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "volunteer sign-up not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "d125f4b95a910edf"
+  },
+  "r2_v2_055_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want to cancel or move a volunteer shift they already have?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want to cancel or move a volunteer shift they already have?"
+    }
+   },
+   "verified_sha": "0b98b403be269d5d"
+  },
+  "r2_v2_055_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want to sign up for a new volunteer shift?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Does the user want to sign up for a new volunteer shift?"
+    }
+   },
+   "verified_sha": "3d50ef52cf3819f9"
+  },
+  "r2_v2_056_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    }
+   },
+   "verified_sha": "1b898096428a2f58"
+  },
+  "r2_v2_056_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    }
+   },
+   "verified_sha": "aa0723f072e4a8c2"
+  },
+  "r2_v2_056_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Bot OK: cust proceeds w/ current order/quote steps"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Bot OK: cust proceeds w/ current order/quote steps"
+    }
+   },
+   "verified_sha": "5af19f4292e2e9be"
+  },
+  "r2_v2_056_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    }
+   },
+   "verified_sha": "3edb91bb152ce275"
+  },
+  "r2_v2_056_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Esc to CSR: cust asks for a live staff member"
+    }
+   },
+   "verified_sha": "b5d0b2cdbe599172"
+  },
+  "r2_v2_056_05": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Hours question, not a staff request; not strictly order steps",
+     "pick": "Bot OK: cust proceeds w/ current order/quote steps"
+    },
+    "D": {
+     "alt": "Bot OK: cust proceeds w/ current order/quote steps",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Asks shop opening hours; not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "fe22a38f2e2c944f"
+  },
+  "r2_v2_057_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ack: ans OK, no more info needed"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ack: ans OK, no more info needed"
+    }
+   },
+   "verified_sha": "a3dc23a6be1df5d1"
+  },
+  "r2_v2_057_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Switch: asks about a diff work in catalogue"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Switch: asks about a diff work in catalogue"
+    }
+   },
+   "verified_sha": "ca18d914f6115796"
+  },
+  "r2_v2_057_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans disputed: user says price/info wrong"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans disputed: user says price/info wrong"
+    }
+   },
+   "verified_sha": "aba24c4305ac2d02"
+  },
+  "r2_v2_057_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants invoice resent, not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "da9f6502770ccc45"
+  },
+  "r2_v2_057_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans partial: needs more info on same work"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans partial: needs more info on same work"
+    }
+   },
+   "verified_sha": "5b52962d9f5e15ae"
+  },
+  "r2_v2_057_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "satisfied; no acknowledgement option",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "satisfied; no acceptance option listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "6220e32012885dcd"
+  },
+  "r2_v2_058_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Correct entry details"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Correct entry details"
+    }
+   },
+   "verified_sha": "a82d8b2a644d2d4a"
+  },
+  "r2_v2_058_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Correct entry details"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Correct entry details"
+    }
+   },
+   "verified_sha": "a3556c187c002f3f"
+  },
+  "r2_v2_058_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm and save entry"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm and save entry"
+    }
+   },
+   "verified_sha": "75ae9f5266c78c55"
+  },
+  "r2_v2_058_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm and save entry"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm and save entry"
+    }
+   },
+   "verified_sha": "3714e3dd0862ecde"
+  },
+  "r2_v2_058_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks question before confirming; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks when check due again",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "2d8628e930c84a6f"
+  },
+  "r2_v2_059_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+    }
+   },
+   "verified_sha": "bae7fd9673965bea"
+  },
+  "r2_v2_059_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The request is a routine self-service task the assistant completes itself: registering a new drone, renewing a registration, or updating owner contact details."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The request is a routine self-service task the assistant completes itself: registering a new drone, renewing a registration, or updating owner contact details."
+    }
+   },
+   "verified_sha": "0489f673ecbe5516"
+  },
+  "r2_v2_059_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+    }
+   },
+   "verified_sha": "6e6480687f63c0fd"
+  },
+  "r2_v2_059_03": {
+   "passes": {
+    "C": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Asks for training school list; neither self-service nor staff",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "Training school list not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "125d5831d0e421e3"
+  },
+  "r2_v2_059_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+    }
+   },
+   "verified_sha": "24f58ba97be4c9aa"
+  },
+  "r2_v2_060_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply gives an existing booking reference or membership number, such as a code like CC-2041 or a member card number."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply gives an existing booking reference or membership number, such as a code like CC-2041 or a member card number."
+    }
+   },
+   "verified_sha": "db97c0be7c7a379c"
+  },
+  "r2_v2_060_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply picks one of the rooms or programmes the assistant listed, by its name, its position in the list or a description of it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply picks one of the rooms or programmes the assistant listed, by its name, its position in the list or a description of it."
+    }
+   },
+   "verified_sha": "b1f461bab9fb66cc"
+  },
+  "r2_v2_060_02": {
+   "passes": {
+    "A": {
+     "alt": "The reply gives an existing booking reference or membership number, such as a code like CC-2041 or a member card number.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "also asks another question",
+     "pick": "The reply says the user does not know or cannot remember the requested information, without refusing to give it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply says the user does not know or cannot remember the requested information, without refusing to give it."
+    }
+   },
+   "verified_sha": "373f0550a1a3c21e"
+  },
+  "r2_v2_060_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply gives a date or time for the booking or activity, either exact (14 March, 7pm) or relative (next Friday evening)."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply gives a date or time for the booking or activity, either exact (14 March, 7pm) or relative (next Friday evening)."
+    }
+   },
+   "verified_sha": "7dd85bdbe44e33fc"
+  },
+  "r2_v2_060_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks price before choosing date; off-list",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks hourly rate, no slot given",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "ddfb095adcabce39"
+  },
+  "r2_v2_060_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply declines or refuses to provide the requested information, for example over privacy concerns or unwillingness to share it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The reply declines or refuses to provide the requested information, for example over privacy concerns or unwillingness to share it."
+    }
+   },
+   "verified_sha": "14ca981ae205a0fa"
+  },
+  "r2_v2_061_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pick a pass type"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Pick a pass type"
+    }
+   },
+   "verified_sha": "ddccd6965358af0b"
+  },
+  "r2_v2_061_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Refuse to share information"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Refuse to share information"
+    }
+   },
+   "verified_sha": "0a43259cdd05875e"
+  },
+  "r2_v2_061_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Give visit date"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Give visit date"
+    }
+   },
+   "verified_sha": "e5bcfa893ba83f28"
+  },
+  "r2_v2_061_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Give ID document number"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Give ID document number"
+    }
+   },
+   "verified_sha": "f3adcb49f9aaab24"
+  },
+  "r2_v2_061_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Name the sponsor"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Name the sponsor"
+    }
+   },
+   "verified_sha": "f294f2f27dc15b4e"
+  },
+  "r2_v2_061_05": {
+   "passes": {
+    "A": {
+     "alt": "Refuse to share information",
+     "annotator": "claude-sonnet-5-5",
+     "note": "no clean fit; closest alt",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "does not know sponsor; no such branch",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "49e4a76de6d31f10"
+  },
+  "r2_v2_062_00": {
+   "passes": {
+    "A": {
+     "alt": "The parent wants to change some detail of the summarised registration before submitting.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "withdraw from camp; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "The parent wants to change some detail of the summarised registration before submitting.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "withdrawal from camp, neither confirm nor change",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "e90aa454c482e554"
+  },
+  "r2_v2_062_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to confirm the summarised registration as correct and submit it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to confirm the summarised registration as correct and submit it."
+    }
+   },
+   "verified_sha": "77ca0246ab31f341"
+  },
+  "r2_v2_062_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to confirm the summarised registration as correct and submit it."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to confirm the summarised registration as correct and submit it."
+    }
+   },
+   "verified_sha": "be9fd9825de47fb0"
+  },
+  "r2_v2_062_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to change some detail of the summarised registration before submitting."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to change some detail of the summarised registration before submitting."
+    }
+   },
+   "verified_sha": "36fb13fc0a4077ac"
+  },
+  "r2_v2_062_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to change some detail of the summarised registration before submitting."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The parent wants to change some detail of the summarised registration before submitting."
+    }
+   },
+   "verified_sha": "80fcc5e335dff6aa"
+  },
+  "r2_v2_063_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller asks about costs, packages or payment options for the arrangements, including instalments, but not about obtaining official documents."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller asks about costs, packages or payment options for the arrangements, including instalments, but not about obtaining official documents."
+    }
+   },
+   "verified_sha": "0caf9744fa30af69"
+  },
+  "r2_v2_063_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller needs help with paperwork such as death certificates, registering the death, or permits required for burial or cremation."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller needs help with paperwork such as death certificates, registering the death, or permits required for burial or cremation."
+    }
+   },
+   "verified_sha": "23095f4558eb7efd"
+  },
+  "r2_v2_063_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The family wants the funeral home to collect the deceased, for example from a hospital, care home or private residence, as the first step after a death."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The family wants the funeral home to collect the deceased, for example from a hospital, care home or private residence, as the first step after a death."
+    }
+   },
+   "verified_sha": "27de7dca27801e47"
+  },
+  "r2_v2_063_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller wants to plan or change the service itself, such as date, venue, music, readings, or whether it is a burial or cremation."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The caller wants to plan or change the service itself, such as date, venue, music, readings, or whether it is a burial or cremation."
+    }
+   },
+   "verified_sha": "19c6006c1a882173"
+  },
+  "r2_v2_063_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "bereavement support group; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "bereavement support group not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "1ab08873a812a7ca"
+  },
+  "r2_v2_064_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer says they do not know or cannot find the requested information."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer says they do not know or cannot find the requested information."
+    }
+   },
+   "verified_sha": "bf2e4837a1a34225"
+  },
+  "r2_v2_064_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer declines to share the requested information and refuses to answer."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer declines to share the requested information and refuses to answer."
+    }
+   },
+   "verified_sha": "589cb36326d6d266"
+  },
+  "r2_v2_064_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer provides their booking reference or membership number as requested."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer provides their booking reference or membership number as requested."
+    }
+   },
+   "verified_sha": "7eb3319031508010"
+  },
+  "r2_v2_064_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks about tools included; off-list",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks about tools, no answer given",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "6267b180faa80df4"
+  },
+  "r2_v2_064_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer gives a preferred date or session time for the class."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer gives a preferred date or session time for the class."
+    }
+   },
+   "verified_sha": "de7c7b1b88be5490"
+  },
+  "r2_v2_065_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that a costume does not fit the performer it was meant for."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that a costume does not fit the performer it was meant for."
+    }
+   },
+   "verified_sha": "abb0309ce03ec5f0"
+  },
+  "r2_v2_065_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic drive question",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic driving time question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "cc3634eb0d62d5ee"
+  },
+  "r2_v2_065_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "discount rate query; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "discount enquiry not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "5a3f0a97d9906642"
+  },
+  "r2_v2_065_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that a costume arrived torn, stained or otherwise damaged."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that a costume arrived torn, stained or otherwise damaged."
+    }
+   },
+   "verified_sha": "9583cbdb4f326ff7"
+  },
+  "r2_v2_065_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that a costume arrived torn, stained or otherwise damaged."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that a costume arrived torn, stained or otherwise damaged."
+    }
+   },
+   "verified_sha": "ac874a5cf0050c41"
+  },
+  "r2_v2_065_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that ordered costumes have not been delivered on time."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The renter reports that ordered costumes have not been delivered on time."
+    }
+   },
+   "verified_sha": "96019047a7168ffc"
+  },
+  "r2_v2_066_00": {
+   "passes": {
+    "C": {
+     "alt": "The buyer wants to change quantities or part numbers in the summarised order.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Changes delivery site, not quantities or part numbers",
+     "pick": "NONE"
+    },
+    "D": {
+     "alt": "The buyer wants to change quantities or part numbers in the summarised order.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "Change of delivery site, not quantity or parts",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "c6130828cdb771fa"
+  },
+  "r2_v2_066_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer wants to change quantities or part numbers in the summarised order."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer wants to change quantities or part numbers in the summarised order."
+    }
+   },
+   "verified_sha": "b63b046eeab1a8e9"
+  },
+  "r2_v2_066_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer wants to cancel the order and not proceed with the purchase."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer wants to cancel the order and not proceed with the purchase."
+    }
+   },
+   "verified_sha": "6249bb23d0485570"
+  },
+  "r2_v2_066_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer confirms the summarised order as presented and wants it placed."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer confirms the summarised order as presented and wants it placed."
+    }
+   },
+   "verified_sha": "4db3c6c25385b33d"
+  },
+  "r2_v2_066_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer wants to change the delivery address or date of the order."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The buyer wants to change the delivery address or date of the order."
+    }
+   },
+   "verified_sha": "b2dd2ffcc1a198d8"
+  },
+  "r2_v2_067_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Escalate to a live agent"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Escalate to a live agent"
+    }
+   },
+   "verified_sha": "8b8ca956b7e8d7de"
+  },
+  "r2_v2_067_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue charger troubleshooting with bot"
+    },
+    "B": {
+     "alt": "Escalate to a live agent",
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue charger troubleshooting with bot"
+    }
+   },
+   "verified_sha": "2132509def1d98fb"
+  },
+  "r2_v2_067_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Escalate to a live agent"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Escalate to a live agent"
+    }
+   },
+   "verified_sha": "e3ba9596c6280f28"
+  },
+  "r2_v2_067_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue charger troubleshooting with bot"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Continue charger troubleshooting with bot"
+    }
+   },
+   "verified_sha": "b60e1eb91e90a11e"
+  },
+  "r2_v2_067_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "host report request; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "host utilization report, not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "490e61045cda0b94"
+  },
+  "r2_v2_068_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Safety emergency: the battery shows smoke, fire, swelling, hissing, a burning or chemical smell or unusual heat; the owner needs immediate safety instructions."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Safety emergency: the battery shows smoke, fire, swelling, hissing, a burning or chemical smell or unusual heat; the owner needs immediate safety instructions."
+    }
+   },
+   "verified_sha": "6161d00ddcb3d163"
+  },
+  "r2_v2_068_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "safety emergency option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "safety emergency branch missing",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "a285c2c7f8916079"
+  },
+  "r2_v2_068_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Urgent fault without danger: the system has stopped supplying power, the inverter is offline or shows an error code, but there is no smoke, heat or smell."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Urgent fault without danger: the system has stopped supplying power, the inverter is offline or shows an error code, but there is no smoke, heat or smell."
+    }
+   },
+   "verified_sha": "1ba46f9aa0f8113f"
+  },
+  "r2_v2_068_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Routine request: questions about gradually reduced capacity, app or display oddities, or booking a regular maintenance check while the system still works normally."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Routine request: questions about gradually reduced capacity, app or display oddities, or booking a regular maintenance check while the system still works normally."
+    }
+   },
+   "verified_sha": "c193f9ea98f26047"
+  },
+  "r2_v2_068_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Routine request: questions about gradually reduced capacity, app or display oddities, or booking a regular maintenance check while the system still works normally."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Routine request: questions about gradually reduced capacity, app or display oddities, or booking a regular maintenance check while the system still works normally."
+    }
+   },
+   "verified_sha": "88bd8b2bc18024d2"
+  },
+  "r2_v2_068_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Safety emergency: the battery shows smoke, fire, swelling, hissing, a burning or chemical smell or unusual heat; the owner needs immediate safety instructions."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Safety emergency: the battery shows smoke, fire, swelling, hissing, a burning or chemical smell or unusual heat; the owner needs immediate safety instructions."
+    }
+   },
+   "verified_sha": "868b909a3085058d"
+  },
+  "r2_v2_069_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The crew member asks about a filming permit for a shooting location."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The crew member asks about a filming permit for a shooting location."
+    }
+   },
+   "verified_sha": "c6dcb153c2e88d26"
+  },
+  "r2_v2_069_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "timesheet request; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "timesheet and pay not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "2da1b8b977ccf35d"
+  },
+  "r2_v2_069_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "The crew member wants to reserve camera, lighting or grip equipment for a shoot.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "extending kit hire not listed; reserve only",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "87c527ccb419e313"
+  },
+  "r2_v2_069_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The crew member wants to reserve camera, lighting or grip equipment for a shoot."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The crew member wants to reserve camera, lighting or grip equipment for a shoot."
+    }
+   },
+   "verified_sha": "d66b021d6d788126"
+  },
+  "r2_v2_069_04": {
+   "passes": {
+    "A": {
+     "alt": "The crew member wants to reserve camera, lighting or grip equipment for a shoot.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "another condition arguable",
+     "pick": "The crew member wants to extend the rental period of equipment already checked out."
+    },
+    "B": {
+     "alt": "The crew member wants to reserve camera, lighting or grip equipment for a shoot.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The crew member wants to extend the rental period of equipment already checked out."
+    }
+   },
+   "verified_sha": "ed082e3e241f2f76"
+  },
+  "r2_v2_070_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks question first; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks accessibility question, not confirm/change",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "ade00304ec3d4157"
+  },
+  "r2_v2_070_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised studio booking and wants it finalised."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised studio booking and wants it finalised."
+    }
+   },
+   "verified_sha": "f804895ea04132b7"
+  },
+  "r2_v2_070_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised studio booking and wants it finalised."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised studio booking and wants it finalised."
+    }
+   },
+   "verified_sha": "04cf89ee8c1b011a"
+  },
+  "r2_v2_070_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change booking details such as time, room or equipment."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change booking details such as time, room or equipment."
+    }
+   },
+   "verified_sha": "17d38f10356cc4a1"
+  },
+  "r2_v2_070_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised studio booking and wants it finalised."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client confirms the summarised studio booking and wants it finalised."
+    }
+   },
+   "verified_sha": "9f4fb1a856cafdab"
+  },
+  "r2_v2_070_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change booking details such as time, room or equipment."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The client wants to change booking details such as time, room or equipment."
+    }
+   },
+   "verified_sha": "813535542981a35f"
+  },
+  "r2_v2_071_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A client wants to book or reschedule a meeting with their architect."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A client wants to book or reschedule a meeting with their architect."
+    }
+   },
+   "verified_sha": "95ee5d2e912dc333"
+  },
+  "r2_v2_071_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A prospective client wants the firm to design a new building project."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A prospective client wants the firm to design a new building project."
+    }
+   },
+   "verified_sha": "c71912eacdc98379"
+  },
+  "r2_v2_071_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The planning authority requests documents or information about a submitted application."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The planning authority requests documents or information about a submitted application."
+    }
+   },
+   "verified_sha": "7b58d47688a09b9e"
+  },
+  "r2_v2_071_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A client asks for a progress update on their ongoing design project."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A client asks for a progress update on their ongoing design project."
+    }
+   },
+   "verified_sha": "568ce34fb1c697ca"
+  },
+  "r2_v2_071_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "design change to ongoing project not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "04f610dc249b5a33"
+  },
+  "r2_v2_072_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants new parcel slot; B is cancel/move only",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "be3ea200061ccd4b"
+  },
+  "r2_v2_072_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Someone needs food urgently today, for example has nothing to eat tonight, and asks for emergency same-day help outside normal bookings."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Someone needs food urgently today, for example has nothing to eat tonight, and asks for emergency same-day help outside normal bookings."
+    }
+   },
+   "verified_sha": "b1df408cd69c9f7b"
+  },
+  "r2_v2_072_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A recipient wants to book a new food parcel collection slot at a distribution site, for example choosing a day and time to pick up."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A recipient wants to book a new food parcel collection slot at a distribution site, for example choosing a day and time to pick up."
+    }
+   },
+   "verified_sha": "02704cc314eb90c1"
+  },
+  "r2_v2_072_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Someone wants to donate food or household goods, including asking which items are accepted and where or when to drop them off."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Someone wants to donate food or household goods, including asking which items are accepted and where or when to drop them off."
+    }
+   },
+   "verified_sha": "0dcdf7e92b543ed3"
+  },
+  "r2_v2_072_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A recipient wants to cancel or move a food parcel collection slot they have already booked, not book a new one."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "A recipient wants to cancel or move a food parcel collection slot they have already booked, not book a new one."
+    }
+   },
+   "verified_sha": "b4bee1c9c27601f3"
+  },
+  "r2_v2_073_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks unrelated question; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic sky question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "66444d894dcc5df7"
+  },
+  "r2_v2_073_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer supplies a paper size or format, such as A4, A3, poster size, or picks one of the formats offered in the question."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer supplies a paper size or format, such as A4, A3, poster size, or picks one of the formats offered in the question."
+    }
+   },
+   "verified_sha": "0041a64868d3e61e"
+  },
+  "r2_v2_073_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer supplies a quantity: a number of copies or units to print, for example 500 flyers or a couple of hundred posters."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer supplies a quantity: a number of copies or units to print, for example 500 flyers or a couple of hundred posters."
+    }
+   },
+   "verified_sha": "fdaa93eebd913a49"
+  },
+  "r2_v2_073_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer supplies a deadline or collection date, for instance by Friday or next Monday morning, including requested delivery dates."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer supplies a deadline or collection date, for instance by Friday or next Monday morning, including requested delivery dates."
+    }
+   },
+   "verified_sha": "4d320a938fc0bfd7"
+  },
+  "r2_v2_073_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer says they do not know or have not decided yet, and asks for advice or a recommendation before answering."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The customer says they do not know or have not decided yet, and asks for advice or a recommendation before answering."
+    }
+   },
+   "verified_sha": "61e04ca70ce2d59e"
+  },
+  "r2_v2_074_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans accepted - client satisfied, close thread"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans accepted - client satisfied, close thread"
+    }
+   },
+   "verified_sha": "7342a3c78ee667a9"
+  },
+  "r2_v2_074_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans needs elaboration - client wants breakdown/explanation of same point"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans needs elaboration - client wants breakdown/explanation of same point"
+    }
+   },
+   "verified_sha": "296299c80d575eda"
+  },
+  "r2_v2_074_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans disputed - client says quote/TAT/word count is wrong"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Ans disputed - client says quote/TAT/word count is wrong"
+    }
+   },
+   "verified_sha": "1c358168b1122823"
+  },
+  "r2_v2_074_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Follow-up Q on same job, diff topic (other LP, file, deliverable)"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Follow-up Q on same job, diff topic (other LP, file, deliverable)"
+    }
+   },
+   "verified_sha": "c2e34b8ae40bec56"
+  },
+  "r2_v2_074_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Ans accepted - client satisfied, close thread",
+     "annotator": "claude-sonnet-5-5",
+     "note": "implies new request about Seoul subtitles",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "cbec9d33c77a469a"
+  },
+  "r2_v2_075_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks counter opening hours; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "asks counter weekend hours, not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "3fd531a2301602b6"
+  },
+  "r2_v2_075_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a visitor pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a visitor pass"
+    }
+   },
+   "verified_sha": "67faa7f77d5b308d"
+  },
+  "r2_v2_075_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a lost or stolen pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Report a lost or stolen pass"
+    }
+   },
+   "verified_sha": "7368a43be085c5fd"
+  },
+  "r2_v2_075_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a contractor pass"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request a contractor pass"
+    }
+   },
+   "verified_sha": "eb303c6c098d9eb2"
+  },
+  "r2_v2_075_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check application status"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Check application status"
+    }
+   },
+   "verified_sha": "e3678d842ecc0ff3"
+  },
+  "r2_v2_076_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Lic scope query - is use covered by current std/ext licence",
+     "annotator": "claude-sonnet-5-5",
+     "note": "licence upgrade request; branch not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "b61b95845828f35c"
+  },
+  "r2_v2_076_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lic upgrade - cust needs to buy std->ext or more seats"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lic upgrade - cust needs to buy std->ext or more seats"
+    }
+   },
+   "verified_sha": "decf47417c6c608b"
+  },
+  "r2_v2_076_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants to sell own photos, not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "46c39ba1d76d73c7"
+  },
+  "r2_v2_076_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lic upgrade - cust needs to buy std->ext or more seats"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lic upgrade - cust needs to buy std->ext or more seats"
+    }
+   },
+   "verified_sha": "78e77759c6d1e8a1"
+  },
+  "r2_v2_076_04": {
+   "passes": {
+    "A": {
+     "alt": "Lic upgrade - cust needs to buy std->ext or more seats",
+     "annotator": "claude-sonnet-5-5",
+     "note": "could also be upgrade need",
+     "pick": "Lic scope query - is use covered by current std/ext licence"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Lic scope query - is use covered by current std/ext licence"
+    }
+   },
+   "verified_sha": "1b45460f40460229"
+  },
+  "r2_v2_076_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Billing - dup charge / refund / inv. error"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Billing - dup charge / refund / inv. error"
+    }
+   },
+   "verified_sha": "0e86696308cdd2b7"
+  },
+  "r2_v2_077_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "licence renewal not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "3da7962d6ebb4ed5"
+  },
+  "r2_v2_077_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The pilot reports a drone incident, crash or near-miss that needs investigation."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The pilot reports a drone incident, crash or near-miss that needs investigation."
+    }
+   },
+   "verified_sha": "2c5a8caffac003b0"
+  },
+  "r2_v2_077_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The applicant wants to apply for their first remote pilot licence."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The applicant wants to apply for their first remote pilot licence."
+    }
+   },
+   "verified_sha": "4c17ad617cfbedb8"
+  },
+  "r2_v2_077_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner wants to transfer a registered drone to the person they sold it to."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The owner wants to transfer a registered drone to the person they sold it to."
+    }
+   },
+   "verified_sha": "53f7c1d809f8cd7b"
+  },
+  "r2_v2_077_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The pilot wants to renew an existing remote pilot licence that is about to expire."
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "The pilot wants to renew an existing remote pilot licence that is about to expire."
+    }
+   },
+   "verified_sha": "a7aa413326f3683b"
+  },
+  "r2_v2_077_05": {
+   "passes": {
+    "A": {
+     "alt": "The pilot wants to register a brand-new drone they have just bought themselves.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "ownership transfer option absent",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "The pilot wants to register a brand-new drone they have just bought themselves.",
+     "annotator": "claude-sonnet-5-5",
+     "note": "ownership transfer not listed",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "68e6d7084288e48d"
+  },
+  "r2_v2_078_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm answer resolved query"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Confirm answer resolved query"
+    }
+   },
+   "verified_sha": "33388b4fc027fe81"
+  },
+  "r2_v2_078_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants phone call; no fit",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": "Request further written detail",
+     "annotator": "claude-sonnet-5-5",
+     "note": "wants phone call, not offered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "afd49351d087a580"
+  },
+  "r2_v2_078_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Raise a different question"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Raise a different question"
+    }
+   },
+   "verified_sha": "63ff9de045fdb439"
+  },
+  "r2_v2_078_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Challenge answer as incorrect"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Challenge answer as incorrect"
+    }
+   },
+   "verified_sha": "bad5c65ca4658530"
+  },
+  "r2_v2_078_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request further written detail"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Request further written detail"
+    }
+   },
+   "verified_sha": "636e4010398bf16d"
+  },
+  "r2_v2_079_00": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "off-topic taco question",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "782072728ad0c97c"
+  },
+  "r2_v2_079_01": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner asking about the progress of an inspection already underway?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner asking about the progress of an inspection already underway?"
+    }
+   },
+   "verified_sha": "8432f5d67c5dc9a8"
+  },
+  "r2_v2_079_02": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner reporting a defect or problem found on the aircraft?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner reporting a defect or problem found on the aircraft?"
+    }
+   },
+   "verified_sha": "50df57e117987e72"
+  },
+  "r2_v2_079_03": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "no listed condition fits",
+     "pick": "NONE"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "booking annual inspection not covered",
+     "pick": "NONE"
+    }
+   },
+   "verified_sha": "52bd2168aba7ad95"
+  },
+  "r2_v2_079_04": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner asking whether an airworthiness directive applies to their aircraft?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner asking whether an airworthiness directive applies to their aircraft?"
+    }
+   },
+   "verified_sha": "4ff16fcb7e3040bf"
+  },
+  "r2_v2_079_05": {
+   "passes": {
+    "A": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner asking to book a new scheduled inspection such as an annual or 100-hour?"
+    },
+    "B": {
+     "alt": null,
+     "annotator": "claude-sonnet-5-5",
+     "note": "",
+     "pick": "Is the owner asking to book a new scheduled inspection such as an annual or 100-hour?"
+    }
+   },
+   "verified_sha": "2a60534b9550c4dc"
+  }
+ },
+ "note": "Two blind passes by claude-sonnet-5-5 (different prompt wording, reversed candidate order in pass B; items anonymous, shuffled, no labels, persona hidden). Same model family for both passes, independent of the generator (claude-opus). NOT a human audit. | round 2: fresh blind passes on the 14 examples edited after round 1: 10 rewritten + 4 affected by a condition edit | round 3: fresh blind passes on the 2 examples rewritten a third time: 2 rewritten",
+ "rounds": [
+  {
+   "examples_annotated": 436,
+   "label": "round 1"
+  },
+  {
+   "examples_annotated": 14,
+   "label": "round 2: fresh blind passes on the 14 examples edited after round 1"
+  },
+  {
+   "examples_annotated": 2,
+   "label": "round 3: fresh blind passes on the 2 examples rewritten a third time"
+  }
+ ]
+}

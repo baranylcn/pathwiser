@@ -1,0 +1,207 @@
+{
+  "version": "realistic-v2",
+  "purpose": "fresh external evaluation set; never used to fit, tune or select",
+  "quality": {
+    "origin": "llm_generated",
+    "generator": "claude-opus (subagents)",
+    "human_audited": false,
+    "blind_verified": {
+      "status_counts": {
+        "blind_verified": 434
+      },
+      "blind_verified_examples": 434,
+      "all_passes_agree_with_intended": 434,
+      "alt_flagged": 29,
+      "agreement_by_label_type": {
+        "route": "342/342",
+        "no_match": "92/92"
+      },
+      "note": "Two blind passes by claude-sonnet-5-5 (different prompt wording, reversed candidate order in pass B; items anonymous, shuffled, no labels, persona hidden). Same model family for both passes, independent of the generator (claude-opus). NOT a human audit. | round 2: fresh blind passes on the 14 examples edited after round 1: 10 rewritten + 4 affected by a condition edit | round 3: fresh blind passes on the 2 examples rewritten a third time: 2 rewritten"
+    },
+    "note": "not 'gold' until audited by a human"
+  },
+  "source_files_sha256": {
+    "scenarios_00.json": "5e117da20222d0835b9a9150297d80748f5d9babecb1d0686deabbdae7ca4ea8",
+    "scenarios_01.json": "c9345c9e7fd763133da22ec63c85f0133333fdd44b01f96c3d21c0ddc01764c5",
+    "scenarios_02.json": "42871d771a3c3fcb57966f66288f300c68bb2f55c68bd88b6c2df9fa79ffc53e",
+    "scenarios_03.json": "f957f9f2f82b3f06b749d9fcd02187ea12fbf3507057973007e3ba278a4221b9",
+    "scenarios_04.json": "d433c9f2e0bc3d212f044cdaa185e0e6ce65872f9f9772e40d86aaa24d2d2c5f",
+    "scenarios_05.json": "5d93076ee17f9fcb348d039a2122bf56304e605f3a10435adceef09c85473e25",
+    "scenarios_06.json": "05a9be0aafdc2ff6b6b5be1b608ee7311ac76c248c1c5afce1af0e343f69c53c",
+    "scenarios_07.json": "3f5035535bcb4e2f9c53995b507bb43d4ff626686548b3f907a13bbb9a8460c4",
+    "scenarios_08.json": "6d65dca400c2ab692ffd182723d5141357f37dc583c3e8eb585e264a0fb3376c",
+    "specs.json": "fae3646e93ccad85675b4eaedfd74c20071e7fb1d83b78d3cacb7a3e27a1a5e1",
+    "generation.json": "c69319c612f68377ea26c87410e0f6e6ad4bb67cd3f40dad3818823267372764",
+    "blind_verification.json": "ff9b02f65e963b20366a6554e06aefd603771a946cbcbba0a233aa4c367f5f17",
+    "dropped.json": "412272712f94e0fe2f75a13556224c798d15f8cffdddd9e9c3ed4e682c3d287f"
+  },
+  "n_scenarios": 80,
+  "n_examples": 434,
+  "dropped_examples": [
+    {
+      "scenario": "v2_056",
+      "i": 5,
+      "reason": "contested after two annotation rounds and one rewrite: the node is a binary 'live staff or continue with the bot' choice, and annotators treat every non-escalation as 'continue with the bot', so a clean in-domain-uncovered example does not exist for it"
+    },
+    {
+      "scenario": "v2_022",
+      "i": 4,
+      "reason": "contested in three annotation rounds with three different rewrites: with the options 'give a date', 'choose an offered option' and 'decline to share the information', annotators consistently read any answer that supplies no information (including 'I don't know') as the decline option, so the intended 'does not know' reading cannot be expressed cleanly for this node"
+    }
+  ],
+  "label_counts": {
+    "route": 342,
+    "no_match": 92
+  },
+  "nm_kind_counts": {
+    "sibling_removed": 39,
+    "in_domain_uncovered": 36,
+    "oos": 17
+  },
+  "candidate_size_counts": {
+    "2": 50,
+    "3": 105,
+    "4": 114,
+    "5": 68,
+    "6": 37,
+    "7": 20,
+    "8": 18,
+    "9": 2,
+    "10": 20
+  },
+  "context_counts": {
+    "ctx:later_turn": 168,
+    "ctx:first_turn": 122,
+    "ctx:none": 144
+  },
+  "domains": [
+    "antique_restoration",
+    "architecture_firm_intake",
+    "art_gallery_sales",
+    "auction_house_consignment",
+    "aviation_maintenance_logbook",
+    "battery_storage_support",
+    "building_materials_yard",
+    "community_center_bookings",
+    "craft_workshop_classes",
+    "drone_regulation_registry",
+    "elevator_maintenance_company",
+    "ev_charging_network",
+    "film_set_logistics",
+    "food_bank_distribution",
+    "funeral_home_arrangements",
+    "gas_pipeline_inspection",
+    "heating_oil_delivery",
+    "land_surveying_company",
+    "military_base_pass_office",
+    "music_school_enrolment",
+    "neighborhood_watch",
+    "parish_office",
+    "podcast_studio_booking",
+    "print_shop_orders",
+    "rocket_parts_supplier",
+    "roofing_contractor",
+    "satellite_ground_station",
+    "scaffolding_hire",
+    "scout_troop_admin",
+    "solar_installer_projects",
+    "sound_studio_sessions",
+    "space_agency_outreach",
+    "stock_photo_licensing",
+    "theater_costume_rental",
+    "translation_agency",
+    "wind_farm_operations"
+  ],
+  "options": {
+    "preprocessing": {
+      "max_context_turns": 6,
+      "max_context_words": 160,
+      "max_message_words": 200,
+      "max_condition_words": 64,
+      "include_node": true,
+      "dataset_weight_power": 0.5,
+      "risky_label_weight": 0.5,
+      "max_k": 10
+    }
+  },
+  "leakage": {
+    "reference_messages": 130472,
+    "reference_conditions": 1065,
+    "exact_messages": [],
+    "exact_conditions": [],
+    "duplicate_messages_within": [],
+    "duplicate_conditions_within": [],
+    "near_messages_flagged": 0,
+    "near_messages": [],
+    "near_conditions_flagged": null,
+    "near_conditions": null,
+    "embeddings_checked": false
+  },
+  "persona_counts": {
+    "rambling_polite": 37,
+    "hinting": 17,
+    "non_native": 38,
+    "anxious": 17,
+    "slang_heavy": 38,
+    "neutral": 83,
+    "fragment_texter": 38,
+    "lay": 13,
+    "confused": 17,
+    "casual": 56,
+    "multi_topic": 9,
+    "formal": 31,
+    "frustrated": 31,
+    "jargon": 9
+  },
+  "style_split_counts": {
+    "heldout": 157,
+    "seen": 277
+  },
+  "noise_planned_counts": {
+    "none": 233,
+    "no_punct_lower": 79,
+    "text_speak": 27,
+    "autocorrect": 9,
+    "keyboard_typos": 86
+  },
+  "noise_applied_counts": {
+    "none": 254,
+    "no_punct_lower": 73,
+    "text_speak": 15,
+    "keyboard_typos": 86,
+    "autocorrect": 6
+  },
+  "tag_counts": {
+    "indirect": 89,
+    "context_dependent": 79,
+    "distractor": 32,
+    "negation": 15
+  },
+  "sampler_version": "1",
+  "archetype_counts": {
+    "post_answer_followup": 8,
+    "intent_router": 40,
+    "confirmation": 8,
+    "slot_answer_type": 10,
+    "triage": 8,
+    "handoff": 6
+  },
+  "groups": [
+    "arts_culture",
+    "community_religion",
+    "construction_trades",
+    "energy_industry",
+    "media_production",
+    "space_defense"
+  ],
+  "acceptance": {
+    "at_least_75_scenarios": true,
+    "at_least_350_examples": true,
+    "heldout_personas_at_least_30_each": true,
+    "no_exact_leakage": true,
+    "near_duplicate_flags_resolved": true,
+    "all_examples_blind_verified": true,
+    "every_disagreement_resolved": true,
+    "all": true
+  }
+}

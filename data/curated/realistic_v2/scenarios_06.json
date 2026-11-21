@@ -1,0 +1,844 @@
+[
+ {
+  "id": "v2_054",
+  "node": {
+   "name": "ground_station_request_router",
+   "description": "Decide what the ground station operator wants to do about passes or link issues."
+  },
+  "conditions": {
+   "a": "Book a new satellite pass",
+   "b": "Cancel a scheduled pass",
+   "c": "Report a link outage",
+   "d": "Reschedule a booked pass",
+   "e": "Request antenna maintenance"
+  },
+  "examples": [
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "Sorry if this is a silly question, but I think we need to move Thursday's contact with the weather bird. I don't want to drop it, just push it to a later window if that's okay?",
+    "why": "keep the pass, move it to another window"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Ground station desk, what do you need?"
+     ]
+    ],
+    "msg": "We lost the downlink on antenna 3 since one hour, no signal is coming at all from the spacecraft.",
+    "why": "downlink lost, reporting a link failure"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c",
+     "d",
+     "e"
+    ],
+    "ctx": [
+     [
+      "u",
+      "hey, quick one about tomorrow's passes"
+     ],
+     [
+      "a",
+      "Sure, which pass is it about?"
+     ]
+    ],
+    "msg": "cancel the 14:20 one for the cubesat completely, we don't need that pass anymore and nothing should replace it",
+    "why": "cancel a pass entirely; no reschedule"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "u",
+      "Hi, I'm covering for my colleague at the station today."
+     ],
+     [
+      "a",
+      "Welcome, what can I help you with?"
+     ]
+    ],
+    "msg": "The big dish outside makes a grinding noise whenever it turns and it moves kind of jerky. Someone should probably look at it.",
+    "why": "mechanical problem with dish needs servicing"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "hey, can we grab a slot on the north antenna for the new imaging sat next tuesday morning?",
+    "why": "new slot for a satellite not yet booked"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Good afternoon, I am writing regarding the passes booked for Mission Kestrel."
+     ],
+     [
+      "a",
+      "Good afternoon. How can I help with those passes?"
+     ]
+    ],
+    "msg": "The spacecraft has entered safe mode, so we will not require Friday's 09:40 contact. Please remove it from the schedule entirely.",
+    "why": "remove booked pass, no replacement"
+   }
+  ]
+ },
+ {
+  "id": "v2_055",
+  "node": {
+   "name": "food_bank_router",
+   "description": "Decide what the person contacting the food bank wants to do."
+  },
+  "conditions": {
+   "a": "Is the user asking to arrange collecting a food parcel for themselves?",
+   "b": "Does the user want to donate food or supplies to the food bank?",
+   "c": "Does the user want to sign up for a new volunteer shift?",
+   "d": "Does the user want to cancel or move a volunteer shift they already have?"
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Hi, sorry, I'm not sure who to ask about this."
+     ],
+     [
+      "a",
+      "No problem! I can help you collect a food parcel, drop off a donation, or volunteer with us. Which is it?"
+     ]
+    ],
+    "msg": "The first one, I think... sorry, it's been a really hard month.",
+    "why": "'first one' refers to collecting a parcel"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hello, I have a question."
+     ],
+     [
+      "a",
+      "Sure, what is it?"
+     ]
+    ],
+    "msg": "I'm not looking to pick anything up. I've got about twenty tins and a few bags of rice I'd like to bring over to you.",
+    "why": "bringing tins and rice to give"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "c",
+    "cands": [
+     "a",
+     "b",
+     "d"
+    ],
+    "ctx": [
+     [
+      "u",
+      "Good morning, I have recently retired and have some free time."
+     ],
+     [
+      "a",
+      "Good morning, how can we help?"
+     ]
+    ],
+    "msg": "I would like to put my name down to help sort deliveries on Saturday mornings, if there is space.",
+    "why": "new volunteer signup, not changing an existing shift"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "I signed up for some kind of helping slot thing on Wednesday but I can't make it now. Can I swap it to another day, or is that even possible?",
+    "why": "move an existing volunteer slot"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "volunteering question"
+     ],
+     [
+      "a",
+      "Happy to help! We have open slots on Tuesday evening packing boxes and Thursday morning at the warehouse. Would you like one of those?"
+     ]
+    ],
+    "msg": "tuesday one",
+    "why": "picks an offered new shift"
+   }
+  ]
+ },
+ {
+  "id": "v2_056",
+  "node": {
+   "name": "print_shop_handoff",
+   "description": "Decide whether the print shop customer continues with the bot or goes to staff."
+  },
+  "conditions": {
+   "a": "Bot OK: cust proceeds w/ current order/quote steps",
+   "b": "Esc to CSR: cust asks for a live staff member"
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "can I just talk to someone at the shop real quick?",
+    "why": "asks for a person"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "hey, I'd rather go over my wedding invites with one of your staff, can somebody give me a call?",
+    "why": "wants staff to call"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "I can prepare your quote for 500 A5 flyers now, or connect you with a staff member. Shall I continue with the quote?"
+     ]
+    ],
+    "msg": "Yes, continue please, is fine for me.",
+    "why": "agrees to continue quote with bot"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Need 200 saddle-stitched booklets, 4/4, 130gsm silk."
+     ],
+     [
+      "a",
+      "I can price that. What finished size do you need?"
+     ]
+    ],
+    "msg": "Before that, put me through to someone in prepress. I need to talk bleed and imposition on my PDF with a human.",
+    "why": "requests a human prepress person"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hello there, I'm putting together a memorial booklet for my grandmother."
+     ],
+     [
+      "a",
+      "I'm sorry for your loss. I can help you order booklets. How many copies would you like?"
+     ]
+    ],
+    "msg": "Thank you, that is very kind. It's rather an emotional one for me, and honestly I think I'd feel better talking it all through with one of your people in the shop, if somebody might ring me this afternoon. My aunt did the photos and they're quite old, you see.",
+    "why": "wants a shop person to ring her"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Good evening, I'd like some posters for our church fete."
+     ],
+     [
+      "a",
+      "Lovely! How many posters would you like, and what size?"
+     ]
+    ],
+    "msg": "Oh dear, I've just realised the time and I must collect my son from football. Before I go, could you tell me whether your shop is open on Sunday afternoons, as I might pop in with the artwork on a memory stick instead? I'd be ever so grateful, it's been one of those days.",
+    "why": "asks opening hours; neither staff nor continuing"
+   }
+  ]
+ },
+ {
+  "id": "v2_057",
+  "node": {
+   "name": "gallery_answer_followup",
+   "description": "Classify how the collector reacts to the gallery assistant's last answer."
+  },
+  "conditions": {
+   "a": "Ack: ans OK, no more info needed",
+   "b": "Ans partial: needs more info on same work",
+   "c": "Ans disputed: user says price/info wrong",
+   "d": "Switch: asks about a diff work in catalogue"
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Good afternoon, could you tell me the dimensions of the small harbour oil by Elsa Marrow?"
+     ],
+     [
+      "a",
+      "Certainly, it is 40 by 55 cm unframed and 52 by 67 cm in its frame."
+     ]
+    ],
+    "msg": "Oh, that's perfect, thank you ever so much. My husband and I were measuring the wall above the piano last night, and it will sit there beautifully. That's everything I wanted to know for now, you've been very helpful.",
+    "why": "thanks, says that's everything needed"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "yo what's the price on that big blue abstract by the door"
+     ],
+     [
+      "a",
+      "That piece, 'Tidewater II' by Rafe Kollin, is listed at 12,400."
+     ]
+    ],
+    "msg": "damn that's way outta my league. kinda digging that little bronze bird thing in the window though",
+    "why": "interest shifts to a different piece"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "The watercolour 'Morning Quay' is priced at 3,200 including the frame."
+     ]
+    ],
+    "msg": "But the card on the wall is saying 2,300, not this.",
+    "why": "says the quoted price is wrong"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Is the charcoal portrait series still available?"
+     ],
+     [
+      "a",
+      "Two of the five drawings are still available, numbers 2 and 4."
+     ]
+    ],
+    "msg": "Fine, whatever. What I actually need is the invoice for the print I bought last month resent. I've asked twice already.",
+    "why": "invoice resend request; no reaction option fits"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "hey, how old is the ceramic vase in room 2?"
+     ],
+     [
+      "a",
+      "It was made in 1968 by the potter Ines Varga."
+     ]
+    ],
+    "msg": "oh nice, and where's it been since then?",
+    "why": "asks provenance of the same vase"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "a",
+    "cands": [
+     "b",
+     "c",
+     "d"
+    ],
+    "ctx": [
+     [
+      "u",
+      "is framing included with the linocut prints?"
+     ],
+     [
+      "a",
+      "Yes, all linocuts come with a simple oak frame at no extra cost."
+     ]
+    ],
+    "msg": "great, that answers it, cheers",
+    "why": "satisfied, no more info wanted"
+   }
+  ]
+ },
+ {
+  "id": "v2_058",
+  "node": {
+   "name": "logbook_entry_confirmation",
+   "description": "Decide how the aircraft owner responds to the summarised logbook entry."
+  },
+  "conditions": {
+   "a": "Confirm and save entry",
+   "b": "Correct entry details"
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Here's the entry: 100-hour inspection on N4821K, tach time 2,315.4, oil changed, completed 12 March. Shall I save it, or is anything off?"
+     ]
+    ],
+    "msg": "the second number is wrong, should be 2,351.4",
+    "why": "fixes the tach time"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Log the new alternator on my Cherokee."
+     ],
+     [
+      "a",
+      "Summary: alternator replaced, part number AL-2290, installed 4 June on N77TR. Confirm?"
+     ]
+    ],
+    "msg": "No, for crying out loud, it's N77RT, not N77TR. Fix the tail number before you save that.",
+    "why": "tail number must be corrected"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Enter the ELT battery swap, P/N 88-3104, done today, IA signoff by Hollis."
+     ],
+     [
+      "a",
+      "Entry: ELT battery replaced, P/N 88-3104, today's date, signed off by IA Hollis. Save to the airframe log?"
+     ]
+    ],
+    "msg": "Affirm, post it.",
+    "why": "approves saving the entry"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "I've drafted the entry: annual inspection on your Skyhawk, N3390P, completed by R. Delgado on 2 October, no discrepancies. Do you want me to record it?"
+     ]
+    ],
+    "msg": "Yes, I think so, that all looks right to me... sorry, I'm new to owning a plane.",
+    "why": "says yes, details look right"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Please add the pitot-static check for my Bonanza."
+     ],
+     [
+      "a",
+      "Entry: pitot-static and transponder check, completed 18 May, N515BW. Shall I save it?"
+     ]
+    ],
+    "msg": "Hold on, first tell me when this check is due again so I can plan ahead. Also, the hangar door jammed on me again this morning.",
+    "why": "asks a question; neither confirm nor correct"
+   }
+  ]
+ },
+ {
+  "id": "v2_059",
+  "node": {
+   "name": "drone_registry_handoff",
+   "description": "Decide whether the drone registry assistant can handle the request or a case officer is needed."
+  },
+  "conditions": {
+   "a": "The request is a routine self-service task the assistant completes itself: registering a new drone, renewing a registration, or updating owner contact details.",
+   "b": "The user needs a human case officer, for example for enforcement notices, disputed fines, appeals against refused licences, or an explicit request to talk to staff."
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "so I got a letter saying I flew over a restricted park and owe 400 bucks, but I was nowhere near there that day",
+    "why": "contests a fine"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Hello, this is the drone registry assistant. What can I help you with?"
+     ]
+    ],
+    "msg": "I just got my first drone as a birthday present and I'm worried I'm not allowed to fly it until it's on your system somehow?",
+    "why": "new drone needs registering"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Good morning, I have a question about my licence application."
+     ],
+     [
+      "a",
+      "Good morning. I can help with renewals and registrations here, or put you through to a case officer if your application was refused and you wish to appeal. Which applies?"
+     ]
+    ],
+    "msg": "It is the latter, unfortunately.",
+    "why": "'latter' means refused application appeal"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "a",
+      "Welcome to the drone registry. How can I help?"
+     ]
+    ],
+    "msg": "I want take a course for fly drone for my work, do you have list of training schools in my region?",
+    "why": "wants training schools; neither self-service nor case officer"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "these guys slapped an enforcement notice on me and took my freaking drone at the beach, what the hell am I supposed to do now",
+    "why": "enforcement notice needs a case officer"
+   }
+  ]
+ },
+ {
+  "id": "v2_060",
+  "node": {
+   "name": "booking_info_answer_type",
+   "description": "Classify what kind of information the user's reply supplies after the assistant asked for a detail."
+  },
+  "conditions": {
+   "a": "The reply gives a date or time for the booking or activity, either exact (14 March, 7pm) or relative (next Friday evening).",
+   "b": "The reply gives an existing booking reference or membership number, such as a code like CC-2041 or a member card number.",
+   "c": "The reply picks one of the rooms or programmes the assistant listed, by its name, its position in the list or a description of it.",
+   "d": "The reply says the user does not know or cannot remember the requested information, without refusing to give it.",
+   "e": "The reply declines or refuses to provide the requested information, for example over privacy concerns or unwillingness to share it."
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hi, I need to change my hall booking, I hope that's okay."
+     ],
+     [
+      "a",
+      "Of course. Could you give me your booking reference?"
+     ]
+    ],
+    "msg": "Yes, sorry, I think it's CC-7318. It was on the confirmation email, I hope that's the right one.",
+    "why": "supplies booking reference code"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "wanna rent a room for my band to practise"
+     ],
+     [
+      "a",
+      "Sure! We have the Oak Room (small, carpeted), the Main Hall (large, with stage), or the Basement Studio (soundproofed). Which would you like?"
+     ]
+    ],
+    "msg": "the soundproof one obviously, we're loud as hell",
+    "why": "picks the listed studio by description"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "To look up your yoga class enrolment, what's your membership number?"
+     ]
+    ],
+    "msg": "I don't remember it, the card is somewhere at home. Also, is the class still running next week?",
+    "why": "cannot remember membership number"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "need the hall for my kid's birthday bash"
+     ],
+     [
+      "a",
+      "Great! When would you like to book it for?"
+     ]
+    ],
+    "msg": "she turns six the saturday after next so that afternoon is good, gonna be chaos",
+    "why": "relative date given via birthday"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Good evening, I would like to book a meeting room for our residents' association."
+     ],
+     [
+      "a",
+      "Certainly. Which date would you like?"
+     ]
+    ],
+    "msg": "Before I choose a date, could you please tell me what the hourly rate is for the meeting rooms?",
+    "why": "asks price instead of answering; no type fits"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "a",
+      "Before we sign your son up for the youth football programme, could you give me your home address?"
+     ]
+    ],
+    "msg": "mate, I've had enough scammy crap this year to know better than typing where I live into some chat box",
+    "why": "won't share address"
+   }
+  ]
+ },
+ {
+  "id": "v2_061",
+  "node": {
+   "name": "pass_request_answer_type",
+   "description": "Classify what the visitor's reply supplies after the pass office asked for a detail."
+  },
+  "conditions": {
+   "a": "Give visit date",
+   "b": "Name the sponsor",
+   "c": "Pick a pass type",
+   "d": "Give ID document number",
+   "e": "Refuse to share information"
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Which pass do you need: 1) single-day visitor, 2) contractor 30-day, 3) contractor annual?"
+     ]
+    ],
+    "msg": "number 2",
+    "why": "selects listed pass option"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "u",
+      "Good morning, I am a delivery driver who needs access on Thursday."
+     ],
+     [
+      "a",
+      "Thank you. Could you please provide your home phone number and date of birth?"
+     ]
+    ],
+    "msg": "I would rather not share those details through this channel.",
+    "why": "declines to give requested details"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "When will you be visiting the base?"
+     ]
+    ],
+    "msg": "so it's for my cousin's graduation ceremony, that's the 4th of next month",
+    "why": "gives the day via the ceremony"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "I need a contractor pass for the hangar refit job."
+     ],
+     [
+      "a",
+      "Sure. What's the number on your passport or driving licence?"
+     ]
+    ],
+    "msg": "My driving licence number is HRT 448201 9KD.",
+    "why": "provides licence number"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "I'm visiting someone on base next week."
+     ],
+     [
+      "a",
+      "Who is sponsoring your visit?"
+     ]
+    ],
+    "msg": "Sergeant Talia Brenner invited me, she works in the motor pool.",
+    "why": "names the inviting sergeant"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "I need a visitor pass for Friday."
+     ],
+     [
+      "a",
+      "Who is the sponsor for your visit?"
+     ]
+    ],
+    "msg": "I'm honestly not sure who's signing for me, my uncle just told me to come to the gate.",
+    "why": "doesn't know the answer; not a refusal"
+   }
+  ]
+ },
+ {
+  "id": "v2_062",
+  "node": {
+   "name": "scout_registration_confirmation",
+   "description": "Decide how the parent responds to the summarised scout activity registration."
+  },
+  "conditions": {
+   "a": "The parent wants to confirm the summarised registration as correct and submit it.",
+   "b": "The parent wants to change some detail of the summarised registration before submitting."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "a",
+      "Here is the summary: Leo Park, Cub pack, summer camp 14-17 July, vegetarian meals, medical form attached. Shall I submit it?"
+     ]
+    ],
+    "msg": "Oh, thank you for putting that together so neatly. I'm terribly sorry, but we've just found out we'll be away visiting my mother-in-law that week, so I'm afraid we'll have to withdraw Leo from the camp altogether. He'll be ever so disappointed, he loves the campfire songs.",
+    "why": "withdraws from camp; neither confirm nor change"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Summary: Maya Okoro, Scouts, badge evening on 3 May, permission slip signed by Ruth Okoro. Is this correct?"
+     ]
+    ],
+    "msg": "Every detail there matches what I filled in on the form.",
+    "why": "implies summary is correct"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Summary: Sam Ellery, Beavers, autumn hike on 9 October, pickup by Dan Ellery at 4pm. Shall I confirm this?"
+     ]
+    ],
+    "msg": "Ah, lovely, thank you. Sam has been talking about this hike for weeks, he's even been practising knots on the dog's lead. Yes, please go ahead and confirm it, everything there is right.",
+    "why": "explicitly confirms"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Summary: Noor Haddad, Cubs, weekend camp 21-23 June, emergency contact Sami Haddad. Confirm?"
+     ]
+    ],
+    "msg": "oh wait, make that her aunt Rima instead",
+    "why": "replaces emergency contact"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "I'd like to sign Theo up for the canoe day."
+     ],
+     [
+      "a",
+      "Summary: Theo Brandt, Scouts, canoe day 2 August, no allergies listed. Shall I submit it?"
+     ]
+    ],
+    "msg": "Hmm, Theo did come out in hives after that peanut incident last spring.",
+    "why": "hints allergy field needs updating"
+   }
+  ]
+ },
+ {
+  "id": "v2_063",
+  "node": {
+   "name": "funeral_arrangements_router",
+   "description": "Decide which part of the funeral arrangements the family is contacting the funeral home about."
+  },
+  "conditions": {
+   "a": "The family wants the funeral home to collect the deceased, for example from a hospital, care home or private residence, as the first step after a death.",
+   "b": "The caller wants to plan or change the service itself, such as date, venue, music, readings, or whether it is a burial or cremation.",
+   "c": "The caller asks about costs, packages or payment options for the arrangements, including instalments, but not about obtaining official documents.",
+   "d": "The caller needs help with paperwork such as death certificates, registering the death, or permits required for burial or cremation.",
+   "e": "The caller wants to place or update a published obituary or death notice, including its wording, photo and where it appears."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "hey, not asking about the certificates yet, just want a rough idea what a simple cremation package costs and if we can spread it over a few months",
+    "why": "price and instalments, explicitly not paperwork"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "Third time asking. The registrar says they still haven't got the medical paperwork from you, and we can't get the death certificate without it. Sort this out.",
+    "why": "death certificate paperwork problem"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "My father is die this morning in the Saint Anne care house, and the nurse ask me when somebody will come for him.",
+    "why": "deceased needs collecting from care home"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hello, I call about my mother, Mrs Ilse Varn."
+     ],
+     [
+      "a",
+      "I'm so sorry for your loss. Is this about the service itself, the paperwork, or the costs?"
+     ]
+    ],
+    "msg": "The first thing, please. We want change something.",
+    "why": "'first thing' refers to the service"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "Good morning, I hope you don't mind me getting in touch. You looked after my husband's funeral back in the spring and everything was handled beautifully. I've been struggling a bit lately, and my daughter suggested I ask whether you know of a bereavement support group that meets locally, perhaps in the evenings.",
+    "why": "asks for grief support group; not covered"
+   }
+  ]
+ }
+]

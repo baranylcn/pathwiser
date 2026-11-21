@@ -1,0 +1,97 @@
+{
+ "purpose": "realistic-v2: a fresh evaluation set (see docs/synthetic-data.md)",
+ "split": "eval_v2",
+ "sampler_version": "1",
+ "seed": 20261121,
+ "persona_weights": {
+  "neutral": 0.19,
+  "casual": 0.13,
+  "formal": 0.07,
+  "frustrated": 0.07,
+  "anxious": 0.04,
+  "confused": 0.04,
+  "hinting": 0.04,
+  "lay": 0.03,
+  "jargon": 0.02,
+  "multi_topic": 0.02,
+  "slang_heavy": 0.0875,
+  "rambling_polite": 0.0875,
+  "non_native": 0.0875,
+  "fragment_texter": 0.0875
+ },
+ "n_scenarios": 80,
+ "summary": {
+  "scenarios": 80,
+  "examples": 436,
+  "domains": 36,
+  "groups": 6,
+  "archetypes": {
+   "post_answer_followup": 8,
+   "intent_router": 40,
+   "confirmation": 8,
+   "slot_answer_type": 10,
+   "triage": 8,
+   "handoff": 6
+  },
+  "k": {
+   "2": 7,
+   "3": 20,
+   "4": 21,
+   "5": 13,
+   "6": 8,
+   "7": 3,
+   "8": 4,
+   "10": 4
+  },
+  "condition_styles": {
+   "imperative_terse": 20,
+   "user_wants": 28,
+   "detailed": 16,
+   "internal_jargon": 8,
+   "question": 8
+  },
+  "no_match_share": 0.216,
+  "no_match_kinds": {
+   "sibling_removed": 40,
+   "in_domain_uncovered": 37,
+   "oos": 17
+  },
+  "context": {
+   "later_turn": 170,
+   "first_turn": 122,
+   "none": 144
+  },
+  "personas": {
+   "rambling_polite": 38,
+   "hinting": 17,
+   "non_native": 38,
+   "anxious": 17,
+   "slang_heavy": 38,
+   "neutral": 83,
+   "fragment_texter": 38,
+   "lay": 13,
+   "confused": 17,
+   "casual": 57,
+   "multi_topic": 9,
+   "formal": 31,
+   "frustrated": 31,
+   "jargon": 9
+  },
+  "noise": {
+   "none": 233,
+   "no_punct_lower": 80,
+   "text_speak": 27,
+   "autocorrect": 9,
+   "keyboard_typos": 87
+  },
+  "tags": {
+   "indirect": 89,
+   "context_dependent": 79,
+   "distractor": 32,
+   "negation": 15
+  },
+  "heldout_persona_examples": 152
+ },
+ "generator": "claude-opus (subagents, one batch each)",
+ "generator_independence": "the benchmark author of realistic-v1 was claude-sonnet-5-5; generators see only their own specification, never realistic-v1 or the benchmark"
+}

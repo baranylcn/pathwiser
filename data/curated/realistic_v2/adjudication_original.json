@@ -1,0 +1,175 @@
+[
+ {
+  "example_id": "r2_v2_003_02",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "A": "The client wants to book a time slot to collect a food parcel."
+  },
+  "message": "is it even possible to like shift it? my hlurs at work got changed, could I come Friday instead or dles that mess thinggs up",
+  "context": [
+   "hi, I have one of tuose food pick up thnigs on Thursday",
+   "Thanks. What can I help you with regarding it?"
+  ],
+  "alts": {
+   "B": "The client wants to book a time slot to collect a food parcel."
+  },
+  "notes": {
+   "A": "reschedule; D is closest, no move option",
+   "B": "moving existing slot; D is new booking"
+  }
+ },
+ {
+  "example_id": "r2_v2_018_01",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "A": "Ask a question first",
+   "B": "Ask a question first"
+  },
+  "message": "Before, can I ask you which train is best for go to the airport from city centre?",
+  "context": [
+   "Hello, I bring the silver tea set to you last week.",
+   "Yes, here is the summary: silver tea set, estimate 800-1,200, no reserve, April sale. Shall I confirm?"
+  ],
+  "alts": {},
+  "notes": {}
+ },
+ {
+  "example_id": "r2_v2_020_03",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "A": "Is the user asking about the times of services or Mass?"
+  },
+  "message": "I retirde recently so my Suhday mornings are rather frfe, and I've always loved hearing the choir from the back pew.",
+  "context": [
+   "Helpo, I've been meaning to get in tuoch for a while.",
+   "Hello, how can we help?"
+  ],
+  "alts": {
+   "B": "Is the user asking about the times of services or Mass?"
+  },
+  "notes": {
+   "B": "volunteering or choir interest vague, not covered"
+  }
+ },
+ {
+  "example_id": "r2_v2_022_04",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "B": "The owner declines to share the information the restorer has asked for."
+  },
+  "message": "honestly no clue i just picked it up at a house clearance",
+  "context": [
+   "hi got an old mirror with a gilt frame thats flaking",
+   "We can help. Do you know if the gilding is original water gilding or a later repair?"
+  ],
+  "alts": {},
+  "notes": {
+   "A": "no listed condition fits"
+  }
+ },
+ {
+  "example_id": "r2_v2_034_01",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "B": "The owner reports a fault, error code or abnormal behaviour of the battery system."
+  },
+  "message": "Thank you so much. So, we had the unit installed two summers ago and it was lovely until your technician confirmed last week that one of the modules is dead. He said it's still within the warranty period, so I would very much like to arrange for it to be swapped out under that warranty, if that's how it works. My husband says hello, by the way.",
+  "context": [
+   "Good morning, I hope you're keeping well.",
+   "Good morning! What can I help you with today?"
+  ],
+  "alts": {
+   "A": "The owner reports a fault, error code or abnormal behaviour of the battery system."
+  },
+  "notes": {
+   "A": "warranty module swap; no fit"
+  }
+ },
+ {
+  "example_id": "r2_v2_048_05",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "B": "Homeowner wants a repair for a leak or damage on their roof."
+  },
+  "message": "hey, the guys who did our roof two years ago left a soft spot by the vent and it's started dripping. that should still be under your guarantee, right?",
+  "context": [],
+  "alts": {
+   "A": "Homeowner wants a repair for a leak or damage on their roof."
+  },
+  "notes": {
+   "A": "no clean fit; closest alt"
+  }
+ },
+ {
+  "example_id": "r2_v2_054_02",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "B": "Reschedule a booked pass"
+  },
+  "message": "the 14:20 one for the cubesat we don't need it anymore so just scrap it no new slot needed",
+  "context": [
+   "hey quick one about tomorrows passes",
+   "Sure, which pass is it about?"
+  ],
+  "alts": {},
+  "notes": {
+   "A": "cancel pass option absent"
+  }
+ },
+ {
+  "example_id": "r2_v2_056_05",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "A": "Bot OK: cust proceeds w/ current order/quote steps",
+   "B": "Bot OK: cust proceeds w/ current order/quote steps"
+  },
+  "message": "Oh dear, I've just realised the time and I must collect my son from football. Would it be possible to stop hree and carry on with this tomorrow evening without losing what I've entered? I'd be ever so grateful, it's beenn one of those dys.",
+  "context": [
+   "Good evening, I'd lie some postes for our church fete.",
+   "Lovely! How many posters would you like, and what size?"
+  ],
+  "alts": {},
+  "notes": {}
+ },
+ {
+  "example_id": "r2_v2_059_03",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "A": "The request is a routine self-service task the assistant completes itself: registering a new drone, renewing a registration, or updating owner contact details."
+  },
+  "message": "I want know what is maximum height I can fly in the countryside, is it 120 metre or more?",
+  "context": [
+   "Welcome to the drone registry. How can I help?"
+  ],
+  "alts": {},
+  "notes": {
+   "B": "flight height rules question; neither branch"
+  }
+ },
+ {
+  "example_id": "r2_v2_066_00",
+  "reason": "disagreement",
+  "intended": "NONE",
+  "picks": {
+   "B": "The buyer wants to change quantities or part numbers in the summarised order."
+  },
+  "message": "Almost right, but please ship theem to our Brsnnick facility instead of Harlow.",
+  "context": [
+   "I'd like to order the valve assemblies we got quotwd laast week.",
+   "Here's your order: 40 x VA-220 valve assemblies, delivered to Dock 3 at the Harlow site on 14 June. Shall I place it?"
+  ],
+  "alts": {},
+  "notes": {
+   "A": "change delivery address; no fit"
+  }
+ }
+]

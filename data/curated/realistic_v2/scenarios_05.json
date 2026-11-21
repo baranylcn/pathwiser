@@ -1,0 +1,780 @@
+[
+ {
+  "id": "v2_044",
+  "node": {
+   "name": "turbine_ops_router",
+   "description": "Decide what the control room or technician wants to do about a wind turbine."
+  },
+  "conditions": {
+   "a": "Technician wants to report a new fault or alarm on a specific turbine.",
+   "b": "Technician wants to update or close a fault ticket that was already reported.",
+   "c": "Control room wants to schedule planned maintenance or a service visit for a turbine."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "Good morning, and I hope I'm not catching you at a busy moment. I've been going through the service calendar with my colleague over a cup of tea, and we noticed turbine 31 is due its annual gearbox oil change. Could we get that booked in for some time in the second week of next month, ideally on a calm day? Many thanks.",
+    "why": "asks to book routine gearbox service"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "T14 pitch fault from this morning, reset done, back online, close it",
+    "why": "closing an existing fault after reset"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c"
+    ],
+    "ctx": [
+     [
+      "u",
+      "Hi, it's about turbine 7."
+     ],
+     [
+      "a",
+      "Sure, what do you need for turbine 7?"
+     ]
+    ],
+    "msg": "The yaw error I logged yesterday turned out to be a loose sensor cable. We fixed it, so please mark that ticket as resolved.",
+    "why": "resolve existing ticket; update option removed"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Turbine 22 just tripped on a high vibration alarm at the main bearing and nobody has logged it yet.",
+    "why": "new alarm not yet logged"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Re WTG-09 converter fault, ticket 4471."
+     ],
+     [
+      "a",
+      "Got it, ticket 4471 for WTG-09. What do you need?"
+     ]
+    ],
+    "msg": "IGBT module swapped, ran 2h at rated power with no recurrence. Set it to resolved pending SCADA review.",
+    "why": "status update on existing ticket"
+   }
+  ]
+ },
+ {
+  "id": "v2_045",
+  "node": {
+   "name": "watch_group_router",
+   "description": "Decide what the resident or member wants from the neighborhood watch group."
+  },
+  "conditions": {
+   "a": "Member wants to report a suspicious person or vehicle currently in the area.",
+   "b": "Resident wants to report a theft or burglary that has already happened.",
+   "c": "Resident wants to know when and where the next watch meeting is held.",
+   "d": "Resident wants to join the watch group or sign up as a volunteer patroller.",
+   "e": "Member wants to cancel their membership and stop receiving all watch alerts.",
+   "f": "Resident wants to report a broken streetlight or other safety hazard for the council.",
+   "g": "Member wants to suggest a topic or agenda item for an upcoming meeting.",
+   "h": "Resident wants to report a lost or found pet in the neighborhood.",
+   "i": "Member wants to change how they receive alerts, such as email instead of text.",
+   "j": "Resident wants to report vandalism or graffiti damage to property."
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Good evening. A grey van has been parked outside number 14 for three hours with a man sitting inside watching the houses. On another note, the last newsletter arrived rather late.",
+    "why": "someone watching houses now; newsletter is side remark"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "Hello, I'm not sure if this is the right place."
+     ],
+     [
+      "a",
+      "Happy to help. What are you looking for?"
+     ]
+    ],
+    "msg": "My neighbour said you have people who walk around at night keeping an eye on things? Could I be one of those? Is that even possible if I only just moved here?",
+    "why": "wants to become a patroller"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "i",
+     "j"
+    ],
+    "ctx": [
+     [
+      "u",
+      "hey, something happened on our street last night"
+     ],
+     [
+      "a",
+      "Sorry to hear that. What happened?"
+     ]
+    ],
+    "msg": "so someone just took my kid's bike right off our front lawn overnight, it's gone, nothing broken or anything.",
+    "why": "theft report; theft option removed, vandalism remains"
+   },
+   {
+    "gold": "h",
+    "ctx": [],
+    "msg": "small brown dog wandering by park gate no collar, anyone missing one? btw good turnout at last meeting",
+    "why": "found dog; meeting remark is side topic"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Hi, this is the Elm Ridge Watch assistant. How can I help?"
+     ]
+    ],
+    "msg": "Third time this month someone has nicked parcels off my doorstep. Today it was a damn birthday present. I want this on record.",
+    "why": "parcel thefts already happened"
+   }
+  ]
+ },
+ {
+  "id": "v2_046",
+  "node": {
+   "name": "lesson_answer_followup",
+   "description": "After answering an enrolment question, decide how the parent or student reacts."
+  },
+  "conditions": {
+   "a": "The parent or student is satisfied with the answer and needs nothing more.",
+   "b": "The student wants more detail or a clearer explanation of the answer given.",
+   "c": "The parent says the answer contradicts what they were told before or is wrong.",
+   "d": "The customer wants to go ahead and enrol or book based on that answer.",
+   "e": "The customer wants a copy of the answer sent to them by email or text."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "How much cost the piano lessons for child?"
+     ],
+     [
+      "a",
+      "Piano lessons for under-12s are 22 per half-hour lesson, billed per term of ten weeks."
+     ]
+    ],
+    "msg": "Okay. And my daughter want to learn also the violin, you have the instrument for rent?",
+    "why": "new question about instrument rental, nothing covers"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Do you run lessons during the summer break?"
+     ],
+     [
+      "a",
+      "Yes, we run a six-week summer programme from mid-July with the same teachers."
+     ]
+    ],
+    "msg": "Great, that's all I needed to know, thanks.",
+    "why": "content, no further needs"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "Is there a free slot with a guitar teacher on Thursday evenings?"
+     ],
+     [
+      "a",
+      "Yes, Mr. Delano has a 6:30 pm slot on Thursdays available from next week."
+     ]
+    ],
+    "msg": "Oh, how lovely, that would suit us perfectly. My son finishes football at five and we live just around the corner, so yes, do put him down for that one if we may. He has talked about nothing else all week, bless him.",
+    "why": "takes the offered slot"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Our grade exam fee covers the exam board registration plus two mock sessions with your teacher."
+     ]
+    ],
+    "msg": "hmm ok, I'm not totally getting what a mock session actually is though",
+    "why": "unclear term, wants explanation"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "u",
+      "What do I need to bring to the first drum lesson?"
+     ],
+     [
+      "a",
+      "Please bring a pair of 7A sticks, a practice pad and earplugs. The kit is provided."
+     ]
+    ],
+    "msg": "Sorry, I'll never remember all that. Can you send it to me somehow, like to my phone or the email thing? Is that possible?",
+    "why": "wants list sent to phone or email"
+   }
+  ]
+ },
+ {
+  "id": "v2_047",
+  "node": {
+   "name": "studio_request_router",
+   "description": "Decide what the artist or client wants from the recording studio."
+  },
+  "conditions": {
+   "a": "Artist wants to book a new recording session in one of the studio rooms.",
+   "b": "Client wants mixing or mastering done on tracks they already recorded.",
+   "c": "Artist wants to reschedule or cancel a session that is already booked."
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "We are band of four people and we have ten songs ready, but no place with good microphones for record them.",
+    "why": "needs studio to record songs"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "yo got like 6 tracks done at home, they sound muddy as hell, need someone to polish em up and make em loud for streaming",
+    "why": "existing tracks need mix/master"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "c",
+    "cands": [
+     "a",
+     "b"
+    ],
+    "ctx": [
+     [
+      "u",
+      "yo it's Kai from the Saturday booking"
+     ],
+     [
+      "a",
+      "Hey Kai, what can I do for you?"
+     ]
+    ],
+    "msg": "drummer bailed on us, gotta push saturday to sometime next week, my bad fam",
+    "why": "move existing booking; reschedule option removed"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "I've got Room B booked for Friday at 2pm."
+     ],
+     [
+      "a",
+      "I see your Friday 2pm booking in Room B. Would you like to keep it, move it to another day, or cancel it?"
+     ]
+    ],
+    "msg": "The last one. And quickly, I've been waiting forever.",
+    "why": "last option means cancel booking"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "Hi, I need the album mastered for vinyl and streaming, eleven tracks, files are ready. Also, your parking gate was broken last time I came by.",
+    "why": "mastering request; gate is side complaint"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Welcome to Brightwave Studios. What can I help you with today?"
+     ]
+    ],
+    "msg": "I can't make my session on the 14th anymore, could we cancel it?",
+    "why": "cancel booked session"
+   }
+  ]
+ },
+ {
+  "id": "v2_048",
+  "node": {
+   "name": "roofing_request_router",
+   "description": "Decide what the homeowner needs from the roofing company."
+  },
+  "conditions": {
+   "a": "Homeowner wants a quote for a new roof or a full roof replacement.",
+   "b": "Homeowner wants a repair for a leak or damage on their roof.",
+   "c": "Homeowner wants to claim under warranty for roofing work the company already did."
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "You put new shingles on our house last spring and now several are lifting at the edge; I believe that is covered. Also, please send invoices to my new email.",
+    "why": "defect in company's own recent work"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Our roof is about thirty years old, the shingles are curling everywhere, and honestly we're done paying to patch it every winter.",
+    "why": "old roof, done patching implies replacement"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Thanks for contacting Summit Ridge Roofing. How can we help?"
+     ]
+    ],
+    "msg": "your crew redid our chimney flashing in march and guess what, it's leaking again right where they worked. not paying for this twice",
+    "why": "leak at company's work, expects free fix"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "After the storm yesterday some tiles is fallen from my roof and water come in to the bedroom ceiling.",
+    "why": "storm damage leak needs repair"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Hi there, what can we do for you today?"
+     ]
+    ],
+    "msg": "A damn tree branch smashed through the garage roof last night. I need someone out to fix it, today if possible.",
+    "why": "storm damage needs repair"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "c",
+    "cands": [
+     "a",
+     "b"
+    ],
+    "ctx": [],
+    "msg": "hey can you email me a copy of the guarantee for the roof the guys did two years ago, i lost mine",
+    "why": "asks for a guarantee document; not a repair or a quote"
+   }
+  ]
+ },
+ {
+  "id": "v2_049",
+  "node": {
+   "name": "parish_office_router",
+   "description": "Decide what the caller wants from the parish office."
+  },
+  "conditions": {
+   "a": "Parent wants to arrange a baptism for their child at the church.",
+   "b": "Customer wants to make a new booking of the parish hall for an event.",
+   "c": "Customer wants to cancel or change an existing parish hall booking.",
+   "d": "Parishioner asks for a pastoral visit to a sick or housebound person."
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Our son was born in August and we would really like him welcomed into the church here, the same way we both were.",
+    "why": "wants child christened"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "hey, could I get a copy of my parents' marriage record? they got married at your church back in the 80s",
+    "why": "records request, no candidate covers"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Hello, you've reached St. Brannoc's parish office. How can I help?"
+     ]
+    ],
+    "msg": "My mother has been stuck in bed since her fall and she keeps saying she misses having someone from the church come round.",
+    "why": "housebound mother wants a visit"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "dad in hospital, ward 6 since tuesday, would like the priest to visit, asap if poss",
+    "why": "priest visit for sick father"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "We are not changing anything we already have booked, this is a new one: we would like the hall on 3 May for a 60th birthday party.",
+    "why": "new hall booking, explicitly not a change"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "We booked the hall for the 12th and now the caterer has let us down. Push it to the 19th, and don't you dare charge me another deposit.",
+    "why": "move existing hall booking"
+   }
+  ]
+ },
+ {
+  "id": "v2_050",
+  "node": {
+   "name": "inspection_desk_router",
+   "description": "Decide what the pipeline inspection team needs from the inspection desk."
+  },
+  "conditions": {
+   "a": "Log a corrosion finding",
+   "b": "Log a gas leak detection",
+   "c": "Request a hot work permit",
+   "d": "Request an excavation permit",
+   "e": "Check permit status",
+   "f": "Schedule a reinspection",
+   "g": "Upload inspection photos"
+  },
+  "examples": [
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Inspection desk here. What do you need?"
+     ]
+    ],
+    "msg": "We need to dig down about two metres at marker 114 to get eyes on the coating, but we can't break ground until someone signs us off.",
+    "why": "needs authorisation to dig"
+   },
+   {
+    "gold": "f",
+    "ctx": [
+     [
+      "u",
+      "Section 22B, the valve station."
+     ],
+     [
+      "a",
+      "Noted, section 22B valve station. What would you like to do?"
+     ]
+    ],
+    "msg": "The contractor's patch there needs checking again before Friday and I've been asking for a week. Get someone booked out there.",
+    "why": "repeat inspection needs booking"
+   },
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [
+     [
+      "u",
+      "Good morning, I have a question."
+     ],
+     [
+      "a",
+      "Good morning. Please go ahead."
+     ]
+    ],
+    "msg": "Would you happen to know the final score of last night's football match?",
+    "why": "sports question, unrelated"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "hey, it's Rosa on the north line crew"
+     ],
+     [
+      "a",
+      "Hi Rosa, what can I do for you?"
+     ]
+    ],
+    "msg": "so we're gonna weld a sleeve onto the pipe at KP 31 tomorrow, can you get us the sign-off for that?",
+    "why": "welding needs hot work permit"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Hello, I am inspector from east team."
+     ],
+     [
+      "a",
+      "Hello, how can I help the east team?"
+     ]
+    ],
+    "msg": "Our gas detector device is broken, I need order a new one for the team please.",
+    "why": "equipment order, nothing covers"
+   },
+   {
+    "gold": "g",
+    "ctx": [
+     [
+      "a",
+      "Pipeline inspection assistant. What can I do for you?"
+     ]
+    ],
+    "msg": "pics from KP 18 dig, 40 of them, where to send",
+    "why": "wants to submit photos"
+   }
+  ]
+ },
+ {
+  "id": "v2_051",
+  "node": {
+   "name": "oil_delivery_handoff",
+   "description": "Decide whether the heating oil customer needs a human or can stay with the automated assistant."
+  },
+  "conditions": {
+   "a": "Connect the customer to a human immediately because of an urgent safety or no-heat situation, for example an oil smell, a leaking tank, or an empty tank in freezing weather.",
+   "b": "The customer can stay with the automated assistant because the request is routine, such as ordering a delivery, checking a delivery date or asking about current prices.",
+   "c": "The customer wants to talk to a person about a non-urgent matter, such as a billing dispute or a complaint, and can wait for a callback during office hours."
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Um, there's a weird smell like diesel in the basement near the big tank thing, and the floor is wet? Is that normal or is it something bad?",
+    "why": "oil smell and wet floor, possible leak"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "c",
+    "cands": [
+     "a",
+     "b"
+    ],
+    "ctx": [],
+    "msg": "I want speak with real person about my bill, you charged me two times for delivery in January. No hurry, somebody can call me tomorrow.",
+    "why": "non-urgent billing callback; option removed"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "a",
+    "cands": [
+     "b",
+     "c"
+    ],
+    "ctx": [
+     [
+      "u",
+      "Good evening, I do hope I'm not bothering anyone at this late hour."
+     ],
+     [
+      "a",
+      "Not at all. How can I help you tonight?"
+     ]
+    ],
+    "msg": "That's very kind of you. I'm eighty-one and live on my own out past the reservoir, and I'm afraid the furnace went quiet about two hours ago. The gauge on the tank says empty and they say minus fifteen tonight. I would be so grateful to speak to someone right away. I'm sorry to be a nuisance.",
+    "why": "no heat in freezing cold, urgent human removed"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Account 55-2190, Fairhaven Road."
+     ],
+     [
+      "a",
+      "Thanks, I've found the account at Fairhaven Road. What's going on?"
+     ]
+    ],
+    "msg": "Burner's in lockout, primed and reset twice, still no ignition. Tank at 1/8, possible sludge in the line. House is at 8C with a newborn, need a tech dispatched now.",
+    "why": "no heat with infant, urgent"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "Hello there, I hope your week is going well. Our last delivery was back in October, and with the cold snap coming I thought it wise to get ahead of things, so I'd like to order a top-up of about 150 gallons for some time next week, whenever suits the driver. Thank you ever so much.",
+    "why": "routine delivery order"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "I can look up your last invoice and explain it here, or I can arrange for someone from our office to call you back tomorrow about it. Which would you prefer?"
+     ]
+    ],
+    "msg": "I've already gone through it on my own twice and it still makes no sense to me.",
+    "why": "self-service failed, implies wants office callback"
+   }
+  ]
+ },
+ {
+  "id": "v2_052",
+  "node": {
+   "name": "yard_issue_triage",
+   "description": "Classify the builder's message by urgency and type."
+  },
+  "conditions": {
+   "a": "Customer reports an urgent problem that is stopping work on site right now.",
+   "b": "Customer reports a problem with an order that needs fixing but is not urgent.",
+   "c": "Customer wants to give feedback or a compliment about staff, service or products."
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Builders yard support. What's the issue?"
+     ]
+    ],
+    "msg": "concrete truck not here, pour booked 7am, crew of 6 standing round, formwork ready",
+    "why": "missing delivery halting crew now"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "your driver yesterday was brilliant, reversed into our tiny lane like a pro, please pass that on. also my neighbour asked if you do skip hire, no idea why he asked me",
+    "why": "praise for driver; skip question is side topic"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "order 8812 came yesterday, 3 pallets bricks wrong colour"
+     ],
+     [
+      "a",
+      "Sorry about that. Is it holding up work today, or can the swap wait until later in the week?"
+     ]
+    ],
+    "msg": "can wait. next week even",
+    "why": "wrong bricks, swap not urgent"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Hi, you've reached the yard's help line. What can I help with?"
+     ]
+    ],
+    "msg": "The timber we got on Monday has a lot of warped lengths in it. We won't need it until second fix next month though.",
+    "why": "faulty timber, not needed yet"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Hello, how can we help today?"
+     ]
+    ],
+    "msg": "I was charged for twenty sheets of plasterboard but the delivery note says eighteen came. No rush, I just want it straightened out.",
+    "why": "billing shortfall, explicitly not urgent"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "Good afternoon, and apologies for the long message. I've been a sole trader for about a year now, mostly small extensions and garden walls, and my old merchant has just closed down, sadly. I'd very much like to open a trade account with you so I can get trade prices and pay monthly. What would you need from me? Thank you kindly.",
+    "why": "trade account request, not problem or feedback"
+   }
+  ]
+ },
+ {
+  "id": "v2_053",
+  "node": {
+   "name": "translation_job_triage",
+   "description": "Classify an incoming translation request or report by type and priority."
+  },
+  "conditions": {
+   "a": "Rush job: the client needs the translation within about 24 hours or by a fixed near deadline, such as a filing due tomorrow, including requests to speed up a job.",
+   "b": "Standard job: a new translation request with a normal turnaround of several days, for example a contract, manual or website text, with no deadline pressure.",
+   "c": "Certified job: the document needs a certified or sworn translation for official use, such as birth certificates, diplomas or immigration papers, whatever the deadline.",
+   "d": "Quality complaint: the client reports errors, omissions or poor quality in a translation already delivered and wants it reviewed or corrected."
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "got a product manual that needs doing into spanish"
+     ],
+     [
+      "a",
+      "Sure. Do you need it in the next day or so, or is a normal turnaround of about a week fine?"
+     ]
+    ],
+    "msg": "nah no freaking rush, a week's chill",
+    "why": "manual, normal turnaround accepted"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "so my visa appointment is in like three weeks and they want my diploma in english with some stamp from the translator saying it's legit",
+    "why": "official stamped diploma translation"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "I need this six-page lease in German by tomorrow at 9. Not next week. Tomorrow. Can you actually do that or not?",
+    "why": "deadline tomorrow morning"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Welcome to Lexbridge Translations. How can we help?"
+     ]
+    ],
+    "msg": "The brochure you translated into French last week has a wrong price on page 2 and a whole paragraph is missing. Also, your invoice went to my old address.",
+    "why": "errors in delivered work; invoice is side issue"
+   },
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [],
+    "msg": "How long should I boil an egg to get a runny yolk?",
+    "why": "cooking question, unrelated"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Thanks for sending the report. Our standard turnaround is five working days, or we can deliver within 24 hours for an express fee. Which would you like?"
+     ]
+    ],
+    "msg": "The quicker one, please.",
+    "why": "chooses 24-hour express option"
+   }
+  ]
+ }
+]

@@ -1,0 +1,359 @@
+[
+ {
+  "id": "v2_000",
+  "node": {
+   "name": "lesson_answer_followup",
+   "description": "Decide how the student or parent reacts to the answer just given about lessons or enrolment."
+  },
+  "conditions": {
+   "a": "Accept answer and proceed",
+   "b": "Ask for more detail",
+   "c": "Say the answer is wrong"
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "Good afternoon, could you tell me what the term fee is for weekly cello lessons for a twelve-year-old?"
+     ],
+     [
+      "a",
+      "Weekly 30-minute cello lessons for under-16s are 165 for the spring term."
+     ]
+    ],
+    "msg": "Oh, thank you kindly. It's only that my sister enrolled her boy here last autumn, a lovely lad, plays beautifully already, and she paid 120 for exactly the same thing, and the leaflet I picked up on Monday also says 120, so I'm a little puzzled, I must say.",
+    "why": "cites leaflet and relative contradicting quoted fee"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Ms. Okafor's beginner piano lessons take place on Tuesdays at 4pm in Room 3."
+     ]
+    ],
+    "msg": "funny, at the open day she told us thursdays and that room is the drum studio",
+    "why": "contradicts the given day and room"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "b",
+    "cands": [
+     "a",
+     "c"
+    ],
+    "ctx": [
+     [
+      "a",
+      "Yes, we prepare students for the Grade 3 flute exam as part of the regular lessons."
+     ]
+    ],
+    "msg": "Okay good. But can you explain me more how is the preparation, how many lessons before exam and who choose the pieces?",
+    "why": "wants more detail, does not dispute the answer"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Good news: the Saturday 10am beginner violin group still has two places, starting 3 March."
+     ]
+    ],
+    "msg": "Oh thank goodness, I was so worried it would be full. Sorry for all the questions earlier, I think that one works for us, yes.",
+    "why": "relieved, accepts the offered group"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "yo how much do you guys charge to rent a drum kit for practice"
+     ],
+     [
+      "a",
+      "Drum kit rental is included free with all term drum lessons."
+     ]
+    ],
+    "msg": "free? hell no it isn't, my last bill had a freaking 30 buck kit rental slapped on it",
+    "why": "bill contradicts claim that rental is free"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hello, my son want to join music theory class. Is possible?"
+     ],
+     [
+      "a",
+      "Yes, our music theory class runs on Wednesdays and is open to students from age 9."
+     ]
+    ],
+    "msg": "Thank you. Please can you tell more details about it, which books he need and how long is one class?",
+    "why": "asks for further details about the class"
+   }
+  ]
+ },
+ {
+  "id": "v2_001",
+  "node": {
+   "name": "lift_answer_followup",
+   "description": "Decide how the building manager reacts to the answer just given about their lifts."
+  },
+  "conditions": {
+   "a": "The building manager is satisfied with the answer and needs nothing more on it.",
+   "b": "The building manager wants a fuller explanation or more detail about the answer given.",
+   "c": "The building manager says the answer does not match what is actually happening on site."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "when's the next service on the lift at Birchwood Court"
+     ],
+     [
+      "a",
+      "The next routine service at Birchwood Court is booked for 14 May."
+     ]
+    ],
+    "msg": "hold up, totally different thing, can you hook me up with a quote for a brand new lift in the annex block? old one's a freaking dinosaur",
+    "why": "new installation quote, no reaction condition covers it"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "The fault on lift 2 was traced to a worn door operator belt, which our technician replaced on Tuesday."
+     ]
+    ],
+    "msg": "Could you explain what that belt actually does and why it would wear out after only two years?",
+    "why": "asks for explanation of the stated fault"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Good morning, could you tell me whether the emergency phone tests are covered by our contract?"
+     ],
+     [
+      "a",
+      "Yes, the quarterly emergency phone test is part of your standard contract at no extra cost."
+     ]
+    ],
+    "msg": "Oh, that is such a relief, thank you. I've been going round in circles with the residents' committee about this for weeks, and now I can finally tell them at Thursday's meeting that it's all taken care of. You've made my afternoon, truly.",
+    "why": "expresses relief and thanks, question settled"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "Is lift A at Fernhill House running again?"
+     ],
+     [
+      "a",
+      "Yes, lift A at Fernhill House was restored to service at 9:40 this morning."
+     ]
+    ],
+    "msg": "I'm looking at it from the lobby right now and the display still just says out of order.",
+    "why": "on-site observation contradicts 'restored'"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "engineer coming today? lift 3 Marlow St"
+     ],
+     [
+      "a",
+      "Our records show the engineer visited lift 3 at Marlow Street yesterday and closed the job."
+     ]
+    ],
+    "msg": "nobody came. still stuck on 4th floor. no one signed in at reception",
+    "why": "site reality contradicts closed job"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "Your quarterly invoice includes a thorough examination fee of 180 per lift."
+     ]
+    ],
+    "msg": "Sorry, what is that examination thing exactly? I don't really understand what you look at and why it's a separate charge.",
+    "why": "wants the examination fee explained"
+   }
+  ]
+ },
+ {
+  "id": "v2_002",
+  "node": {
+   "name": "print_order_router",
+   "description": "Decide what the customer wants to do with the print shop."
+  },
+  "conditions": {
+   "a": "Order flyers",
+   "b": "Check an order's status",
+   "c": "Cancel an order",
+   "d": "Change an existing order",
+   "e": "Get a price quote",
+   "f": "Order posters",
+   "g": "Reprint a faulty order",
+   "h": "Order bound documents"
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "We placed an order for 200 event programmes last Monday, the event is this Friday, and we haven't heard a thing since.",
+    "why": "worried about progress of placed order"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Hi, is this the printing place?"
+     ],
+     [
+      "a",
+      "Yes, this is the print shop. What can I do for you?"
+     ]
+    ],
+    "msg": "I need those little paper ads you hand out on the street, not sure what you call them, like 500 for a bake sale. Also is your car park free?",
+    "why": "handout ads are flyers; parking is secondary"
+   },
+   {
+    "gold": "h",
+    "ctx": [],
+    "msg": "Sorry, I hope this is the right place. It's not flyers or posters I need, it's my dissertation, 80 pages, and it has to be bound with a hard cover by the 12th. Is that okay?",
+    "why": "explicitly not flyers/posters; needs bound dissertation"
+   },
+   {
+    "gold": "g",
+    "ctx": [],
+    "msg": "The wedding invitations I collected yesterday have a grey streak across every one and the names are cut off at the edge.",
+    "why": "describes defective printed job"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "Hey, I don't want to swap anything on the banner order, just scrap the whole thing, the gig got called off.",
+    "why": "rejects changing, wants it scrapped"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "Can you scan a box of old family photos onto a memory stick for me?",
+    "why": "photo scanning not among the options"
+   }
+  ]
+ },
+ {
+  "id": "v2_003",
+  "node": {
+   "name": "food_bank_router",
+   "description": "Decide what the caller wants from the food bank."
+  },
+  "conditions": {
+   "a": "The client wants to book a new time slot to collect a food parcel (no booking exists yet).",
+   "b": "The person wants to register as a new client of the food bank.",
+   "c": "The donor wants to arrange dropping off donated food items.",
+   "d": "The person wants to sign up for a volunteer shift at the food bank.",
+   "e": "The volunteer wants to cancel a volunteer shift they already signed up for.",
+   "f": "The person asks about the food bank's opening hours or location.",
+   "g": "The donor wants to give money or set up a regular financial donation.",
+   "h": "The client wants to move an already booked parcel pickup to another time."
+  },
+  "examples": [
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "Hello there, I hope you're keeping well today."
+     ],
+     [
+      "a",
+      "Hello! How can I help you today?"
+     ]
+    ],
+    "msg": "How kind of you to ask. I've recently retired after thirty years of teaching, and my husband says I'm driving him up the wall at home, so I'd love to come and give a hand sorting things on Wednesday mornings, if you have room for someone like me. I'm quite good with lists!",
+    "why": "offers to help on Wednesday mornings"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hi, I have a question."
+     ],
+     [
+      "a",
+      "Of course, go ahead."
+     ]
+    ],
+    "msg": "We've just moved to town with the kids and I've never used a food bank before, so I'm not on any of your lists yet.",
+    "why": "newcomer not yet on the client list"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "h",
+    "cands": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g"
+    ],
+    "ctx": [
+     [
+      "u",
+      "hi, I have one of those food pick up things on Thursday"
+     ],
+     [
+      "a",
+      "Thanks. What can I help you with regarding it?"
+     ]
+    ],
+    "msg": "is it even possible to like shift it? my hours at work got changed, could I come Friday instead or does that mess things up",
+    "why": "wants to move existing pickup, not book new"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Hi, you've reached the food bank. What can we do for you?"
+     ]
+    ],
+    "msg": "6 boxes tinned stuff from office collection. in car now. where to bring",
+    "why": "has food to drop off"
+   },
+   {
+    "gold": "f",
+    "ctx": [
+     [
+      "a",
+      "Welcome to the food bank helpline. How can I help?"
+     ]
+    ],
+    "msg": "Where exactly are you based, and are you open on Saturday mornings? My car's in the garage so I'll be coming by bus.",
+    "why": "asks location and hours; bus is secondary"
+   }
+  ]
+ }
+]

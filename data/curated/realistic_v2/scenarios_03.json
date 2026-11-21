@@ -1,0 +1,756 @@
+[
+ {
+  "id": "v2_024",
+  "node": {
+   "name": "community_centre_handoff",
+   "description": "Decide whether the caller needs a member of centre staff or can continue with the automated assistant."
+  },
+  "conditions": {
+   "a": "The caller wants to be put through to a live staff member right now.",
+   "b": "The caller is happy to keep going with the automated assistant on their booking.",
+   "c": "The caller reports an injury, accident or safety concern that staff must handle."
+  },
+  "examples": [
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "a",
+      "I can book the room for you myself here, or pass you to the front desk team. Shall we carry on together?"
+     ]
+    ],
+    "msg": "Sure, that works, let's keep going.",
+    "why": "agrees to continue with the assistant"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [],
+    "msg": "yo can y'all just wipe my number and email off your system, I'm done getting your damn newsletters",
+    "why": "data deletion request, no candidate covers it"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "I'm trying to book the main hall for a wedding reception in June."
+     ],
+     [
+      "a",
+      "I can check availability for you. What date were you thinking of?"
+     ]
+    ],
+    "msg": "It's a bit complicated with the catering and the bar licence, could I just talk to someone who works there?",
+    "why": "asks to speak with a person"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "No need to get anyone on the line, I can sort the room booking out here with you.",
+    "why": "prefers continuing with the bot"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "Hello, I am at the centre now for the toddler class."
+     ],
+     [
+      "a",
+      "Welcome! How can I help you today?"
+     ]
+    ],
+    "msg": "Child of other parent fall from the climbing frame in big hall, she hit the head and is bleeding little bit.",
+    "why": "reports a child injured on site"
+   }
+  ]
+ },
+ {
+  "id": "v2_025",
+  "node": {
+   "name": "maintenance_report_triage",
+   "description": "Classify an owner's maintenance report by urgency and category for the logbook."
+  },
+  "conditions": {
+   "a": "Ground aircraft for urgent defect",
+   "b": "Schedule upcoming due inspection",
+   "c": "Log cosmetic or cabin wear",
+   "d": "Defer non-urgent technical defect"
+  },
+  "examples": [
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "oil pressure dropped to zero mid flight. landed. oil all over the cowling",
+    "why": "serious engine problem, must not fly"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "Hey, so my annual's coming up end of next month, can we get it on the calendar?",
+    "why": "annual inspection coming due"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "A couple of things I noticed after the weekend trip."
+     ],
+     [
+      "a",
+      "Okay, one at a time. Does the first one affect anything mechanical, or is it more about how the plane looks inside or out?"
+     ]
+    ],
+    "msg": "Purely the second, honestly. Nothing that changes how she flies, just makes the passengers frown.",
+    "why": "appearance-only issue per the assistant's question"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Got an issue from this morning's flight."
+     ],
+     [
+      "a",
+      "Sorry to hear that. Can it wait until the next scheduled visit, or should the aircraft stay on the ground until it's looked at?"
+     ]
+    ],
+    "msg": "I wouldn't put my kids in it until someone looks, put it that way.",
+    "why": "implies aircraft should stay grounded"
+   },
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "d",
+    "cands": [
+     "a",
+     "b",
+     "c"
+    ],
+    "ctx": [
+     [
+      "a",
+      "Maintenance desk. Please describe the issue you would like logged."
+     ]
+    ],
+    "msg": "The left landing light has stopped working. We only fly in daylight, so I would like it noted and repaired at the next scheduled visit, not urgently.",
+    "why": "non-urgent defect to defer; grounding not wanted"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "the autopilot has been drifting a couple of degrees off heading lately, I hand fly most of the time anyway",
+    "why": "minor non-critical system fault, can wait"
+   }
+  ]
+ },
+ {
+  "id": "v2_026",
+  "node": {
+   "name": "incident_detail_answer",
+   "description": "Determine what kind of information the resident's reply supplies after the assistant asked for an incident detail."
+  },
+  "conditions": {
+   "a": "The resident gives the date or time when the incident took place.",
+   "b": "The resident says they do not know or cannot remember the requested detail.",
+   "c": "The resident refuses or declines to share the requested information with the group.",
+   "d": "The resident supplies a location, street or address connected to the incident."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "c",
+    "cands": [
+     "a",
+     "b",
+     "d"
+    ],
+    "ctx": [
+     [
+      "a",
+      "Thanks for the report. Can you give me your full name and phone number for our records?"
+     ]
+    ],
+    "msg": "No, I'm not giving you my number. I just want the damn car break-in logged, that's it.",
+    "why": "refuses to share details, not lack of knowledge"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Which spot was it: Elm Close, Birch Road, or the park entrance?"
+     ]
+    ],
+    "msg": "The last one you said.",
+    "why": "picks the park entrance location"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Someone's been dumping rubbish behind the garages again."
+     ],
+     [
+      "a",
+      "Thanks for letting us know. Roughly what time did you notice it?"
+     ]
+    ],
+    "msg": "Honestly I couldn't say, could've been any time over the weekend, I only saw the bags when I walked the dog. And that streetlight back there is still broken by the way.",
+    "why": "cannot say when it happened"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Was it on Saturday the 9th, the day of the street party, that you last saw the bicycle?"
+     ]
+    ],
+    "msg": "Oh yes, that's the one, I remember because the bunting was still up and my husband was grumbling about the music. Thank you so much for asking, and sorry, I do go on.",
+    "why": "confirms the proposed date"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "a",
+      "Would you be willing to share the name of the neighbour you think is involved?"
+     ]
+    ],
+    "msg": "nah, gonna pass on that one, sorry",
+    "why": "declines to give the name"
+   }
+  ]
+ },
+ {
+  "id": "v2_027",
+  "node": {
+   "name": "parts_order_confirmation",
+   "description": "Decide how the customer responds to the summarised parts order awaiting confirmation."
+  },
+  "conditions": {
+   "a": "Confirm the order as summarised",
+   "b": "Amend order details",
+   "c": "Cancel the pending order"
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "a",
+      "To summarise: 40 titanium flange fittings, part TF-2210, $18,400, delivery in 6 weeks to your Hartwell facility. Shall I place the order?"
+     ]
+    ],
+    "msg": "Before I say yes, will these ship with material certs and a certificate of conformance?",
+    "why": "asks a certification question, no candidate fits"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "We would like to order the valve seals we discussed."
+     ],
+     [
+      "a",
+      "Certainly. That is 200 seals, part VS-88, delivered to Dock 3 by 14 March. Shall I confirm?"
+     ]
+    ],
+    "msg": "Nearly correct. It should be three hundred, please.",
+    "why": "corrects the quantity in the summary"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "Can you put through the bracket order from the quote?"
+     ],
+     [
+      "a",
+      "Sure: 12 machined aluminium brackets, quote Q-5531, total $3,960, ships in 3 weeks. Confirm?"
+     ]
+    ],
+    "msg": "Actually, scrap the whole thing. Our programme just lost its funding, so we won't need them.",
+    "why": "drops the order entirely"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Here's your order: 6 pressure transducers, PT-400 series, $7,200, shipping Friday. Good to go?"
+     ]
+    ],
+    "msg": "yep, send it",
+    "why": "accepts the summary"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Your order: 24 stainless fastener kits, part FK-12, $2,150, dispatch in 10 days. Shall I go ahead?"
+     ]
+    ],
+    "msg": "hell yeah, that's exactly the stuff, the test stand's been sitting there waiting on these forever",
+    "why": "enthusiastic acceptance without saying confirm"
+   }
+  ]
+ },
+ {
+  "id": "v2_028",
+  "node": {
+   "name": "builders_merchant_router",
+   "description": "Decide what the customer wants from the builders' merchant yard."
+  },
+  "conditions": {
+   "a": "Request a price quotation",
+   "b": "Book a delivery",
+   "c": "Track an existing delivery",
+   "d": "Return unused materials",
+   "e": "Open a trade account",
+   "f": "Check stock availability",
+   "g": "Order ready-mix concrete",
+   "h": "Calculate material quantities",
+   "i": "Report damaged goods",
+   "j": "Change a delivery date"
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "The lorry with my blocks was meant to be here by ten and it's nearly noon now.",
+    "why": "expected delivery late, wants its whereabouts"
+   },
+   {
+    "gold": "g",
+    "ctx": [],
+    "msg": "Could I get four cubic metres of mixed concrete brought out for a garage slab?",
+    "why": "orders mixed concrete"
+   },
+   {
+    "gold": "h",
+    "ctx": [],
+    "msg": "I'm laying a patio, about 5 by 4 metres, and I've no clue how many of those flat stone things or how much sand I need. Is that something you can work out? Also your website wouldn't load earlier.",
+    "why": "needs help working out amounts"
+   },
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [],
+    "msg": "My daughter's been on about wanting a puppy for months and I'm running out of excuses.",
+    "why": "personal topic unrelated to the yard"
+   },
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "Hello there, hope you're well."
+     ],
+     [
+      "a",
+      "Hello! What can I help you with today?"
+     ]
+    ],
+    "msg": "Oh lovely, thank you. We finished the extension last week, finally, after my husband swore it would take a month and it took four. We've ended up with about thirty bricks and two bags of plaster we never opened. Could we bring those back to you? They're still wrapped.",
+    "why": "bringing back leftover unopened materials"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "Can I get the timber and sheet boards I paid for yesterday dropped at the site Monday morning? And honestly your car park is a nightmare.",
+    "why": "arranges drop-off of purchased goods"
+   }
+  ]
+ },
+ {
+  "id": "v2_029",
+  "node": {
+   "name": "survey_booking_answer",
+   "description": "Determine what kind of information the client's reply supplies to the assistant's booking question."
+  },
+  "conditions": {
+   "a": "The client gives the address or parcel number of the land to be surveyed.",
+   "b": "The client states a preferred date or time window for the site visit.",
+   "c": "The client indicates which kind of survey they need, such as boundary or topographic.",
+   "d": "The client supplies an existing job reference or quote number for their booking."
+  },
+  "examples": [
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "u",
+      "I've called three times about my stakeout job and nobody gets back to me."
+     ],
+     [
+      "a",
+      "I'm sorry about that. Do you have the job reference from your confirmation email?"
+     ]
+    ],
+    "msg": "Yes, it's SV-20418. Same as the last three times I gave it.",
+    "why": "gives the job reference"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "hey so we're buying a house"
+     ],
+     [
+      "a",
+      "Congrats! What kind of survey are you after?"
+     ]
+    ],
+    "msg": "the neighbour reckons his fence is a metre onto our side so we just wanna know where the line actually is",
+    "why": "describes need for a boundary survey"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "need to book someone out to the lot"
+     ],
+     [
+      "a",
+      "Sure. When would suit you for the surveyor to come out?"
+     ]
+    ],
+    "msg": "any morning next week works, maybe tuesday or wednesday",
+    "why": "gives preferred visit days"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "u",
+      "Hello, I want survey for my land before I build house."
+     ],
+     [
+      "a",
+      "Of course. Where is the land located?"
+     ]
+    ],
+    "msg": "Is the plot 27 on Millbrook Lane, in village Ashford Green. Also I want know the price, is very expensive?",
+    "why": "gives the plot location"
+   },
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [
+     [
+      "u",
+      "yo need a survey done at some point"
+     ],
+     [
+      "a",
+      "No problem. What's the address of the property?"
+     ]
+    ],
+    "msg": "hold up, who won the game last night? my boy's been talking crap all morning",
+    "why": "sports chit-chat, unrelated"
+   }
+  ]
+ },
+ {
+  "id": "v2_030",
+  "node": {
+   "name": "solar_project_router",
+   "description": "Decide what the customer wants regarding their rooftop solar project."
+  },
+  "conditions": {
+   "a": "Is the customer asking about the current stage or progress of their installation project?",
+   "b": "Does the customer want to reschedule the site survey or installation appointment?",
+   "c": "Is the customer reporting that their installed panels or inverter are not producing power?",
+   "d": "Is the customer asking about the grid connection or export meter application?",
+   "e": "Is the customer querying an invoice or a payment they have made?"
+  },
+  "examples": [
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "hey so the app's been showing zero output since sunday even though it's been sunny all week",
+    "why": "system producing nothing"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "Could you tell me whether the electricity network has approved us to send surplus power back yet? We have heard nothing about the new meter.",
+    "why": "asks about export approval and meter"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Where are we up to with the install? The scaffold went up two weeks ago and nothing since. Also the roofer left a ladder in our garden.",
+    "why": "asks how far the project has got"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "a",
+      "Hi, this is the solar project assistant. What can I do for you?"
+     ]
+    ],
+    "msg": "You've charged my card twice for the deposit. Fix it, I'm not paying three grand twice.",
+    "why": "duplicate charge on a payment"
+   },
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "u",
+      "Hello, I have the panels from you since last year."
+     ],
+     [
+      "a",
+      "Great, how can I help today?"
+     ]
+    ],
+    "msg": "I want to add a battery for store the energy, can you make me offer for this?",
+    "why": "new battery quote, no candidate covers"
+   },
+   {
+    "gold": "b",
+    "ctx": [],
+    "msg": "yo the install crew's booked for friday but i'm gonna be outta town, can we bump it to the week after? also the dude on the phone was hella rude",
+    "why": "move the installation date"
+   }
+  ]
+ },
+ {
+  "id": "v2_031",
+  "node": {
+   "name": "scaffold_hire_router",
+   "description": "Decide what the customer wants from the scaffolding hire company."
+  },
+  "conditions": {
+   "a": "The customer wants a quote for hiring scaffolding on a new job.",
+   "b": "The customer wants to extend the hire period of scaffolding already on site.",
+   "c": "The customer wants the scaffolding taken down and collected from their site.",
+   "d": "The customer reports scaffolding that looks damaged, unsafe or has been tampered with.",
+   "e": "The customer wants to change the date the crew comes to erect scaffolding.",
+   "f": "The customer asks for a copy of the scaffold inspection or handover certificate.",
+   "g": "The customer wants extra lifts added or the existing scaffold layout altered.",
+   "h": "The customer has a question or dispute about an invoice they received.",
+   "i": "The customer wants to hire scaffold equipment only, without our crew erecting it.",
+   "j": "The customer wants to complain about the crew's behaviour on site."
+  },
+  "examples": [
+   {
+    "gold": "d",
+    "ctx": [
+     [
+      "a",
+      "Good morning, how may I assist you with your scaffolding hire?"
+     ]
+    ],
+    "msg": "After last night's storm, several boards on the top level appear to have shifted and one of the ties is hanging loose from the wall.",
+    "why": "describes storm damage to the scaffold"
+   },
+   {
+    "gold": "h",
+    "ctx": [
+     [
+      "a",
+      "Hi there. I can see an open invoice, INV-7731 for 2,840, and your hire on Carrow Street ending Friday. Which one is this about?"
+     ]
+    ],
+    "msg": "The first one. It's way more than we agreed, frankly ridiculous.",
+    "why": "picks the invoice and disputes it"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "We're re-roofing a two-storey terrace in April and need scaffolding round the front and back. What would that cost?",
+    "why": "price for a new job"
+   },
+   {
+    "gold": null,
+    "nm": "oos",
+    "ctx": [],
+    "msg": "What's the best way to get rid of moss on a lawn?",
+    "why": "gardening question, unrelated"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "u",
+      "Hello, I have booking with you for the scaffold at my house."
+     ],
+     [
+      "a",
+      "Thanks. I can see the crew is booked to put it up on 3 June. Would you like to keep that, or is there a problem?"
+     ]
+    ],
+    "msg": "This day is not good for me, maybe one week after?",
+    "why": "moves the erection date"
+   }
+  ]
+ },
+ {
+  "id": "v2_032",
+  "node": {
+   "name": "craft_studio_router",
+   "description": "Decide what the customer wants from the craft workshop studio."
+  },
+  "conditions": {
+   "a": "Book a class place",
+   "b": "Buy a gift voucher",
+   "c": "Rent studio time",
+   "d": "Transfer to another class date",
+   "e": "Ask about materials needed",
+   "f": "Cancel a class booking"
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "sibling_removed",
+    "intent": "d",
+    "cands": [
+     "a",
+     "b",
+     "c",
+     "e",
+     "f"
+    ],
+    "ctx": [],
+    "msg": "I cannot come on Saturday pottery, can you move me to the next Saturday please? I don't want lose my place.",
+    "why": "wants to switch date, not cancel"
+   },
+   {
+    "gold": "a",
+    "ctx": [],
+    "msg": "Can I get myself into one of those spinning wheel clay sessions, the bowl-making one? Not sure what it's actually called.",
+    "why": "wants a spot in a class"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "Hello, I hope you're well. I'm booked onto the weaving afternoon on the 12th, which I was so looking forward to, but my granddaughter's school play is that very day. Could you possibly swap me onto a later weaving date? Also, the parking sign outside has fallen down. Many thanks.",
+    "why": "move existing booking to later date"
+   },
+   {
+    "gold": "e",
+    "ctx": [
+     [
+      "a",
+      "Hey! Welcome to the studio. What can I help with?"
+     ]
+    ],
+    "msg": "yo do i gotta bring my own freaking chisels and stuff for the woodworking thing or you guys got that covered?",
+    "why": "asks what to bring"
+   },
+   {
+    "gold": "c",
+    "ctx": [
+     [
+      "u",
+      "sup, did the pottery course last year"
+     ],
+     [
+      "a",
+      "Nice to hear from you again! What can we do for you?"
+     ]
+    ],
+    "msg": "wanna hit the wheels solo for like a couple hours on weekends, can i just pay for the space and do my thing?",
+    "why": "pay for independent studio use"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "Hi, it's my mum's birthday next month."
+     ],
+     [
+      "a",
+      "Lovely! How can we help?"
+     ]
+    ],
+    "msg": "She'd love the weaving stuff but I don't know which day she's free. Is there like a card or ticket I can give her so she picks herself? Is that even a thing?",
+    "why": "wants a giftable voucher"
+   }
+  ]
+ },
+ {
+  "id": "v2_033",
+  "node": {
+   "name": "image_licensing_router",
+   "description": "Decide what the customer wants from the stock image library's support assistant."
+  },
+  "conditions": {
+   "a": "The customer cannot download or access an image they already paid for, for example broken download links, expired sessions or files missing from their account.",
+   "b": "The customer wants to upgrade a licence they already hold to cover wider use, such as more printed copies, merchandise or a bigger advertising campaign.",
+   "c": "The customer asks which licence type fits a planned use before buying, for example web banners, book covers or social media posts.",
+   "d": "The customer wants a refund or cancellation of an image or subscription purchase, for example a duplicate charge or an accidental plan renewal."
+  },
+  "examples": [
+   {
+    "gold": null,
+    "nm": "in_domain_uncovered",
+    "ctx": [
+     [
+      "a",
+      "Hello! How can I help you with your image licences today?"
+     ]
+    ],
+    "msg": "Oh hello, thank you. I've been taking photographs as a hobby for nearly twenty years, mostly coastal scenes, and my nephew, who is a designer, says I really ought to share them. Could I submit some of my own photos to be sold in your library?",
+    "why": "wants to become a contributor, not covered"
+   },
+   {
+    "gold": "c",
+    "ctx": [],
+    "msg": "we haven't bought it yet but we want one of your photos on a cookbook cover, which licence would cover that?",
+    "why": "pre-purchase licence choice for a cover"
+   },
+   {
+    "gold": "d",
+    "ctx": [],
+    "msg": "Hey, my yearly plan just renewed and I totally forgot to cancel it. Can I get that money back?",
+    "why": "unwanted renewal refund"
+   },
+   {
+    "gold": "b",
+    "ctx": [
+     [
+      "u",
+      "We bought a standard licence for the mountain lake photo last month."
+     ],
+     [
+      "a",
+      "Thanks, I can see that order. What would you like to do with it?"
+     ]
+    ],
+    "msg": "The client now wants it on t-shirts and tote bags as well, so we need what we have to stretch to that.",
+    "why": "extend existing licence to merchandise"
+   },
+   {
+    "gold": "a",
+    "ctx": [
+     [
+      "a",
+      "Hi, how can I help today?"
+     ]
+    ],
+    "msg": "I paid for the city skyline image an hour ago and the button in my account just spins and then shows an error.",
+    "why": "paid image will not download"
+   }
+  ]
+ }
+]
