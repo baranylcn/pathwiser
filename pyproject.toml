@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pathwiser"
+version = "0.1.0"
+description = "Context-aware workflow-branch selection from natural-language conditions: data, scorers, decision layer and evaluation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Baran Yalcin" }]
+keywords = ["intent routing", "dialogue", "candidate ranking", "cross-encoder", "evaluation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+    "scikit-learn>=1.4",
+]
+
+[project.optional-dependencies]
+embeddings = ["sentence-transformers>=3.0"]
+gbm = ["lightgbm>=4.0"]
+train = ["pathwiser[embeddings,gbm]"]
+notebooks = ["pathwiser[train]", "pandas>=2.2", "matplotlib>=3.8", "jupyter", "nbconvert", "ipykernel"]
+dev = ["ruff>=0.6"]
+
+[project.urls]
+Homepage = "https://github.com/baranylcn/pathwiser"
+Issues = "https://github.com/baranylcn/pathwiser/issues"
+
+[project.scripts]
+pathwiser = "pathwiser.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pathwiser*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["notebooks", "data", "scratch"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM"]
+ignore = [
+    "B905",   # zip() without strict=: lengths are checked explicitly where it matters
+    "SIM108", # ternary operators are not always clearer
+    "E741",   # short names such as ``l`` are used in tiny comprehensions
+    "E501",   # the formatter wraps code; long strings and comments are left alone
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pathwiser", "tests"]
+
+[tool.ruff.format]
+quote-style = "double"
