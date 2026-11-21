@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import importlib.util
 import random
 import tempfile
 import unittest
@@ -77,6 +78,8 @@ class TestPairModels(unittest.TestCase):
 
     def test_embedding_models_with_fake_encoder_and_cache(self):
         for learner in ("lr", "lgbm"):
+            if learner == "lgbm" and importlib.util.find_spec("lightgbm") is None:
+                continue
             with tempfile.TemporaryDirectory() as tmp:
                 m = EmbeddingPairModel(learner, train_examples=200, cache_dir=tmp)
                 m._st = FakeEncoder()
