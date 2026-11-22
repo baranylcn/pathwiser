@@ -126,5 +126,4 @@ the 8,000-example cross-encoder 0.637.
   examples are both of that kind.
 * **Stereotyped style.** LLM slang is repetitive ("freaking" occurs in 14 messages); simulated slang is not real slang. Noise is character-level and mild.
 * Per-slice numbers rest on 17 to 60 examples; report intervals (scenario-bootstrap), not point values.
-* **Open:** the trained scorers `st_lr`, `st_lgbm`, the bge variant and the selected fusion have not been scored on it yet. The refit needs about 2 GB of free RAM,
-  and only about 1 GB of 16 GB was free during this session (VS Code and the browser held the rest). The commands are in `docs/decision-layer.md` under "Next".
+* **Scored:** the fixed systems were evaluated on it without any change; results and their interpretation are in [decision-layer.md](decision-layer.md) (selected system: Top-1 0.693, decision accuracy 0.523).

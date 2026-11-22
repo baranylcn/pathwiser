@@ -24,19 +24,19 @@ behind this repository, and every result below is reported with that in mind.
 ## Results
 
 Systems are compared on a benchmark built from six public datasets (SGD, STAR, ABCD, Banking77, CLINC150, HWU64; 19,567 test
-examples, conditions and services held out from training) and on an external stress test of 344 LLM-authored examples from business
-contexts none of those datasets cover. Details, slices and intervals: [reports/](reports/) and [docs/decision-layer.md](docs/decision-layer.md).
+examples, conditions and services held out from training) and on two external stress tests of LLM-authored examples from business
+contexts none of those datasets cover (`realistic-v1`: 344 examples; `realistic-v2`: 434 examples in 36 unseen contexts and 14 writing styles). Details, slices and intervals: [reports/](reports/) and [docs/decision-layer.md](docs/decision-layer.md).
 
-| System | Benchmark Top-1 | Benchmark decision acc. | External Top-1 | External decision acc. |
+| System | Benchmark Top-1 | Benchmark decision acc. | `realistic-v1` Top-1 / decision acc. | `realistic-v2` Top-1 / decision acc. |
 |---|---:|---:|---:|---:|
 | random | 0.242 | 0.227 | | |
-| TF-IDF cosine | 0.588 | 0.559 | 0.307 | |
-| MiniLM cosine (zero-shot) | 0.846 | 0.725 | 0.734 | 0.549 |
-| MiniLM + LightGBM | 0.875 | 0.783 | 0.759 | 0.605 |
-| cross-encoder (CPU budget, 8k examples) | 0.854 | 0.783 | 0.646 | |
-| **fusion of two LightGBM scorers (MiniLM, bge-small) + threshold** | **0.888** | **0.802** | **0.792** | **0.657** |
+| TF-IDF cosine | 0.588 | 0.559 | 0.307 / | 0.380 / 0.302 |
+| MiniLM cosine (zero-shot) | 0.846 | 0.725 | 0.734 / 0.549 | 0.643 / 0.408 |
+| MiniLM + LightGBM | 0.875 | 0.783 | 0.759 / 0.605 | 0.658 / 0.525 |
+| cross-encoder (CPU budget, 8k examples) | 0.854 | 0.783 | 0.646 / | 0.637 / 0.495 |
+| **fusion of two LightGBM scorers (MiniLM, bge-small) + threshold** | **0.888** | **0.802** | **0.792 / 0.657** | **0.693 / 0.523** |
 
-Decision accuracy counts a `no_match` example as correct when the system abstains. Intervals are in the reports; on the external set they
+Decision accuracy counts a `no_match` example as correct when the system abstains. Intervals are in the reports; on the external sets they
 are about +/-0.05, so differences between the top systems there are not conclusive.
 
 What the results support, and what they do not:
@@ -44,9 +44,11 @@ What the results support, and what they do not:
 * Frozen sentence embeddings with a small trained scoring layer beat lexical baselines by a wide margin and keep most of their accuracy
   on services and conditions never seen in training.
 * The abstention rule is not the bottleneck: calibrated and learned abstention policies did not beat one global threshold. The loss on
-  unfamiliar domains (Top-1 0.875 to 0.759) is a ranking problem.
-* The external set is LLM-authored, blind-verified by model annotators and **not human-audited**. A second set, `realistic-v2`
-  (434 examples, 36 unseen business contexts, 14 writing styles), is built and has not been scored with the fixed systems yet.
+  unfamiliar domains is a ranking problem.
+* **Accuracy on new business contexts is much lower than on the benchmark** (decision accuracy 0.80 vs 0.52 on `realistic-v2`), and the
+  fusion's decision advantage over a single LightGBM scorer shows on the benchmark and `realistic-v1` but not on `realistic-v2`
+  ([details](docs/decision-layer.md)). Do not expect benchmark numbers on your own workflows yet.
+* Both external sets are LLM-authored, blind-verified by model annotators and **not human-audited**.
 * The benchmark's `no_match` examples are largely constructed, and non-SGD condition descriptions are unreviewed drafts
   ([dataset card](data/processed/v1/DATASET_CARD.md)).
 
@@ -118,10 +120,9 @@ tests/          unit and end-to-end tests
 
 ## Roadmap
 
-1. Score `realistic-v2` with the fixed systems.
-2. Generate training scenarios with the synthetic-data machinery and test whether condition diversity improves unseen-condition accuracy.
-3. Human audit of a sample of the LLM-authored sets.
-4. Packaged inference engine with a typed Python API, then a REST service.
+1. Generate training scenarios with the synthetic-data machinery and test whether condition diversity improves unseen-condition accuracy.
+2. Human audit of a sample of the LLM-authored sets.
+3. Packaged inference engine with a typed Python API, then a REST service.
 
 ## Contributing
 

@@ -109,6 +109,39 @@ validation). The validation deficit on unseen services did **not** reproduce on 
 services, so examples are strongly correlated and a bootstrap over dialogues understates the uncertainty. Fusing both models is better
 than either alone, on validation, on test and on the external set.
 
+## Second external set: `realistic-v2`
+
+The fixed systems were scored on `realistic-v2` (434 examples, 80 scenarios, 36 business contexts in six industry groups absent from every
+training split, 14 writing styles) without changing anything: same fitted models, same validation thresholds
+([`reports/decision/v1/realistic_v2/summary.md`](../reports/decision/v1/realistic_v2/summary.md),
+[`reports/realistic/v1/realistic_v2_baselines.md`](../reports/realistic/v1/realistic_v2_baselines.md)).
+
+| `realistic-v2` | Top-1 | Decision acc. | False routing | no_match recall |
+|---|---:|---:|---:|---:|
+| `st_message` + threshold (zero-shot) | 0.643 [0.579, 0.697] | 0.408 [0.355, 0.454] | 0.175 | 0.696 |
+| `st_lgbm` + threshold | 0.658 [0.602, 0.707] | 0.525 [0.471, 0.577] | 0.244 | 0.565 |
+| cross-encoder (CPU budget) | 0.637 [0.588, 0.683] | 0.495 [0.449, 0.545] | 0.214 | 0.598 |
+| **fusion + threshold (selected)** | **0.693** [0.636, 0.741] | 0.523 [0.472, 0.572] | 0.235 | 0.522 |
+| paired difference, fusion minus `st_lgbm` | +0.035 [-0.006, 0.072] | -0.002 [-0.042, 0.035] | -0.009 [-0.049, 0.032] | |
+
+What this shows:
+
+* **The absolute level is low.** On business contexts the models have never seen, the selected system picks the right condition for 69% of
+  the route examples and decides correctly on 52% of all examples; 24% of all examples are routed wrongly. The benchmark numbers
+  (0.888 / 0.802) overstate what to expect on new domains by a wide margin, and `realistic-v1` (0.792 / 0.657) was the easier of the two
+  external sets.
+* **The fusion's advantage did not replicate.** Top-1 moves in the same direction as before (+0.033 on `realistic-v1`, +0.035 here) but is
+  not significant on either set alone. The decision-accuracy gain over `st_lgbm` is +0.018 on the benchmark test and +0.052 on
+  `realistic-v1` (interval above zero) but -0.002 here (interval around zero). The evidence for the fusion is therefore: clearly better on
+  the benchmark, possibly better in ranking elsewhere, and no demonstrated gain in decisions on new domains. The selection rule was not
+  changed because of this.
+* **Training does help the decision, compared with the zero-shot encoder:** `st_lgbm` beats `st_message` by +0.117 [0.074, 0.162] in
+  decision accuracy on this set (+0.055 on `realistic-v1`), mostly because the zero-shot threshold abstains far too often (56% of examples).
+* **Writing style is not the main loss.** An exploratory slice (not part of the report, no intervals): `st_lgbm` Top-1 on route examples is
+  0.610 for the held-out styles (n=118) and 0.683 for the seen styles (n=224). Even `neutral` examples reach only 0.725. Rambling,
+  long-winded messages are the weakest persona (0.435, n=23). The gap is mainly about unfamiliar conditions and domains, not about slang
+  or typos.
+
 ## Cross-encoder
 
 Fine-tuning helps a little on `realistic-v1` (zero-shot ms-marco cross-encoder Top-1 0.617, fine-tuned on 8,000 examples 0.646), but its
@@ -121,8 +154,8 @@ models (0.759). It is budget-limited (CPU training) and was not scaled.
    (`AbstentionModel` outputs probabilities if they are needed later).
 2. The loss on unfamiliar domains is a ranking problem. Combining two different frozen encoders under the trained scoring layer helps;
    replacing MiniLM by bge-small alone does not. More diverse training data is the other lever (see [synthetic-data.md](synthetic-data.md)).
-3. The external evidence rests on a 344-example, LLM-authored, not human-audited set. `realistic-v2` (434 examples) exists and has not yet been
-   scored with these systems.
+3. The external evidence rests on two LLM-authored, not human-audited sets (344 and 434 examples). Every system loses a lot on new
+   business contexts (decision accuracy about 0.52 on `realistic-v2`), and the fusion's decision advantage is not reproduced there.
 
 ## Reproduce
 
@@ -137,9 +170,13 @@ pathwiser report external --extra realistic=data/model/realistic-v1
 pathwiser report encoders --extra realistic=data/model/realistic-v1
 ```
 
-Scoring the fixed systems on `realistic-v2` (refitting `st_lr`/`st_lgbm` needs about 2 GB of free RAM):
+Scoring the fixed systems on `realistic-v2` (refitting `st_lr`/`st_lgbm` needs about 2 GB of free RAM; the same fits as above with
+`--splits realistic_v2 --extra realistic_v2=data/model/realistic-v2`, and `--load models/cross_encoder` for the cross-encoder):
 
 ```bash
-pathwiser scorers fit --baseline st_lgbm --splits realistic_v2 --extra realistic_v2=data/model/realistic-v2
+pathwiser report external --extra realistic_v2=data/model/realistic-v2
 pathwiser report final --extra realistic_v2=data/model/realistic-v2 --out-dir reports/decision/v1/realistic_v2
 ```
+
+Stored scores are tied to the exact example list. After the set changed (two examples were dropped), scores of the earlier version were
+refused and had to be recomputed with `--force`.
